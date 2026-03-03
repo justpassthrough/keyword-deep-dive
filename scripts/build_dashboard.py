@@ -54,6 +54,7 @@ CSS = """
   .value-cell { color: #f0883e; font-weight: 600; }
   .positive { color: #f85149; }
   .negative { color: #3fb950; }
+  .trend-sub { color: #8b949e; font-size: 0.8em; }
 
   .watch-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
   .watch-item { padding: 6px 0; }
@@ -256,11 +257,15 @@ def build_html(data):
         for c in r.get("compounds", []):
             labels = " ".join(c.get("labels", []))
             vol = c.get("volume")
-            cr = c.get("change_rate")
+            cr = c.get("change_rate")  # 단기 3일
+            tr = c.get("trend_rate")   # 추세 7일
             cr_str = f"{cr:+.1f}%" if cr is not None else "-"
+            tr_str = f"{tr:+.1f}%" if tr is not None else ""
             cr_cls = "positive" if cr is not None and cr >= 20 else (
                 "negative" if cr is not None and cr <= -20 else ""
             )
+            # 추세는 작게 회색으로 표시
+            trend_display = f'<br><span class="trend-sub">7일 {tr_str}</span>' if tr_str else ""
             gap = c.get("expert_gap", {})
             blog_count = c.get("blog_count")
             if vol is not None:
@@ -276,7 +281,7 @@ def build_html(data):
                 f'<td class="kw-cell">{escape(c.get("keyword", ""))}{bridge}</td>'
                 f"<td>{labels}</td>"
                 f"<td>{vol_display}</td>"
-                f'<td class="{cr_cls}">{cr_str}</td>'
+                f'<td class="{cr_cls}">{cr_str}{trend_display}</td>'
                 f'<td>{escape(c.get("intent", ""))}</td>'
                 f'<td>{gap.get("label", "")}</td>'
                 f'<td class="value-cell">{c.get("pharma_value", 0)}</td>'
@@ -298,7 +303,7 @@ def build_html(data):
             f'{rising_block}'
             f'{news_block}'
             '<table class="kw-table"><thead><tr>'
-            '<th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율</th>'
+            '<th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th>'
             '<th>의도</th><th>전문가갭</th><th>약사가치</th>'
             f'</tr></thead><tbody>{rows_html}</tbody></table>'
             '</div>\n'

@@ -310,7 +310,7 @@ def compare_datalab(root, compounds):
 
         if not data or "results" not in data:
             for kw in batch:
-                results[kw] = {"volume": None, "change_rate": None, "type": "longtail"}
+                results[kw] = {"volume": None, "change_rate": None, "trend_rate": None, "type": "longtail"}
             continue
 
         root_avg = _calc_recent_avg(data["results"][0]) if data["results"] else 0
@@ -318,10 +318,12 @@ def compare_datalab(root, compounds):
         for result in data["results"][1:]:
             kw = result["title"]
             avg = _calc_recent_avg(result)
-            change = _calc_change_rate(result)
+            change_short = _calc_change_rate_short(result)
+            change_trend = _calc_change_rate_trend(result)
             results[kw] = {
                 "volume": round(avg, 1) if avg else None,
-                "change_rate": round(change, 1) if change is not None else None,
+                "change_rate": round(change_short, 1) if change_short is not None else None,
+                "trend_rate": round(change_trend, 1) if change_trend is not None else None,
                 "type": "datalab" if avg and avg > 0 else "longtail",
             }
 
@@ -329,7 +331,7 @@ def compare_datalab(root, compounds):
         found_names = {r["title"] for r in data["results"]}
         for kw in batch:
             if kw not in found_names and kw not in results:
-                results[kw] = {"volume": None, "change_rate": None, "type": "longtail"}
+                results[kw] = {"volume": None, "change_rate": None, "trend_rate": None, "type": "longtail"}
 
     return results
 
@@ -343,8 +345,22 @@ def _calc_recent_avg(result):
     return sum(recent) / len(recent) if recent else 0
 
 
-def _calc_change_rate(result):
-    """검색량 변화율: (최근7일 - 이전7일) / 이전7일 × 100."""
+def _calc_change_rate_short(result):
+    """단기 변화율: (최근3일 - 직전3일) / 직전3일 × 100. 빠른 급등 감지용."""
+    ratios = [d["ratio"] for d in result.get("data", [])]
+    if len(ratios) < 6:
+        return None
+    prev = ratios[-6:-3]
+    recent = ratios[-3:]
+    avg_prev = sum(prev) / len(prev) if prev else 0
+    avg_recent = sum(recent) / len(recent) if recent else 0
+    if avg_prev == 0:
+        return 100.0 if avg_recent > 0 else 0.0
+    return (avg_recent - avg_prev) / avg_prev * 100
+
+
+def _calc_change_rate_trend(result):
+    """추세 변화율: (최근7일 - 이전7일) / 이전7일 × 100. 지속성 판단용."""
     ratios = [d["ratio"] for d in result.get("data", [])]
     if len(ratios) < 14:
         return None
@@ -695,7 +711,7 @@ def main():
         rising = []
 
         for kw in compounds:
-            dl = datalab_results.get(kw, {"volume": None, "change_rate": None, "type": "longtail"})
+            dl = datalab_results.get(kw, {"volume": None, "change_rate": None, "trend_rate": None, "type": "longtail"})
             intent, intent_score = _classify_intent(kw)
 
             # 롱테일: DataLab 데이터 없으면 블로그 카운트로 판단
@@ -722,6 +738,7 @@ def main():
                 "keyword": kw,
                 "volume": dl["volume"],
                 "change_rate": dl["change_rate"],
+                "trend_rate": dl.get("trend_rate"),
                 "type": dl["type"],
                 "intent": intent,
                 "intent_score": intent_score,
