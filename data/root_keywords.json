@@ -8,7 +8,7 @@
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 1
+      "consecutive_dormant_weeks": 2
     },
     {
       "keyword": "알부민",
@@ -17,7 +17,7 @@
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
-      "last_active": "2026-03-04",
+      "last_active": "2026-03-03",
       "consecutive_dormant_weeks": 0
     },
     {
@@ -28,17 +28,17 @@
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 1
+      "consecutive_dormant_weeks": 2
     },
     {
       "keyword": "오메가3",
       "category": "영양제",
-      "status": "active",
+      "status": "dormant",
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 3
+      "consecutive_dormant_weeks": 4
     },
     {
       "keyword": "NMN",
@@ -47,7 +47,7 @@
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
-      "last_active": "2026-03-04",
+      "last_active": "2026-03-03",
       "consecutive_dormant_weeks": 0
     },
     {
@@ -58,7 +58,7 @@
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 0
+      "consecutive_dormant_weeks": 1
     }
   ]
 }
