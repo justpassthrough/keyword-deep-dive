@@ -89,6 +89,18 @@ def load_known_products():
     return set(data["products"])
 
 
+def load_previous():
+    """이전 latest.json 로드 (추이 비교용)."""
+    path = os.path.join(DATA_DIR, "latest.json")
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
 # ══════════════════════════════════════════════════════════
 #  네이버 API 호출
 # ══════════════════════════════════════════════════════════
@@ -439,10 +451,10 @@ def calc_pharma_value(compound, intent_score, expert_gap, change_rate):
 
     # 변화율 보너스
     change_bonus = 1.0
-    if change_rate is not None and change_rate >= 20:
-        change_bonus = 1.2
-    elif change_rate is not None and change_rate >= 50:
+    if change_rate is not None and change_rate >= 50:
         change_bonus = 1.4
+    elif change_rate is not None and change_rate >= 20:
+        change_bonus = 1.2
 
     value = intent_score * gap_mult * change_bonus
     return round(value, 1)
@@ -551,6 +563,98 @@ def update_lifecycle(root_data, results_by_root):
 
 
 # ══════════════════════════════════════════════════════════
+#  추이 비교
+# ══════════════════════════════════════════════════════════
+
+def compare_with_previous(previous, current_roots):
+    """이전 결과와 비교하여 변화 감지."""
+    if not previous:
+        return {"prev_time": None, "new_compounds": [], "gone_compounds": [],
+                "rising_up": [], "rising_down": [], "new_rising": [],
+                "value_up": [], "value_down": []}
+
+    prev_time = previous.get("updated_at", "")
+
+    # 이전 데이터를 {root: {compound_kw: detail}} 형태로 인덱싱
+    prev_by_root = {}
+    for r in previous.get("roots", []):
+        prev_by_root[r["keyword"]] = {
+            c["keyword"]: c for c in r.get("compounds", [])
+        }
+
+    new_compounds = []     # 이번에 새로 등장한 복합키워드
+    gone_compounds = []    # 이전에 있었는데 사라진 복합키워드
+    rising_up = []         # 변화율이 상승한 키워드
+    rising_down = []       # 변화율이 하락한 키워드
+    new_rising = []        # 이번에 새로 급등(🔥)된 키워드
+    value_up = []          # 약사가치가 올라간 키워드
+    value_down = []        # 약사가치가 내려간 키워드
+
+    for r in current_roots:
+        root = r["keyword"]
+        prev_compounds = prev_by_root.get(root, {})
+        curr_compounds = {c["keyword"]: c for c in r.get("compounds", [])}
+
+        for kw, curr in curr_compounds.items():
+            if kw not in prev_compounds:
+                new_compounds.append({"keyword": kw, "root": root,
+                                      "pharma_value": curr.get("pharma_value", 0)})
+            else:
+                prev = prev_compounds[kw]
+                # 변화율 비교
+                prev_cr = prev.get("change_rate")
+                curr_cr = curr.get("change_rate")
+                if prev_cr is not None and curr_cr is not None:
+                    diff = curr_cr - prev_cr
+                    if diff >= 10:
+                        rising_up.append({"keyword": kw, "root": root,
+                                          "prev": round(prev_cr, 1), "curr": round(curr_cr, 1),
+                                          "diff": round(diff, 1)})
+                    elif diff <= -10:
+                        rising_down.append({"keyword": kw, "root": root,
+                                            "prev": round(prev_cr, 1), "curr": round(curr_cr, 1),
+                                            "diff": round(diff, 1)})
+
+                # 새로 급등
+                prev_labels = prev.get("labels", [])
+                curr_labels = curr.get("labels", [])
+                if "🔥급등" in curr_labels and "🔥급등" not in prev_labels:
+                    new_rising.append({"keyword": kw, "root": root,
+                                       "change_rate": curr_cr})
+
+                # 약사가치 비교
+                prev_val = prev.get("pharma_value", 0)
+                curr_val = curr.get("pharma_value", 0)
+                if curr_val - prev_val >= 0.5:
+                    value_up.append({"keyword": kw, "root": root,
+                                     "prev": prev_val, "curr": curr_val})
+                elif prev_val - curr_val >= 0.5:
+                    value_down.append({"keyword": kw, "root": root,
+                                       "prev": prev_val, "curr": curr_val})
+
+        # 사라진 키워드
+        for kw in prev_compounds:
+            if kw not in curr_compounds:
+                gone_compounds.append({"keyword": kw, "root": root})
+
+    # 중요도 순 정렬
+    new_compounds.sort(key=lambda x: x["pharma_value"], reverse=True)
+    rising_up.sort(key=lambda x: x["diff"], reverse=True)
+    rising_down.sort(key=lambda x: x["diff"])
+
+    return {
+        "prev_time": prev_time,
+        "new_compounds": new_compounds[:10],
+        "gone_compounds": gone_compounds[:10],
+        "rising_up": rising_up[:10],
+        "rising_down": rising_down[:10],
+        "new_rising": new_rising[:5],
+        "value_up": value_up[:10],
+        "value_down": value_down[:10],
+    }
+
+
+# ══════════════════════════════════════════════════════════
 #  메인 파이프라인
 # ══════════════════════════════════════════════════════════
 
@@ -562,6 +666,7 @@ def main():
     if not NAVER_CLIENT_ID:
         print("[경고] NAVER_CLIENT_ID 환경변수가 없습니다. 빈 결과로 진행합니다.")
 
+    previous = load_previous()
     roots = load_roots()
     known_products = load_known_products()
     root_data = load_all_roots()
@@ -685,6 +790,15 @@ def main():
         for w, info in sorted(all_unidentified.items(), key=lambda x: x[1]["count"], reverse=True)
     ][:15]
 
+    # ── 추이 비교 ──
+    changes = compare_with_previous(previous, all_results)
+    if changes["prev_time"]:
+        print(f"\n── 이전({changes['prev_time']}) 대비 변화 ──")
+        print(f"  새 복합키워드: {len(changes['new_compounds'])}개")
+        print(f"  새 급등: {len(changes['new_rising'])}개")
+        print(f"  변화율 상승: {len(changes['rising_up'])}개")
+        print(f"  변화율 하락: {len(changes['rising_down'])}개")
+
     # ── 생명주기 업데이트 ──
     root_data = update_lifecycle(root_data, results_by_root)
     save_roots(root_data)
@@ -695,6 +809,7 @@ def main():
         "roots": all_results,
         "top_recommendations": top_recommendations,
         "unidentified_candidates": unidentified_list,
+        "changes": changes,
     }
 
     latest_path = os.path.join(DATA_DIR, "latest.json")

@@ -62,9 +62,22 @@ CSS = """
   .unid-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
   .unid-desc { color: #8b949e; font-size: 0.85em; margin-bottom: 10px; }
 
+  .changes-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; margin-bottom: 10px; }
+  .changes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+  .change-box { background: #0d1117; border-radius: 6px; padding: 12px; }
+  .change-box h4 { margin-bottom: 8px; }
+  .change-item { padding: 3px 0; font-size: 0.85em; }
+  .change-item .kw { color: #f0f6fc; font-weight: 500; }
+  .change-item .root-tag { color: #8b949e; font-size: 0.8em; }
+  .change-item .up { color: #f85149; }
+  .change-item .down { color: #3fb950; }
+  .change-item .new-badge { background: #1f6feb33; color: #58a6ff; padding: 1px 6px; border-radius: 3px; font-size: 0.8em; }
+  .prev-time { color: #8b949e; font-size: 0.82em; }
+
   @media (max-width: 768px) {
     .kw-table { font-size: 0.75em; }
     .rec-meta { flex-direction: column; gap: 4px; }
+    .changes-grid { grid-template-columns: 1fr; }
   }
 """
 
@@ -97,8 +110,95 @@ def build_html(data):
     top_recs = data.get("top_recommendations", [])
     unidentified = data.get("unidentified_candidates", [])
 
+    changes = data.get("changes", {})
+
     active_roots = [r for r in roots if r.get("status") == "active"]
     watch_roots = [r for r in roots if r.get("status") == "watch"]
+
+    # ── 추이 비교 섹션 ──
+    changes_html = ""
+    if changes.get("prev_time"):
+        # 새 급등
+        new_rising_items = ""
+        for c in changes.get("new_rising", []):
+            cr = c.get("change_rate")
+            cr_str = f"+{cr:.0f}%" if cr is not None else ""
+            new_rising_items += (
+                f'<div class="change-item">'
+                f'<span class="new-badge">NEW</span> '
+                f'<span class="kw">{escape(c.get("keyword", ""))}</span> '
+                f'<span class="up">{cr_str}</span> '
+                f'<span class="root-tag">{escape(c.get("root", ""))}</span>'
+                f'</div>\n'
+            )
+
+        # 새 복합키워드
+        new_compound_items = ""
+        for c in changes.get("new_compounds", [])[:5]:
+            new_compound_items += (
+                f'<div class="change-item">'
+                f'<span class="new-badge">NEW</span> '
+                f'<span class="kw">{escape(c.get("keyword", ""))}</span> '
+                f'<span class="root-tag">{escape(c.get("root", ""))}</span>'
+                f'</div>\n'
+            )
+
+        # 변화율 상승
+        rising_up_items = ""
+        for c in changes.get("rising_up", [])[:5]:
+            rising_up_items += (
+                f'<div class="change-item">'
+                f'<span class="kw">{escape(c.get("keyword", ""))}</span> '
+                f'<span class="up">{c.get("prev", 0):+.1f}% → {c.get("curr", 0):+.1f}%</span> '
+                f'<span class="root-tag">{escape(c.get("root", ""))}</span>'
+                f'</div>\n'
+            )
+
+        # 변화율 하락
+        rising_down_items = ""
+        for c in changes.get("rising_down", [])[:5]:
+            rising_down_items += (
+                f'<div class="change-item">'
+                f'<span class="kw">{escape(c.get("keyword", ""))}</span> '
+                f'<span class="down">{c.get("prev", 0):+.1f}% → {c.get("curr", 0):+.1f}%</span> '
+                f'<span class="root-tag">{escape(c.get("root", ""))}</span>'
+                f'</div>\n'
+            )
+
+        # 약사가치 상승
+        value_up_items = ""
+        for c in changes.get("value_up", [])[:5]:
+            value_up_items += (
+                f'<div class="change-item">'
+                f'<span class="kw">{escape(c.get("keyword", ""))}</span> '
+                f'<span class="up">{c.get("prev", 0)} → {c.get("curr", 0)}</span> '
+                f'<span class="root-tag">{escape(c.get("root", ""))}</span>'
+                f'</div>\n'
+            )
+
+        has_any = (new_rising_items or new_compound_items or rising_up_items
+                   or rising_down_items or value_up_items)
+
+        if has_any:
+            boxes = ""
+            if new_rising_items:
+                boxes += f'<div class="change-box"><h4>🔥 새로 급등</h4>{new_rising_items}</div>'
+            if new_compound_items:
+                boxes += f'<div class="change-box"><h4>🆕 새 복합키워드</h4>{new_compound_items}</div>'
+            if rising_up_items:
+                boxes += f'<div class="change-box"><h4>📈 변화율 상승</h4>{rising_up_items}</div>'
+            if rising_down_items:
+                boxes += f'<div class="change-box"><h4>📉 변화율 하락</h4>{rising_down_items}</div>'
+            if value_up_items:
+                boxes += f'<div class="change-box"><h4>⬆ 약사가치 상승</h4>{value_up_items}</div>'
+
+            changes_html = (
+                '<div class="changes-section">'
+                f'<h3>📊 이전 대비 변화</h3>'
+                f'<div class="prev-time">이전 스캔: {escape(changes.get("prev_time", ""))}</div>'
+                f'<div class="changes-grid">{boxes}</div>'
+                '</div>'
+            )
 
     # ── 추천 글감 TOP 3 ──
     top_html = ""
@@ -257,6 +357,7 @@ def build_html(data):
         '</head>\n<body>\n'
         '<h1>키워드 딥다이브 스캐너</h1>\n'
         f'<div class="updated">마지막 업데이트: {updated}</div>\n'
+        f'{changes_html}\n'
         '<h3>📝 오늘의 추천 글감 TOP 3</h3>\n'
         f'{top_section}\n'
         f'<div class="tab-bar">{tab_buttons}</div>\n'
