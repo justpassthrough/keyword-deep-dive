@@ -1,0 +1,36 @@
+name: Weekly Root Discovery
+on:
+  schedule:
+    - cron: '0 23 * * 1'   # 월요일 08:00 KST
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pages: write
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Discover new roots
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
+        run: python scripts/discover_roots.py
+      - name: Run dive on updated roots
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
+        run: python scripts/dive.py
+      - name: Build dashboard
+        run: python scripts/build_dashboard.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          git diff --cached --quiet || git commit -m "discover+dive: $(TZ=Asia/Seoul date +%Y-%m-%d\ %H:%M)"
+          git push

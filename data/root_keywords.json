@@ -1,0 +1,10 @@
+{
+  "roots": [
+    {"keyword": "마운자로", "category": "비만치료제", "status": "active", "source": "manual", "parent": null, "added": "2026-03-04", "last_active": "2026-03-04", "consecutive_dormant_weeks": 0},
+    {"keyword": "알부민", "category": "영양제", "status": "active", "source": "manual", "parent": null, "added": "2026-03-04", "last_active": "2026-03-04", "consecutive_dormant_weeks": 0},
+    {"keyword": "위고비", "category": "비만치료제", "status": "active", "source": "manual", "parent": null, "added": "2026-03-04", "last_active": "2026-03-04", "consecutive_dormant_weeks": 0},
+    {"keyword": "오메가3", "category": "영양제", "status": "active", "source": "manual", "parent": null, "added": "2026-03-04", "last_active": "2026-03-04", "consecutive_dormant_weeks": 0},
+    {"keyword": "NMN", "category": "영양제", "status": "active", "source": "manual", "parent": null, "added": "2026-03-04", "last_active": "2026-03-04", "consecutive_dormant_weeks": 0},
+    {"keyword": "밀크씨슬", "category": "일반의약품", "status": "active", "source": "manual", "parent": null, "added": "2026-03-04", "last_active": "2026-03-04", "consecutive_dormant_weeks": 0}
+  ]
+}
