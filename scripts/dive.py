@@ -54,6 +54,48 @@ STOPWORDS = {
     "나는", "제가", "우리", "저희", "여러분",
 }
 
+# ── 미확인 후보에서 제외할 일반 단어 ─────────────────────
+# 의도 키워드 + 카테고리어 + 마케팅 수식어 + 일반 의약 용어
+# (제품/성분 고유명사가 아닌 것들)
+_INTENT_WORDS = set(HIGH_PHARMA + MID_PHARMA + LOW_PHARMA + WEAK_PHARMA)
+CANDIDATE_EXCLUDE = _INTENT_WORDS | {
+    # 카테고리/분류어
+    "비만약", "비만", "영양제", "건기식", "건강기능식품", "일반의약품", "전문의약품",
+    "의약품", "처방약", "약품", "보충제", "건강식품", "기능식품", "식품",
+    "치료제", "치료약", "주사제", "주사", "경구약", "내복약", "외용약",
+    "다이어트약", "살빠지는약", "식욕억제제",
+    # 마케팅/수식어
+    "프리미엄", "골드", "플러스", "플래티넘", "스페셜", "울트라",
+    "마시는", "씹어먹는", "고함량", "저용량", "고용량", "순수", "천연",
+    "국산", "수입", "직구", "정품", "리뉴얼", "신제품",
+    # 유통/기업 일반어
+    "출시", "발매", "판매", "입고", "재입고", "예약", "예판",
+    "제약", "제약사", "바이오", "헬스케어", "팜",
+    # 일반 동사/형용사
+    "먹는", "먹고", "먹으면", "드시는", "섭취", "복용법",
+    "좋은", "나쁜", "좋다", "좋아요", "싫어요",
+    "안전한", "위험한", "중요한", "필요한", "인기",
+    # 단위/수량
+    "정도", "이상", "이하", "미만", "이내", "하루", "매일",
+    "한달", "개월", "시간", "분량", "용법",
+    # 일반 의약/건강 용어
+    "비만치료제", "비만치료", "항노화", "역노화", "노화방지",
+    "효능", "효과적", "물질", "성분명", "앰플", "캡슐", "정제", "시럽",
+    "융복합", "임상", "임상시험", "논문", "연구", "연구결과",
+    # 기업/유통 고유명 (제품이 아닌 회사/매장명)
+    "대원제약", "종근당", "유한양행", "동아제약", "한미약품", "광동제약",
+    "일동제약", "녹십자", "보령제약", "JW중외", "대웅제약",
+    "이랜드", "풀무원", "킴스클럽", "올리브영", "다이소",
+    "CJ", "GC녹십자", "HK이노엔",
+    # 기타 노이즈
+    "AI", "김석훈", "박수지", "오한진",
+    # 일반 명사/동사 (제품명 아닌 것)
+    "건강", "이유", "진행", "시작", "방법", "종류", "크림", "필름",
+    "런칭", "백세", "시누이", "미나", "경북대", "홈앤쇼핑",
+    "단백질", "아미노산", "지방", "탄수화물", "칼로리", "혈당",
+    "체중", "체지방", "근육", "면역", "면역력", "피로", "간수치",
+}
+
 
 # ══════════════════════════════════════════════════════════
 #  데이터 로드
@@ -526,9 +568,24 @@ def find_unidentified_candidates(all_titles, root, known_products, active_roots)
                 if cleaned != root and cleaned not in root:
                     word_counter[cleaned] += 1
 
+    # 뿌리 키워드가 포함된 합성어 제외용
+    all_root_words = root_keywords | {root}
+
     candidates = []
-    for word, cnt in word_counter.most_common(50):
+    for word, cnt in word_counter.most_common(100):
         if cnt >= 3 and word not in known_products and word not in root_keywords:
+            if word in CANDIDATE_EXCLUDE:
+                continue
+            # 뿌리 키워드가 포함된 합성어 제외 (예: "위고비마운자로")
+            if any(rk in word for rk in all_root_words):
+                continue
+            # CANDIDATE_EXCLUDE 부분 매칭 (예: "킴스클럽과" ← "킴스클럽" 포함)
+            if any(ex in word for ex in CANDIDATE_EXCLUDE if len(ex) >= 3):
+                continue
+            # 조사 붙은 단어 제외 (예: "킴스클럽과", "알부민을")
+            stripped = re.sub(r"[은는이가을를과와의에서도만로]$", "", word)
+            if stripped != word and (stripped in known_products or stripped in CANDIDATE_EXCLUDE):
+                continue
             # 2글자 한글 명사 or 영문 약어만 후보로
             if re.match(r"^[가-힣]{2,}$", word) or re.match(r"^[A-Za-z0-9]{2,}$", word):
                 candidates.append({"word": word, "count": cnt})
