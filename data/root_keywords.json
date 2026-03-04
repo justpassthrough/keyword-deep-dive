@@ -7,7 +7,7 @@
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
-      "last_active": "2026-03-05",
+      "last_active": "2026-03-04",
       "consecutive_dormant_weeks": 0
     },
     {
@@ -17,7 +17,7 @@
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
-      "last_active": "2026-03-05",
+      "last_active": "2026-03-04",
       "consecutive_dormant_weeks": 0
     },
     {
@@ -43,22 +43,22 @@
     {
       "keyword": "NMN",
       "category": "영양제",
-      "status": "active",
+      "status": "dormant",
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 3
+      "consecutive_dormant_weeks": 4
     },
     {
       "keyword": "밀크씨슬",
       "category": "일반의약품",
-      "status": "active",
+      "status": "dormant",
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 3
+      "consecutive_dormant_weeks": 4
     }
   ]
 }

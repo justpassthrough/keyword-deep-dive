@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-05 00:32",
+  "updated_at": "2026-03-04 23:00",
   "roots": [
     {
       "keyword": "마운자로",
@@ -15,8 +15,8 @@
           "intent": "효능",
           "intent_score": 3,
           "expert_gap": {
-            "total": 28722,
-            "expert": 843,
+            "total": 28753,
+            "expert": 845,
             "ratio": 34.0,
             "label": "전문가 갭 큼"
           },
@@ -24,51 +24,6 @@
           "labels": [
             "★★★",
             "🔥급등"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 다이어트",
-          "volume": 0.1,
-          "change_rate": 20.4,
-          "trend_rate": 1.6,
-          "type": "datalab",
-          "intent": "효능",
-          "intent_score": 3,
-          "expert_gap": {
-            "total": 29703,
-            "expert": 838,
-            "ratio": 35.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 4.7,
-          "labels": [
-            "★★★",
-            "🔥급등"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 비교",
-          "volume": 0.0,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "비교",
-          "intent_score": 4,
-          "expert_gap": {
-            "total": 11259,
-            "expert": 457,
-            "ratio": 24.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 4.4,
-          "labels": [
-            "★★★★"
           ],
           "is_bridge": false,
           "bridge_target": null,
@@ -83,8 +38,8 @@
           "intent": "전문지식",
           "intent_score": 4,
           "expert_gap": {
-            "total": 20942,
-            "expert": 999,
+            "total": 20965,
+            "expert": 1000,
             "ratio": 20.9,
             "label": "전문가 부족"
           },
@@ -105,8 +60,8 @@
           "intent": "전문지식",
           "intent_score": 4,
           "expert_gap": {
-            "total": 11264,
-            "expert": 685,
+            "total": 11276,
+            "expert": 686,
             "ratio": 16.4,
             "label": "전문가 부족"
           },
@@ -119,44 +74,66 @@
           "root": "마운자로"
         },
         {
-          "keyword": "마운자로 품귀",
-          "volume": 0.5,
-          "change_rate": -16.4,
-          "trend_rate": 13.7,
+          "keyword": "마운자로 주의사항",
+          "volume": 0.2,
+          "change_rate": -11.1,
+          "trend_rate": -9.8,
           "type": "datalab",
-          "intent": "공급",
-          "intent_score": 3,
+          "intent": "안전성",
+          "intent_score": 4,
           "expert_gap": {
-            "total": 1419,
-            "expert": 94,
-            "ratio": 14.9,
+            "total": 4183,
+            "expert": 263,
+            "ratio": 15.8,
             "label": "전문가 부족"
           },
-          "pharma_value": 3.3,
+          "pharma_value": 4.4,
           "labels": [
-            "★★★"
+            "★★★★"
           ],
           "is_bridge": false,
           "bridge_target": null,
           "root": "마운자로"
         },
         {
-          "keyword": "마운자로 품절",
-          "volume": 1.5,
-          "change_rate": -14.3,
-          "trend_rate": 21.0,
+          "keyword": "마운자로 부작용",
+          "volume": 17.1,
+          "change_rate": -13.6,
+          "trend_rate": -16.7,
           "type": "datalab",
-          "intent": "공급",
-          "intent_score": 3,
+          "intent": "안전성",
+          "intent_score": 4,
           "expert_gap": {
-            "total": 1488,
-            "expert": 123,
-            "ratio": 12.0,
+            "total": 25406,
+            "expert": 979,
+            "ratio": 25.9,
             "label": "전문가 부족"
           },
-          "pharma_value": 3.3,
+          "pharma_value": 4.4,
           "labels": [
-            "★★★"
+            "★★★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 비교",
+          "volume": 0.0,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "datalab",
+          "intent": "비교",
+          "intent_score": 4,
+          "expert_gap": {
+            "total": 11271,
+            "expert": 458,
+            "ratio": 24.6,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 4.4,
+          "labels": [
+            "★★★★"
           ],
           "is_bridge": false,
           "bridge_target": null,
@@ -171,14 +148,59 @@
           "intent": "효능",
           "intent_score": 3,
           "expert_gap": {
-            "total": 33102,
-            "expert": 1122,
-            "ratio": 29.5,
+            "total": 33127,
+            "expert": 1124,
+            "ratio": 29.4,
             "label": "전문가 부족"
           },
           "pharma_value": 3.3,
           "labels": [
             "★★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 품귀",
+          "volume": 0.5,
+          "change_rate": -16.4,
+          "trend_rate": 13.7,
+          "type": "datalab",
+          "intent": "공급",
+          "intent_score": 3,
+          "expert_gap": {
+            "total": 1422,
+            "expert": 95,
+            "ratio": 14.8,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 3.3,
+          "labels": [
+            "★★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 1일차",
+          "volume": 0.3,
+          "change_rate": 27.4,
+          "trend_rate": -19.4,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 1660,
+            "expert": 38,
+            "ratio": 42.6,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 3.1,
+          "labels": [
+            "★★",
+            "🔥급등"
           ],
           "is_bridge": false,
           "bridge_target": null,
@@ -193,8 +215,8 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 34824,
-            "expert": 1047,
+            "total": 34842,
+            "expert": 1049,
             "ratio": 33.2,
             "label": "전문가 갭 큼"
           },
@@ -205,98 +227,6 @@
           ],
           "is_bridge": true,
           "bridge_target": "마운자로",
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 5일차",
-          "volume": 0.1,
-          "change_rate": -37.5,
-          "trend_rate": 59.2,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 1078,
-            "expert": 12,
-            "ratio": 82.9,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 위고비",
-          "volume": 0.5,
-          "change_rate": -12.5,
-          "trend_rate": -17.5,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 34756,
-            "expert": 1047,
-            "ratio": 33.2,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형"
-          ],
-          "is_bridge": true,
-          "bridge_target": "위고비",
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 내돈내산",
-          "volume": 0.3,
-          "change_rate": -4.0,
-          "trend_rate": -33.2,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 4310,
-            "expert": 119,
-            "ratio": 35.9,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "마운자로"
-        },
-        {
-          "keyword": "내돈내산 마운자로",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 3872,
-            "expert": 119,
-            "ratio": 32.3,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형",
-            "📎롱테일"
-          ],
-          "is_bridge": true,
-          "bridge_target": "마운자로",
-          "blog_count": 3872,
           "root": "마운자로"
         },
         {
@@ -308,7 +238,7 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 10816,
+            "total": 10823,
             "expert": 334,
             "ratio": 32.3,
             "label": "전문가 갭 큼"
@@ -322,7 +252,7 @@
           "root": "마운자로"
         },
         {
-          "keyword": "마운자로 현상",
+          "keyword": "남친 마운자로",
           "volume": null,
           "change_rate": null,
           "trend_rate": null,
@@ -330,60 +260,37 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 7513,
-            "expert": 332,
-            "ratio": 22.6,
-            "label": "전문가 부족"
+            "total": 465,
+            "expert": 9,
+            "ratio": 46.5,
+            "label": "전문가 갭 큼"
           },
-          "pharma_value": 2.2,
+          "pharma_value": 2.6,
           "labels": [
             "★★",
+            "🔗비교형",
             "📎롱테일"
           ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 7513,
+          "is_bridge": true,
+          "bridge_target": "마운자로",
+          "blog_count": 465,
           "root": "마운자로"
         },
         {
-          "keyword": "마운자로 미나",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 64,
-            "expert": 4,
-            "ratio": 12.8,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 64,
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 주사",
+          "keyword": "마운자로 위고비",
           "volume": 0.5,
-          "change_rate": 3.9,
-          "trend_rate": -11.2,
+          "change_rate": -12.5,
+          "trend_rate": -17.5,
           "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 24359,
-            "expert": 895,
-            "ratio": 27.2,
-            "label": "전문가 부족"
+            "total": 34774,
+            "expert": 1049,
+            "ratio": 33.1,
+            "label": "전문가 갭 큼"
           },
-          "pharma_value": 2.2,
+          "pharma_value": 2.6,
           "labels": [
             "★★"
           ],
@@ -392,29 +299,7 @@
           "root": "마운자로"
         },
         {
-          "keyword": "마운자로 5mg",
-          "volume": 2.4,
-          "change_rate": -14.8,
-          "trend_rate": 39.2,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 5928,
-            "expert": 240,
-            "ratio": 24.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "마운자로"
-        },
-        {
-          "keyword": "마운자로 비만약",
+          "keyword": "마운자로 총정리",
           "volume": null,
           "change_rate": null,
           "trend_rate": null,
@@ -422,9 +307,9 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 6096,
-            "expert": 277,
-            "ratio": 21.9,
+            "total": 1994,
+            "expert": 94,
+            "ratio": 21.0,
             "label": "전문가 부족"
           },
           "pharma_value": 2.2,
@@ -434,7 +319,7 @@
           ],
           "is_bridge": false,
           "bridge_target": null,
-          "blog_count": 6096,
+          "blog_count": 1994,
           "root": "마운자로"
         },
         {
@@ -461,13 +346,131 @@
           "bridge_target": "마운자로",
           "blog_count": 781,
           "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 열풍",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 2119,
+            "expert": 124,
+            "ratio": 17.0,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 2119,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 임신",
+          "volume": 1.1,
+          "change_rate": 5.6,
+          "trend_rate": -24.6,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 2779,
+            "expert": 217,
+            "ratio": 12.7,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 현상",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 7518,
+            "expert": 332,
+            "ratio": 22.6,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 7518,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 보험",
+          "volume": 0.6,
+          "change_rate": -17.3,
+          "trend_rate": -20.4,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 7339,
+            "expert": 373,
+            "ratio": 19.6,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "마운자로"
+        },
+        {
+          "keyword": "마운자로 5mg",
+          "volume": 2.4,
+          "change_rate": -14.8,
+          "trend_rate": 39.2,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 5939,
+            "expert": 242,
+            "ratio": 24.4,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "마운자로"
         }
       ],
       "rising": [
         "마운자로 감량",
-        "마운자로 다이어트"
+        "마운자로 1일차"
       ],
       "news_events": [
+        {
+          "title": "'비만병'으로 인식 전환···치료제 급여화 앞당길까",
+          "trigger": "급여"
+        },
         {
           "title": "마운자로 부작용 최소화를 위해 제대로 된 전문의 진료 뒷받침돼야 해",
           "trigger": "부작용"
@@ -483,10 +486,6 @@
         {
           "title": "위고비·마운자로 보험 적용, ‘설탕세’로 충당하면 안될까?",
           "trigger": "보험"
-        },
-        {
-          "title": "&quot;비만, '예방'을 넘어 '치료'로&quot;‥단계적 보험 적용+설탕세 제안",
-          "trigger": "보험"
         }
       ]
     },
@@ -495,51 +494,6 @@
       "status": "active",
       "category": "영양제",
       "compounds": [
-        {
-          "keyword": "알부민 효과",
-          "volume": 0.9,
-          "change_rate": -10.4,
-          "trend_rate": -36.0,
-          "type": "datalab",
-          "intent": "효능",
-          "intent_score": 3,
-          "expert_gap": {
-            "total": 66326,
-            "expert": 1529,
-            "ratio": 43.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 3.9,
-          "labels": [
-            "★★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "알부민"
-        },
-        {
-          "keyword": "알부민 앰플",
-          "volume": 0.1,
-          "change_rate": 275.0,
-          "trend_rate": 56.9,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 2738,
-            "expert": 120,
-            "ratio": 22.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 3.1,
-          "labels": [
-            "★★",
-            "🔥급등"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "알부민"
-        },
         {
           "keyword": "명작 알부민",
           "volume": 0.0,
@@ -565,7 +519,76 @@
           "root": "알부민"
         },
         {
-          "keyword": "알부민 진행",
+          "keyword": "뉴트리원 알부민",
+          "volume": 0.1,
+          "change_rate": 29.2,
+          "trend_rate": -61.2,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 981,
+            "expert": 16,
+            "ratio": 57.7,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 3.1,
+          "labels": [
+            "★★",
+            "🔥급등",
+            "🔗비교형"
+          ],
+          "is_bridge": true,
+          "bridge_target": "알부민",
+          "root": "알부민"
+        },
+        {
+          "keyword": "알부민 앰플",
+          "volume": 0.1,
+          "change_rate": 275.0,
+          "trend_rate": 56.9,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 2734,
+            "expert": 120,
+            "ratio": 22.6,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 3.1,
+          "labels": [
+            "★★",
+            "🔥급등"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "알부민"
+        },
+        {
+          "keyword": "알부민 효능",
+          "volume": 33.7,
+          "change_rate": -3.2,
+          "trend_rate": -27.0,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 28029,
+            "expert": 806,
+            "ratio": 34.7,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "알부민"
+        },
+        {
+          "keyword": "메모리365 알부민",
           "volume": null,
           "change_rate": null,
           "trend_rate": null,
@@ -573,46 +596,46 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 33226,
-            "expert": 645,
-            "ratio": 51.4,
+            "total": 608,
+            "expert": 4,
+            "ratio": 121.6,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
           "labels": [
             "★★",
+            "🔗비교형",
             "📎롱테일"
           ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 33226,
+          "is_bridge": true,
+          "bridge_target": "알부민",
+          "blog_count": 608,
           "root": "알부민"
         },
         {
-          "keyword": "백세 알부민",
-          "volume": 1.0,
-          "change_rate": -0.5,
-          "trend_rate": -31.8,
+          "keyword": "알부민 마시는",
+          "volume": 0.0,
+          "change_rate": -32.3,
+          "trend_rate": null,
           "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 825,
-            "expert": 19,
-            "ratio": 41.2,
+            "total": 18248,
+            "expert": 438,
+            "ratio": 41.6,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
           "labels": [
-            "★★",
-            "🔗비교형"
+            "★★"
           ],
-          "is_bridge": true,
-          "bridge_target": "알부민",
+          "is_bridge": false,
+          "bridge_target": null,
           "root": "알부민"
         },
         {
-          "keyword": "비오진 알부민",
+          "keyword": "알부민 뉴트리원",
           "volume": 0.0,
           "change_rate": null,
           "trend_rate": null,
@@ -620,18 +643,61 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 45,
-            "expert": 0,
-            "ratio": 45.0,
+            "total": 980,
+            "expert": 16,
+            "ratio": 57.6,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
           "labels": [
-            "★★",
-            "🔗비교형"
+            "★★"
           ],
-          "is_bridge": true,
-          "bridge_target": "알부민",
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "알부민"
+        },
+        {
+          "keyword": "알부민 백세",
+          "volume": 0.0,
+          "change_rate": -25.0,
+          "trend_rate": null,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 818,
+            "expert": 19,
+            "ratio": 40.9,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "알부민"
+        },
+        {
+          "keyword": "알부민 967",
+          "volume": 0.2,
+          "change_rate": 6.8,
+          "trend_rate": -30.9,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 472,
+            "expert": 11,
+            "ratio": 39.3,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
           "root": "알부민"
         },
         {
@@ -643,9 +709,9 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 935,
+            "total": 939,
             "expert": 12,
-            "ratio": 71.9,
+            "ratio": 72.2,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
@@ -681,52 +747,26 @@
           "root": "알부민"
         },
         {
-          "keyword": "메모리365 알부민",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
+          "keyword": "백세 알부민",
+          "volume": 1.0,
+          "change_rate": -0.5,
+          "trend_rate": -31.8,
+          "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 608,
-            "expert": 4,
-            "ratio": 121.6,
+            "total": 825,
+            "expert": 19,
+            "ratio": 41.2,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
           "labels": [
             "★★",
-            "🔗비교형",
-            "📎롱테일"
+            "🔗비교형"
           ],
           "is_bridge": true,
           "bridge_target": "알부민",
-          "blog_count": 608,
-          "root": "알부민"
-        },
-        {
-          "keyword": "알부민 전인화와",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 151,
-            "expert": 1,
-            "ratio": 75.5,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 151,
           "root": "알부민"
         },
         {
@@ -753,6 +793,73 @@
           "root": "알부민"
         },
         {
+          "keyword": "알부민 8899",
+          "volume": 0.0,
+          "change_rate": 0.0,
+          "trend_rate": -40.4,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 388,
+            "expert": 5,
+            "ratio": 64.7,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "알부민"
+        },
+        {
+          "keyword": "알부민 골드",
+          "volume": 0.6,
+          "change_rate": -7.5,
+          "trend_rate": -34.3,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 9167,
+            "expert": 288,
+            "ratio": 31.7,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "알부민"
+        },
+        {
+          "keyword": "마시는 알부민",
+          "volume": 2.0,
+          "change_rate": 4.4,
+          "trend_rate": -21.7,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 18392,
+            "expert": 438,
+            "ratio": 41.9,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★",
+            "🔗비교형"
+          ],
+          "is_bridge": true,
+          "bridge_target": "알부민",
+          "root": "알부민"
+        },
+        {
           "keyword": "알부민 고함량",
           "volume": 0.0,
           "change_rate": 25.0,
@@ -761,7 +868,7 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 8347,
+            "total": 8348,
             "expert": 370,
             "ratio": 22.5,
             "label": "전문가 부족"
@@ -784,7 +891,7 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 5314,
+            "total": 5313,
             "expert": 162,
             "ratio": 32.6,
             "label": "전문가 갭 큼"
@@ -798,84 +905,17 @@
           "root": "알부민"
         },
         {
-          "keyword": "알부민 골드",
-          "volume": 0.6,
-          "change_rate": -7.5,
-          "trend_rate": -34.3,
+          "keyword": "알부민 수치",
+          "volume": 0.8,
+          "change_rate": -23.9,
+          "trend_rate": -15.3,
           "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 9163,
-            "expert": 288,
-            "ratio": 31.7,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "알부민"
-        },
-        {
-          "keyword": "알부민 967",
-          "volume": 0.2,
-          "change_rate": 6.8,
-          "trend_rate": -30.9,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 473,
-            "expert": 11,
-            "ratio": 39.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "알부민"
-        },
-        {
-          "keyword": "마시는 알부민",
-          "volume": 2.0,
-          "change_rate": 4.4,
-          "trend_rate": -21.7,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 18399,
-            "expert": 438,
-            "ratio": 41.9,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형"
-          ],
-          "is_bridge": true,
-          "bridge_target": "알부민",
-          "root": "알부민"
-        },
-        {
-          "keyword": "알부민 효능",
-          "volume": 33.7,
-          "change_rate": -3.2,
-          "trend_rate": -27.0,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 28029,
-            "expert": 805,
-            "ratio": 34.8,
+            "total": 52794,
+            "expert": 1241,
+            "ratio": 42.5,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
@@ -895,55 +935,9 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 101424,
-            "expert": 1746,
-            "ratio": 58.1,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "알부민"
-        },
-        {
-          "keyword": "알부민 배우",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 2078,
-            "expert": 26,
-            "ratio": 77.0,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 2078,
-          "root": "알부민"
-        },
-        {
-          "keyword": "알부민 백세",
-          "volume": 0.0,
-          "change_rate": -25.0,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 818,
-            "expert": 19,
-            "ratio": 40.9,
+            "total": 101421,
+            "expert": 1747,
+            "ratio": 58.0,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
@@ -956,500 +950,12 @@
         }
       ],
       "rising": [
-        "알부민 앰플",
         "명작 알부민",
-        "알부민 고함량"
+        "뉴트리원 알부민",
+        "알부민 고함량",
+        "알부민 앰플"
       ],
       "news_events": []
-    },
-    {
-      "keyword": "위고비",
-      "status": "active",
-      "category": "비만치료제",
-      "compounds": [
-        {
-          "keyword": "위고비 부작용",
-          "volume": 14.2,
-          "change_rate": -15.3,
-          "trend_rate": -17.9,
-          "type": "datalab",
-          "intent": "안전성",
-          "intent_score": 4,
-          "expert_gap": {
-            "total": 45507,
-            "expert": 1842,
-            "ratio": 24.7,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 4.4,
-          "labels": [
-            "★★★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 다이어트",
-          "volume": 0.2,
-          "change_rate": -16.0,
-          "trend_rate": -11.6,
-          "type": "datalab",
-          "intent": "효능",
-          "intent_score": 3,
-          "expert_gap": {
-            "total": 59399,
-            "expert": 1580,
-            "ratio": 37.6,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 3.9,
-          "labels": [
-            "★★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 효과",
-          "volume": 4.8,
-          "change_rate": -17.9,
-          "trend_rate": -14.1,
-          "type": "datalab",
-          "intent": "효능",
-          "intent_score": 3,
-          "expert_gap": {
-            "total": 66536,
-            "expert": 2134,
-            "ratio": 31.2,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 3.9,
-          "labels": [
-            "★★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 감량",
-          "volume": 0.1,
-          "change_rate": -11.1,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "효능",
-          "intent_score": 3,
-          "expert_gap": {
-            "total": 54595,
-            "expert": 1499,
-            "ratio": 36.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 3.9,
-          "labels": [
-            "★★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 마운자로",
-          "volume": 13.6,
-          "change_rate": -13.0,
-          "trend_rate": -10.9,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 34825,
-            "expert": 1047,
-            "ratio": 33.2,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형"
-          ],
-          "is_bridge": true,
-          "bridge_target": "마운자로",
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 비만",
-          "volume": 0.1,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 70957,
-            "expert": 1991,
-            "ratio": 35.6,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 노보",
-          "volume": 0.1,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 25900,
-            "expert": 641,
-            "ratio": 40.3,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "보는 위고비",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 14398,
-            "expert": 439,
-            "ratio": 32.7,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형",
-            "📎롱테일"
-          ],
-          "is_bridge": true,
-          "bridge_target": "위고비",
-          "blog_count": 14398,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 손절",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 1368,
-            "expert": 19,
-            "ratio": 68.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 1368,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 70kg",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 854,
-            "expert": 17,
-            "ratio": 47.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 854,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 요요",
-          "volume": 0.9,
-          "change_rate": -10.9,
-          "trend_rate": -7.3,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 19167,
-            "expert": 454,
-            "ratio": 42.1,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 비만치료제",
-          "volume": 0.6,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 51673,
-            "expert": 1563,
-            "ratio": 33.0,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "위고비"
-        },
-        {
-          "keyword": "박수지 위고비",
-          "volume": 0.1,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 64,
-            "expert": 4,
-            "ratio": 12.8,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "🔗비교형"
-          ],
-          "is_bridge": true,
-          "bridge_target": "위고비",
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 가임기임신",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 159,
-            "expert": 9,
-            "ratio": 15.9,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 159,
-          "root": "위고비"
-        },
-        {
-          "keyword": "먹는 위고비",
-          "volume": 7.2,
-          "change_rate": -32.2,
-          "trend_rate": 6.1,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 25148,
-            "expert": 879,
-            "ratio": 28.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "🔗비교형"
-          ],
-          "is_bridge": true,
-          "bridge_target": "위고비",
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 미나",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 111,
-            "expert": 7,
-            "ratio": 13.9,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 111,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 2배",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 4918,
-            "expert": 280,
-            "ratio": 17.5,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 4918,
-          "root": "위고비"
-        },
-        {
-          "keyword": "시누이 위고비",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 80,
-            "expert": 7,
-            "ratio": 10.0,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "🔗비교형",
-            "📎롱테일"
-          ],
-          "is_bridge": true,
-          "bridge_target": "위고비",
-          "blog_count": 80,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 박수지",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 64,
-            "expert": 4,
-            "ratio": 12.8,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 64,
-          "root": "위고비"
-        },
-        {
-          "keyword": "위고비 비만약",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 13704,
-            "expert": 556,
-            "ratio": 24.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 13704,
-          "root": "위고비"
-        }
-      ],
-      "rising": [],
-      "news_events": [
-        {
-          "title": "비만도 유전무죄? &quot;비만약 선택적 급여화해야&quot; 비만학회 주장, 왜",
-          "trigger": "급여"
-        },
-        {
-          "title": "&quot;고도비만·취약계층부터 비만약 급여화&quot;…치료중심 정책전환",
-          "trigger": "급여"
-        },
-        {
-          "title": "위고비·마운자로 보험 적용, ‘설탕세’로 충당하면 안될까?",
-          "trigger": "보험"
-        },
-        {
-          "title": "&quot;비만, '예방'을 넘어 '치료'로&quot;‥단계적 보험 적용+설탕세 제안",
-          "trigger": "보험"
-        }
-      ]
     },
     {
       "keyword": "NMN",
@@ -1457,7 +963,7 @@
       "category": "영양제",
       "compounds": [
         {
-          "keyword": "NMN 2종",
+          "keyword": "솜솜벨 NMN",
           "volume": null,
           "change_rate": null,
           "trend_rate": null,
@@ -1465,43 +971,20 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 687,
-            "expert": 12,
-            "ratio": 52.8,
+            "total": 78,
+            "expert": 0,
+            "ratio": 78.0,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
           "labels": [
             "★★",
+            "🔗비교형",
             "📎롱테일"
           ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 687,
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 스킨",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 4698,
-            "expert": 50,
-            "ratio": 92.1,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 4698,
+          "is_bridge": true,
+          "bridge_target": "NMN",
+          "blog_count": 78,
           "root": "NMN"
         },
         {
@@ -1528,6 +1011,54 @@
           "root": "NMN"
         },
         {
+          "keyword": "NMN 맥스",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 664,
+            "expert": 20,
+            "ratio": 31.6,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 664,
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 2종",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 687,
+            "expert": 12,
+            "ratio": 52.8,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 687,
+          "root": "NMN"
+        },
+        {
           "keyword": "NMN 관리",
           "volume": null,
           "change_rate": null,
@@ -1536,7 +1067,7 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 17857,
+            "total": 17862,
             "expert": 574,
             "ratio": 31.1,
             "label": "전문가 갭 큼"
@@ -1548,7 +1079,31 @@
           ],
           "is_bridge": false,
           "bridge_target": null,
-          "blog_count": 17857,
+          "blog_count": 17862,
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 나노",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 779,
+            "expert": 21,
+            "ratio": 35.4,
+            "label": "전문가 갭 큼"
+          },
+          "pharma_value": 2.6,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 779,
           "root": "NMN"
         },
         {
@@ -1576,41 +1131,17 @@
           "root": "NMN"
         },
         {
-          "keyword": "NMN 트리플",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 502,
-            "expert": 15,
-            "ratio": 31.4,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 502,
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 일본",
-          "volume": 0.6,
-          "change_rate": 2.9,
-          "trend_rate": -39.4,
+          "keyword": "NMN 고순도",
+          "volume": 1.0,
+          "change_rate": 5.8,
+          "trend_rate": 23.9,
           "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 2892,
-            "expert": 91,
-            "ratio": 31.4,
+            "total": 2824,
+            "expert": 92,
+            "ratio": 30.4,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
@@ -1622,128 +1153,6 @@
           "root": "NMN"
         },
         {
-          "keyword": "리뉴잉 NMN",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 60,
-            "expert": 0,
-            "ratio": 60.0,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형",
-            "📎롱테일"
-          ],
-          "is_bridge": true,
-          "bridge_target": "NMN",
-          "blog_count": 60,
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 나노",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 780,
-            "expert": 21,
-            "ratio": 35.5,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 780,
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 큐티시아",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 50,
-            "expert": 0,
-            "ratio": 50.0,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 50,
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 맥스",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 663,
-            "expert": 20,
-            "ratio": 31.6,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 663,
-          "root": "NMN"
-        },
-        {
-          "keyword": "솜솜벨 NMN",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 79,
-            "expert": 0,
-            "ratio": 79.0,
-            "label": "전문가 갭 큼"
-          },
-          "pharma_value": 2.6,
-          "labels": [
-            "★★",
-            "🔗비교형",
-            "📎롱테일"
-          ],
-          "is_bridge": true,
-          "bridge_target": "NMN",
-          "blog_count": 79,
-          "root": "NMN"
-        },
-        {
           "keyword": "NMN 앰플",
           "volume": 0.9,
           "change_rate": -42.3,
@@ -1752,12 +1161,82 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 4089,
+            "total": 4087,
             "expert": 28,
-            "ratio": 141.0,
+            "ratio": 140.9,
             "label": "전문가 갭 큼"
           },
           "pharma_value": 2.6,
+          "labels": [
+            "★★"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 체결",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 166,
+            "expert": 9,
+            "ratio": 16.6,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 166,
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 출시",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 2872,
+            "expert": 118,
+            "ratio": 24.1,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 2872,
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 영양제",
+          "volume": 37.6,
+          "change_rate": -19.9,
+          "trend_rate": -6.2,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 12542,
+            "expert": 752,
+            "ratio": 16.7,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
           "labels": [
             "★★"
           ],
@@ -1790,17 +1269,40 @@
           "root": "NMN"
         },
         {
-          "keyword": "NMN 영양제",
-          "volume": 37.6,
-          "change_rate": -19.9,
-          "trend_rate": -6.2,
+          "keyword": "리포좀 NMN",
+          "volume": 6.9,
+          "change_rate": -71.6,
+          "trend_rate": 34.0,
           "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 12538,
-            "expert": 752,
-            "ratio": 16.7,
+            "total": 2811,
+            "expert": 118,
+            "ratio": 23.6,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★",
+            "🔗비교형"
+          ],
+          "is_bridge": true,
+          "bridge_target": "NMN",
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 리포좀",
+          "volume": 1.0,
+          "change_rate": -50.0,
+          "trend_rate": 12.6,
+          "type": "datalab",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 2805,
+            "expert": 118,
+            "ratio": 23.6,
             "label": "전문가 부족"
           },
           "pharma_value": 2.2,
@@ -1813,16 +1315,16 @@
         },
         {
           "keyword": "NMN 효능",
-          "volume": 25.9,
+          "volume": 34.3,
           "change_rate": -35.0,
           "trend_rate": 7.7,
           "type": "datalab",
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 8655,
+            "total": 8657,
             "expert": 451,
-            "ratio": 19.1,
+            "ratio": 19.2,
             "label": "전문가 부족"
           },
           "pharma_value": 2.2,
@@ -1831,6 +1333,30 @@
           ],
           "is_bridge": false,
           "bridge_target": null,
+          "root": "NMN"
+        },
+        {
+          "keyword": "NMN 선택",
+          "volume": null,
+          "change_rate": null,
+          "trend_rate": null,
+          "type": "longtail",
+          "intent": "일반",
+          "intent_score": 2,
+          "expert_gap": {
+            "total": 9995,
+            "expert": 403,
+            "ratio": 24.7,
+            "label": "전문가 부족"
+          },
+          "pharma_value": 2.2,
+          "labels": [
+            "★★",
+            "📎롱테일"
+          ],
+          "is_bridge": false,
+          "bridge_target": null,
+          "blog_count": 9995,
           "root": "NMN"
         },
         {
@@ -1855,75 +1381,6 @@
           "is_bridge": false,
           "bridge_target": null,
           "blog_count": 291,
-          "root": "NMN"
-        },
-        {
-          "keyword": "리포좀 NMN",
-          "volume": 6.9,
-          "change_rate": -71.6,
-          "trend_rate": 34.0,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 2810,
-            "expert": 118,
-            "ratio": 23.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "🔗비교형"
-          ],
-          "is_bridge": true,
-          "bridge_target": "NMN",
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 선택",
-          "volume": null,
-          "change_rate": null,
-          "trend_rate": null,
-          "type": "longtail",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 9999,
-            "expert": 403,
-            "ratio": 24.8,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★",
-            "📎롱테일"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "blog_count": 9999,
-          "root": "NMN"
-        },
-        {
-          "keyword": "NMN 리포좀",
-          "volume": 1.3,
-          "change_rate": -50.0,
-          "trend_rate": 12.6,
-          "type": "datalab",
-          "intent": "일반",
-          "intent_score": 2,
-          "expert_gap": {
-            "total": 2804,
-            "expert": 118,
-            "ratio": 23.6,
-            "label": "전문가 부족"
-          },
-          "pharma_value": 2.2,
-          "labels": [
-            "★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
           "root": "NMN"
         }
       ],
@@ -1953,28 +1410,6 @@
       "category": "일반의약품",
       "compounds": [
         {
-          "keyword": "밀크씨슬 부작용",
-          "volume": 2.7,
-          "change_rate": -5.3,
-          "trend_rate": -17.7,
-          "type": "datalab",
-          "intent": "안전성",
-          "intent_score": 4,
-          "expert_gap": {
-            "total": 22205,
-            "expert": 2424,
-            "ratio": 9.2,
-            "label": "보통"
-          },
-          "pharma_value": 4.0,
-          "labels": [
-            "★★★★"
-          ],
-          "is_bridge": false,
-          "bridge_target": null,
-          "root": "밀크씨슬"
-        },
-        {
           "keyword": "밀크씨슬 건강",
           "volume": null,
           "change_rate": null,
@@ -1983,8 +1418,8 @@
           "intent": "일반",
           "intent_score": 2,
           "expert_gap": {
-            "total": 155986,
-            "expert": 10767,
+            "total": 155997,
+            "expert": 10768,
             "ratio": 14.5,
             "label": "전문가 부족"
           },
@@ -1995,7 +1430,7 @@
           ],
           "is_bridge": false,
           "bridge_target": null,
-          "blog_count": 155986,
+          "blog_count": 155997,
           "root": "밀크씨슬"
         }
       ],
@@ -2034,8 +1469,8 @@
       "intent": "효능",
       "intent_score": 3,
       "expert_gap": {
-        "total": 28722,
-        "expert": 843,
+        "total": 28753,
+        "expert": 845,
         "ratio": 34.0,
         "label": "전문가 갭 큼"
       },
@@ -2049,40 +1484,39 @@
       "root": "마운자로"
     },
     {
-      "keyword": "마운자로 다이어트",
-      "volume": 0.1,
-      "change_rate": 20.4,
-      "trend_rate": 1.6,
+      "keyword": "마운자로 처방",
+      "volume": 8.2,
+      "change_rate": 2.6,
+      "trend_rate": -25.7,
       "type": "datalab",
-      "intent": "효능",
-      "intent_score": 3,
+      "intent": "전문지식",
+      "intent_score": 4,
       "expert_gap": {
-        "total": 29703,
-        "expert": 838,
-        "ratio": 35.4,
-        "label": "전문가 갭 큼"
+        "total": 20965,
+        "expert": 1000,
+        "ratio": 20.9,
+        "label": "전문가 부족"
       },
-      "pharma_value": 4.7,
+      "pharma_value": 4.4,
       "labels": [
-        "★★★",
-        "🔥급등"
+        "★★★★"
       ],
       "is_bridge": false,
       "bridge_target": null,
       "root": "마운자로"
     },
     {
-      "keyword": "마운자로 비교",
-      "volume": 0.0,
-      "change_rate": null,
-      "trend_rate": null,
+      "keyword": "마운자로 처방병원",
+      "volume": 2.3,
+      "change_rate": -7.5,
+      "trend_rate": -23.0,
       "type": "datalab",
-      "intent": "비교",
+      "intent": "전문지식",
       "intent_score": 4,
       "expert_gap": {
-        "total": 11259,
-        "expert": 457,
-        "ratio": 24.6,
+        "total": 11276,
+        "expert": 686,
+        "ratio": 16.4,
         "label": "전문가 부족"
       },
       "pharma_value": 4.4,
@@ -2096,12 +1530,12 @@
   ],
   "unidentified_candidates": [
     {
-      "word": "노보",
-      "count": 14,
+      "word": "난백",
+      "count": 13,
       "found_from": [
-        "위고비"
+        "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "시장",
@@ -2110,15 +1544,7 @@
         "마운자로",
         "밀크씨슬"
       ],
-      "first_seen": "2026-03-05"
-    },
-    {
-      "word": "난백",
-      "count": 9,
-      "found_from": [
-        "알부민"
-      ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "용도특허",
@@ -2126,7 +1552,7 @@
       "found_from": [
         "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "출원",
@@ -2134,7 +1560,7 @@
       "found_from": [
         "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "개발",
@@ -2142,7 +1568,7 @@
       "found_from": [
         "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "비오진",
@@ -2150,7 +1576,7 @@
       "found_from": [
         "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "에버콜라겐랩",
@@ -2158,25 +1584,39 @@
       "found_from": [
         "NMN"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
-      "word": "건보",
+      "word": "임신",
       "count": 8,
       "found_from": [
-        "마운자로",
-        "위고비"
+        "마운자로"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
-      "word": "요요",
+      "word": "위한",
       "count": 8,
       "found_from": [
-        "마운자로",
-        "위고비"
+        "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
+    },
+    {
+      "word": "액상",
+      "count": 8,
+      "found_from": [
+        "알부민"
+      ],
+      "first_seen": "2026-03-04"
+    },
+    {
+      "word": "인텐시브",
+      "count": 8,
+      "found_from": [
+        "알부민"
+      ],
+      "first_seen": "2026-03-04"
     },
     {
       "word": "CU01",
@@ -2184,7 +1624,7 @@
       "found_from": [
         "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
       "word": "신규",
@@ -2192,118 +1632,119 @@
       "found_from": [
         "알부민"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
-      "word": "닥터제이페이스",
+      "word": "동안피부",
       "count": 8,
       "found_from": [
-        "알부민"
+        "NMN"
       ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     },
     {
-      "word": "생체접착제",
+      "word": "비결",
       "count": 8,
       "found_from": [
-        "알부민"
+        "NMN"
       ],
-      "first_seen": "2026-03-05"
-    },
-    {
-      "word": "노디스크",
-      "count": 8,
-      "found_from": [
-        "위고비"
-      ],
-      "first_seen": "2026-03-05"
+      "first_seen": "2026-03-04"
     }
   ],
   "changes": {
-    "prev_time": "2026-03-05 00:30",
+    "prev_time": "2026-03-05 00:32",
     "new_compounds": [
       {
-        "keyword": "알부민 효능",
+        "keyword": "마운자로 주의사항",
+        "root": "마운자로",
+        "pharma_value": 4.4
+      },
+      {
+        "keyword": "마운자로 부작용",
+        "root": "마운자로",
+        "pharma_value": 4.4
+      },
+      {
+        "keyword": "마운자로 1일차",
+        "root": "마운자로",
+        "pharma_value": 3.1
+      },
+      {
+        "keyword": "뉴트리원 알부민",
+        "root": "알부민",
+        "pharma_value": 3.1
+      },
+      {
+        "keyword": "남친 마운자로",
+        "root": "마운자로",
+        "pharma_value": 2.6
+      },
+      {
+        "keyword": "알부민 마시는",
         "root": "알부민",
         "pharma_value": 2.6
       },
       {
-        "keyword": "마운자로 현상",
-        "root": "마운자로",
-        "pharma_value": 2.2
+        "keyword": "알부민 뉴트리원",
+        "root": "알부민",
+        "pharma_value": 2.6
       },
       {
-        "keyword": "마운자로 5mg",
-        "root": "마운자로",
-        "pharma_value": 2.2
+        "keyword": "알부민 8899",
+        "root": "알부민",
+        "pharma_value": 2.6
       },
       {
-        "keyword": "with 마운자로",
-        "root": "마운자로",
-        "pharma_value": 2.2
+        "keyword": "알부민 수치",
+        "root": "알부민",
+        "pharma_value": 2.6
       },
       {
-        "keyword": "먹는 위고비",
-        "root": "위고비",
-        "pharma_value": 2.2
-      },
-      {
-        "keyword": "위고비 미나",
-        "root": "위고비",
-        "pharma_value": 2.2
-      },
-      {
-        "keyword": "위고비 2배",
-        "root": "위고비",
-        "pharma_value": 2.2
-      },
-      {
-        "keyword": "NMN 영양제",
+        "keyword": "NMN 고순도",
         "root": "NMN",
-        "pharma_value": 2.2
-      },
-      {
-        "keyword": "NMN 베트남",
-        "root": "NMN",
-        "pharma_value": 2.2
+        "pharma_value": 2.6
       }
     ],
     "gone_compounds": [
       {
-        "keyword": "마운자로 맞고",
+        "keyword": "마운자로 다이어트",
         "root": "마운자로"
       },
       {
-        "keyword": "마운자로 25mg",
+        "keyword": "마운자로 품절",
         "root": "마운자로"
       },
       {
-        "keyword": "마운자로 열풍",
+        "keyword": "마운자로 5일차",
         "root": "마운자로"
       },
       {
-        "keyword": "알부민 마시는",
+        "keyword": "마운자로 내돈내산",
+        "root": "마운자로"
+      },
+      {
+        "keyword": "내돈내산 마운자로",
+        "root": "마운자로"
+      },
+      {
+        "keyword": "마운자로 미나",
+        "root": "마운자로"
+      },
+      {
+        "keyword": "마운자로 주사",
+        "root": "마운자로"
+      },
+      {
+        "keyword": "마운자로 비만약",
+        "root": "마운자로"
+      },
+      {
+        "keyword": "알부민 효과",
         "root": "알부민"
       },
       {
-        "keyword": "위고비 먹는",
-        "root": "위고비"
-      },
-      {
-        "keyword": "위고비 시누이",
-        "root": "위고비"
-      },
-      {
-        "keyword": "위고비 환자",
-        "root": "위고비"
-      },
-      {
-        "keyword": "NMN 체결",
-        "root": "NMN"
-      },
-      {
-        "keyword": "NMN 출시",
-        "root": "NMN"
+        "keyword": "알부민 진행",
+        "root": "알부민"
       }
     ],
     "rising_up": [],
