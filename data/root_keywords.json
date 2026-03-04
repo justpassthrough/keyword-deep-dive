@@ -23,12 +23,12 @@
     {
       "keyword": "위고비",
       "category": "비만치료제",
-      "status": "active",
+      "status": "dormant",
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 3
+      "consecutive_dormant_weeks": 4
     },
     {
       "keyword": "오메가3",
@@ -47,8 +47,8 @@
       "source": "manual",
       "parent": null,
       "added": "2026-03-04",
-      "last_active": "2026-03-03",
-      "consecutive_dormant_weeks": 1
+      "last_active": "2026-03-04",
+      "consecutive_dormant_weeks": 0
     },
     {
       "keyword": "밀크씨슬",
@@ -58,7 +58,7 @@
       "parent": null,
       "added": "2026-03-04",
       "last_active": "2026-03-04",
-      "consecutive_dormant_weeks": 0
+      "consecutive_dormant_weeks": 1
     }
   ]
 }
