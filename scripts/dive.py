@@ -598,7 +598,10 @@ def find_unidentified_candidates(all_titles, root, known_products, active_roots)
 # ══════════════════════════════════════════════════════════
 
 def update_lifecycle(root_data, results_by_root):
-    """뿌리 생명주기 상태 업데이트."""
+    """뿌리 생명주기 상태 업데이트.
+    dormant 판단은 날짜 기반: last_active로부터 경과 일수로 계산.
+    (하루 여러 번 실행해도 중복 카운트 방지)
+    """
     today = datetime.now().strftime("%Y-%m-%d")
 
     for root_info in root_data["roots"]:
@@ -622,8 +625,16 @@ def update_lifecycle(root_data, results_by_root):
                 root_info["last_active"] = today
                 root_info["consecutive_dormant_weeks"] = 0
             else:
-                root_info["consecutive_dormant_weeks"] += 1
-                if root_info["consecutive_dormant_weeks"] >= 4:
+                # 날짜 기반 경과 주수 계산 (실행 횟수와 무관)
+                last_active = root_info.get("last_active", today)
+                try:
+                    days_since = (datetime.strptime(today, "%Y-%m-%d")
+                                  - datetime.strptime(last_active, "%Y-%m-%d")).days
+                except ValueError:
+                    days_since = 0
+                weeks_dormant = days_since // 7
+                root_info["consecutive_dormant_weeks"] = weeks_dormant
+                if weeks_dormant >= 4:
                     root_info["status"] = "dormant"
 
         elif root_info["status"] == "dormant":
