@@ -1,7 +1,7 @@
-name: Weekly Root Discovery
+name: Root Discovery (Every 3 Days)
 on:
   schedule:
-    - cron: '0 23 * * 1'   # 월요일 08:00 KST
+    - cron: '0 23 */3 * *'   # 3일마다 08:00 KST
   workflow_dispatch: {}
 permissions:
   contents: write
