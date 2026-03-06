@@ -56,9 +56,7 @@ CSS = """
   .negative { color: #3fb950; }
   .trend-sub { color: #8b949e; font-size: 0.8em; }
 
-  .watch-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
-  .watch-item { padding: 6px 0; }
-  .watch-kw { color: #d2a8ff; font-weight: 500; }
+  .watch-badge { background: #d2a8ff20; color: #d2a8ff; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: normal; margin-left: 6px; }
 
   .unid-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
   .unid-desc { color: #8b949e; font-size: 0.85em; margin-bottom: 10px; }
@@ -222,19 +220,21 @@ def build_html(data):
             '</div></div>\n'
         )
 
-    # ── 뿌리별 탭 버튼 ──
+    # ── 뿌리별 탭 버튼 (active + watch 통합) ──
+    all_display_roots = active_roots + watch_roots
     tab_buttons = ""
-    for i, r in enumerate(active_roots):
+    for i, r in enumerate(all_display_roots):
         active_cls = " active" if i == 0 else ""
         kw = r["keyword"]
+        watch_tag = " 👀" if r.get("status") == "watch" else ""
         tab_buttons += (
             f'<button class="tab-btn{active_cls}" '
-            f"onclick=\"showTab('{kw}')\">{escape(kw)}</button>\n"
+            f"onclick=\"showTab('{kw}')\">{escape(kw)}{watch_tag}</button>\n"
         )
 
-    # ── 뿌리별 탭 내용 ──
+    # ── 뿌리별 탭 내용 (active + watch 통합) ──
     tab_contents = ""
-    for i, r in enumerate(active_roots):
+    for i, r in enumerate(all_display_roots):
         display = "block" if i == 0 else "none"
         kw = r["keyword"]
 
@@ -296,10 +296,13 @@ def build_html(data):
             if news_html else ""
         )
 
+        status_badge = (' <span class="watch-badge">👀 관찰중</span>'
+                        if r.get("status") == "watch" else "")
         tab_contents += (
             f'<div class="tab-content" id="tab-{kw}" style="display:{display}">'
             f'<div class="section-header">{escape(kw)} '
-            f'<span class="category-badge">{escape(r.get("category", ""))}</span></div>'
+            f'<span class="category-badge">{escape(r.get("category", ""))}</span>'
+            f'{status_badge}</div>'
             f'{rising_block}'
             f'{news_block}'
             '<table class="kw-table"><thead><tr>'
@@ -309,22 +312,8 @@ def build_html(data):
             '</div>\n'
         )
 
-    # ── Watch 섹션 ──
+    # ── Watch 섹션 (탭에 통합되었으므로 별도 표시 불필요) ──
     watch_html = ""
-    if watch_roots:
-        watch_items = ""
-        for r in watch_roots:
-            cnt = len(r.get("compounds", []))
-            watch_items += (
-                f'<div class="watch-item">'
-                f'<span class="watch-kw">{escape(r["keyword"])}</span> — 복합키워드 {cnt}개'
-                f'</div>\n'
-            )
-        watch_html = (
-            '<div class="watch-section">'
-            '<h3>👀 관찰 중 (Watch)</h3>'
-            f'{watch_items}</div>'
-        )
 
     # ── 미확인 후보 섹션 ──
     unid_html = ""

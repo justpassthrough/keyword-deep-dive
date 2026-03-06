@@ -47,9 +47,7 @@
   .negative { color: #3fb950; }
   .trend-sub { color: #8b949e; font-size: 0.8em; }
 
-  .watch-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
-  .watch-item { padding: 6px 0; }
-  .watch-kw { color: #d2a8ff; font-weight: 500; }
+  .watch-badge { background: #d2a8ff20; color: #d2a8ff; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: normal; margin-left: 6px; }
 
   .unid-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
   .unid-desc { color: #8b949e; font-size: 0.85em; margin-bottom: 10px; }
@@ -92,6 +90,13 @@
 <button class="tab-btn" onclick="showTab('위고비')">위고비</button>
 <button class="tab-btn" onclick="showTab('NMN')">NMN</button>
 <button class="tab-btn" onclick="showTab('밀크씨슬')">밀크씨슬</button>
+<button class="tab-btn" onclick="showTab('루테인')">루테인 👀</button>
+<button class="tab-btn" onclick="showTab('콜라겐')">콜라겐 👀</button>
+<button class="tab-btn" onclick="showTab('유산균')">유산균 👀</button>
+<button class="tab-btn" onclick="showTab('미녹시딜')">미녹시딜 👀</button>
+<button class="tab-btn" onclick="showTab('보스웰리아')">보스웰리아 👀</button>
+<button class="tab-btn" onclick="showTab('레스베라트롤')">레스베라트롤 👀</button>
+<button class="tab-btn" onclick="showTab('아연')">아연 👀</button>
 </div>
 <div class="tab-content" id="tab-마운자로" style="display:block"><div class="section-header">마운자로 <span class="category-badge">비만치료제</span></div><div class="rising-section"><span class="rising-badge">🔥 마운자로 약국</span>
 <span class="rising-badge">🔥 마운자로 3주차</span>
@@ -222,15 +227,109 @@
 <tr><td class="kw-cell">밀크씨슬 코엔자임Q10</td><td>★★ 📎롱테일</td><td>블로그 8491</td><td class="">-</td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
 <tr><td class="kw-cell">코엔자임Q10 밀크씨슬 → 밀크씨슬</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 8491</td><td class="">-</td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
 </tbody></table></div>
+<div class="tab-content" id="tab-루테인" style="display:none"><div class="section-header">루테인 <span class="category-badge">영양제</span> <span class="watch-badge">👀 관찰중</span></div><div class="rising-section"><span class="rising-badge">🔥 토비콤 루테인</span>
+<span class="rising-badge">🔥 루테인 아스타잔틴</span>
+</div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">토비콤 루테인 → 루테인</td><td>★★ 🔥급등 🔗비교형</td><td>2.9</td><td class="positive">+62.9%<br><span class="trend-sub">7일 -14.3%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">3.1</td></tr>
+<tr><td class="kw-cell">루테인 건강</td><td>★★ 📎롱테일</td><td>블로그 464765</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">위한 루테인 → 루테인</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 142568</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">루테인 중요성</td><td>★★ 📎롱테일</td><td>블로그 22262</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">루테인 건강을</td><td>★★ 📎롱테일</td><td>블로그 464765</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">루테인 아스타잔틴</td><td>★★ 🔥급등</td><td>2.0</td><td class="positive">+30.5%<br><span class="trend-sub">7일 +21.6%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">루테인 위한</td><td>★★ 📎롱테일</td><td>블로그 142568</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">루테인 섭취</td><td>★★ 📎롱테일</td><td>블로그 335381</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">루테인 지아잔틴</td><td>★★</td><td>66.0</td><td class="">+12.8%<br><span class="trend-sub">7일 -10.5%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">바디닥터스 루테인 → 루테인</td><td>★★ 🔗비교형</td><td>0.5</td><td class="">+6.3%<br><span class="trend-sub">7일 +29.1%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">루테인 영양제</td><td>★★</td><td>1.4</td><td class="">-3.7%<br><span class="trend-sub">7일 -25.3%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">루테인 솔직</td><td>★★ 📎롱테일</td><td>블로그 5015</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">루테인 안국약품</td><td>★★ 📎롱테일</td><td>블로그 2412</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">루테인 토비콤</td><td>★★ 📎롱테일</td><td>블로그 1555</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">루테인 지아잔틴의</td><td>★★ 📎롱테일</td><td>블로그 89985</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">루테인 제품군</td><td>★★ 📎롱테일</td><td>블로그 2332</td><td class="">-</td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
+</tbody></table></div>
+<div class="tab-content" id="tab-콜라겐" style="display:none"><div class="section-header">콜라겐 <span class="category-badge">피부관리</span> <span class="watch-badge">👀 관찰중</span></div><div class="news-section"><h4>📰 이벤트 뉴스</h4><div class="news-item"><span class="news-trigger">출시</span> ‘공스킨’ 콜라겐 주름개선 크림 출시 및 글로벌 도매수출, OEM·ODM 서비...</div>
+<div class="news-item"><span class="news-trigger">출시</span> [신상품 브리핑] 식품·외식업계, 봄 맞아 치킨·베이커리, 음료 출시 봇...</div>
+</div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">콜라겐 한국동남아</td><td>★★ 📎롱테일</td><td>블로그 3119</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">콜라겐 젤리팩으로</td><td>★★ 📎롱테일</td><td>블로그 1162</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">콜라겐 롯데마트</td><td>★★ 📎롱테일</td><td>블로그 4669</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">오캄 콜라겐 → 콜라겐</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 285</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">다크스팟 콜라겐 → 콜라겐</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 7818</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아이엠유IMU 콜라겐 → 콜라겐</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 648</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">콜라겐 톤업</td><td>★★ 📎롱테일</td><td>블로그 78145</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">콜라겐 아이엠유IMU</td><td>★★ 📎롱테일</td><td>블로그 648</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+</tbody></table></div>
+<div class="tab-content" id="tab-유산균" style="display:none"><div class="section-header">유산균 <span class="category-badge">비만치료제</span> <span class="watch-badge">👀 관찰중</span></div><div class="news-section"><h4>📰 이벤트 뉴스</h4><div class="news-item"><span class="news-trigger">출시</span> [신상품 브리핑] 식품·외식업계, 봄 맞아 치킨·베이커리, 음료 출시 봇...</div>
+</div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">다이어트 유산균 → 유산균</td><td>★★★ 🔗비교형</td><td>12.9</td><td class="">+0.1%<br><span class="trend-sub">7일 -9.4%</span></td><td>효능</td><td>전문가 갭 큼</td><td class="value-cell">3.9</td></tr>
+<tr><td class="kw-cell">유산균 다이어트</td><td>★★★</td><td>1.9</td><td class="">-6.5%<br><span class="trend-sub">7일 -14.2%</span></td><td>효능</td><td>전문가 갭 큼</td><td class="value-cell">3.9</td></tr>
+<tr><td class="kw-cell">유산균 비에날씬</td><td>★★</td><td>0.1</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">유산균 BNR17</td><td>★★</td><td>0.3</td><td class="negative">-24.6%<br><span class="trend-sub">7일 -10.2%</span></td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">유산균 변화</td><td>★★ 📎롱테일</td><td>블로그 367877</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">내돈내산 유산균 → 유산균</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 95822</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+</tbody></table></div>
+<div class="tab-content" id="tab-미녹시딜" style="display:none"><div class="section-header">미녹시딜 <span class="category-badge">탈모치료</span> <span class="watch-badge">👀 관찰중</span></div><div class="rising-section"><span class="rising-badge">🔥 미녹시딜 효과</span>
+</div><div class="news-section"><h4>📰 이벤트 뉴스</h4><div class="news-item"><span class="news-trigger">허가</span> 미녹시딜 정제 허가 늘어…오프라벨 탈모시장 주목</div>
+</div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">미녹시딜 복용</td><td>★★★★</td><td>0.3</td><td class="">-15.8%</td><td>복용법</td><td>전문가 부족</td><td class="value-cell">4.4</td></tr>
+<tr><td class="kw-cell">미녹시딜 부작용</td><td>★★★★</td><td>10.3</td><td class="">+4.7%<br><span class="trend-sub">7일 -23.3%</span></td><td>안전성</td><td>전문가 부족</td><td class="value-cell">4.4</td></tr>
+<tr><td class="kw-cell">미녹시딜 효과</td><td>★★★ 🔥급등</td><td>1.6</td><td class="positive">+24.5%<br><span class="trend-sub">7일 -11.8%</span></td><td>효능</td><td>전문가 부족</td><td class="value-cell">4.0</td></tr>
+<tr><td class="kw-cell">미녹시딜 효과와</td><td>★★★ 📎롱테일</td><td>블로그 42708</td><td class="">-</td><td>효능</td><td>전문가 부족</td><td class="value-cell">3.3</td></tr>
+<tr><td class="kw-cell">미녹시딜 도포기</td><td>★★</td><td>0.7</td><td class="">+17.8%<br><span class="trend-sub">7일 -24.8%</span></td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">미녹시딜 바르는</td><td>★★ 📎롱테일</td><td>블로그 21654</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">미녹시딜 정리</td><td>★★ 📎롱테일</td><td>블로그 8739</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">미녹시딜 14</td><td>★★ 📎롱테일</td><td>블로그 1905</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">미녹시딜 먹는</td><td>★★ 📎롱테일</td><td>블로그 15184</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">미녹시딜 탈모</td><td>★★</td><td>0.2</td><td class="">+6.7%</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">미녹시딜 여성</td><td>★★</td><td>0.3</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">탈모 미녹시딜 → 미녹시딜</td><td>★★ 🔗비교형</td><td>0.3</td><td class="">-10.5%<br><span class="trend-sub">7일 -41.7%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">미녹시딜 총정리</td><td>★★ 📎롱테일</td><td>블로그 1405</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">먹는 미녹시딜 → 미녹시딜</td><td>★★ 🔗비교형</td><td>2.6</td><td class="">+13.9%<br><span class="trend-sub">7일 -24.8%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">탈모약 미녹시딜 → 미녹시딜</td><td>★★ 🔗비교형</td><td>0.5</td><td class="">+3.1%<br><span class="trend-sub">7일 +3.9%</span></td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
+<tr><td class="kw-cell">미녹시딜 탈모약</td><td>★★</td><td>0.3</td><td class="">-5.9%<br><span class="trend-sub">7일 -18.4%</span></td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
+<tr><td class="kw-cell">미녹시딜 사용법</td><td>★★</td><td>0.4</td><td class="">+0.0%<br><span class="trend-sub">7일 -8.0%</span></td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
+<tr><td class="kw-cell">미녹시딜 가격</td><td>★</td><td>7.0</td><td class="">-3.2%<br><span class="trend-sub">7일 -29.9%</span></td><td>구매</td><td>보통</td><td class="value-cell">1.0</td></tr>
+</tbody></table></div>
+<div class="tab-content" id="tab-보스웰리아" style="display:none"><div class="section-header">보스웰리아 <span class="category-badge">영양제</span> <span class="watch-badge">👀 관찰중</span></div><div class="news-section"><h4>📰 이벤트 뉴스</h4><div class="news-item"><span class="news-trigger">출시</span> 뉴트리미, &#x27;관절비법 콘드로이친 뮤코다당단백 1200 K2 플러스&#x27; 출시</div>
+<div class="news-item"><span class="news-trigger">출시</span> 래오이경제, 제주 야생적 활력 &#x27;말(馬)진액&#x27; 출시</div>
+<div class="news-item"><span class="news-trigger">출시</span> 래오이경제, &#x27;제주 말(馬)의 활력&#x27; 담은 프리미엄 &#x27;제주 말진액&#x27; 출시</div>
+<div class="news-item"><span class="news-trigger">출시</span> 퓨어바이탈랩 &#x27;철갑상어 콘드로이친 1200 앤 MBP+&#x27; 출시</div>
+<div class="news-item"><span class="news-trigger">출시</span> 일동후디스, 반려동물 관절 영양제 &#x27;후디스펫 조인케어&#x27; 출시</div>
+</div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">보스웰리아 성분</td><td>★★★★</td><td>0.8</td><td class="">-</td><td>전문지식</td><td>전문가 부족</td><td class="value-cell">4.4</td></tr>
+<tr><td class="kw-cell">보스웰리아 비교</td><td>★★★★ 📎롱테일</td><td>블로그 10973</td><td class="">-</td><td>비교</td><td>전문가 부족</td><td class="value-cell">4.4</td></tr>
+<tr><td class="kw-cell">보스웰리아 관절</td><td>★★</td><td>0.8</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">보스웰리아 분석</td><td>★★ 📎롱테일</td><td>블로그 4244</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">콘드로이친 보스웰리아 → 보스웰리아</td><td>★★ 🔗비교형</td><td>1.5</td><td class="">-15.2%<br><span class="trend-sub">7일 -15.9%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">보스웰리아 콘드로이친</td><td>★★</td><td>2.1</td><td class="">+16.7%<br><span class="trend-sub">7일 -22.4%</span></td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">보스웰리아 순위</td><td>★★ 📎롱테일</td><td>블로그 1571</td><td class="">-</td><td>일반</td><td>전문가 부족</td><td class="value-cell">2.2</td></tr>
+<tr><td class="kw-cell">보스웰리아 철갑상어</td><td>★★ 📎롱테일</td><td>블로그 2057</td><td class="">-</td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
+<tr><td class="kw-cell">보스웰리아 1400파워</td><td>★★ 📎롱테일</td><td>블로그 362</td><td class="">-</td><td>일반</td><td>보통</td><td class="value-cell">2.0</td></tr>
+</tbody></table></div>
+<div class="tab-content" id="tab-레스베라트롤" style="display:none"><div class="section-header">레스베라트롤 <span class="category-badge">영양제</span> <span class="watch-badge">👀 관찰중</span></div><div class="news-section"><h4>📰 이벤트 뉴스</h4><div class="news-item"><span class="news-trigger">출시</span> 뷰니스, 붓기 관리 솔루션 ‘브이컷딥’ 출시…기존 ‘브이컷’ 업그레...</div>
+<div class="news-item"><span class="news-trigger">출시</span> 안국건강, ‘식물유래 퀘르세틴&amp;amp;브로멜라인’ 출시… 파이토케미컬 흡...</div>
+<div class="news-item"><span class="news-trigger">출시</span> 제이비케이랩, 자체 기술로 상용화한 &#x27;NMN 플렉스&#x27; 2종 출시</div>
+<div class="news-item"><span class="news-trigger">출시</span> 노화 관리 시대…제이비케이랩, &#x27;NMN 플렉스&#x27; 2종 출시</div>
+</div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">레스베라트롤 80</td><td>★★ 📎롱테일</td><td>블로그 3860</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+</tbody></table></div>
+<div class="tab-content" id="tab-아연" style="display:none"><div class="section-header">아연 <span class="category-badge">탈모치료</span> <span class="watch-badge">👀 관찰중</span></div><table class="kw-table"><thead><tr><th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th><th>의도</th><th>전문가갭</th><th>약사가치</th></tr></thead><tbody><tr><td class="kw-cell">아연 논란</td><td>★★★ 📎롱테일</td><td>블로그 20270</td><td class="">-</td><td>진위</td><td>전문가 부족</td><td class="value-cell">3.3</td></tr>
+<tr><td class="kw-cell">아연 AI</td><td>★★ 📎롱테일</td><td>블로그 51835</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 도입</td><td>★★ 📎롱테일</td><td>블로그 38642</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 주총</td><td>★★ 📎롱테일</td><td>블로그 5632</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 안건</td><td>★★ 📎롱테일</td><td>블로그 3038</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 도입AI</td><td>★★ 📎롱테일</td><td>블로그 10513</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 스마트</td><td>★★ 📎롱테일</td><td>블로그 117742</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 기반</td><td>★★ 📎롱테일</td><td>블로그 89432</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">MBK영풍 아연 → 아연</td><td>★★ 🔗비교형 📎롱테일</td><td>블로그 8833</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 MBK영풍</td><td>★★ 📎롱테일</td><td>블로그 8833</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 제련소</td><td>★★ 📎롱테일</td><td>블로그 9412</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 챗GPT</td><td>★★ 📎롱테일</td><td>블로그 3887</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 엔터프라이즈</td><td>★★ 📎롱테일</td><td>블로그 13589</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 이사</td><td>★★ 📎롱테일</td><td>블로그 29635</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 전환</td><td>★★ 📎롱테일</td><td>블로그 99621</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 신규이사</td><td>★★ 📎롱테일</td><td>블로그 6477</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 전사에</td><td>★★ 📎롱테일</td><td>블로그 7919</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 기업</td><td>★★ 📎롱테일</td><td>블로그 173472</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 선임</td><td>★★ 📎롱테일</td><td>블로그 6309</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+<tr><td class="kw-cell">아연 앞두고</td><td>★★ 📎롱테일</td><td>블로그 31299</td><td class="">-</td><td>일반</td><td>전문가 갭 큼</td><td class="value-cell">2.6</td></tr>
+</tbody></table></div>
 
-<div class="watch-section"><h3>👀 관찰 중 (Watch)</h3><div class="watch-item"><span class="watch-kw">루테인</span> — 복합키워드 16개</div>
-<div class="watch-item"><span class="watch-kw">콜라겐</span> — 복합키워드 8개</div>
-<div class="watch-item"><span class="watch-kw">유산균</span> — 복합키워드 6개</div>
-<div class="watch-item"><span class="watch-kw">미녹시딜</span> — 복합키워드 18개</div>
-<div class="watch-item"><span class="watch-kw">보스웰리아</span> — 복합키워드 9개</div>
-<div class="watch-item"><span class="watch-kw">레스베라트롤</span> — 복합키워드 1개</div>
-<div class="watch-item"><span class="watch-kw">아연</span> — 복합키워드 20개</div>
-</div>
+
 <div class="unid-section"><h3>🔍 미확인 후보</h3><p class="unid-desc">이번 분석에서 자주 등장했지만 known_products.json에 없는 단어입니다. 제품/성분이 맞다면 사전에 추가해 주세요.</p><table class="kw-table"><thead><tr><th>단어</th><th>빈도</th><th>출처 뿌리</th><th>최초 발견</th></tr></thead><tbody><tr><td>피부</td><td>61</td><td>NMN, 콜라겐, 레스베라트롤</td><td>2026-03-06</td></tr>
 <tr><td>탈모</td><td>60</td><td>미녹시딜</td><td>2026-03-06</td></tr>
 <tr><td>콘드로이친</td><td>36</td><td>보스웰리아</td><td>2026-03-06</td></tr>
