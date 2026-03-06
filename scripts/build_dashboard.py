@@ -57,6 +57,7 @@ CSS = """
   .trend-sub { color: #8b949e; font-size: 0.8em; }
 
   .watch-badge { background: #d2a8ff20; color: #d2a8ff; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: normal; margin-left: 6px; }
+  .api-warning { background: #f8514930; border: 1px solid #f85149; color: #f85149; padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-weight: 600; }
 
   .unid-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
   .unid-desc { color: #8b949e; font-size: 0.85em; margin-bottom: 10px; }
@@ -110,9 +111,23 @@ def build_html(data):
     unidentified = data.get("unidentified_candidates", [])
 
     changes = data.get("changes", {})
+    api_usage = data.get("api_usage", {})
 
     active_roots = [r for r in roots if r.get("status") == "active"]
     watch_roots = [r for r in roots if r.get("status") == "watch"]
+
+    # ── API 경고 배너 ──
+    api_warning_html = ""
+    if api_usage.get("warning"):
+        pct = api_usage.get("usage_pct", 0)
+        daily = api_usage.get("estimated_daily", 0)
+        limit = api_usage.get("daily_limit", 1000)
+        api_warning_html = (
+            '<div class="api-warning">'
+            f'⚠️ API 한도 경고: 일 예상 DataLab {daily}회 / {limit}회 ({pct}%) '
+            '— 뿌리 키워드 정리가 필요합니다!'
+            '</div>'
+        )
 
     # ── 추이 비교 섹션 ──
     changes_html = ""
@@ -351,6 +366,7 @@ def build_html(data):
         '</head>\n<body>\n'
         '<h1>키워드 딥다이브 스캐너</h1>\n'
         f'<div class="updated">마지막 업데이트: {updated}</div>\n'
+        f'{api_warning_html}\n'
         f'{changes_html}\n'
         '<h3>📝 오늘의 추천 글감 TOP 3</h3>\n'
         f'{top_section}\n'

@@ -25,6 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
 
+# ── API 호출 카운터 ────────────────────────────────────
+DATALAB_DAILY_LIMIT = 1000
+RUNS_PER_DAY = 4
+_api_counter = {"datalab": 0, "search": 0}
+
 # ── 약사 가치 판단 상수 ──────────────────────────────────
 HIGH_PHARMA = ["부작용", "상호작용", "같이", "복용", "금기", "용량", "처방",
                "성분", "원리", "차이", "비교", "위험", "주의"]
@@ -222,11 +227,13 @@ def datalab_search(keyword_groups, start_date=None, end_date=None):
     }
     headers = {**NAVER_HEADERS, "Content-Type": "application/json"}
     try:
+        _api_counter["datalab"] += 1
         r = requests.post(url, headers=headers, json=body, timeout=10)
         if r.status_code == 200:
             return r.json()
         if r.status_code == 429:
             time.sleep(5)
+            _api_counter["datalab"] += 1
             r = requests.post(url, headers=headers, json=body, timeout=10)
             if r.status_code == 200:
                 return r.json()
@@ -888,6 +895,26 @@ def main():
     root_data = update_lifecycle(root_data, results_by_root)
     save_roots(root_data)
 
+    # ── API 사용량 경고 ──
+    datalab_this_run = _api_counter["datalab"]
+    estimated_daily = datalab_this_run * RUNS_PER_DAY
+    usage_pct = round(estimated_daily / DATALAB_DAILY_LIMIT * 100, 1)
+    api_usage = {
+        "datalab_this_run": datalab_this_run,
+        "estimated_daily": estimated_daily,
+        "daily_limit": DATALAB_DAILY_LIMIT,
+        "usage_pct": usage_pct,
+        "warning": usage_pct >= 80,
+    }
+    if usage_pct >= 80:
+        print(f"\n⚠️ API 한도 경고: 이번 실행 DataLab {datalab_this_run}회 "
+              f"× {RUNS_PER_DAY}회/일 = {estimated_daily}회 "
+              f"(한도 {DATALAB_DAILY_LIMIT}의 {usage_pct}%)")
+        print(f"   뿌리 키워드 정리가 필요합니다!")
+    else:
+        print(f"\n📊 API 사용량: DataLab {datalab_this_run}회/실행, "
+              f"일 예상 {estimated_daily}회 ({usage_pct}%)")
+
     # ── 결과 저장 ──
     output = {
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
@@ -895,6 +922,7 @@ def main():
         "top_recommendations": top_recommendations,
         "unidentified_candidates": unidentified_list,
         "changes": changes,
+        "api_usage": api_usage,
     }
 
     latest_path = os.path.join(DATA_DIR, "latest.json")
