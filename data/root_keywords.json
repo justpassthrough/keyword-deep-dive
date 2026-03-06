@@ -59,6 +59,76 @@
       "added": "2026-03-04",
       "last_active": "2026-03-06",
       "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "루테인",
+      "category": "영양제",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "콜라겐",
+      "category": "피부관리",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "유산균",
+      "category": "비만치료제",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "미녹시딜",
+      "category": "탈모치료",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "보스웰리아",
+      "category": "영양제",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "레스베라트롤",
+      "category": "영양제",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "아연",
+      "category": "탈모치료",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-06",
+      "last_active": "2026-03-06",
+      "consecutive_dormant_weeks": 0
     }
   ]
 }
