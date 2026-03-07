@@ -138,6 +138,12 @@ GOLDMINE_CSS = """
 .gm-badge.pharma_news { background: #f0883e20; color: #f0883e; }
 .gm-badge.pharmacist_faq { background: #d2a8ff20; color: #d2a8ff; }
 
+.gm-demand {
+    color: #58a6ff;
+    font-weight: 600;
+    font-size: 0.92em;
+    white-space: nowrap;
+}
 .gm-value {
     font-weight: 700;
     color: #d4a017;
@@ -306,11 +312,23 @@ def build_top_table(longtails, limit=15):
         # 의도 별점
         intent = lt.get("intent_score", 1)
 
+        # 수요 (블로그 총 건수)
+        blog_total = gap.get("total", 0)
+        if blog_total >= 10000:
+            demand_str = f'{blog_total/10000:.1f}만'
+        elif blog_total >= 1000:
+            demand_str = f'{blog_total/1000:.1f}천'
+        elif blog_total > 0:
+            demand_str = f'{blog_total}'
+        else:
+            demand_str = '-'
+
         rows += (
             f'<tr>'
             f'<td><span class="gm-keyword">{kw}</span>'
             f'<span class="gm-root-tag">{root}</span>'
             f'<br>{badges}</td>'
+            f'<td class="gm-demand">{demand_str}</td>'
             f'<td class="gm-stars">{stars_html(intent)}</td>'
             f'<td><span class="gm-gap-label {gap_cls}">{gap_label}</span></td>'
             f'<td class="gm-value">{pv}</td>'
@@ -319,7 +337,7 @@ def build_top_table(longtails, limit=15):
 
     return (
         '<table class="gm-table"><thead><tr>'
-        '<th>키워드</th><th>전문성</th><th>전문가 갭</th><th>약사가치</th>'
+        '<th>키워드</th><th>수요</th><th>전문성</th><th>전문가 갭</th><th>약사가치</th>'
         f'</tr></thead><tbody>{rows}</tbody></table>'
     )
 
@@ -355,9 +373,21 @@ def build_root_accordions(longtails, roots_scanned):
             pv = lt.get("pharma_value", 0)
             intent = lt.get("intent_score", 1)
 
+            # 수요 (블로그 총 건수)
+            blog_total = gap.get("total", 0)
+            if blog_total >= 10000:
+                demand_str = f'{blog_total/10000:.1f}만'
+            elif blog_total >= 1000:
+                demand_str = f'{blog_total/1000:.1f}천'
+            elif blog_total > 0:
+                demand_str = f'{blog_total}'
+            else:
+                demand_str = '-'
+
             rows += (
                 f'<tr>'
                 f'<td><span class="gm-keyword">{kw}</span>{badges}</td>'
+                f'<td class="gm-demand">{demand_str}</td>'
                 f'<td class="gm-stars">{stars_html(intent)}</td>'
                 f'<td><span class="gm-gap-label {gap_cls}">{gap_label}</span></td>'
                 f'<td class="gm-value">{pv}</td>'
@@ -373,7 +403,7 @@ def build_root_accordions(longtails, roots_scanned):
             f'</div>'
             f'<div class="gm-root-body">'
             f'<table class="gm-table"><thead><tr>'
-            f'<th>키워드</th><th>전문성</th><th>전문가 갭</th><th>약사가치</th>'
+            f'<th>키워드</th><th>수요</th><th>전문성</th><th>전문가 갭</th><th>약사가치</th>'
             f'</tr></thead><tbody>{rows}</tbody></table>'
             f'</div></div>\n'
         )
