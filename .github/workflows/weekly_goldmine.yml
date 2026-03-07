@@ -1,0 +1,47 @@
+name: Weekly Goldmine Scan
+
+on:
+  schedule:
+    # 매주 일요일 23:00 UTC (월요일 08:00 KST)
+    - cron: '0 23 * * 0'
+  workflow_dispatch:
+    inputs:
+      roots_override:
+        description: '특정 뿌리만 스캔 (쉼표 구분, 비우면 전체)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  goldmine-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run longtail goldmine scanner
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
+        run: python scripts/longtail_goldmine.py
+
+      - name: Build goldmine dashboard section
+        run: python scripts/build_goldmine_section.py
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/longtail_goldmine.json docs/index.html docs/goldmine.html
+          git diff --staged --quiet || git commit -m "goldmine: $(TZ=Asia/Seoul date +%Y-%m-%d\ %H:%M)"
+          git push

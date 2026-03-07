@@ -27,6 +27,8 @@ jobs:
         run: python scripts/dive.py
       - name: Build dashboard
         run: python scripts/build_dashboard.py
+      - name: Inject goldmine section (if data exists)
+        run: python scripts/build_goldmine_section.py --inject || true
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
