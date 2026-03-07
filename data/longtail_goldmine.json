@@ -1,0 +1,31 @@
+{
+  "scan_time": "2026-03-07T15:10:19.124199+09:00",
+  "scanner": "longtail_goldmine",
+  "version": "1.0",
+  "summary": {
+    "total_longtails": 0,
+    "goldmine_matches": 0,
+    "categories": {},
+    "top_pharma_value": [],
+    "api_calls": {
+      "autocomplete": 182,
+      "blog_search": 0
+    }
+  },
+  "roots_scanned": [
+    "마운자로",
+    "알부민",
+    "위고비",
+    "오메가3",
+    "NMN",
+    "밀크씨슬",
+    "루테인",
+    "콜라겐",
+    "유산균",
+    "미녹시딜",
+    "보스웰리아",
+    "레스베라트롤",
+    "아연"
+  ],
+  "longtails": []
+}
