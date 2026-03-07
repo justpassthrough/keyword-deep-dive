@@ -112,13 +112,14 @@ GOLDMINE_CATEGORIES = {
 # ─── 네이버 자동완성 API ────────────────────────────────────
 
 def fetch_autocomplete(query: str) -> list[str]:
-    """네이버 검색창 자동완성 결과를 가져온다."""
+    """네이버 모바일 자동완성 결과를 가져온다."""
     encoded = urllib.parse.quote(query)
-    url = f"https://ac.search.naver.com/nx/ac?q={encoded}&con=1&frm=nv&ans=2&t=0"
+    url = (f"https://mac.search.naver.com/mobile/ac?"
+           f"q={encoded}&st=100&r_lt=100&q_enc=UTF-8&r_format=json&r_enc=UTF-8&r_unicode=0")
 
     req = urllib.request.Request(url, headers={
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Referer": "https://search.naver.com/",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36",
+        "Referer": "https://m.search.naver.com/",
     })
 
     try:
