@@ -159,6 +159,56 @@
       "added": "2026-03-07",
       "last_active": "2026-03-10",
       "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "비타민D",
+      "category": "비만치료제",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-10",
+      "last_active": "2026-03-10",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "마그네슘",
+      "category": "기타",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-10",
+      "last_active": "2026-03-10",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "크릴오일",
+      "category": "영양제",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-10",
+      "last_active": "2026-03-10",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "비오틴",
+      "category": "비만치료제",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-10",
+      "last_active": "2026-03-10",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "실리마린",
+      "category": "영양제",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-10",
+      "last_active": "2026-03-10",
+      "consecutive_dormant_weeks": 0
     }
   ]
 }
