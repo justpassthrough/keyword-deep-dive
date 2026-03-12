@@ -214,9 +214,9 @@ def build_html(data):
                 '</div>'
             )
 
-    # ── 추천 글감 TOP 3 ──
+    # ── 추천 글감 TOP 5 ──
     top_html = ""
-    for i, rec in enumerate(top_recs[:3], 1):
+    for i, rec in enumerate(top_recs[:5], 1):
         labels_str = " ".join(rec.get("labels", []))
         gap = rec.get("expert_gap", {})
         top_html += (
@@ -368,7 +368,7 @@ def build_html(data):
         f'<div class="updated">마지막 업데이트: {updated}</div>\n'
         f'{api_warning_html}\n'
         f'{changes_html}\n'
-        '<h3>📝 오늘의 추천 글감 TOP 3</h3>\n'
+        '<h3>📝 오늘의 추천 글감 TOP 5</h3>\n'
         f'{top_section}\n'
         f'<div class="tab-bar">{tab_buttons}</div>\n'
         f'{tab_contents}\n'
