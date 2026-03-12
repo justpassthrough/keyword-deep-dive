@@ -873,7 +873,7 @@ def main():
             c["root"] = r["keyword"]
             all_compounds.append(c)
     all_compounds.sort(key=lambda x: x["pharma_value"], reverse=True)
-    top_recommendations = all_compounds[:3]
+    top_recommendations = all_compounds[:5]
 
     # ── 미확인 후보 정리 ──
     unidentified_list = [
