@@ -219,6 +219,56 @@
       "added": "2026-03-13",
       "last_active": "2026-03-14",
       "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "프로바이오틱스",
+      "category": "피부관리",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-16",
+      "last_active": "2026-03-16",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "엽산",
+      "category": "영양제",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-16",
+      "last_active": "2026-03-16",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "글루코사민",
+      "category": "영양제",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-16",
+      "last_active": "2026-03-16",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "오젬픽",
+      "category": "비만치료제",
+      "status": "watch",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-16",
+      "last_active": "2026-03-16",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "철분",
+      "category": "기타",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-03-16",
+      "last_active": "2026-03-16",
+      "consecutive_dormant_weeks": 0
     }
   ]
 }
