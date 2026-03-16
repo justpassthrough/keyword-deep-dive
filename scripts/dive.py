@@ -525,6 +525,20 @@ def calc_pharma_value(compound, intent_score, expert_gap, change_rate):
     return round(value, 1)
 
 
+def calc_recommend_score(pharma_value, change_rate):
+    """추천 점수 = 약사가치 × 시의성 배수. '지금 쓰면 좋은 글'을 골라내기 위한 점수."""
+    if change_rate is not None and change_rate >= 50:
+        timeliness = 2.0
+    elif change_rate is not None and change_rate >= 20:
+        timeliness = 1.5
+    elif change_rate is None or (-10 <= change_rate < 20):
+        timeliness = 0.5
+    else:
+        # change_rate < -10 (하락)
+        timeliness = 0.3
+    return round(pharma_value * timeliness, 1)
+
+
 def _make_labels(intent_score, change_rate, is_bridge, datalab_type):
     """라벨 리스트 생성."""
     labels = []
@@ -808,6 +822,9 @@ def main():
             # 약사 가치
             pharma_value = calc_pharma_value(kw, intent_score, expert_gap, dl.get("change_rate"))
 
+            # 추천 점수
+            recommend_score = calc_recommend_score(pharma_value, dl.get("change_rate"))
+
             # 라벨
             labels = _make_labels(intent_score, dl.get("change_rate"), is_bridge, dl["type"])
 
@@ -821,6 +838,7 @@ def main():
                 "intent_score": intent_score,
                 "expert_gap": expert_gap,
                 "pharma_value": pharma_value,
+                "recommend_score": recommend_score,
                 "labels": labels,
                 "is_bridge": is_bridge,
                 "bridge_target": bridge_target,
@@ -874,7 +892,7 @@ def main():
         for c in r["compounds"]:
             c["root"] = r["keyword"]
             all_compounds.append(c)
-    all_compounds.sort(key=lambda x: x["pharma_value"], reverse=True)
+    all_compounds.sort(key=lambda x: x.get("recommend_score", 0), reverse=True)
     top_recommendations = all_compounds[:5]
 
     # ── 미확인 후보 정리 ──

@@ -29,6 +29,11 @@ CSS = """
   .rec-root { color: #58a6ff; }
   .rec-intent { color: #d2a8ff; }
   .rec-value { color: #f0883e; font-weight: 600; }
+  .rec-pharma { color: #8b949e; }
+  .rec-time-hot { color: #f85149; font-weight: 700; }
+  .rec-time-rise { color: #f0883e; font-weight: 600; }
+  .rec-time-flat { color: #8b949e; }
+  .rec-time-fall { color: #3fb950; }
   .rec-gap { color: #8b949e; font-size: 0.82em; margin-top: 4px; }
 
   .tab-bar { display: flex; gap: 5px; margin: 20px 0 0; flex-wrap: wrap; }
@@ -219,6 +224,18 @@ def build_html(data):
     for i, rec in enumerate(top_recs[:5], 1):
         labels_str = " ".join(rec.get("labels", []))
         gap = rec.get("expert_gap", {})
+        rec_score = rec.get("recommend_score", 0)
+        pharma_val = rec.get("pharma_value", 0)
+        cr = rec.get("change_rate")
+        # 시의성 라벨
+        if cr is not None and cr >= 50:
+            time_label = '<span class="rec-time-hot">급등중 ×2.0</span>'
+        elif cr is not None and cr >= 20:
+            time_label = '<span class="rec-time-rise">상승중 ×1.5</span>'
+        elif cr is not None and cr < -10:
+            time_label = '<span class="rec-time-fall">하락 ×0.3</span>'
+        else:
+            time_label = '<span class="rec-time-flat">평시 ×0.5</span>'
         top_html += (
             '<div class="rec-card">'
             f'<div class="rec-rank">#{i}</div>'
@@ -227,7 +244,9 @@ def build_html(data):
             '<div class="rec-meta">'
             f'<span class="rec-root">{escape(rec.get("root", ""))}</span>'
             f'<span class="rec-intent">{escape(rec.get("intent", ""))}</span>'
-            f'<span class="rec-value">약사가치 {rec.get("pharma_value", 0)}</span>'
+            f'<span class="rec-value">추천점수 {rec_score}</span>'
+            f'<span class="rec-pharma">약사가치 {pharma_val}</span>'
+            f'{time_label}'
             f'<span class="rec-labels">{labels_str}</span>'
             '</div>'
             f'<div class="rec-gap">전문가갭: {gap.get("label", "")} '
