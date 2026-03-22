@@ -63,6 +63,13 @@ CSS = """
 
   .watch-badge { background: #d2a8ff20; color: #d2a8ff; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: normal; margin-left: 6px; }
   .cosearch-badge { background: #1f6feb33; color: #58a6ff; border: 1px solid #1f6feb50; padding: 1px 6px; border-radius: 3px; font-size: 0.8em; font-weight: 600; }
+  .cosearch-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
+  .cosearch-desc { color: #8b949e; font-size: 0.85em; margin-bottom: 10px; }
+  .cosearch-item { display: inline-block; background: #1f6feb1a; border: 1px solid #1f6feb40; padding: 6px 12px; border-radius: 20px; margin: 4px; font-size: 0.85em; }
+  .cosearch-item .cs-kw { color: #f0f6fc; font-weight: 500; }
+  .cosearch-item .cs-root { color: #8b949e; font-size: 0.8em; }
+  .cosearch-item .cs-value { color: #f0883e; font-weight: 600; font-size: 0.8em; }
+  .cosearch-item .cs-rising { color: #f85149; font-weight: 600; font-size: 0.8em; }
   .api-warning { background: #f8514930; border: 1px solid #f85149; color: #f85149; padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-weight: 600; }
 
   .unid-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
@@ -364,6 +371,44 @@ def build_html(data):
     # ── Watch 섹션 (탭에 통합되었으므로 별도 표시 불필요) ──
     watch_html = ""
 
+    # ── 네이버 인기 (cosearch trending) 모음 섹션 ──
+    cosearch_html = ""
+    cosearch_items = []
+    for r in roots:
+        for c in r.get("compounds", []):
+            if c.get("cosearch_trending"):
+                cosearch_items.append({
+                    "keyword": c.get("keyword", ""),
+                    "root": r.get("keyword", ""),
+                    "pharma_value": c.get("pharma_value", 0),
+                    "change_rate": c.get("change_rate"),
+                    "intent": c.get("intent", ""),
+                })
+    if cosearch_items:
+        cosearch_items.sort(key=lambda x: x["pharma_value"], reverse=True)
+        items_html = ""
+        for ci in cosearch_items:
+            cr = ci["change_rate"]
+            rising_tag = ""
+            if cr is not None and cr >= 20:
+                rising_tag = f' <span class="cs-rising">🔥{cr:+.0f}%</span>'
+            items_html += (
+                '<span class="cosearch-item">'
+                f'<span class="cs-kw">{escape(ci["keyword"])}</span> '
+                f'<span class="cs-root">{escape(ci["root"])}</span> '
+                f'<span class="cs-value">약사가치 {ci["pharma_value"]}</span>'
+                f'{rising_tag}'
+                '</span>\n'
+            )
+        cosearch_html = (
+            '<div class="cosearch-section">'
+            '<h3>🔍 네이버 실시간 인기 키워드</h3>'
+            '<p class="cosearch-desc">네이버 "함께 많이 찾는" 섹션에서 '
+            '"요즘 인기" 배지가 붙은 키워드입니다.</p>'
+            f'{items_html}'
+            '</div>'
+        )
+
     # ── 미확인 후보 섹션 ──
     unid_html = ""
     if unidentified:
@@ -407,6 +452,7 @@ def build_html(data):
         f'<div class="tab-bar">{tab_buttons}</div>\n'
         f'{tab_contents}\n'
         f'{watch_html}\n'
+        f'{cosearch_html}\n'
         f'{unid_html}\n'
         f'<script>{JS}</script>\n'
         '</body>\n</html>'
