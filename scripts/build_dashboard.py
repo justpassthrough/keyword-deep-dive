@@ -384,28 +384,57 @@ def build_html(data):
                     "change_rate": c.get("change_rate"),
                     "intent": c.get("intent", ""),
                 })
-    if cosearch_items:
-        cosearch_items.sort(key=lambda x: x["pharma_value"], reverse=True)
-        items_html = ""
-        for ci in cosearch_items:
-            cr = ci["change_rate"]
-            rising_tag = ""
-            if cr is not None and cr >= 20:
-                rising_tag = f' <span class="cs-rising">🔥{cr:+.0f}%</span>'
-            items_html += (
-                '<span class="cosearch-item">'
-                f'<span class="cs-kw">{escape(ci["keyword"])}</span> '
-                f'<span class="cs-root">{escape(ci["root"])}</span> '
-                f'<span class="cs-value">약사가치 {ci["pharma_value"]}</span>'
-                f'{rising_tag}'
-                '</span>\n'
+    # 2차 cosearch (급등 키워드 심층 탐색)
+    deep_cosearch = data.get("deep_cosearch_trending", [])
+
+    if cosearch_items or deep_cosearch:
+        sections_inner = ""
+
+        # 1차: 뿌리 키워드 cosearch
+        if cosearch_items:
+            cosearch_items.sort(key=lambda x: x["pharma_value"], reverse=True)
+            items_html = ""
+            for ci in cosearch_items:
+                cr = ci["change_rate"]
+                rising_tag = ""
+                if cr is not None and cr >= 20:
+                    rising_tag = f' <span class="cs-rising">🔥{cr:+.0f}%</span>'
+                items_html += (
+                    '<span class="cosearch-item">'
+                    f'<span class="cs-kw">{escape(ci["keyword"])}</span> '
+                    f'<span class="cs-root">{escape(ci["root"])}</span> '
+                    f'<span class="cs-value">약사가치 {ci["pharma_value"]}</span>'
+                    f'{rising_tag}'
+                    '</span>\n'
+                )
+            sections_inner += (
+                '<h4 style="color:#8b949e;margin-bottom:8px;">뿌리 키워드 연관</h4>'
+                f'{items_html}'
             )
+
+        # 2차: 급등 키워드 심층 cosearch
+        if deep_cosearch:
+            deep_html = ""
+            for dc in deep_cosearch:
+                deep_html += (
+                    '<span class="cosearch-item" style="border-color:#f8514950;">'
+                    f'<span class="cs-kw">{escape(dc.get("query", ""))}</span> '
+                    f'<span class="cs-root">← {escape(dc.get("source_keyword", ""))}</span> '
+                    f'<span class="cs-rising">🔥급등연관</span>'
+                    '</span>\n'
+                )
+            sections_inner += (
+                '<h4 style="color:#f85149;margin-top:12px;margin-bottom:8px;">'
+                '🔥 급등 키워드에서 추가 발견</h4>'
+                f'{deep_html}'
+            )
+
         cosearch_html = (
             '<div class="cosearch-section">'
             '<h3>🔍 네이버 실시간 인기 키워드</h3>'
             '<p class="cosearch-desc">네이버 "함께 많이 찾는" 섹션에서 '
             '"요즘 인기" 배지가 붙은 키워드입니다.</p>'
-            f'{items_html}'
+            f'{sections_inner}'
             '</div>'
         )
 

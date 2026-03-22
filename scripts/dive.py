@@ -971,6 +971,37 @@ def main():
 
         print(f"  분석 완료: {len(compound_details)}개 복합키워드, {len(rising)}개 급등")
 
+    # ── 급등 키워드 2차 cosearch (deep dive) ──
+    deep_cosearch = []
+    all_rising_kws = []
+    for r in all_results:
+        for c in r.get("compounds", []):
+            if c.get("change_rate") is not None and c["change_rate"] >= 20:
+                all_rising_kws.append({"keyword": c["keyword"], "root": r["keyword"]})
+
+    if all_rising_kws:
+        print(f"\n── 급등 키워드 2차 cosearch: {len(all_rising_kws)}개 ──")
+        for rk in all_rising_kws:
+            results = fetch_cosearch_trending(rk["keyword"])
+            for cs in results:
+                if cs["is_trending"]:
+                    deep_cosearch.append({
+                        "query": cs["query"],
+                        "source_keyword": rk["keyword"],
+                        "root": rk["root"],
+                    })
+            time.sleep(0.5)
+
+        # 중복 제거 (query 기준)
+        seen = set()
+        unique_deep = []
+        for d in deep_cosearch:
+            if d["query"] not in seen:
+                seen.add(d["query"])
+                unique_deep.append(d)
+        deep_cosearch = unique_deep
+        print(f"  2차 cosearch 요즘인기: {len(deep_cosearch)}개 발견")
+
     # ── 전체 통합 추천 ──
     all_compounds = []
     for r in all_results:
@@ -1025,6 +1056,7 @@ def main():
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "roots": all_results,
         "top_recommendations": top_recommendations,
+        "deep_cosearch_trending": deep_cosearch,
         "unidentified_candidates": unidentified_list,
         "changes": changes,
         "api_usage": api_usage,
