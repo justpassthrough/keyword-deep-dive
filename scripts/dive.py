@@ -8,6 +8,7 @@ import json
 import os
 import re
 import time
+import urllib.parse
 from collections import Counter
 from datetime import datetime, timedelta
 
@@ -240,6 +241,68 @@ def datalab_search(keyword_groups, start_date=None, end_date=None):
         return None
     except Exception:
         return None
+
+
+# ══════════════════════════════════════════════════════════
+#  함께 많이 찾는 (요즘 인기) 키워드 수집
+# ══════════════════════════════════════════════════════════
+
+MOBILE_UA = "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36"
+
+
+def fetch_cosearch_trending(keyword):
+    """네이버 모바일 검색의 '함께 많이 찾는' 키워드 수집.
+
+    2-step: (1) 모바일 검색 HTML에서 apiURL 추출 → (2) apiURL 호출하여 JSON 파싱.
+    '요즘 인기' 배지가 붙은 키워드는 is_trending=True.
+
+    Returns:
+        list[dict]: [{"query": str, "is_trending": bool}, ...]
+    """
+    try:
+        # Step 1: 모바일 검색 페이지에서 apiURL 추출
+        encoded = urllib.parse.quote(keyword)
+        search_url = f"https://m.search.naver.com/search.naver?query={encoded}"
+        r = requests.get(search_url, headers={"User-Agent": MOBILE_UA}, timeout=10)
+        if r.status_code != 200:
+            print(f"  [cosearch] 모바일 검색 실패: HTTP {r.status_code}")
+            return []
+
+        m = re.search(r'"apiURL":"(https://s\.search\.naver\.com/p/qra/[^"]+)"', r.text)
+        if not m:
+            # "함께 많이 찾는" 섹션이 없는 키워드
+            print(f"  [cosearch] apiURL 없음 ('{keyword}'에 연관검색어 섹션 없음)")
+            return []
+
+        api_url = m.group(1).replace("\\u002F", "/").replace("\\u0026", "&")
+
+        time.sleep(1.5)  # 네이버 차단 방지
+
+        # Step 2: apiURL 호출하여 JSON 파싱
+        r2 = requests.get(api_url, headers={"User-Agent": MOBILE_UA}, timeout=10)
+        if r2.status_code != 200:
+            print(f"  [cosearch] API 호출 실패: HTTP {r2.status_code}")
+            return []
+
+        data = r2.json()
+        contents = data.get("result", {}).get("contents", [])
+
+        results = []
+        for item in contents:
+            query = item.get("query", "").strip()
+            if not query:
+                continue
+            badge = item.get("badge")
+            is_trending = (badge is not None and badge.get("text") == "요즘 인기")
+            results.append({"query": query, "is_trending": is_trending})
+
+        trending_count = sum(1 for r in results if r["is_trending"])
+        print(f"  [cosearch] '{keyword}': {len(results)}개 수집 ({trending_count}개 요즘인기)")
+        return results
+
+    except Exception as e:
+        print(f"  [cosearch] 에러 ({keyword}): {e}")
+        return []
 
 
 # ══════════════════════════════════════════════════════════
@@ -790,6 +853,22 @@ def main():
         compounds, all_titles, news_titles = mine_compound_keywords(root)
         print(f"  발견된 복합키워드: {len(compounds)}개")
 
+        # 1.5. 함께 많이 찾는 (요즘 인기) 키워드 수집
+        cosearch_results = fetch_cosearch_trending(root)
+        cosearch_trending_set = set()  # "요즘 인기" 배지가 붙은 키워드
+        for cs in cosearch_results:
+            query = cs["query"]
+            if cs["is_trending"]:
+                cosearch_trending_set.add(query)
+            # 기존 복합키워드 풀에 합류 (중복 방지)
+            if query not in compounds:
+                compounds.append(query)
+
+        if cosearch_results:
+            print(f"  → cosearch 합류 후 총 복합키워드: {len(compounds)}개")
+
+        time.sleep(1.0)  # 다음 뿌리 처리 전 딜레이
+
         if not compounds:
             results_by_root[root] = {"compounds": [], "rising": [], "news_events": []}
             continue
@@ -825,8 +904,13 @@ def main():
             # 추천 점수
             recommend_score = calc_recommend_score(pharma_value, dl.get("change_rate"))
 
+            # cosearch trending 여부
+            is_cosearch_trending = kw in cosearch_trending_set
+
             # 라벨
             labels = _make_labels(intent_score, dl.get("change_rate"), is_bridge, dl["type"])
+            if is_cosearch_trending:
+                labels.append("🔍네이버인기")
 
             detail = {
                 "keyword": kw,
@@ -842,6 +926,7 @@ def main():
                 "labels": labels,
                 "is_bridge": is_bridge,
                 "bridge_target": bridge_target,
+                "cosearch_trending": is_cosearch_trending,
             }
             if blog_count is not None:
                 detail["blog_count"] = blog_count

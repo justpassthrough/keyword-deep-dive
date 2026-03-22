@@ -62,6 +62,7 @@ CSS = """
   .trend-sub { color: #8b949e; font-size: 0.8em; }
 
   .watch-badge { background: #d2a8ff20; color: #d2a8ff; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: normal; margin-left: 6px; }
+  .cosearch-badge { background: #1f6feb33; color: #58a6ff; border: 1px solid #1f6feb50; padding: 1px 6px; border-radius: 3px; font-size: 0.8em; font-weight: 600; }
   .api-warning { background: #f8514930; border: 1px solid #f85149; color: #f85149; padding: 12px 16px; border-radius: 8px; margin-bottom: 15px; font-weight: 600; }
 
   .unid-section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-top: 20px; }
@@ -222,7 +223,14 @@ def build_html(data):
     # ── 추천 글감 TOP 5 ──
     top_html = ""
     for i, rec in enumerate(top_recs[:5], 1):
-        labels_str = " ".join(rec.get("labels", []))
+        raw_labels = rec.get("labels", [])
+        label_parts = []
+        for lb in raw_labels:
+            if lb == "🔍네이버인기":
+                label_parts.append('<span class="cosearch-badge">🔍네이버인기</span>')
+            else:
+                label_parts.append(escape(lb))
+        labels_str = " ".join(label_parts)
         gap = rec.get("expert_gap", {})
         rec_score = rec.get("recommend_score", 0)
         pharma_val = rec.get("pharma_value", 0)
@@ -289,7 +297,14 @@ def build_html(data):
         # 복합키워드 테이블
         rows_html = ""
         for c in r.get("compounds", []):
-            labels = " ".join(c.get("labels", []))
+            raw_labels = c.get("labels", [])
+            label_parts = []
+            for lb in raw_labels:
+                if lb == "🔍네이버인기":
+                    label_parts.append('<span class="cosearch-badge">🔍네이버인기</span>')
+                else:
+                    label_parts.append(escape(lb))
+            labels = " ".join(label_parts)
             vol = c.get("volume")
             cr = c.get("change_rate")  # 단기 3일
             tr = c.get("trend_rate")   # 추세 7일
