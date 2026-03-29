@@ -4,7 +4,6 @@ on:
     - cron: '30 22 * * *'  # 07:30 KST
     - cron: '0 4 * * *'    # 13:00 KST
     - cron: '0 10 * * *'   # 19:00 KST
-    - cron: '0 15 * * *'   # 00:00 KST
   workflow_dispatch: {}
 permissions:
   contents: write

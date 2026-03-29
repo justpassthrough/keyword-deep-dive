@@ -28,7 +28,7 @@ HISTORY_DIR = os.path.join(DATA_DIR, "history")
 
 # ── API 호출 카운터 ────────────────────────────────────
 DATALAB_DAILY_LIMIT = 1000
-RUNS_PER_DAY = 4
+RUNS_PER_DAY = 3
 _api_counter = {"datalab": 0, "search": 0}
 
 # ── 약사 가치 판단 상수 ──────────────────────────────────
