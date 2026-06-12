@@ -527,15 +527,16 @@ def mine_compound_keywords(root):
 #  DataLab 비교 + 롱테일 판단
 # ══════════════════════════════════════════════════════════
 
-def compare_datalab(root, compounds):
-    """DataLab으로 검색량 비교. 5개씩 배치, 1초 간격."""
+def compare_datalab(compounds):
+    """DataLab으로 복합키워드 트렌드 조회. 5개씩 배치, 1초 간격.
+    큰 뿌리와 묶으면 작은 키워드가 정규화로 0에 깔려 트렌드가 소실되므로,
+    뿌리 없이 복합키워드끼리만 조회한다. change_rate는 자기 시계열 기준이라
+    배치(정규화) 무관하게 비교 가능."""
     results = {}
-    batches = [compounds[i:i+4] for i in range(0, len(compounds), 4)]
+    batches = [compounds[i:i+5] for i in range(0, len(compounds), 5)]
 
     for batch in batches:
-        keyword_groups = [{"groupName": root, "keywords": [root]}]
-        for kw in batch:
-            keyword_groups.append({"groupName": kw, "keywords": [kw]})
+        keyword_groups = [{"groupName": kw, "keywords": [kw]} for kw in batch]
 
         data = datalab_search(keyword_groups)
         time.sleep(1.0)  # DataLab 429 방지
@@ -545,9 +546,7 @@ def compare_datalab(root, compounds):
                 results[kw] = {"volume": None, "change_rate": None, "trend_rate": None, "type": "longtail"}
             continue
 
-        root_avg = _calc_recent_avg(data["results"][0]) if data["results"] else 0
-
-        for result in data["results"][1:]:
+        for result in data["results"]:
             kw = result["title"]
             avg = _calc_recent_avg(result)
             change_short = _calc_change_rate_short(result)
@@ -1066,7 +1065,7 @@ def main():
             continue
 
         # 2. DataLab 비교
-        datalab_results = compare_datalab(root, compounds)
+        datalab_results = compare_datalab(compounds)
 
         # 2.5. 검색광고 API — 월간 절대 검색수 + 경쟁정도 (키 없으면 빈 dict)
         volume_map = fetch_search_volume(compounds)
