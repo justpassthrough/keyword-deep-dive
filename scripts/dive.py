@@ -8,6 +8,7 @@ import base64
 import hashlib
 import hmac
 import json
+import math
 import os
 import re
 import time
@@ -307,16 +308,9 @@ def calc_opportunity(search_volume, comp_idx, pharma_value):
     if search_volume is None:
         return None  # 검색광고 데이터 없음 → 점수 미산출
 
-    if search_volume >= 5000:
-        demand_mult = 1.3
-    elif search_volume >= 1000:
-        demand_mult = 1.2
-    elif search_volume >= 300:
-        demand_mult = 1.1
-    elif search_volume >= 100:
-        demand_mult = 1.0
-    else:
-        demand_mult = 0.6  # 수요 자체가 적음
+    # 검색량은 20~수십만으로 자릿수 차이가 큼 → 로그로 가중(트래픽 중시).
+    # log10(검색량)/2: 100회=1.0, 2500회≈1.7, 1.1만회≈2.0, 23만회≈2.7
+    demand_mult = math.log10(max(search_volume, 10)) / 2
 
     comp_mult = {"낮음": 1.2, "중간": 1.0, "높음": 0.8}.get(comp_idx, 1.0)
 
@@ -1158,8 +1152,15 @@ def main():
             if dl.get("change_rate") is not None and dl["change_rate"] >= 20:
                 rising.append(kw)
 
-        # 약사가치순 정렬
-        compound_details.sort(key=lambda x: x["pharma_value"], reverse=True)
+        # 기회점수순 정렬 (검색량 100 미만은 맨 뒤로).
+        # 검색광고 데이터가 없으면 약사가치로 폴백.
+        def _sort_key(x):
+            sv = x.get("search_volume")
+            opp = x.get("opportunity_score")
+            score = opp if opp is not None else x.get("pharma_value", 0)
+            has_demand = 1 if (isinstance(sv, int) and sv >= 100) else 0
+            return (has_demand, score)
+        compound_details.sort(key=_sort_key, reverse=True)
 
         # 4. 뉴스 이벤트
         news_events = detect_news_events(news_titles, root)
