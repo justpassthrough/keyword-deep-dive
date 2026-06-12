@@ -33,6 +33,19 @@ CSS = """
   .rec-time-hot { color: #f85149; font-weight: 700; }
   .rec-time-rise { color: #f0883e; font-weight: 600; }
   .rec-time-flat { color: #8b949e; }
+  .written-badge { background: #21262d !important; color: #8b949e; border: 1px solid #30363d; }
+  .gap-badge { background: #1f6f3f !important; color: #aff5c8; font-weight: 700; }
+  .matched-post { display: block; margin-top: 6px; font-size: 0.8em; color: #8b949e; }
+  .matched-post a { color: #58a6ff; text-decoration: none; }
+  .matched-post a:hover { text-decoration: underline; }
+  .coverage-bar { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px 15px; margin-bottom: 14px; color: #c9d1d9; }
+  .coverage-bar b { color: #aff5c8; }
+  .coverage-bar .cov-written { color: #8b949e; }
+  tr.row-written { opacity: 0.5; }
+  .write-cell-gap { color: #3fb950; font-weight: 700; }
+  .write-cell-done { color: #8b949e; }
+  .write-cell-done a { color: #6e7681; text-decoration: none; }
+  .write-cell-done a:hover { text-decoration: underline; color: #58a6ff; }
   .rec-time-fall { color: #3fb950; }
   .rec-gap { color: #8b949e; font-size: 0.82em; margin-top: 4px; }
 
@@ -125,6 +138,19 @@ def build_html(data):
 
     changes = data.get("changes", {})
     api_usage = data.get("api_usage", {})
+    coverage = data.get("coverage", {})
+
+    # ── 내 글 교차검증 요약 바 ──
+    coverage_html = ""
+    if coverage.get("my_posts_count"):
+        coverage_html = (
+            '<div class="coverage-bar">'
+            f'📚 내 블로그 글 <b>{coverage.get("my_posts_count", 0)}개</b>와 대조 · '
+            f'추천 키워드 {coverage.get("checked", 0)}개 중 '
+            f'<b>🆕 미작성 {coverage.get("gap", 0)}개</b> · '
+            f'<span class="cov-written">✅ 이미 쓴 글 {coverage.get("already_written", 0)}개</span>'
+            '</div>'
+        )
 
     active_roots = [r for r in roots if r.get("status") == "active"]
     watch_roots = [r for r in roots if r.get("status") == "watch"]
@@ -251,12 +277,28 @@ def build_html(data):
             time_label = '<span class="rec-time-fall">하락 ×0.3</span>'
         else:
             time_label = '<span class="rec-time-flat">평시 ×0.5</span>'
+        # 작성 여부 배지 + 이미 쓴 글이면 링크
+        if rec.get("already_written"):
+            write_badge = '<span class="rec-pharma written-badge">✅ 이미 씀</span>'
+            mp = rec.get("matched_post") or {}
+            if mp.get("url"):
+                matched_html = (
+                    f'<div class="matched-post">내 글: '
+                    f'<a href="{escape(mp.get("url", ""))}" target="_blank">'
+                    f'{escape(mp.get("title", ""))}</a></div>'
+                )
+            else:
+                matched_html = ""
+        else:
+            write_badge = '<span class="rec-pharma gap-badge">🆕 미작성</span>'
+            matched_html = ""
         top_html += (
             '<div class="rec-card">'
             f'<div class="rec-rank">#{i}</div>'
             '<div class="rec-content">'
             f'<div class="rec-keyword">{escape(rec.get("keyword", ""))}</div>'
             '<div class="rec-meta">'
+            f'{write_badge}'
             f'<span class="rec-root">{escape(rec.get("root", ""))}</span>'
             f'<span class="rec-intent">{escape(rec.get("intent", ""))}</span>'
             f'<span class="rec-value">추천점수 {rec_score}</span>'
@@ -266,6 +308,7 @@ def build_html(data):
             '</div>'
             f'<div class="rec-gap">전문가갭: {gap.get("label", "")} '
             f'(전체 {gap.get("total", 0)} / 약사 {gap.get("expert", 0)})</div>'
+            f'{matched_html}'
             '</div></div>\n'
         )
 
@@ -332,8 +375,23 @@ def build_html(data):
                 vol_display = "-"
             bridge = f' → {escape(c.get("bridge_target", ""))}' if c.get("is_bridge") else ""
 
+            # 내가 이미 쓴 글이면 표시 + 흐리게, 아니면 '미작성' 강조
+            if c.get("already_written"):
+                row_cls = ' class="row-written"'
+                mp = c.get("matched_post") or {}
+                if mp.get("url"):
+                    write_cell = (
+                        f'<span class="write-cell-done">✅ <a href="{escape(mp.get("url", ""))}" '
+                        f'target="_blank" title="{escape(mp.get("title", ""))}">씀</a></span>'
+                    )
+                else:
+                    write_cell = '<span class="write-cell-done">✅ 씀</span>'
+            else:
+                row_cls = ""
+                write_cell = '<span class="write-cell-gap">🆕</span>'
+
             rows_html += (
-                "<tr>"
+                f"<tr{row_cls}>"
                 f'<td class="kw-cell">{escape(c.get("keyword", ""))}{bridge}</td>'
                 f"<td>{labels}</td>"
                 f"<td>{vol_display}</td>"
@@ -341,6 +399,7 @@ def build_html(data):
                 f'<td>{escape(c.get("intent", ""))}</td>'
                 f'<td>{gap.get("label", "")}</td>'
                 f'<td class="value-cell">{c.get("pharma_value", 0)}</td>'
+                f"<td>{write_cell}</td>"
                 "</tr>\n"
             )
 
@@ -363,7 +422,7 @@ def build_html(data):
             f'{news_block}'
             '<table class="kw-table"><thead><tr>'
             '<th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th>'
-            '<th>의도</th><th>전문가갭</th><th>약사가치</th>'
+            '<th>의도</th><th>전문가갭</th><th>약사가치</th><th>내 글</th>'
             f'</tr></thead><tbody>{rows_html}</tbody></table>'
             '</div>\n'
         )
@@ -474,6 +533,7 @@ def build_html(data):
         '</head>\n<body>\n'
         '<h1>키워드 딥다이브 스캐너</h1>\n'
         f'<div class="updated">마지막 업데이트: {updated}</div>\n'
+        f'{coverage_html}\n'
         f'{api_warning_html}\n'
         f'{changes_html}\n'
         f'{cosearch_html}\n'

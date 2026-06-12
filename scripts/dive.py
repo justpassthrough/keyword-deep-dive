@@ -825,6 +825,83 @@ def compare_with_previous(previous, current_roots):
 
 
 # ══════════════════════════════════════════════════════════
+#  내가 이미 쓴 글 교차검증 (inflow-keyword-analyzer 연동)
+# ══════════════════════════════════════════════════════════
+
+# inflow-keyword-analyzer 저장소가 매일 갱신하는 내 블로그 글 목록(공개 raw JSON)
+INFLOW_POSTS_URL = (
+    "https://raw.githubusercontent.com/justpassthrough/"
+    "inflow-keyword-analyzer/main/data/my_posts.json"
+)
+
+
+def fetch_my_posts():
+    """내가 이미 쓴 블로그 글 목록을 가져온다.
+
+    inflow-keyword-analyzer 저장소가 매일 RSS로 갱신하는 my_posts.json을
+    그대로 읽어온다. 실패하면 빈 리스트를 돌려줘서 분석 자체는 멈추지 않게 한다.
+    """
+    try:
+        r = requests.get(INFLOW_POSTS_URL, timeout=15)
+        r.raise_for_status()
+        data = r.json()
+        posts = data.get("posts", []) if isinstance(data, dict) else []
+        # 각 글의 검색용 텍스트(제목+요약)를 미리 만들어 둔다.
+        for p in posts:
+            text = f"{p.get('title', '')} {p.get('summary', '')}"
+            p["_search_text"] = re.sub(r"\s+", " ", text).strip()
+        print(f"  내 블로그 글 {len(posts)}개 로드 (교차검증용)")
+        return posts
+    except Exception as e:
+        print(f"  [경고] 내 글 목록 로드 실패 — 교차검증 스킵: {e}")
+        return []
+
+
+def _post_covers_keyword(keyword, post):
+    """글 한 편이 복합키워드를 '이미 다뤘는지' 판단.
+
+    복합키워드를 띄어쓰기로 쪼갠 모든 토큰이 글 제목+요약에 전부 들어 있으면
+    그 주제를 이미 쓴 것으로 본다. (예: '마운자로 고용량' → '마운자로'와 '고용량'이
+    모두 글에 등장해야 매칭)
+    """
+    text = post.get("_search_text", "")
+    tokens = [t for t in keyword.split() if t]
+    if not tokens:
+        return False
+    return all(t in text for t in tokens)
+
+
+def mark_already_written(all_results, posts):
+    """추천 복합키워드마다 '이미 쓴 글' 여부를 표시한다.
+
+    all_results 안의 compound dict에 직접 필드를 추가하므로,
+    같은 객체를 참조하는 top_recommendations 등에도 자동 반영된다.
+    반환값은 (검사한 키워드 수, 이미 쓴 수)이다.
+    """
+    checked = 0
+    written = 0
+    for r in all_results:
+        for c in r.get("compounds", []):
+            kw = c.get("keyword", "")
+            checked += 1
+            matches = [p for p in posts if _post_covers_keyword(kw, p)]
+            if matches:
+                # 가장 최근에 쓴 글을 대표로 연결
+                best = max(matches, key=lambda p: p.get("date", ""))
+                c["already_written"] = True
+                c["matched_post"] = {
+                    "title": best.get("title", ""),
+                    "url": best.get("url", ""),
+                    "date": best.get("date", ""),
+                }
+                written += 1
+            else:
+                c["already_written"] = False
+                c["matched_post"] = None
+    return checked, written
+
+
+# ══════════════════════════════════════════════════════════
 #  메인 파이프라인
 # ══════════════════════════════════════════════════════════
 
@@ -1011,6 +1088,20 @@ def main():
     all_compounds.sort(key=lambda x: x.get("recommend_score", 0), reverse=True)
     top_recommendations = all_compounds[:5]
 
+    # ── 내가 이미 쓴 글 교차검증 ──
+    # 추천 키워드 중 이미 글로 다룬 주제는 표시하고, '미작성 + 급등'만 부각시킨다.
+    my_posts = fetch_my_posts()
+    checked_cnt, written_cnt = mark_already_written(all_results, my_posts)
+    coverage = {
+        "my_posts_count": len(my_posts),
+        "checked": checked_cnt,
+        "already_written": written_cnt,
+        "gap": checked_cnt - written_cnt,
+    }
+    if my_posts:
+        print(f"\n── 교차검증: 추천 {checked_cnt}개 중 "
+              f"이미 쓴 글 {written_cnt}개 / 미작성 {checked_cnt - written_cnt}개 ──")
+
     # ── 미확인 후보 정리 ──
     unidentified_list = [
         {"word": w, "count": info["count"], "found_from": info["found_from"],
@@ -1060,6 +1151,7 @@ def main():
         "unidentified_candidates": unidentified_list,
         "changes": changes,
         "api_usage": api_usage,
+        "coverage": coverage,
     }
 
     latest_path = os.path.join(DATA_DIR, "latest.json")
