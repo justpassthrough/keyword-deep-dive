@@ -488,20 +488,26 @@ def build_html(data):
                 f'{items_html}'
             )
 
-        # 2차: 급등 키워드 심층 cosearch
+        # 2차: 급등 키워드 심층 cosearch (데이터랩 트렌드 모멘텀 상위)
         if deep_cosearch:
             deep_html = ""
             for dc in deep_cosearch:
+                cr = dc.get("change_rate")
+                cr_disp = f"🔥{cr:+.0f}%" if cr is not None else "신규"
+                pv = dc.get("pharma_value")
                 deep_html += (
                     '<span class="cosearch-item" style="border-color:#f8514950;">'
                     f'<span class="cs-kw">{escape(dc.get("query", ""))}</span> '
                     f'<span class="cs-root">← {escape(dc.get("source_keyword", ""))}</span> '
-                    f'<span class="cs-rising">🔥급등연관</span>'
+                    f'<span class="cs-rising">{cr_disp}</span> '
+                    f'<span class="cs-value">약사가치 {pv}</span>'
                     '</span>\n'
                 )
             sections_inner += (
                 '<h4 style="color:#f85149;margin-top:12px;margin-bottom:8px;">'
-                '🔥 급등 키워드에서 추가 발견</h4>'
+                '🔥 급등 키워드에서 추가 발견 '
+                '<span style="font-weight:normal;font-size:0.8em;color:#8b949e;">'
+                '(데이터랩 트렌드 모멘텀 상위 10)</span></h4>'
                 f'{deep_html}'
             )
 

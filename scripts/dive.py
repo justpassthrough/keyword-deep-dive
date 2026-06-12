@@ -1199,26 +1199,67 @@ def main():
 
     if all_rising_kws:
         print(f"\n── 급등 키워드 2차 cosearch: {len(all_rising_kws)}개 ──")
+        # 기존 복합키워드(메인 표) 집합 — 중복 제거용
+        existing = set()
+        for r in all_results:
+            for c in r.get("compounds", []):
+                existing.add(c["keyword"].replace(" ", ""))
+
+        raw = []
+        seen = set()
         for rk in all_rising_kws:
             results = fetch_cosearch_trending(rk["keyword"])
             for cs in results:
-                if cs["is_trending"]:
-                    deep_cosearch.append({
-                        "query": cs["query"],
-                        "source_keyword": rk["keyword"],
-                        "root": rk["root"],
-                    })
+                if not cs["is_trending"]:
+                    continue
+                q = cs["query"]
+                qn = q.replace(" ", "")
+                if qn in seen or qn in existing:
+                    continue  # 중복 / 메인 표와 겹침 제거
+                if any(region in q for region in REGIONS):
+                    continue  # 지역 스팸 제거
+                seen.add(qn)
+                raw.append({"query": q, "source_keyword": rk["keyword"], "root": rk["root"]})
             time.sleep(0.5)
+        print(f"  요즘인기 수집(중복/스팸 제거 후): {len(raw)}개")
 
-        # 중복 제거 (query 기준)
-        seen = set()
-        unique_deep = []
-        for d in deep_cosearch:
-            if d["query"] not in seen:
-                seen.add(d["query"])
-                unique_deep.append(d)
-        deep_cosearch = unique_deep
-        print(f"  2차 cosearch 요즘인기: {len(deep_cosearch)}개 발견")
+        # 이 신생 롱테일은 검색광고 키워드DB엔 없지만(0건) 데이터랩엔 트렌드가 잡힘.
+        # 롱테일끼리만 5개씩 묶어 조회(큰 뿌리와 안 묶음 → 정규화 왜곡 회피).
+        # change_rate는 자기 시계열 내 비율이라 배치(정규화) 무관하게 비교 가능.
+        for i in range(0, len(raw), 5):
+            batch = raw[i:i + 5]
+            groups = [{"groupName": d["query"], "keywords": [d["query"]]} for d in batch]
+            data = datalab_search(groups)
+            time.sleep(1.0)
+            by_title = {res["title"]: res for res in (data.get("results", []) if data else [])}
+            for d in batch:
+                res = by_title.get(d["query"])
+                if res and res.get("data"):
+                    d["trend_avg"] = round(_calc_recent_avg(res), 1)
+                    d["change_rate"] = _calc_change_rate_short(res)
+                else:
+                    d["trend_avg"] = 0
+                    d["change_rate"] = None
+
+        # 데이터랩 신호 있는 것만 → 모멘텀 상위 25개로 압축(비싼 전문가갭 절약)
+        signal = [d for d in raw if d.get("trend_avg", 0) > 0]
+        signal.sort(key=lambda x: (x.get("change_rate") is not None,
+                                   x.get("change_rate") or 0, x.get("trend_avg", 0)),
+                    reverse=True)
+        shortlist = signal[:25]
+
+        # 약사가치 부여 후 '약사가치 × 시의성'으로 최종 정렬(브랜드명 급등 노이즈 억제).
+        # 메인 추천점수와 동일 공식(calc_recommend_score, 검색량 없으니 약사가치 폴백).
+        for d in shortlist:
+            intent, intent_score = _classify_intent(d["query"])
+            gap = calc_expert_gap(d["query"])
+            d["intent"] = intent
+            d["pharma_value"] = calc_pharma_value(d["query"], intent_score, gap)
+            d["expert_gap"] = gap
+            d["deep_score"] = calc_recommend_score(None, d["pharma_value"], d.get("change_rate"))
+        shortlist.sort(key=lambda x: x.get("deep_score") or 0, reverse=True)
+        deep_cosearch = shortlist[:10]
+        print(f"  → 데이터랩 신호 {len(signal)}개 → 약사가치×시의성 상위 {len(deep_cosearch)}개")
 
     # ── 전체 통합 추천 ──
     all_compounds = []
