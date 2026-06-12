@@ -684,9 +684,9 @@ def _intent_label(word):
     return mapping.get(word, "일반")
 
 
-def calc_pharma_value(compound, intent_score, expert_gap, change_rate):
-    """약사 가치 = 의도점수 × 전문가갭배수 × 변화율보너스."""
-    # 전문가 갭 배수
+def calc_pharma_value(compound, intent_score, expert_gap):
+    """약사 가치 = 의도점수 × 전문가갭배수. 시점 무관한 '전문성 적합도'.
+    (시의성/변화율은 여기 넣지 않음 → 추천점수에서만 반영해 이중계산 방지)"""
     ratio = expert_gap.get("ratio", 0)
     if ratio >= 30:
         gap_mult = 1.3
@@ -697,19 +697,14 @@ def calc_pharma_value(compound, intent_score, expert_gap, change_rate):
     else:
         gap_mult = 0.7
 
-    # 변화율 보너스
-    change_bonus = 1.0
-    if change_rate is not None and change_rate >= 50:
-        change_bonus = 1.4
-    elif change_rate is not None and change_rate >= 20:
-        change_bonus = 1.2
-
-    value = intent_score * gap_mult * change_bonus
-    return round(value, 1)
+    return round(intent_score * gap_mult, 1)
 
 
-def calc_recommend_score(pharma_value, change_rate):
-    """추천 점수 = 약사가치 × 시의성 배수. '지금 쓰면 좋은 글'을 골라내기 위한 점수."""
+def calc_recommend_score(opportunity_score, pharma_value, change_rate):
+    """추천 점수 = 기회점수 × 시의성 배수. '지금 쓰면 좋은 글'을 골라내기 위한 점수.
+    기회점수(수요·경쟁 반영)에 시의성만 곱해 메인 표와 일관 + % 급등 함정 회피.
+    검색광고 데이터가 없으면 약사가치로 폴백."""
+    base = opportunity_score if opportunity_score is not None else pharma_value
     if change_rate is not None and change_rate >= 50:
         timeliness = 2.0
     elif change_rate is not None and change_rate >= 20:
@@ -719,7 +714,7 @@ def calc_recommend_score(pharma_value, change_rate):
     else:
         # change_rate < -10 (하락)
         timeliness = 0.3
-    return round(pharma_value * timeliness, 1)
+    return round(base * timeliness, 1)
 
 
 def _make_labels(intent_score, change_rate, is_bridge, datalab_type):
@@ -1100,11 +1095,8 @@ def main():
             # 브릿지 감지
             is_bridge, bridge_target = detect_bridge(kw, roots)
 
-            # 약사 가치
-            pharma_value = calc_pharma_value(kw, intent_score, expert_gap, dl.get("change_rate"))
-
-            # 추천 점수
-            recommend_score = calc_recommend_score(pharma_value, dl.get("change_rate"))
+            # 약사 가치 (시점 무관 전문성 적합도)
+            pharma_value = calc_pharma_value(kw, intent_score, expert_gap)
 
             # 검색광고 기반 절대 검색량 + 경쟁정도 + 기회점수
             vol = lookup_volume(volume_map, kw)
@@ -1112,6 +1104,10 @@ def main():
             comp_idx = vol["comp_idx"] if vol else None
             opportunity_score = calc_opportunity(search_volume, comp_idx, pharma_value)
             opp_label = opportunity_label(search_volume, comp_idx)
+
+            # 추천 점수 = 기회점수 × 시의성 (지금 쓰기 좋은 글감)
+            recommend_score = calc_recommend_score(
+                opportunity_score, pharma_value, dl.get("change_rate"))
 
             # cosearch trending 여부
             is_cosearch_trending = kw in cosearch_trending_set
@@ -1230,7 +1226,12 @@ def main():
         for c in r["compounds"]:
             c["root"] = r["keyword"]
             all_compounds.append(c)
-    all_compounds.sort(key=lambda x: x.get("recommend_score", 0), reverse=True)
+    # 추천점수순, 단 검색량 100 미만은 맨 뒤로(아무도 안 찾는 급등 키워드 배제)
+    def _rec_key(x):
+        sv = x.get("search_volume")
+        has_demand = 1 if (isinstance(sv, int) and sv >= 100) else 0
+        return (has_demand, x.get("recommend_score", 0))
+    all_compounds.sort(key=_rec_key, reverse=True)
     top_recommendations = all_compounds[:5]
 
     # ── 내가 이미 쓴 글 교차검증 ──
