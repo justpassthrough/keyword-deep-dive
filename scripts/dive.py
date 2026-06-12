@@ -4,6 +4,9 @@
 뿌리 키워드에서 복합키워드를 자동 확장하고 약사 블로그 글감 가치를 판단.
 """
 
+import base64
+import hashlib
+import hmac
 import json
 import os
 import re
@@ -21,6 +24,12 @@ NAVER_HEADERS = {
     "X-Naver-Client-Id": NAVER_CLIENT_ID,
     "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
 }
+
+# 검색광고(검색광고 키워드도구) API — 월간 절대 검색수 + 경쟁정도
+NAVER_AD_CUSTOMER_ID = os.environ.get("NAVER_AD_CUSTOMER_ID", "")
+NAVER_AD_API_KEY = os.environ.get("NAVER_AD_API_KEY", "")
+NAVER_AD_SECRET_KEY = os.environ.get("NAVER_AD_SECRET_KEY", "")
+SEARCHAD_BASE = "https://api.searchad.naver.com"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -210,6 +219,123 @@ def get_blog_total_count(query):
     """블로그 검색 totalCount 조회."""
     data = _naver_search("blog", {"query": query, "display": 1})
     return data.get("total", 0)
+
+
+# ══════════════════════════════════════════════════════════
+#  검색광고 키워드도구 API (월간 절대 검색수 + 경쟁정도)
+# ══════════════════════════════════════════════════════════
+
+def _searchad_signature(timestamp, method, path):
+    """검색광고 API용 HMAC-SHA256 서명 생성."""
+    message = f"{timestamp}.{method}.{path}"
+    digest = hmac.new(
+        NAVER_AD_SECRET_KEY.encode("utf-8"),
+        message.encode("utf-8"),
+        hashlib.sha256,
+    ).digest()
+    return base64.b64encode(digest).decode("utf-8")
+
+
+def _parse_qc(value):
+    """월간검색수 파싱. '< 10' 같은 문자열 → 정수."""
+    if isinstance(value, int):
+        return value
+    if isinstance(value, str):
+        v = value.replace("<", "").replace(",", "").strip()
+        if v.isdigit():
+            return int(v)
+        return 9  # "< 10" 류는 9로 근사
+    return 0
+
+
+def fetch_search_volume(keywords):
+    """검색광고 API로 키워드들의 월간검색수(PC+모바일)와 경쟁정도 조회.
+    keywords: 문자열 리스트. 반환: {키워드(공백제거,대문자): {pc, mobile, total, comp_idx}}.
+    키가 없으면 빈 dict 반환(있는 기능에 영향 없음)."""
+    result = {}
+    if not (NAVER_AD_CUSTOMER_ID and NAVER_AD_API_KEY and NAVER_AD_SECRET_KEY):
+        return result
+    path = "/keywordstool"
+    # API는 한 번에 hintKeywords 최대 5개 권장 → 5개씩 배치
+    for i in range(0, len(keywords), 5):
+        batch = keywords[i:i + 5]
+        # 검색광고 API는 키워드의 공백을 무시함 → 공백 제거해서 전달
+        hint = ",".join(k.replace(" ", "") for k in batch)
+        timestamp = str(int(time.time() * 1000))
+        headers = {
+            "X-Timestamp": timestamp,
+            "X-API-KEY": NAVER_AD_API_KEY,
+            "X-Customer": str(NAVER_AD_CUSTOMER_ID),
+            "X-Signature": _searchad_signature(timestamp, "GET", path),
+        }
+        try:
+            r = requests.get(
+                SEARCHAD_BASE + path,
+                headers=headers,
+                params={"hintKeywords": hint, "showDetail": "1"},
+                timeout=10,
+            )
+            if r.status_code != 200:
+                print(f"  [검색광고 경고] status {r.status_code}: {r.text[:120]}")
+                time.sleep(0.5)
+                continue
+            for item in r.json().get("keywordList", []):
+                rel = item.get("relKeyword", "")
+                key = rel.replace(" ", "").upper()
+                pc = _parse_qc(item.get("monthlyPcQcCnt", 0))
+                mo = _parse_qc(item.get("monthlyMobileQcCnt", 0))
+                result[key] = {
+                    "pc": pc,
+                    "mobile": mo,
+                    "total": pc + mo,
+                    "comp_idx": item.get("compIdx", ""),
+                }
+        except Exception as e:
+            print(f"  [검색광고 경고] {e}")
+        time.sleep(0.4)  # rate limit 보호
+    return result
+
+
+def lookup_volume(volume_map, keyword):
+    """fetch_search_volume 결과에서 특정 키워드의 지표를 안전하게 꺼냄."""
+    return volume_map.get(keyword.replace(" ", "").upper())
+
+
+def calc_opportunity(search_volume, comp_idx, pharma_value):
+    """기회점수 = 약사가치 × 수요배수 × 경쟁여유배수.
+    '검색량은 충분한데 경쟁은 덜한' 황금 키워드를 위로 끌어올림."""
+    if search_volume is None:
+        return None  # 검색광고 데이터 없음 → 점수 미산출
+
+    if search_volume >= 5000:
+        demand_mult = 1.3
+    elif search_volume >= 1000:
+        demand_mult = 1.2
+    elif search_volume >= 300:
+        demand_mult = 1.1
+    elif search_volume >= 100:
+        demand_mult = 1.0
+    else:
+        demand_mult = 0.6  # 수요 자체가 적음
+
+    comp_mult = {"낮음": 1.2, "중간": 1.0, "높음": 0.8}.get(comp_idx, 1.0)
+
+    return round(pharma_value * demand_mult * comp_mult, 1)
+
+
+def opportunity_label(search_volume, comp_idx):
+    """검색량·경쟁도 조합을 사람이 읽을 라벨로."""
+    if search_volume is None:
+        return None
+    if search_volume < 100:
+        return "수요 적음"
+    if search_volume >= 1000 and comp_idx == "낮음":
+        return "💎황금(수요多·경쟁低)"
+    if comp_idx == "낮음":
+        return "양호(경쟁 낮음)"
+    if comp_idx == "높음":
+        return "포화(경쟁 높음)"
+    return "보통"
 
 
 def datalab_search(keyword_groups, start_date=None, end_date=None):
@@ -953,6 +1079,11 @@ def main():
         # 2. DataLab 비교
         datalab_results = compare_datalab(root, compounds)
 
+        # 2.5. 검색광고 API — 월간 절대 검색수 + 경쟁정도 (키 없으면 빈 dict)
+        volume_map = fetch_search_volume(compounds)
+        if volume_map:
+            print(f"  → 검색광고 검색량 수집: {len(volume_map)}개 키워드")
+
         # 3. 각 복합키워드 분석
         compound_details = []
         rising = []
@@ -981,6 +1112,13 @@ def main():
             # 추천 점수
             recommend_score = calc_recommend_score(pharma_value, dl.get("change_rate"))
 
+            # 검색광고 기반 절대 검색량 + 경쟁정도 + 기회점수
+            vol = lookup_volume(volume_map, kw)
+            search_volume = vol["total"] if vol else None
+            comp_idx = vol["comp_idx"] if vol else None
+            opportunity_score = calc_opportunity(search_volume, comp_idx, pharma_value)
+            opp_label = opportunity_label(search_volume, comp_idx)
+
             # cosearch trending 여부
             is_cosearch_trending = kw in cosearch_trending_set
 
@@ -988,6 +1126,8 @@ def main():
             labels = _make_labels(intent_score, dl.get("change_rate"), is_bridge, dl["type"])
             if is_cosearch_trending:
                 labels.append("🔍네이버인기")
+            if opp_label and opp_label.startswith("💎"):
+                labels.append("💎황금")
 
             detail = {
                 "keyword": kw,
@@ -1000,6 +1140,10 @@ def main():
                 "expert_gap": expert_gap,
                 "pharma_value": pharma_value,
                 "recommend_score": recommend_score,
+                "search_volume": search_volume,
+                "comp_idx": comp_idx,
+                "opportunity_score": opportunity_score,
+                "opportunity_label": opp_label,
                 "labels": labels,
                 "is_bridge": is_bridge,
                 "bridge_target": bridge_target,

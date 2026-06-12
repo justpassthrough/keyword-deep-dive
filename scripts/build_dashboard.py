@@ -73,6 +73,10 @@ CSS = """
   .positive { color: #f85149; }
   .negative { color: #3fb950; }
   .trend-sub { color: #8b949e; font-size: 0.8em; }
+  .vol-cell { color: #58a6ff; font-weight: 600; }
+  .comp-low { color: #3fb950; font-weight: 600; }
+  .comp-mid { color: #d29922; }
+  .comp-high { color: #f85149; }
 
   .watch-badge { background: #d2a8ff20; color: #d2a8ff; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: normal; margin-left: 6px; }
   .cosearch-badge { background: #1f6feb33; color: #58a6ff; border: 1px solid #1f6feb50; padding: 1px 6px; border-radius: 3px; font-size: 0.8em; font-weight: 600; }
@@ -390,6 +394,15 @@ def build_html(data):
                 row_cls = ""
                 write_cell = '<span class="write-cell-gap">🆕</span>'
 
+            # 검색광고 기반 절대 검색수 / 경쟁도 / 기회점수
+            sv = c.get("search_volume")
+            sv_display = f"{sv:,}" if isinstance(sv, int) else "-"
+            comp = c.get("comp_idx")
+            comp_cls = {"낮음": "comp-low", "중간": "comp-mid", "높음": "comp-high"}.get(comp, "")
+            comp_display = f'<span class="{comp_cls}">{escape(comp)}</span>' if comp else "-"
+            opp = c.get("opportunity_score")
+            opp_display = str(opp) if opp is not None else "-"
+
             rows_html += (
                 f"<tr{row_cls}>"
                 f'<td class="kw-cell">{escape(c.get("keyword", ""))}{bridge}</td>'
@@ -399,6 +412,9 @@ def build_html(data):
                 f'<td>{escape(c.get("intent", ""))}</td>'
                 f'<td>{gap.get("label", "")}</td>'
                 f'<td class="value-cell">{c.get("pharma_value", 0)}</td>'
+                f'<td class="vol-cell">{sv_display}</td>'
+                f"<td>{comp_display}</td>"
+                f'<td class="value-cell">{opp_display}</td>'
                 f"<td>{write_cell}</td>"
                 "</tr>\n"
             )
@@ -421,8 +437,9 @@ def build_html(data):
             f'{rising_block}'
             f'{news_block}'
             '<table class="kw-table"><thead><tr>'
-            '<th>복합키워드</th><th>라벨</th><th>검색량</th><th>변화율(3일)</th>'
-            '<th>의도</th><th>전문가갭</th><th>약사가치</th><th>내 글</th>'
+            '<th>복합키워드</th><th>라벨</th><th>트렌드</th><th>변화율(3일)</th>'
+            '<th>의도</th><th>전문가갭</th><th>약사가치</th>'
+            '<th>월검색수</th><th>경쟁</th><th>기회점수</th><th>내 글</th>'
             f'</tr></thead><tbody>{rows_html}</tbody></table>'
             '</div>\n'
         )
