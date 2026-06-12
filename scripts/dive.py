@@ -112,6 +112,17 @@ CANDIDATE_EXCLUDE = _INTENT_WORDS | {
     "체중", "체지방", "근육", "면역", "면역력", "피로", "간수치",
 }
 
+# 회사·주식·유통 고유명사 (영양제 성분 뿌리에 딸려오는 off-topic) — 복합키워드에서 제외.
+# 정확히 일치할 때만 제외(부분매칭 X) → "종근당 락토핏" 같은 정상 제품키워드는 유지.
+COMPANY_EXCLUDE = {
+    # 성분 뿌리(아연/구리 등)에 딸려오는 주식·금속 회사
+    "고려아연", "영풍", "풍산",
+    # 제약/유통 회사명 (제품이 아닌 회사 자체)
+    "대원제약", "종근당", "유한양행", "동아제약", "한미약품", "광동제약",
+    "일동제약", "녹십자", "보령제약", "대웅제약", "GC녹십자", "HK이노엔",
+    "풀무원", "킴스클럽", "올리브영", "다이소",
+}
+
 
 # ══════════════════════════════════════════════════════════
 #  데이터 로드
@@ -511,12 +522,12 @@ def mine_compound_keywords(root):
     # 바이그램 기반 복합키워드
     compounds = set()
     for kw, cnt in bigrams.most_common(30):
-        if cnt >= 2:
+        if cnt >= 2 and kw not in COMPANY_EXCLUDE:
             compounds.add(kw)
 
     # 동시 출현 단어 → "뿌리 X" 형태로 추가
     for word, cnt in cooccurrence.most_common(20):
-        if cnt >= 3:
+        if cnt >= 3 and word not in COMPANY_EXCLUDE:
             compound = f"{root} {word}"
             compounds.add(compound)
 
