@@ -35,6 +35,7 @@
 | `scripts/dive.py` | **메인 스크립트**. 뿌리 키워드마다 복합키워드를 찾고, 검색량/변화율/전문가갭/약사가치를 분석합니다. |
 | `scripts/build_dashboard.py` | `data/latest.json`을 읽어서 보기 좋은 HTML 대시보드(`docs/index.html`)를 만듭니다. |
 | `scripts/discover_roots.py` | 새로운 뿌리 키워드를 자동으로 발굴합니다. 매주 월요일 실행됩니다. |
+| `scripts/compete.py` | **상위노출 경쟁 분석기**(수동 실행). 키워드의 네이버 블로그 1페이지를 긁어 인플루언서 비중·최신성·글자수·이미지수를 분석하고 진입난이도(쉬움/보통/어려움)와 목표 분량을 알려줍니다. `python scripts/compete.py "키워드"` 또는 `--gold`(💎황금 키워드 자동 분석). 로컬 PC에서 실행하세요. |
 | `data/root_keywords.json` | 현재 관리 중인 뿌리 키워드 목록입니다. |
 | `data/known_products.json` | 알려진 제품/성분 이름 사전입니다. |
 | `data/latest.json` | 가장 최근 분석 결과입니다. |
