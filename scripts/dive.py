@@ -11,12 +11,20 @@ import json
 import math
 import os
 import re
+import sys
 import time
 import urllib.parse
 from collections import Counter
 from datetime import datetime, timedelta
 
 import requests
+
+# Windows 콘솔(cp949)에서 이모지 출력 시 UnicodeEncodeError 방지 — 출력 인코딩을 UTF-8로 고정
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except (AttributeError, ValueError):
+    pass
 
 # ── 환경변수 ──────────────────────────────────────────────
 NAVER_CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "")
@@ -122,6 +130,13 @@ COMPANY_EXCLUDE = {
     "일동제약", "녹십자", "보령제약", "대웅제약", "GC녹십자", "HK이노엔",
     "풀무원", "킴스클럽", "올리브영", "다이소",
 }
+# 공백 무시 비교용 (바이그램 "고려 아연", cosearch "고려아연" 등 표기차 모두 매칭)
+COMPANY_EXCLUDE_NORM = {c.replace(" ", "") for c in COMPANY_EXCLUDE}
+
+
+def is_excluded_company(kw):
+    """회사/주식명 여부 — 공백 무시하고 정확일치로 판단."""
+    return kw.replace(" ", "") in COMPANY_EXCLUDE_NORM
 
 
 # ══════════════════════════════════════════════════════════
@@ -522,12 +537,12 @@ def mine_compound_keywords(root):
     # 바이그램 기반 복합키워드
     compounds = set()
     for kw, cnt in bigrams.most_common(30):
-        if cnt >= 2 and kw not in COMPANY_EXCLUDE:
+        if cnt >= 2 and not is_excluded_company(kw):
             compounds.add(kw)
 
     # 동시 출현 단어 → "뿌리 X" 형태로 추가
     for word, cnt in cooccurrence.most_common(20):
-        if cnt >= 3 and word not in COMPANY_EXCLUDE:
+        if cnt >= 3 and not is_excluded_company(word):
             compound = f"{root} {word}"
             compounds.add(compound)
 
@@ -1088,6 +1103,9 @@ def main():
         rising = []
 
         for kw in compounds:
+            # 회사/주식명(고려아연 등)은 cosearch 경로로도 들어오므로 여기서 일괄 제외
+            if is_excluded_company(kw):
+                continue
             dl = datalab_results.get(kw, {"volume": None, "change_rate": None, "trend_rate": None, "type": "longtail"})
             intent, intent_score = _classify_intent(kw)
 
