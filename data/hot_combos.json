@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-16 17:00",
-  "today_count": 6,
+  "updated_at": "2026-06-16 17:27",
+  "today_count": 5,
   "count": 6,
   "items": [
     {
@@ -15,7 +15,8 @@
       "seed": "다이어트",
       "today": true,
       "last_seen": "2026-06-16",
-      "seen_count": 2
+      "seen_count": 3,
+      "first_seen": "2026-06-16"
     },
     {
       "keyword": "이순실 위고비",
@@ -25,7 +26,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-16",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -36,7 +37,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-16",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -47,7 +48,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-16",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -58,7 +59,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-16",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -70,7 +71,7 @@
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-16",
       "seen_count": 1,
-      "today": true
+      "today": false
     }
   ]
 }
