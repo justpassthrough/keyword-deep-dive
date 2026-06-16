@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-16 13:53",
-  "count": 7,
+  "updated_at": "2026-06-16 06:23",
+  "count": 1,
   "items": [
     {
       "keyword": "김민하 다이어트",
@@ -12,72 +12,6 @@
       "entity": "인물",
       "shop_count": 0,
       "seed": "다이어트"
-    },
-    {
-      "keyword": "이순실 위고비",
-      "kind": "화제(인물)",
-      "warn": "👤인물",
-      "is_hot_badge": false,
-      "search_volume": 1790,
-      "comp_idx": "낮음",
-      "entity": "인물",
-      "shop_count": 0,
-      "seed": "위고비"
-    },
-    {
-      "keyword": "남진 쏘팔메토",
-      "kind": "화제(인물)",
-      "warn": "👤인물",
-      "is_hot_badge": false,
-      "search_volume": 1450,
-      "comp_idx": "높음",
-      "entity": "인물",
-      "shop_count": 230,
-      "seed": "쏘팔메토"
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "kind": "화제(인물)",
-      "warn": "👤인물",
-      "is_hot_badge": false,
-      "search_volume": 260,
-      "comp_idx": "낮음",
-      "entity": "인물",
-      "shop_count": 0,
-      "seed": "마운자로"
-    },
-    {
-      "keyword": "씬님 마운자로",
-      "kind": "화제(인물)",
-      "warn": "👤인물",
-      "is_hot_badge": false,
-      "search_volume": 250,
-      "comp_idx": "낮음",
-      "entity": "인물",
-      "shop_count": 0,
-      "seed": "마운자로"
-    },
-    {
-      "keyword": "쏘팔메토 레드",
-      "kind": "화제(인물)",
-      "warn": "👤인물",
-      "is_hot_badge": false,
-      "search_volume": 230,
-      "comp_idx": "높음",
-      "entity": "인물",
-      "shop_count": 455,
-      "seed": "쏘팔메토"
-    },
-    {
-      "keyword": "최화정 글루타치온",
-      "kind": "화제(인물)",
-      "warn": "👤인물",
-      "is_hot_badge": false,
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "entity": "인물",
-      "shop_count": 0,
-      "seed": "글루타치온"
     }
   ]
 }
