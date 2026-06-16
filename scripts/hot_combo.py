@@ -52,7 +52,7 @@ MOBILE_UA = "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36"
 # 막힘(Actions IP 스로틀링) 대비: 짧은 타임아웃 + 전체 시간 예산.
 # 스크래핑(cosearch/자동완성/인물검증)은 막힐 수 있고, 공식 API(검색/쇼핑/검색광고)는 안전.
 REQUEST_TIMEOUT = 6
-MAX_RUNTIME = float(os.environ.get("HOTCOMBO_MAX_SEC", "420"))  # 7분 — 넘으면 중단·저장
+MAX_RUNTIME = float(os.environ.get("HOTCOMBO_MAX_SEC", "600"))  # 10분 — 넘으면 중단·저장
 
 # ── Kiwi 형태소 분석기 (지연 로드) ──
 _kiwi = None
@@ -304,7 +304,7 @@ def fetch_search_volume(keywords):
                 result[key] = {"total": pc + mo, "comp_idx": item.get("compIdx", "")}
         except Exception as e:
             print(f"  [검색광고 경고] {e}")
-        time.sleep(0.4)
+        time.sleep(0.2)
     return result
 
 def lookup_volume(vmap, kw):
@@ -320,6 +320,22 @@ def shop_count(keyword):
     except Exception:
         return -1
 
+# 이름 형태(2~4자 한글)지만 인물이 아닌 흔한 일반어 — 인물 후보에서 제외
+NAME_STOPLIST = {
+    "하루", "스토리", "레드", "골드", "블랙", "화이트", "그린", "오리지널", "프리미엄",
+    "스페셜", "에디션", "플러스", "데일리", "오늘", "내일", "이번", "최신", "신상",
+    "정품", "공식", "국내", "수입", "대용량", "소용량", "리얼", "퓨어", "내돈내산",
+}
+
+def is_name_shaped(token):
+    """인물명 형태(2~4자 순수 한글)인지. 인물 후보를 이 형태로 좁혀 노이즈·긴토큰 제거.
+    이름처럼 보이는 흔한 일반어(하루·스토리·레드 등)는 제외."""
+    t = (token or "").strip()
+    if t in NAME_STOPLIST:
+        return False
+    return bool(re.fullmatch(r"[가-힣]{2,4}", t))
+
+
 # ══════════════════════════════════════════════════════════
 #  메인
 # ══════════════════════════════════════════════════════════
@@ -334,7 +350,7 @@ UMBRELLA_SEEDS = ["연예인 다이어트", "다이어트약", "감량 성공", 
 TEST_ROOTS = ["위고비", "마운자로", "루테인", "콜라겐", "글루타치온",
               "유산균", "오메가3", "미녹시딜", "쏘팔메토"]
 
-def run(roots=None, verify=True, min_volume=30, verify_limit=60, limit=None):
+def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
     if roots is None:
         roots = load_active_roots()
     print("=" * 60)
@@ -401,10 +417,12 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=60, limit=None):
             next((i for i in INGREDIENT if i in phrase), meta["seed"])
         rows.append({"phrase": phrase, "hot": meta["hot"], "seed": meta["seed"],
                      **classify(phrase, root)})
-    hotrows = [r for r in rows if r["kind"] not in ("정보성", "제형", "지역")]
-    print(f"    화제성 후보 {len(hotrows)}개 (정보성·제형·지역 제외)")
+    # 인물 전용: '미확인 고유명사' 중 이름 형태(2~4자 한글)만 → 노이즈·긴토큰 제거.
+    # (검색량/검증을 이 후보들에만 돌려 시간 절약 + 인물 비율↑)
+    hotrows = [r for r in rows if r.get("needs_verify") and is_name_shaped(r["token"])]
+    print(f"    인물 후보(이름형 토큰) {len(hotrows)}개")
 
-    # 검색량 (전 후보 — 트래픽이 화제성 판단 핵심)
+    # 검색량 (인물 후보만 — 트래픽순 검증 우선순위용)
     print("[5] 검색광고 월검색량 조회")
     vmap = fetch_search_volume([r["phrase"] for r in hotrows])
     for r in hotrows:
