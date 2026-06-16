@@ -25,10 +25,21 @@ jobs:
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
         run: python scripts/dive.py
+      - name: Run hot combo scanner
+        continue-on-error: true
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+        run: python scripts/hot_combo.py
       - name: Build dashboard
         run: python scripts/build_dashboard.py
       - name: Inject goldmine section (if data exists)
         run: python scripts/build_goldmine_section.py --inject || true
+      - name: Inject hot combo section (if data exists)
+        run: python scripts/build_hot_section.py --inject || true
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
