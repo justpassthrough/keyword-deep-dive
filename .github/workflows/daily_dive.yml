@@ -25,15 +25,9 @@ jobs:
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
         run: python scripts/dive.py
-      - name: Run hot combo scanner
-        continue-on-error: true
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
-          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
-          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
-          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
-        run: python scripts/hot_combo.py
+      # 참고: hot_combo.py(인물 화제 조합) 생성은 로컬에서 자동 실행(작업 스케줄러)함.
+      #   Actions 데이터센터 IP는 네이버 인물검증 페이지가 막혀 인물이 거의 안 잡힘.
+      #   여기선 로컬이 푸시한 data/hot_combos.json을 읽어 대시보드에 주입만 한다.
       - name: Build dashboard
         run: python scripts/build_dashboard.py
       - name: Inject goldmine section (if data exists)

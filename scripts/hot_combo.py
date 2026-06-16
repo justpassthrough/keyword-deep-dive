@@ -17,6 +17,7 @@
 출력: data/hot_combos.json
 """
 import os, sys, re, time, json, base64, hmac, hashlib, urllib.parse, urllib.request
+from datetime import datetime
 import requests
 
 try:
@@ -468,34 +469,77 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
     print(f"    → 인물 조합 {len(persons)}개 생존")
     hotrows = persons
 
-    # 랭킹: 요즘인기 → 트래픽순
-    hotrows.sort(key=lambda r: (not r["hot"], -(r["search_volume"] or 0)))
+    # ── 누적 병합 ──
+    # 매번 덮어쓰지 않고, 기존 누적에 이번 발견을 합침. 인물은 매일 바뀌므로
+    # 며칠치를 쌓아 풍성하게 유지(클라우드/로컬 둘 다 sparse run 보완).
+    today = time.strftime("%Y-%m-%d")
+    RETAIN_DAYS = 21   # 마지막 발견 후 이 기간 지나면 자동 정리
+    path = os.path.join(DATA_DIR, "hot_combos.json")
 
+    existing = {}
+    if os.path.exists(path):
+        try:
+            for it in json.load(open(path, encoding="utf-8")).get("items", []):
+                existing[it["keyword"]] = it
+        except Exception:
+            existing = {}
+    for it in existing.values():
+        it["today"] = False   # 일단 전부 '오늘 아님'으로
+
+    for r in hotrows:
+        kw = r["phrase"]
+        if kw in existing:
+            it = existing[kw]
+            it.setdefault("first_seen", today)   # 옛 데이터 전환 보정
+            it["last_seen"] = today
+            it["seen_count"] = it.get("seen_count", 1) + 1
+            it["today"] = True
+            it["is_hot_badge"] = r["hot"]
+            it["seed"] = r["seed"]
+            if r.get("search_volume") is not None:
+                it["search_volume"] = r["search_volume"]
+            it["comp_idx"] = r.get("comp_idx", "")
+        else:
+            existing[kw] = {
+                "keyword": kw, "search_volume": r.get("search_volume"),
+                "comp_idx": r.get("comp_idx", ""), "seed": r["seed"],
+                "is_hot_badge": r["hot"], "first_seen": today, "last_seen": today,
+                "seen_count": 1, "today": True,
+            }
+
+    def _days_since(dstr):
+        try:
+            return (datetime.strptime(today, "%Y-%m-%d") - datetime.strptime(dstr, "%Y-%m-%d")).days
+        except Exception:
+            return 0
+    # last_seen 있는 것만(옛 형식·정체불명 자동 정리) + 보존기간 내
+    merged = [it for it in existing.values()
+              if it.get("last_seen") and _days_since(it["last_seen"]) <= RETAIN_DAYS]
+    # 정렬: 오늘 발견 먼저 → 최근 발견 → 트래픽 큰 순
+    merged.sort(key=lambda it: (0 if it.get("today") else 1,
+                                _days_since(it.get("last_seen", today)),
+                                -(it.get("search_volume") or 0)))
+
+    today_n = sum(1 for it in merged if it.get("today"))
     out = {
         "updated_at": time.strftime("%Y-%m-%d %H:%M"),
-        "count": len(hotrows),
-        "items": [{
-            "keyword": r["phrase"], "kind": r["kind"], "warn": r["warn"],
-            "is_hot_badge": r["hot"], "search_volume": r.get("search_volume"),
-            "comp_idx": r.get("comp_idx", ""), "entity": r.get("entity"),
-            "shop_count": r.get("shop_count"), "seed": r["seed"],
-        } for r in hotrows],
+        "today_count": today_n,
+        "count": len(merged),
+        "items": merged[:limit] if limit else merged,
     }
-    if limit:
-        out["items"] = out["items"][:limit]
-    path = os.path.join(DATA_DIR, "hot_combos.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
-    print(f"\n저장: {path}  (화제 후보 {len(hotrows)}개)")
+    print(f"\n저장: {path}  (누적 {len(merged)}개 · 오늘 {today_n}개 · 이번 인물 {len(hotrows)}개)")
 
     print("\n" + "=" * 60)
-    print(" 상위 미리보기 (트래픽순)")
+    print(" 누적 인물 미리보기 (오늘 발견 먼저)")
     print("=" * 60)
     for it in out["items"][:30]:
-        badge = "🔥" if it["is_hot_badge"] else "  "
-        vol = it["search_volume"]
+        badge = "🔥오늘" if it.get("today") else "     "
+        vol = it.get("search_volume")
         vol_s = f"{vol:>6}/월" if vol is not None else "  -   "
-        print(f"  {badge} {vol_s} {it['keyword']:<20} [{it['kind']:<10}] {it['warn']}  (seed:{it['seed']})")
+        seen = f"{it.get('first_seen','?')}~{it.get('last_seen','?')}({it.get('seen_count',1)}회)"
+        print(f"  {badge} {vol_s} {it['keyword']:<20} {seen}")
     return out
 
 if __name__ == "__main__":

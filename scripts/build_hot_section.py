@@ -42,6 +42,9 @@ HOT_CSS = """
 .hc-kw { font-weight: 600; color: #f0f6fc; }
 .hc-person-ic { color: #d2a8ff; }
 .hc-fire { margin-right: 2px; }
+.hc-today { color: #3fb950; font-weight: 600; font-size: 0.85em; }
+.hc-seen { color: #6e7681; font-size: 0.82em; }
+.hc-cnt { color: #8b949e; font-size: 0.78em; }
 .hc-seed { display: inline-block; background: #21262d; color: #6e7681;
            font-size: 0.72em; padding: 1px 6px; border-radius: 3px; margin-left: 6px; }
 .hc-vol { color: #58a6ff; font-weight: 600; white-space: nowrap; }
@@ -78,12 +81,21 @@ def _fmt_vol(v):
     return f"{v}"
 
 
-def build_rows(items, limit=50):
+def build_rows(items, limit=60):
     rows = ""
     for it in items[:limit]:
-        fire = '<span class="hc-fire">🔥</span>' if it.get("is_hot_badge") else ""
+        today = it.get("today")
+        fire = '<span class="hc-fire">🔥</span>' if today else ""
         comp = it.get("comp_idx", "") or ""
         comp_html = f'<span class="hc-comp-{comp}">{comp}</span>' if comp else "-"
+        # 발견 정보: 오늘이면 '오늘', 아니면 마지막 발견일 + 누적 횟수
+        cnt = it.get("seen_count", 1)
+        if today:
+            seen = f'<span class="hc-today">오늘</span>'
+        else:
+            seen = f'<span class="hc-seen">{it.get("last_seen","")}</span>'
+        if cnt > 1:
+            seen += f' <span class="hc-cnt">·{cnt}회</span>'
         rows += (
             f'<tr>'
             f'<td>{fire}<span class="hc-person-ic">👤</span> '
@@ -91,6 +103,7 @@ def build_rows(items, limit=50):
             f'<span class="hc-seed">{it.get("seed","")}</span></td>'
             f'<td class="hc-vol">{_fmt_vol(it.get("search_volume"))}</td>'
             f'<td>{comp_html}</td>'
+            f'<td>{seen}</td>'
             f'</tr>\n'
         )
     return rows
@@ -100,25 +113,27 @@ def build_hot_html(data):
     items = data.get("items", [])
     scan_time = data.get("updated_at", "")
     total = data.get("count", len(items))
-    rows = build_rows(items, limit=50)
+    today_n = data.get("today_count", sum(1 for it in items if it.get("today")))
+    rows = build_rows(items, limit=60)
     if not rows:
-        rows = '<tr><td colspan="3" style="color:#8b949e">오늘은 잡힌 인물 조합이 없습니다.</td></tr>'
+        rows = '<tr><td colspan="4" style="color:#8b949e">아직 쌓인 인물 조합이 없습니다.</td></tr>'
     return (
         '<div class="hc-wrapper" id="hot-section">'
         '<div class="hc-header">'
         '<h2>👤 인물 화제 조합</h2>'
         '<div class="subtitle">내 성분·약물 키워드에 <b>지금 엮여 검색되는 유명인</b> 조합. '
-        '셀럽 다이어트·건강 글감으로, 기존 리스트엔 안 나오는 새 소재입니다.</div>'
-        f'<div class="scan-time">마지막 스캔: {scan_time} · 인물 조합 {total}개</div>'
+        '셀럽 다이어트·건강 글감으로, 기존 리스트엔 안 나오는 새 소재입니다. '
+        '매 스캔 결과를 <b>최근 3주간 누적</b>해서 보여줍니다.</div>'
+        f'<div class="scan-time">마지막 스캔: {scan_time} · 누적 {total}명 · 🔥오늘 {today_n}명</div>'
         '</div>'
         '<div class="hc-legend">'
-        '<b>🔥</b> 네이버 \'요즘 인기\' 배지 &nbsp;|&nbsp; '
+        '<b>🔥오늘</b> 이번 스캔에 잡힘 &nbsp;|&nbsp; '
         '<b><span style="color:#58a6ff">월검색량</span></b> 네이버 검색광고 기준 &nbsp;|&nbsp; '
         '인물명은 네이버 인물검증으로 자동 선별 — '
-        '<b>드물게 오탐(예: 일반어가 인물로)이 있으니 작성 전 확인하세요.</b>'
+        '<b>드물게 오탐(일반어가 인물로)이 있으니 작성 전 확인하세요.</b>'
         '</div>'
         '<table class="hc-table"><thead><tr>'
-        '<th>키워드</th><th>월검색량</th><th>경쟁</th>'
+        '<th>키워드</th><th>월검색량</th><th>경쟁</th><th>발견</th>'
         '</tr></thead><tbody>'
         f'{rows}'
         '</tbody></table>'
