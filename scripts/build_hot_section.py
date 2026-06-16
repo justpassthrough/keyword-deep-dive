@@ -123,7 +123,7 @@ def build_hot_html(data):
         '<h2>👤 인물 화제 조합</h2>'
         '<div class="subtitle">내 성분·약물 키워드에 <b>지금 엮여 검색되는 유명인</b> 조합. '
         '셀럽 다이어트·건강 글감으로, 기존 리스트엔 안 나오는 새 소재입니다. '
-        '매 스캔 결과를 <b>최근 3주간 누적</b>해서 보여줍니다.</div>'
+        '매 스캔 결과를 <b>계속 누적</b>해서 쌓아갑니다.</div>'
         f'<div class="scan-time">마지막 스캔: {scan_time} · 누적 {total}명 · 🔥오늘 {today_n}명</div>'
         '</div>'
         '<div class="hc-legend">'

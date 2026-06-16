@@ -470,10 +470,9 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
     hotrows = persons
 
     # ── 누적 병합 ──
-    # 매번 덮어쓰지 않고, 기존 누적에 이번 발견을 합침. 인물은 매일 바뀌므로
-    # 며칠치를 쌓아 풍성하게 유지(클라우드/로컬 둘 다 sparse run 보완).
+    # 매번 덮어쓰지 않고, 기존 누적에 이번 발견을 합침. 셀럽×건강은 에버그린 글감이라
+    # 영구 누적(안 지움). 대시보드는 상위 N명만 표시하므로 화면은 안 지저분해짐.
     today = time.strftime("%Y-%m-%d")
-    RETAIN_DAYS = 21   # 마지막 발견 후 이 기간 지나면 자동 정리
     path = os.path.join(DATA_DIR, "hot_combos.json")
 
     existing = {}
@@ -512,9 +511,8 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
             return (datetime.strptime(today, "%Y-%m-%d") - datetime.strptime(dstr, "%Y-%m-%d")).days
         except Exception:
             return 0
-    # last_seen 있는 것만(옛 형식·정체불명 자동 정리) + 보존기간 내
-    merged = [it for it in existing.values()
-              if it.get("last_seen") and _days_since(it["last_seen"]) <= RETAIN_DAYS]
+    # last_seen 있는 것만 유지(옛 형식·정체불명 자동 정리). 보존기간 제한 없음(영구 누적).
+    merged = [it for it in existing.values() if it.get("last_seen")]
     # 정렬: 오늘 발견 먼저 → 최근 발견 → 트래픽 큰 순
     merged.sort(key=lambda it: (0 if it.get("today") else 1,
                                 _days_since(it.get("last_seen", today)),
