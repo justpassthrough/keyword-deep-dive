@@ -49,6 +49,11 @@ SEARCHAD_BASE = "https://api.searchad.naver.com"
 SEARCH_HDR = {"X-Naver-Client-Id": NAVER_CLIENT_ID, "X-Naver-Client-Secret": NAVER_CLIENT_SECRET}
 MOBILE_UA = "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36"
 
+# 막힘(Actions IP 스로틀링) 대비: 짧은 타임아웃 + 전체 시간 예산.
+# 스크래핑(cosearch/자동완성/인물검증)은 막힐 수 있고, 공식 API(검색/쇼핑/검색광고)는 안전.
+REQUEST_TIMEOUT = 6
+MAX_RUNTIME = float(os.environ.get("HOTCOMBO_MAX_SEC", "420"))  # 7분 — 넘으면 중단·저장
+
 # ── Kiwi 형태소 분석기 (지연 로드) ──
 _kiwi = None
 def get_kiwi():
@@ -113,7 +118,7 @@ def cosearch_trending(seed):
     enc = urllib.parse.quote(seed)
     try:
         r = requests.get(f"https://m.search.naver.com/search.naver?query={enc}",
-                         headers={"User-Agent": MOBILE_UA}, timeout=10)
+                         headers={"User-Agent": MOBILE_UA}, timeout=REQUEST_TIMEOUT)
         m = re.search(r'"apiURL":"(https://s\.search\.naver\.com/p/qra/[^"]+)"', r.text)
         if not m:
             return []
@@ -124,7 +129,7 @@ def cosearch_trending(seed):
              "Accept": "application/json, text/plain, */*",
              "Accept-Language": "ko-KR,ko;q=0.9",
              "Sec-Fetch-Site": "same-site", "Sec-Fetch-Mode": "cors"}
-        r2 = requests.get(api, headers=h, timeout=10)
+        r2 = requests.get(api, headers=h, timeout=REQUEST_TIMEOUT)
         if r2.status_code != 200:
             return []
         out = []
@@ -145,7 +150,7 @@ def autocomplete(query):
     req = urllib.request.Request(url, headers={"User-Agent": MOBILE_UA,
                                                "Referer": "https://m.search.naver.com/"})
     try:
-        with urllib.request.urlopen(req, timeout=5) as r:
+        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as r:
             items = json.loads(r.read().decode("utf-8")).get("items", [[]])[0]
             return [it[0] for it in items if it and it[0]]
     except Exception:
@@ -155,7 +160,7 @@ def fetch_titles(kind, query, n=100):
     url = f"https://openapi.naver.com/v1/search/{kind}.json"
     try:
         r = requests.get(url, headers=SEARCH_HDR,
-                         params={"query": query, "display": n, "sort": "sim"}, timeout=10)
+                         params={"query": query, "display": n, "sort": "sim"}, timeout=REQUEST_TIMEOUT)
         return [re.sub(r"<[^>]+>", "", it.get("title", "")) for it in r.json().get("items", [])]
     except Exception:
         return []
@@ -246,7 +251,7 @@ def verify_entity(token):
     enc = urllib.parse.quote(token)
     try:
         r = requests.get(f"https://m.search.naver.com/search.naver?query={enc}",
-                         headers={"User-Agent": MOBILE_UA}, timeout=10)
+                         headers={"User-Agent": MOBILE_UA}, timeout=REQUEST_TIMEOUT)
         t = r.text
         p = sum(1 for m in PERSON_MARK if m in t)
         b = sum(1 for m in BRAND_MARK if m in t)
@@ -289,7 +294,7 @@ def fetch_search_volume(keywords):
                    "X-Signature": _searchad_signature(ts, "GET", path)}
         try:
             r = requests.get(SEARCHAD_BASE + path, headers=headers,
-                             params={"hintKeywords": hint, "showDetail": "1"}, timeout=10)
+                             params={"hintKeywords": hint, "showDetail": "1"}, timeout=REQUEST_TIMEOUT)
             if r.status_code != 200:
                 time.sleep(0.5); continue
             for item in r.json().get("keywordList", []):
@@ -310,7 +315,7 @@ def shop_count(keyword):
     소송 위험 제품명 판별의 결정적 신호."""
     try:
         r = requests.get("https://openapi.naver.com/v1/search/shop.json",
-                         headers=SEARCH_HDR, params={"query": keyword, "display": 1}, timeout=10)
+                         headers=SEARCH_HDR, params={"query": keyword, "display": 1}, timeout=REQUEST_TIMEOUT)
         return r.json().get("total", 0)
     except Exception:
         return -1
@@ -329,12 +334,19 @@ UMBRELLA_SEEDS = ["연예인 다이어트", "다이어트약", "감량 성공", 
 TEST_ROOTS = ["위고비", "마운자로", "루테인", "콜라겐", "글루타치온",
               "유산균", "오메가3", "미녹시딜", "쏘팔메토"]
 
-def run(roots=None, verify=True, min_volume=30, verify_limit=250, limit=None):
+def run(roots=None, verify=True, min_volume=30, verify_limit=60, limit=None):
     if roots is None:
         roots = load_active_roots()
     print("=" * 60)
     print(f" 화제 조합 스캐너 (hot_combo) — 뿌리 {len(roots)}개")
     print("=" * 60)
+
+    t0 = time.time()
+    def over_budget():
+        if time.time() - t0 > MAX_RUNTIME:
+            print(f"  [예산초과] {MAX_RUNTIME:.0f}초 경과 → 남은 작업 중단하고 저장")
+            return True
+        return False
 
     cands = {}   # phrase -> {"seed":, "hot":bool}
     def add(phrase, seed, hot=False):
@@ -345,8 +357,19 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=250, limit=None):
                 c["hot"] = True
 
     print("\n[1] '요즘 인기' 배지 cosearch 수확 (뿌리 전체 + 우산)")
+    cosearch_fail = 0
     for s in roots + ["다이어트약", "비만약", "다이어트"]:
-        for q, hot in cosearch_trending(s):
+        if over_budget():
+            break
+        res = cosearch_trending(s)
+        if not res:
+            cosearch_fail += 1
+            if cosearch_fail >= 6:   # 연속 빈 결과 = IP 차단 추정 → 스크래핑 수확 중단
+                print("  [차단추정] cosearch 연속 실패 → 수확 단계 축소(공식 API 위주로 진행)")
+                break
+        else:
+            cosearch_fail = 0
+        for q, hot in res:
             if q != s:
                 add(q, s, hot)
         time.sleep(0.4)
@@ -360,12 +383,14 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=250, limit=None):
         time.sleep(0.4)
     print(f"    누적 {len(cands)}개")
 
-    print("[3] 뿌리 제목 바이그램 수확")
+    print("[3] 뿌리 제목 바이그램 수확 (공식 API — 안전)")
     for root in roots:
+        if over_budget():
+            break
         titles = fetch_titles("blog", root, 100) + fetch_titles("news", root, 100)
         for kw in bigrams_from_titles(titles, root):
             add(kw, root)
-        time.sleep(0.3)
+        time.sleep(0.2)
     print(f"    누적 {len(cands)}개")
 
     # 분류 (사전만 — 검증은 뒤에서 상위 후보만)
@@ -395,12 +420,23 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=250, limit=None):
                           and (r["search_volume"] or 0) >= min_volume],
                          key=lambda r: -(r["search_volume"] or 0))[:verify_limit]
         print(f"[6] 인물 검증 ({len(targets)}건)")
+        verify_fail = 0
         for r in targets:
-            ent, esc = verify_entity(r["token"]); time.sleep(0.3)
+            if over_budget():
+                break
+            ent, esc = verify_entity(r["token"]); time.sleep(0.8)  # 스크래핑 — 차단 회피용 충분한 딜레이
             r["entity"] = ent; r["entity_score"] = esc
+            # 인물검증은 스크래핑 → 연속 실패(점수 -1)면 IP 차단 추정 → 중단
+            if esc.get("p", 0) < 0:
+                verify_fail += 1
+                if verify_fail >= 5:
+                    print("  [차단추정] 인물검증 연속 실패 → 검증 중단")
+                    break
+                continue
+            verify_fail = 0
             if ent != "인물":
                 continue                          # 인물 아님 → 탈락
-            sc = shop_count(r["phrase"]); time.sleep(0.25)
+            sc = shop_count(r["phrase"]); time.sleep(0.2)   # 공식 API — 안전
             r["shop_count"] = sc
             if sc >= PERSON_SHOP_MAX:
                 r["entity"] = "제품인물"           # 제품 파는 인물 → 탈락
