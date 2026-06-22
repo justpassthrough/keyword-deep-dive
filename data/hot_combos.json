@@ -1,22 +1,55 @@
 {
-  "updated_at": "2026-06-19 16:07",
+  "updated_at": "2026-06-22 16:07",
   "today_count": 4,
-  "count": 6,
+  "count": 7,
   "items": [
     {
       "keyword": "김민하 다이어트",
       "kind": "화제(인물)",
       "warn": "👤인물",
       "is_hot_badge": false,
-      "search_volume": 25650,
+      "search_volume": 26460,
       "comp_idx": "낮음",
       "entity": "인물",
       "shop_count": 0,
       "seed": "다이어트",
       "today": true,
-      "last_seen": "2026-06-19",
-      "seen_count": 6,
+      "last_seen": "2026-06-22",
+      "seen_count": 7,
       "first_seen": "2026-06-16"
+    },
+    {
+      "keyword": "남진 쏘팔메토",
+      "search_volume": 1510,
+      "comp_idx": "높음",
+      "seed": "쏘팔메토",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-22",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 570,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-22",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "오한진 프로바이오틱스",
+      "search_volume": 490,
+      "comp_idx": "중간",
+      "seed": "프로바이오틱스",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_count": 1,
+      "today": true
     },
     {
       "keyword": "이순실 위고비",
@@ -27,29 +60,7 @@
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-19",
       "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "남진 쏘팔메토",
-      "search_volume": 1480,
-      "comp_idx": "높음",
-      "seed": "쏘팔메토",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-06-19",
-      "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 480,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-06-19",
-      "seen_count": 5,
-      "today": true
+      "today": false
     },
     {
       "keyword": "씬님 마운자로",
