@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-23 11:52",
-  "today_count": 4,
+  "updated_at": "2026-06-23 16:07",
+  "today_count": 5,
   "count": 7,
   "items": [
     {
@@ -15,8 +15,19 @@
       "seed": "다이어트",
       "today": true,
       "last_seen": "2026-06-23",
-      "seen_count": 8,
+      "seen_count": 9,
       "first_seen": "2026-06-16"
+    },
+    {
+      "keyword": "이순실 위고비",
+      "search_volume": 2780,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-23",
+      "seen_count": 6,
+      "today": true
     },
     {
       "keyword": "남진 쏘팔메토",
@@ -26,7 +37,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-23",
-      "seen_count": 7,
+      "seen_count": 8,
       "today": true
     },
     {
@@ -37,7 +48,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-23",
-      "seen_count": 7,
+      "seen_count": 8,
       "today": true
     },
     {
@@ -48,19 +59,8 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-23",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
-    },
-    {
-      "keyword": "이순실 위고비",
-      "search_volume": 2380,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-06-19",
-      "seen_count": 5,
-      "today": false
     },
     {
       "keyword": "씬님 마운자로",
