@@ -1,39 +1,28 @@
 {
-  "updated_at": "2026-06-24 16:07",
-  "today_count": 4,
+  "updated_at": "2026-06-25 10:07",
+  "today_count": 3,
   "count": 7,
   "items": [
     {
-      "keyword": "이순실 위고비",
-      "search_volume": 2780,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-06-24",
-      "seen_count": 7,
-      "today": true
-    },
-    {
       "keyword": "남진 쏘팔메토",
-      "search_volume": 1570,
+      "search_volume": 1560,
       "comp_idx": "높음",
       "seed": "쏘팔메토",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-24",
-      "seen_count": 9,
+      "last_seen": "2026-06-25",
+      "seen_count": 10,
       "today": true
     },
     {
       "keyword": "스윙스 마운자로",
-      "search_volume": 670,
+      "search_volume": 690,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-24",
-      "seen_count": 9,
+      "last_seen": "2026-06-25",
+      "seen_count": 10,
       "today": true
     },
     {
@@ -43,9 +32,20 @@
       "seed": "프로바이오틱스",
       "is_hot_badge": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-24",
-      "seen_count": 4,
+      "last_seen": "2026-06-25",
+      "seen_count": 5,
       "today": true
+    },
+    {
+      "keyword": "이순실 위고비",
+      "search_volume": 2780,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-24",
+      "seen_count": 7,
+      "today": false
     },
     {
       "keyword": "김민하 다이어트",
