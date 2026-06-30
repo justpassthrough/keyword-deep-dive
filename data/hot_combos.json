@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-30 10:07",
-  "today_count": 3,
-  "count": 8,
+  "updated_at": "2026-06-30 16:07",
+  "today_count": 4,
+  "count": 9,
   "items": [
     {
       "keyword": "남진 쏘팔메토",
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-06-30",
-      "seen_count": 16,
+      "seen_count": 17,
       "today": true
     },
     {
@@ -22,7 +22,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-30",
-      "seen_count": 11,
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "한림루테인",
+      "search_volume": 380,
+      "comp_idx": "중간",
+      "seed": "루테인",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -33,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-06-30",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
     },
     {
