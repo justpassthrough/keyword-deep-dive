@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-01 10:07",
-  "today_count": 3,
+  "updated_at": "2026-07-01 16:06",
+  "today_count": 1,
   "count": 9,
   "items": [
     {
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-07-01",
-      "seen_count": 18,
+      "seen_count": 19,
       "today": true
     },
     {
@@ -23,7 +23,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-07-01",
       "seen_count": 13,
-      "today": true
+      "today": false
     },
     {
       "keyword": "조현아 위고비",
@@ -34,7 +34,7 @@
       "first_seen": "2026-06-26",
       "last_seen": "2026-07-01",
       "seen_count": 8,
-      "today": true
+      "today": false
     },
     {
       "keyword": "한림루테인",
