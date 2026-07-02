@@ -1,29 +1,40 @@
 {
-  "updated_at": "2026-07-01 16:06",
-  "today_count": 1,
-  "count": 9,
+  "updated_at": "2026-07-02 10:07",
+  "today_count": 4,
+  "count": 10,
   "items": [
     {
       "keyword": "남진 쏘팔메토",
-      "search_volume": 1550,
+      "search_volume": 1560,
       "comp_idx": "높음",
       "seed": "쏘팔메토",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
-      "last_seen": "2026-07-01",
-      "seen_count": 19,
+      "last_seen": "2026-07-02",
+      "seen_count": 20,
       "today": true
     },
     {
       "keyword": "오한진 프로바이오틱스",
-      "search_volume": 480,
+      "search_volume": 460,
       "comp_idx": "중간",
       "seed": "프로바이오틱스",
       "is_hot_badge": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-01",
-      "seen_count": 13,
-      "today": false
+      "last_seen": "2026-07-02",
+      "seen_count": 14,
+      "today": true
+    },
+    {
+      "keyword": "여에스더 철분",
+      "search_volume": 430,
+      "comp_idx": "높음",
+      "seed": "철분",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_count": 1,
+      "today": true
     },
     {
       "keyword": "조현아 위고비",
@@ -32,9 +43,9 @@
       "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-07-01",
-      "seen_count": 8,
-      "today": false
+      "last_seen": "2026-07-02",
+      "seen_count": 9,
+      "today": true
     },
     {
       "keyword": "한림루테인",
