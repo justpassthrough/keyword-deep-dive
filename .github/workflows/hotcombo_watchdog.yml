@@ -1,0 +1,43 @@
+name: HotCombo Freshness Watchdog
+
+# 인물조합(hot_combo)은 집 PC의 작업 스케줄러로만 돈다(Actions IP는 네이버 인물검증 차단).
+# PC가 꺼져 있으면 스캔이 조용히 멈춤 → 사용자가 모름.
+# 이 감시견이 클라우드(항상 켜짐)에서 매일 데이터 신선도를 확인해
+# 36시간 넘게 안 갱신됐으면 텔레그램으로 경고한다.
+
+on:
+  schedule:
+    # 매일 11:00 UTC (20:00 KST) — 로컬 실행(10:00·16:00 KST) 이후에 점검
+    - cron: '0 11 * * *'
+  workflow_dispatch:  # 수동 테스트용
+
+permissions:
+  contents: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Check freshness and alert if stale
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          MSG=$(python scripts/check_hotcombo_freshness.py)
+          if [ -n "$MSG" ]; then
+            echo "STALE 감지 — 텔레그램 경고 전송"
+            echo "$MSG"
+            python scripts/notify_telegram.py "$MSG"
+          else
+            echo "신선함 — 경고 없음"
+          fi
