@@ -321,6 +321,37 @@ def shop_count(keyword):
     except Exception:
         return -1
 
+# ── 광고모델 vs 진짜화제 판별 (행동 신호) ──
+# 실측(2026-07-04): 남진 쏘팔메토·오한진 프로바이오틱스 같은 '광고모델'은 인물검증을
+# 통과하지만(실제 사람이므로) 뉴스가 없거나 전부 광고성이고 쇼핑 상품수가 수십~수백.
+# 반대로 조현아 위고비 같은 '진짜 화제'는 쇼핑수 0 + 상업어 없는 실제 뉴스가 다수.
+# → 쇼핑수 상한 + '진짜 뉴스 N건' 게이트로 광고모델을 걸러낸다.
+TOPIC_WORDS = ["근황", "화제", "공개", "고백", "인터뷰", "감량", "다이어트", "방송", "출연",
+               "투병", "논란", "몸무게", "몸매", "폭로", "복귀", "컴백", "열애", "결혼",
+               "임신", "출산", "별세", "은퇴", "비결", "요요", "중단", "습관", "식단"]
+COMMERCE_WORDS = ["최저가", "정품", "구매", "판매", "할인", "쿠팡", "증정", "프로모션", "1위",
+                  "파는곳", "정품몰", "세일", "특가", "광고", "브랜드", "출시", "런칭",
+                  "만족지수", "인증", "전문", "후기", "추천", "효능", "성분", "가격"]
+
+def genuine_news_count(phrase):
+    """뉴스 제목 중 '상업어 없이 인물 스토리 어휘(화제어)를 담은' 진짜 화제 기사 수.
+    광고성 advertorial(증정/1위/구매…)은 화제어가 있어도 상업어 때문에 제외된다."""
+    titles = fetch_titles("news", phrase, 20)
+    return sum(1 for t in titles
+               if any(w in t for w in TOPIC_WORDS) and not any(c in t for c in COMMERCE_WORDS))
+
+# 광고모델 필터 임계값 (실측 튜닝 2026-07-04: shop<50 AND 진짜뉴스>=2)
+PERSON_SHOP_MAX = 50
+MIN_GENUINE_NEWS = 2
+
+def is_genuine_person_combo(phrase):
+    """누적 항목 재검증용: (통과여부, shop, 진짜뉴스). 광고모델·제품·가짜인물을 걸러냄."""
+    sc = shop_count(phrase); time.sleep(0.2)
+    if sc >= PERSON_SHOP_MAX:
+        return False, sc, None
+    gn = genuine_news_count(phrase); time.sleep(0.2)
+    return (gn >= MIN_GENUINE_NEWS), sc, gn
+
 # 이름 형태(2~4자 한글)지만 인물이 아닌 흔한 일반어 — 인물 후보에서 제외
 NAME_STOPLIST = {
     "하루", "스토리", "레드", "골드", "블랙", "화이트", "그린", "오리지널", "프리미엄",
@@ -432,8 +463,11 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
         r["comp_idx"] = v["comp_idx"] if v else ""
 
     # 인물 전용 검증: 미확인 후보 → 인물 판정 → 인물만 생존.
-    # 단, '제품 파는 인물'(여에스더 등)은 구문 쇼핑수로 추가 제외(소송 위험).
-    PERSON_SHOP_MAX = 500
+    # 단, '광고모델·제품 파는 인물'(남진 쏘팔메토, 여에스더 등)은
+    #   쇼핑 상품수(≥PERSON_SHOP_MAX) 또는 진짜뉴스 부족(<MIN_GENUINE_NEWS)으로 제외.
+    #   실측 튜닝(2026-07-04): shop<50 AND 진짜뉴스>=2 → 광고모델 4명 전멸, 진짜화제 6명 전원 생존.
+    PERSON_SHOP_MAX = 50
+    MIN_GENUINE_NEWS = 2
     if verify:
         targets = sorted([r for r in hotrows if r.get("needs_verify")
                           and (r["search_volume"] or 0) >= min_volume],
@@ -458,7 +492,12 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
             sc = shop_count(r["phrase"]); time.sleep(0.2)   # 공식 API — 안전
             r["shop_count"] = sc
             if sc >= PERSON_SHOP_MAX:
-                r["entity"] = "제품인물"           # 제품 파는 인물 → 탈락
+                r["entity"] = "제품인물"           # 제품 많이 파는 인물 → 탈락
+                continue
+            gn = genuine_news_count(r["phrase"]); time.sleep(0.2)  # 공식 API — 안전
+            r["genuine_news"] = gn
+            if gn < MIN_GENUINE_NEWS:
+                r["entity"] = "광고모델"           # 쇼핑수는 낮아도 진짜 화제기사가 없음 → 탈락
                 continue
             r["kind"] = "화제(인물)"; r["warn"] = "👤인물"
     else:
@@ -540,7 +579,39 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
         print(f"  {badge} {vol_s} {it['keyword']:<20} {seen}")
     return out
 
+def revalidate_existing(apply=False):
+    """누적된 인물 조합을 현재 필터(쇼핑수+진짜뉴스)로 다시 검증.
+    필터를 바꿨을 때 옛 항목(광고모델·가짜인물)을 청소하는 용도.
+    apply=False면 판정만 출력(dry-run), True면 탈락자를 실제로 제거·저장."""
+    path = os.path.join(DATA_DIR, "hot_combos.json")
+    data = json.load(open(path, encoding="utf-8"))
+    items = data.get("items", [])
+    print(f"재검증: 누적 {len(items)}명  (기준: shop<{PERSON_SHOP_MAX} AND 진짜뉴스>={MIN_GENUINE_NEWS})")
+    keep, drop = [], []
+    for it in items:
+        ok, sc, gn = is_genuine_person_combo(it["keyword"])
+        (keep if ok else drop).append(it)
+        mark = "유지" if ok else "탈락"
+        print(f"  [{mark}] {it['keyword']:<22} shop={sc} 진짜뉴스={gn}")
+    print(f"\n유지 {len(keep)}명 / 탈락 {len(drop)}명")
+    if drop:
+        print("탈락:", ", ".join(d["keyword"] for d in drop))
+    if apply and drop:
+        keep.sort(key=lambda it: (0 if it.get("today") else 1, -(it.get("search_volume") or 0)))
+        data["items"] = keep
+        data["count"] = len(keep)
+        data["today_count"] = sum(1 for it in keep if it.get("today"))
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"→ 저장 완료 (누적 {len(keep)}명)")
+    elif drop:
+        print("(dry-run — 실제 제거하려면 --apply 추가)")
+
+
 if __name__ == "__main__":
-    verify = "--no-verify" not in sys.argv
-    roots = TEST_ROOTS if "--test" in sys.argv else None
-    run(roots=roots, verify=verify)
+    if "--revalidate" in sys.argv:
+        revalidate_existing(apply="--apply" in sys.argv)
+    else:
+        verify = "--no-verify" not in sys.argv
+        roots = TEST_ROOTS if "--test" in sys.argv else None
+        run(roots=roots, verify=verify)
