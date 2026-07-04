@@ -157,11 +157,11 @@ def autocomplete(query):
     except Exception:
         return []
 
-def fetch_titles(kind, query, n=100):
+def fetch_titles(kind, query, n=100, sort="sim"):
     url = f"https://openapi.naver.com/v1/search/{kind}.json"
     try:
         r = requests.get(url, headers=SEARCH_HDR,
-                         params={"query": query, "display": n, "sort": "sim"}, timeout=REQUEST_TIMEOUT)
+                         params={"query": query, "display": n, "sort": sort}, timeout=REQUEST_TIMEOUT)
         return [re.sub(r"<[^>]+>", "", it.get("title", "")) for it in r.json().get("items", [])]
     except Exception:
         return []
@@ -378,6 +378,59 @@ def load_active_roots():
 # 분야를 가로지르는 우산 시드 (시드 밖 인물×건강 조합 포착)
 UMBRELLA_SEEDS = ["연예인 다이어트", "다이어트약", "감량 성공", "다이어트 성공"]
 
+# ══════════════════════════════════════════════════════════
+#  연예뉴스 역방향 생성기 (news-first)
+#  기존은 '건강키워드 검색기능 → 사람'이라 광고모델이 딸려옴.
+#  이건 '연예/건강 뉴스 → 사람 + 건강앵글'로 뒤집어, 실제 화제 기사에서
+#  사람을 얻는다. 공식 뉴스 API만 사용(스크래핑 X) → 클라우드에서도 동작.
+# ══════════════════════════════════════════════════════════
+STORY_SEEDS = ["연예인 다이어트", "다이어트 고백", "감량 고백", "체중 감량", "몸매 변화",
+               "다이어트 근황", "위고비", "마운자로", "삭센다", "다이어트 성공", "건강 고백",
+               "글루타치온 주사", "다이어트 비결"]
+# 뉴스 제목에서 인물과 짝지을 건강 키워드 (성분·약물 + 대표 다이어트어)
+HEALTH_PAIR = INGREDIENT | {"다이어트", "감량"}
+
+def _title_persons(title):
+    """뉴스 제목에서 인물명 후보(2~4자 한글, Kiwi NNP) 추출. 건강/일반/회사/지역어 제외."""
+    out = []
+    for t in get_kiwi().tokenize(title):
+        if t.tag == "NNP" and is_name_shaped(t.form):
+            f = t.form
+            if (f in EXCLUDE or f in GENERIC or f in COMPANY or f in REGIONS
+                    or f in HEALTH_PAIR or f in FORM):
+                continue
+            out.append(f)
+    return list(dict.fromkeys(out))   # 중복 제거·순서 유지
+
+def _title_health_kw(title):
+    """제목에 등장하는 건강 키워드(성분/약물/다이어트어). 긴 것 우선."""
+    return [h for h in sorted(HEALTH_PAIR, key=len, reverse=True) if h in title]
+
+def harvest_news_persons(roots, add, over_budget):
+    """연예/건강 뉴스(sort=date)에서 '인물 + 건강키워드' 조합을 뽑아 후보로 추가.
+    실제 화제 기사에 함께 등장한 조합만 만들므로 광고모델이 원천적으로 덜 섞인다."""
+    # 성분 뿌리(유산균·콜라겐 등)는 '제품 뉴스'를 물어와 브랜드 노이즈만 늘림 →
+    # 사람을 물어오는 연예/화제 맥락 시드(STORY_SEEDS)만 사용.
+    seeds = list(dict.fromkeys(STORY_SEEDS))
+    made = 0
+    for s in seeds:
+        if over_budget():
+            break
+        for title in fetch_titles("news", s, 50, sort="date"):
+            persons = _title_persons(title)
+            if not persons:
+                continue
+            hks = _title_health_kw(title)
+            if s in HEALTH_PAIR and s not in hks:
+                hks.append(s)
+            for p in persons:
+                for hk in hks:
+                    if p != hk and hk not in p and p not in hk:
+                        add(f"{p} {hk}", s)
+                        made += 1
+        time.sleep(0.2)
+    return made
+
 # 테스트용 다양한 분야 대표 뿌리 (다이어트약+영양제+탈모 등)
 TEST_ROOTS = ["위고비", "마운자로", "루테인", "콜라겐", "글루타치온",
               "유산균", "오메가3", "미녹시딜", "쏘팔메토"]
@@ -440,6 +493,10 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
             add(kw, root)
         time.sleep(0.2)
     print(f"    누적 {len(cands)}개")
+
+    print("[3b] 연예뉴스 역방향 인물 수확 (news-first, 공식 API — 안전)")
+    made = harvest_news_persons(roots, add, over_budget)
+    print(f"    뉴스 인물조합 {made}건 → 누적 {len(cands)}개")
 
     # 분류 (사전만 — 검증은 뒤에서 상위 후보만)
     print("\n[4] Kiwi 정제 + 사전 분류")
