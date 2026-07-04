@@ -426,7 +426,7 @@ def harvest_news_persons(roots, add, over_budget):
             for p in persons:
                 for hk in hks:
                     if p != hk and hk not in p and p not in hk:
-                        add(f"{p} {hk}", s)
+                        add(f"{p} {hk}", s, from_news=True)
                         made += 1
         time.sleep(0.2)
     return made
@@ -449,13 +449,15 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
             return True
         return False
 
-    cands = {}   # phrase -> {"seed":, "hot":bool}
-    def add(phrase, seed, hot=False):
+    cands = {}   # phrase -> {"seed":, "hot":bool, "from_news":bool}
+    def add(phrase, seed, hot=False, from_news=False):
         phrase = phrase.strip()
         if phrase:
-            c = cands.setdefault(phrase, {"seed": seed, "hot": False})
+            c = cands.setdefault(phrase, {"seed": seed, "hot": False, "from_news": False})
             if hot:
                 c["hot"] = True
+            if from_news:
+                c["from_news"] = True
 
     print("\n[1] '요즘 인기' 배지 cosearch 수확 (뿌리 전체 + 우산)")
     cosearch_fail = 0
@@ -505,6 +507,7 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
         root = meta["seed"] if meta["seed"] in phrase else \
             next((i for i in INGREDIENT if i in phrase), meta["seed"])
         rows.append({"phrase": phrase, "hot": meta["hot"], "seed": meta["seed"],
+                     "from_news": meta.get("from_news", False),
                      **classify(phrase, root)})
     # 인물 전용: '미확인 고유명사' 중 이름 형태(2~4자 한글)만 → 노이즈·긴토큰 제거.
     # (검색량/검증을 이 후보들에만 돌려 시간 절약 + 인물 비율↑)
@@ -526,9 +529,17 @@ def run(roots=None, verify=True, min_volume=30, verify_limit=200, limit=None):
     PERSON_SHOP_MAX = 50
     MIN_GENUINE_NEWS = 2
     if verify:
-        targets = sorted([r for r in hotrows if r.get("needs_verify")
-                          and (r["search_volume"] or 0) >= min_volume],
-                         key=lambda r: -(r["search_volume"] or 0))[:verify_limit]
+        pool = [r for r in hotrows if r.get("needs_verify")
+                and (r["search_volume"] or 0) >= min_volume]
+        # 검증 순서: 뉴스 출신(news-first, 품질 보장)을 먼저 → 그다음 나머지를 검색량순.
+        #   뉴스 셀럽은 검색량이 낮아(30~80) 볼륨순으로만 정렬하면 브랜드 노이즈에 밀려
+        #   예산 안에 검증을 못 받는 문제(2026-07-04 실측)를 막는다.
+        news_pool = sorted([r for r in pool if r.get("from_news")],
+                           key=lambda r: -(r["search_volume"] or 0))
+        rest_pool = sorted([r for r in pool if not r.get("from_news")],
+                           key=lambda r: -(r["search_volume"] or 0))
+        targets = (news_pool + rest_pool)[:verify_limit]
+        print(f"    (뉴스 출신 {len(news_pool)} 먼저 → 나머지 {len(rest_pool)})")
         print(f"[6] 인물 검증 ({len(targets)}건)")
         verify_fail = 0
         for r in targets:
