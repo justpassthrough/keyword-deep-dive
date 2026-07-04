@@ -1369,6 +1369,18 @@ def main():
         print(f"\n── 교차검증: 추천 {checked_cnt}개 중 "
               f"이미 쓴 글 {written_cnt}개 / 미작성 {checked_cnt - written_cnt}개 ──")
 
+    # ── 지금 당장 쓸 1순위 ──
+    # 히어로 중 '아직 안 쓴' 최고 점수. 이미 쓴 글은 새 글감이 아니므로 제외.
+    # (교차검증 후라야 already_written이 채워져 있음)
+    _unwritten_hero = [c for c in all_compounds
+                       if _hero_ok(c) and not c.get("already_written")]
+    _unwritten_hero.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
+    today_pick = _unwritten_hero[0] if _unwritten_hero else (
+        top_recommendations[0] if top_recommendations else None)
+    if today_pick:
+        print(f"  🎯 지금 당장 쓸 1순위: {today_pick.get('keyword')} "
+              f"(검색 {today_pick.get('search_volume')}, 기회 {today_pick.get('recommend_score')})")
+
     # ── 미확인 후보 정리 ──
     unidentified_list = [
         {"word": w, "count": info["count"], "found_from": info["found_from"],
@@ -1413,6 +1425,7 @@ def main():
     output = {
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "roots": all_results,
+        "today_pick": today_pick,
         "top_recommendations": top_recommendations,
         "deep_cosearch_trending": deep_cosearch,
         "unidentified_candidates": unidentified_list,

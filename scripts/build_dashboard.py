@@ -49,6 +49,15 @@ CSS = """
   .rec-time-fall { color: #3fb950; }
   .rec-gap { color: #8b949e; font-size: 0.82em; margin-top: 4px; }
 
+  /* 지금 당장 쓸 1순위 — 가장 눈에 띄게 */
+  .pick-card { background: linear-gradient(135deg, #1f2b1a 0%, #161b22 60%); border: 2px solid #3fb950; border-radius: 12px; padding: 18px 20px; margin-bottom: 22px; box-shadow: 0 0 0 1px #3fb95033; }
+  .pick-label { color: #3fb950; font-size: 0.9em; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 8px; }
+  .pick-kw { font-size: 1.6em; font-weight: 800; color: #f0f6fc; }
+  .pick-signal { margin-top: 10px; font-size: 1.05em; display: flex; gap: 4px 0; flex-wrap: wrap; align-items: center; }
+  .pick-signal > span { margin-right: 4px; }
+  .pick-sub { margin-top: 10px; color: #8b949e; font-size: 0.9em; }
+  .pick-sub b { color: #aff5c8; }
+
   /* 히어로(오늘 쓸 글감) — 조회수 신호 전면 배치 */
   .hero-sub { color: #8b949e; font-size: 0.85em; margin: 2px 0 12px; line-height: 1.5; }
   .rec-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -575,6 +584,40 @@ def build_html(data):
             f'<tbody>{unid_rows}</tbody></table></div></details>'
         )
 
+    # ── 지금 당장 쓸 1순위 (미작성 최고점) ──
+    pick_html = ""
+    pick = data.get("today_pick")
+    if pick:
+        sv = pick.get("search_volume")
+        comp = pick.get("comp_idx")
+        mom = pick.get("momentum")
+        if mom is None:
+            mom = pick.get("change_rate")
+        parts = []
+        if isinstance(sv, int):
+            parts.append(f'<span class="sig-vol">🔎 월 {sv:,}회</span>')
+        if comp:
+            comp_cls = {"낮음": "sig-comp-low", "중간": "sig-comp-mid",
+                        "높음": "sig-comp-high"}.get(comp, "")
+            gem = " 💎" if comp == "낮음" and isinstance(sv, int) and sv >= 1000 else ""
+            parts.append(f'<span class="{comp_cls}">경쟁 {escape(comp)}{gem}</span>')
+        if mom is not None and mom >= 40:
+            parts.append(f'<span class="sig-hot">🔥 급등 {mom:+.0f}%</span>')
+        elif mom is not None and mom >= 15:
+            parts.append(f'<span class="sig-rise">📈 상승 {mom:+.0f}%</span>')
+        pick_sig = " · ".join(parts)
+        gap = pick.get("expert_gap", {})
+        pick_html = (
+            '<div class="pick-card">'
+            '<div class="pick-label">🎯 지금 당장 쓸 1순위 (아직 안 쓴 글감 중 최고)</div>'
+            f'<div class="pick-kw">{escape(pick.get("keyword", ""))}</div>'
+            f'<div class="pick-signal">{pick_sig}</div>'
+            f'<div class="pick-sub"><b>{escape(pick.get("root", ""))}</b> · '
+            f'{escape(pick.get("intent", ""))} · 전문가갭 {escape(gap.get("label", ""))} · '
+            f'기회점수 {pick.get("recommend_score", 0)}</div>'
+            '</div>'
+        )
+
     # 최종 조합 (CSS/JS는 상수이므로 중괄호 충돌 없음)
     top_section = top_html if top_html else '<div style="color:#8b949e">추천 글감이 없습니다.</div>'
 
@@ -589,6 +632,7 @@ def build_html(data):
         f'<div class="updated">마지막 업데이트: {updated}</div>\n'
         f'{coverage_html}\n'
         f'{api_warning_html}\n'
+        f'{pick_html}\n'
         '<h3>📝 오늘 쓸 글감 TOP 7</h3>\n'
         '<div class="hero-sub">🔎 검색량(파이) · 경쟁 낮을수록(상위노출 쉬움) · 🔥지금 뜨는(모멘텀) '
         '순으로 정렬 — <b>내가 실제로 상위노출 잡아 조회수 먹을 수 있는</b> 글감입니다.</div>\n'
