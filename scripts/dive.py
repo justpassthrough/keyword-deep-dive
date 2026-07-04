@@ -337,19 +337,51 @@ def lookup_volume(volume_map, keyword):
     return volume_map.get(keyword.replace(" ", "").upper())
 
 
-def calc_opportunity(search_volume, comp_idx, pharma_value):
-    """기회점수 = 약사가치 × 수요배수 × 경쟁여유배수.
-    '검색량은 충분한데 경쟁은 덜한' 황금 키워드를 위로 끌어올림."""
-    if search_volume is None:
-        return None  # 검색광고 데이터 없음 → 점수 미산출
+# 약사 적합도 보정(의도별). 조회수 정렬을 뒤집지 않게 좁은 범위(0.85~1.15)로만 넛지.
+# 약사 강점 주제(부작용·용량·비교·전문지식)는 소폭 가산, 단순 가격/구매 검색은 소폭 감산.
+FIT_MULT = {
+    "안전성": 1.15, "복용법": 1.15, "비교": 1.15, "전문지식": 1.15,
+    "효능": 1.05, "진위": 1.05, "공급": 1.05,
+    "일반": 1.0, "경험담": 1.0, "선택": 1.0,
+    "구매": 0.85, "접근성": 0.85,
+}
 
-    # 검색량은 20~수십만으로 자릿수 차이가 큼 → 로그로 가중(트래픽 중시).
-    # log10(검색량)/2: 100회=1.0, 2500회≈1.7, 1.1만회≈2.0, 23만회≈2.7
-    demand_mult = math.log10(max(search_volume, 10)) / 2
 
-    comp_mult = {"낮음": 1.2, "중간": 1.0, "높음": 0.8}.get(comp_idx, 1.0)
+def momentum_of(change_rate, trend_rate):
+    """모멘텀 = 3일 급등/7일 추세 중 '더 센 쪽'. 반짝 스파이크도, 지속 상승도 놓치지 않음.
+    (검색량 하한이 노이즈를 막아주므로 max로 잡아도 안전)"""
+    vals = [v for v in (change_rate, trend_rate) if v is not None]
+    return max(vals) if vals else None
 
-    return round(pharma_value * demand_mult * comp_mult, 1)
+
+def _momentum_mult(m):
+    """모멘텀 배수 — 보너스이지 벌점 아님(평시=1.0). 반짝을 강하게 반영."""
+    if m is None:
+        return 1.0
+    if m >= 40:
+        return 1.6   # 급등
+    if m >= 15:
+        return 1.3   # 상승
+    if m <= -15:
+        return 0.7   # 하락
+    return 1.0       # 평시(꾸준한 에버그린도 벌점 없음)
+
+
+def calc_opportunity(search_volume, comp_idx, momentum, intent):
+    """조회수 기회점수 = log10(검색량) × 경쟁배수 × 모멘텀배수 × 약사보정.
+    '지금 뜨고(모멘텀) + 상위노출 되고(경쟁 낮음) + 파이 최소 이상(검색량)'인
+    '내가 실제로 먹을 수 있는 조회수'를 위로 끌어올린다.
+    검색량 100 미만은 게이트(None) — 못 먹는/노이즈 키워드 배제."""
+    if search_volume is None or search_volume < 100:
+        return None
+
+    # 검색량을 로그 '그대로'(÷2 제거) 반영 → 파이 크기가 제대로 실림.
+    # log10: 100회=2.0, 1천=3.0, 1만=4.0, 27만≈5.4
+    vol_factor = math.log10(search_volume)
+    comp_mult = {"낮음": 1.3, "중간": 1.0, "높음": 0.7}.get(comp_idx, 1.0)
+    fit_mult = FIT_MULT.get(intent, 1.0)
+
+    return round(vol_factor * comp_mult * _momentum_mult(momentum) * fit_mult, 2)
 
 
 def opportunity_label(search_volume, comp_idx):
@@ -734,21 +766,13 @@ def calc_pharma_value(compound, intent_score, expert_gap):
     return round(intent_score * gap_mult, 1)
 
 
-def calc_recommend_score(opportunity_score, pharma_value, change_rate):
-    """추천 점수 = 기회점수 × 시의성 배수. '지금 쓰면 좋은 글'을 골라내기 위한 점수.
-    기회점수(수요·경쟁 반영)에 시의성만 곱해 메인 표와 일관 + % 급등 함정 회피.
-    검색광고 데이터가 없으면 약사가치로 폴백."""
-    base = opportunity_score if opportunity_score is not None else pharma_value
-    if change_rate is not None and change_rate >= 50:
-        timeliness = 2.0
-    elif change_rate is not None and change_rate >= 20:
-        timeliness = 1.5
-    elif change_rate is None or (-10 <= change_rate < 20):
-        timeliness = 0.5
-    else:
-        # change_rate < -10 (하락)
-        timeliness = 0.3
-    return round(base * timeliness, 1)
+def calc_recommend_score(opportunity_score, pharma_value):
+    """추천점수 = 조회수 기회점수 그 자체(모멘텀·경쟁·검색량·약사보정이 이미 안에 들어있음).
+    별도 시의성 재곱 없음 → 이중계산·% 급등 함정 제거.
+    검색광고 데이터가 없어 기회점수를 못 낸 키워드만 약사가치로 약하게 폴백(표에서 아래로)."""
+    if opportunity_score is not None:
+        return opportunity_score
+    return round(pharma_value * 0.5, 2)
 
 
 def _make_labels(intent_score, change_rate, is_bridge, datalab_type):
@@ -1139,18 +1163,19 @@ def main():
             vol = lookup_volume(volume_map, kw)
             search_volume = vol["total"] if vol else None
             comp_idx = vol["comp_idx"] if vol else None
-            opportunity_score = calc_opportunity(search_volume, comp_idx, pharma_value)
+            # 모멘텀 = 3일 급등/7일 추세 중 강한 쪽
+            momentum = momentum_of(dl.get("change_rate"), dl.get("trend_rate"))
+            opportunity_score = calc_opportunity(search_volume, comp_idx, momentum, intent)
             opp_label = opportunity_label(search_volume, comp_idx)
 
-            # 추천 점수 = 기회점수 × 시의성 (지금 쓰기 좋은 글감)
-            recommend_score = calc_recommend_score(
-                opportunity_score, pharma_value, dl.get("change_rate"))
+            # 추천점수 = 기회점수(모멘텀·경쟁·검색량·약사보정 이미 반영)
+            recommend_score = calc_recommend_score(opportunity_score, pharma_value)
 
             # cosearch trending 여부
             is_cosearch_trending = kw in cosearch_trending_set
 
-            # 라벨
-            labels = _make_labels(intent_score, dl.get("change_rate"), is_bridge, dl["type"])
+            # 라벨 (급등 배지는 모멘텀=3일/7일 중 강한 쪽 기준)
+            labels = _make_labels(intent_score, momentum, is_bridge, dl["type"])
             if is_cosearch_trending:
                 labels.append("🔍네이버인기")
             if opp_label and opp_label.startswith("💎"):
@@ -1161,6 +1186,7 @@ def main():
                 "volume": dl["volume"],
                 "change_rate": dl["change_rate"],
                 "trend_rate": dl.get("trend_rate"),
+                "momentum": momentum,
                 "type": dl["type"],
                 "intent": intent,
                 "intent_score": intent_score,
@@ -1285,15 +1311,16 @@ def main():
                     reverse=True)
         shortlist = signal[:25]
 
-        # 약사가치 부여 후 '약사가치 × 시의성'으로 최종 정렬(브랜드명 급등 노이즈 억제).
-        # 메인 추천점수와 동일 공식(calc_recommend_score, 검색량 없으니 약사가치 폴백).
+        # 약사가치 × 모멘텀으로 최종 정렬(브랜드명 급등 노이즈 억제).
+        # 이 신생 롱테일은 검색광고 절대검색량이 없어(0건) 기회점수를 못 냄 → 약사가치×모멘텀 폴백.
         for d in shortlist:
             intent, intent_score = _classify_intent(d["query"])
             gap = calc_expert_gap(d["query"])
             d["intent"] = intent
             d["pharma_value"] = calc_pharma_value(d["query"], intent_score, gap)
             d["expert_gap"] = gap
-            d["deep_score"] = calc_recommend_score(None, d["pharma_value"], d.get("change_rate"))
+            mom = momentum_of(d.get("change_rate"), None)
+            d["deep_score"] = round(d["pharma_value"] * _momentum_mult(mom), 2)
         shortlist.sort(key=lambda x: x.get("deep_score") or 0, reverse=True)
         deep_cosearch = shortlist[:10]
         print(f"  → 데이터랩 신호 {len(signal)}개 → 약사가치×시의성 상위 {len(deep_cosearch)}개")
@@ -1304,13 +1331,19 @@ def main():
         for c in r["compounds"]:
             c["root"] = r["keyword"]
             all_compounds.append(c)
-    # 추천점수순, 단 검색량 100 미만은 맨 뒤로(아무도 안 찾는 급등 키워드 배제)
-    def _rec_key(x):
+    # 히어로(오늘 쓸 글감)는 '실제로 조회수 나올' 것만 → 검색량 하한 적용.
+    # 월 300 이상, 또는 월 150 이상이면서 급등(모멘텀≥40%)인 반짝 키워드까지 허용.
+    def _hero_ok(x):
         sv = x.get("search_volume")
-        has_demand = 1 if (isinstance(sv, int) and sv >= 100) else 0
-        return (has_demand, x.get("recommend_score", 0))
-    all_compounds.sort(key=_rec_key, reverse=True)
-    top_recommendations = all_compounds[:5]
+        if not isinstance(sv, int):
+            return False
+        if sv >= 300:
+            return True
+        m = x.get("momentum")
+        return sv >= 150 and m is not None and m >= 40
+    hero_pool = [c for c in all_compounds if _hero_ok(c)]
+    hero_pool.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
+    top_recommendations = hero_pool[:7]
 
     # ── 내가 이미 쓴 글 교차검증 ──
     # 추천 키워드 중 이미 글로 다룬 주제는 표시하고, '미작성 + 급등'만 부각시킨다.
