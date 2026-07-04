@@ -1343,7 +1343,17 @@ def main():
         return sv >= 150 and m is not None and m >= 40
     hero_pool = [c for c in all_compounds if _hero_ok(c)]
     hero_pool.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
-    top_recommendations = hero_pool[:7]
+    # 띄어쓰기/대소문자 변형 중복 제거("콜라겐 젤리"=="콜라겐젤리") → 히어로에 같은 글감 중복 방지
+    top_recommendations = []
+    _seen_hero = set()
+    for c in hero_pool:
+        k = c["keyword"].replace(" ", "").upper()
+        if k in _seen_hero:
+            continue
+        _seen_hero.add(k)
+        top_recommendations.append(c)
+        if len(top_recommendations) >= 7:
+            break
 
     # ── 내가 이미 쓴 글 교차검증 ──
     # 추천 키워드 중 이미 글로 다룬 주제는 표시하고, '미작성 + 급등'만 부각시킨다.
