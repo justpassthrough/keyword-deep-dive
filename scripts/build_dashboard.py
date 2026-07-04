@@ -641,6 +641,8 @@ def build_html(data):
         f'<div class="tab-bar">{tab_buttons}</div>\n'
         f'{tab_contents}\n'
         f'{watch_html}\n'
+        # 인물 화제 조합·롱테일 금맥 주입 지점 (접이식 참고 섹션보다 위에 오도록)
+        '<!-- INJECT_SECTIONS -->\n'
         f'{cosearch_html}\n'
         f'{unid_html}\n'
         f'<script>{JS}</script>\n'

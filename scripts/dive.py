@@ -257,6 +257,40 @@ def get_blog_total_count(query):
     return data.get("total", 0)
 
 
+def shop_count(keyword):
+    """네이버 쇼핑 상품수. 브랜드/제품명=수백~수만, 순수 토픽·성분정보=0~수십.
+    (공식 API — Actions에서도 안전. 키 없으면 0=필터 안 함)"""
+    if not NAVER_CLIENT_ID:
+        return 0
+    data = _naver_search("shop", {"query": keyword, "display": 1})
+    return data.get("total", 0)
+
+
+# 브랜드 제품 판별 임계값(실측 2026-07-04): 순수 토픽 쇼핑수 ≤48(오젬픽 급여기준),
+# 브랜드 ≥160(저스트글로우 nmn)~수만. 둘 사이 100으로 잡아 브랜드 조합까지 걸러냄.
+BRAND_SHOP_MIN = 100
+
+
+def is_brand_product(compound, roots_norm):
+    """히어로(오늘 쓸 글감)에서 제외할 '상업 제품/브랜드명' 여부.
+    약사 교육 글감이 아니라 제품 리뷰가 되는 것(하이퍼셀 코엔자임Q10, 임산부오메가3 등) 차단.
+    - 뿌리(성분·약물 자체: 베르베린·콜라겐 등)는 쇼핑수 커도 통과.
+    - 교육 의도(부작용·용량·비교·효능 등, intent != '일반')는 통과.
+    - 의도 '일반' + 뿌리 아님 + 쇼핑 상품수 많음 = 브랜드 제품 → True.
+    결과를 compound에 캐시(_brand, shop_count)해 재호출 방지."""
+    if "_brand" in compound:
+        return compound["_brand"]
+    kw_norm = compound.get("keyword", "").replace(" ", "").upper()
+    if kw_norm in roots_norm or compound.get("intent") != "일반":
+        compound["_brand"] = False
+        return False
+    sc = shop_count(compound.get("keyword", ""))
+    time.sleep(0.2)  # rate limit 보호
+    compound["shop_count"] = sc
+    compound["_brand"] = sc >= BRAND_SHOP_MIN
+    return compound["_brand"]
+
+
 # ══════════════════════════════════════════════════════════
 #  검색광고 키워드도구 API (월간 절대 검색수 + 경쟁정도)
 # ══════════════════════════════════════════════════════════
@@ -1343,13 +1377,17 @@ def main():
         return sv >= 150 and m is not None and m >= 40
     hero_pool = [c for c in all_compounds if _hero_ok(c)]
     hero_pool.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
-    # 띄어쓰기/대소문자 변형 중복 제거("콜라겐 젤리"=="콜라겐젤리") → 히어로에 같은 글감 중복 방지
+    roots_norm = {r["keyword"].replace(" ", "").upper() for r in roots}
+    # 히어로 선정: 브랜드 제품(하이퍼셀 코엔자임Q10 등) 제외 + 띄어쓰기/대소문자 변형 중복 제거.
+    # (브랜드 판별은 쇼핑 상품수 조회 → 상위부터 7개 채울 때까지만 검사해 API 호출 최소화)
     top_recommendations = []
     _seen_hero = set()
     for c in hero_pool:
         k = c["keyword"].replace(" ", "").upper()
         if k in _seen_hero:
             continue
+        if is_brand_product(c, roots_norm):
+            continue  # 브랜드 제품 → 히어로/1순위에서 제외(표에는 남음)
         _seen_hero.add(k)
         top_recommendations.append(c)
         if len(top_recommendations) >= 7:
@@ -1370,13 +1408,18 @@ def main():
               f"이미 쓴 글 {written_cnt}개 / 미작성 {checked_cnt - written_cnt}개 ──")
 
     # ── 지금 당장 쓸 1순위 ──
-    # 히어로 중 '아직 안 쓴' 최고 점수. 이미 쓴 글은 새 글감이 아니므로 제외.
-    # (교차검증 후라야 already_written이 채워져 있음)
-    _unwritten_hero = [c for c in all_compounds
-                       if _hero_ok(c) and not c.get("already_written")]
-    _unwritten_hero.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
-    today_pick = _unwritten_hero[0] if _unwritten_hero else (
-        top_recommendations[0] if top_recommendations else None)
+    # 히어로 중 '아직 안 쓴' 최고 점수. 이미 쓴 글·브랜드 제품은 새 글감이 아니므로 제외.
+    # (교차검증 후라야 already_written이 채워져 있음. hero_pool은 점수순 정렬됨)
+    today_pick = None
+    for c in hero_pool:
+        if c.get("already_written"):
+            continue
+        if is_brand_product(c, roots_norm):  # 캐시됨 → 재조회 안 함
+            continue
+        today_pick = c
+        break
+    if today_pick is None and top_recommendations:
+        today_pick = top_recommendations[0]
     if today_pick:
         print(f"  🎯 지금 당장 쓸 1순위: {today_pick.get('keyword')} "
               f"(검색 {today_pick.get('search_volume')}, 기회 {today_pick.get('recommend_score')})")
