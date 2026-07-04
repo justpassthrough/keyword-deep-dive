@@ -133,10 +133,19 @@ COMPANY_EXCLUDE = {
 # 공백 무시 비교용 (바이그램 "고려 아연", cosearch "고려아연" 등 표기차 모두 매칭)
 COMPANY_EXCLUDE_NORM = {c.replace(" ", "") for c in COMPANY_EXCLUDE}
 
+# 제품 광고모델 인물명 — "남진 쏘팔메토", "여에스더 철분"처럼 조합키워드로 딸려옴.
+# 회사명과 달리 인물명+제품 조합이라 정확일치로 안 걸림 → '이름을 포함하면' 제외(부분일치).
+# hot_combo의 인물검증과 별개로, 정보성 표(dive)·금맥에서도 광고모델 조합을 걸러내는 값싼 방어.
+# 새 광고모델 발견 시 여기에 이름만 추가.
+ENDORSER_EXCLUDE = {"남진", "오한진", "여에스더"}
+
 
 def is_excluded_company(kw):
-    """회사/주식명 여부 — 공백 무시하고 정확일치로 판단."""
-    return kw.replace(" ", "") in COMPANY_EXCLUDE_NORM
+    """회사/주식명(공백무시 정확일치) 또는 광고모델 인물명(부분일치) 여부."""
+    norm = kw.replace(" ", "")
+    if norm in COMPANY_EXCLUDE_NORM:
+        return True
+    return any(name in norm for name in ENDORSER_EXCLUDE)
 
 
 # ══════════════════════════════════════════════════════════

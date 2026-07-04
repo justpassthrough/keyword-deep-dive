@@ -133,6 +133,11 @@ def fetch_autocomplete(query: str) -> list[str]:
         return []
 
 
+# 제품 광고모델 인물명 — 자동완성에 "남진 쏘팔메토"처럼 딸려옴. 이름 포함 시 제외.
+# dive.py의 ENDORSER_EXCLUDE와 동일 목록(단일 출처가 이상적이나 import 결합 피해 로컬 정의).
+ENDORSER_EXCLUDE = {"남진", "오한진", "여에스더"}
+
+
 def mine_longtails_for_root(root: str) -> list[dict]:
     """
     뿌리 키워드에 ㄱ~ㅎ를 붙여 자동완성 롱테일을 수집한다.
@@ -155,6 +160,10 @@ def mine_longtails_for_root(root: str) -> list[dict]:
 
             # 뿌리를 포함하는지 확인 (관련성)
             if root not in normalized:
+                continue
+
+            # 광고모델 인물명 조합 제외 ("남진 쏘팔메토" 등)
+            if any(name in normalized.replace(" ", "") for name in ENDORSER_EXCLUDE):
                 continue
 
             # 뿌리를 빼고 나머지를 tail로 추출
