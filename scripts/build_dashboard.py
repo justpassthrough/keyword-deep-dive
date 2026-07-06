@@ -49,6 +49,43 @@ CSS = """
   .rec-time-fall { color: #3fb950; }
   .rec-gap { color: #8b949e; font-size: 0.82em; margin-top: 4px; }
 
+  /* 지금 당장 쓸 1순위 — 가장 눈에 띄게 */
+  .pick-card { background: linear-gradient(135deg, #1f2b1a 0%, #161b22 60%); border: 2px solid #3fb950; border-radius: 12px; padding: 18px 20px; margin-bottom: 22px; box-shadow: 0 0 0 1px #3fb95033; }
+  .pick-label { color: #3fb950; font-size: 0.9em; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 8px; }
+  .pick-kw { font-size: 1.6em; font-weight: 800; color: #f0f6fc; }
+  .pick-signal { margin-top: 10px; font-size: 1.05em; display: flex; gap: 4px 0; flex-wrap: wrap; align-items: center; }
+  .pick-signal > span { margin-right: 4px; }
+  .pick-sub { margin-top: 10px; color: #8b949e; font-size: 0.9em; }
+  .pick-sub b { color: #aff5c8; }
+
+  /* 히어로(오늘 쓸 글감) — 조회수 신호 전면 배치 */
+  .hero-sub { color: #8b949e; font-size: 0.85em; margin: 2px 0 12px; line-height: 1.5; }
+  .rec-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .hero-badge { font-size: 0.8em; padding: 2px 8px; border-radius: 4px; }
+  .rec-signal { margin-top: 7px; font-size: 0.95em; display: flex; gap: 4px 0; flex-wrap: wrap; align-items: center; }
+  .rec-signal > span { margin-right: 2px; }
+  .sig-vol { color: #58a6ff; font-weight: 700; }
+  .sig-dim { color: #6e7681; font-weight: 400; }
+  .sig-comp-low { color: #3fb950; font-weight: 700; }
+  .sig-comp-mid { color: #d29922; font-weight: 600; }
+  .sig-comp-high { color: #f85149; font-weight: 600; }
+  .sig-hot { color: #f85149; font-weight: 700; }
+  .sig-rise { color: #f0883e; font-weight: 700; }
+  .rec-sub { margin-top: 6px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .rec-sub span { background: #21262d; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; color: #8b949e; }
+  .rec-sub .rec-root { color: #58a6ff; }
+  .rec-sub .rec-intent { color: #d2a8ff; }
+  .rec-sub .rec-score-inline { color: #f0883e; }
+
+  /* 접이식 섹션 (실시간 인기 / 미확인 후보 — 잘 안 보는 것) */
+  details.fold { background: #161b22; border: 1px solid #30363d; border-radius: 8px; margin-top: 16px; }
+  details.fold > summary { cursor: pointer; padding: 14px 18px; color: #8b949e; font-weight: 600; list-style: none; }
+  details.fold > summary:hover { color: #c9d1d9; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary::before { content: "▸ "; color: #6e7681; }
+  details.fold[open] > summary::before { content: "▾ "; }
+  details.fold .fold-body { padding: 0 18px 18px; }
+
   .tab-bar { display: flex; gap: 5px; margin: 20px 0 0; flex-wrap: wrap; }
   .tab-btn { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; padding: 8px 16px; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 0.9em; }
   .tab-btn.active { background: #161b22; border-bottom-color: #161b22; color: #58a6ff; font-weight: 600; }
@@ -257,61 +294,62 @@ def build_html(data):
                 '</div>'
             )
 
-    # ── 추천 글감 TOP 5 ──
+    # ── 오늘 쓸 글감 (히어로) — 조회수 신호를 전면 배치 ──
     top_html = ""
-    for i, rec in enumerate(top_recs[:5], 1):
-        raw_labels = rec.get("labels", [])
-        label_parts = []
-        for lb in raw_labels:
-            if lb == "🔍네이버인기":
-                label_parts.append('<span class="cosearch-badge">🔍네이버인기</span>')
-            else:
-                label_parts.append(escape(lb))
-        labels_str = " ".join(label_parts)
+    for i, rec in enumerate(top_recs[:7], 1):
         gap = rec.get("expert_gap", {})
         rec_score = rec.get("recommend_score", 0)
-        pharma_val = rec.get("pharma_value", 0)
-        cr = rec.get("change_rate")
-        # 시의성 라벨
-        if cr is not None and cr >= 50:
-            time_label = '<span class="rec-time-hot">급등중 ×2.0</span>'
-        elif cr is not None and cr >= 20:
-            time_label = '<span class="rec-time-rise">상승중 ×1.5</span>'
-        elif cr is not None and cr < -10:
-            time_label = '<span class="rec-time-fall">하락 ×0.3</span>'
+        sv = rec.get("search_volume")
+        comp = rec.get("comp_idx")
+        # 모멘텀 = 3일/7일 중 강한 쪽 (dive.py에서 계산). 폴백: change_rate.
+        mom = rec.get("momentum")
+        if mom is None:
+            mom = rec.get("change_rate")
+
+        # (1) 트래픽 신호 줄: 월검색수 · 경쟁 · 모멘텀
+        sig_parts = []
+        if isinstance(sv, int):
+            sig_parts.append(f'<span class="sig-vol">🔎 월 {sv:,}회</span>')
         else:
-            time_label = '<span class="rec-time-flat">평시 ×0.5</span>'
+            sig_parts.append('<span class="sig-vol sig-dim">🔎 검색량 미확인</span>')
+        if comp:
+            comp_cls = {"낮음": "sig-comp-low", "중간": "sig-comp-mid",
+                        "높음": "sig-comp-high"}.get(comp, "")
+            gem = " 💎" if comp == "낮음" and isinstance(sv, int) and sv >= 1000 else ""
+            sig_parts.append(f'<span class="{comp_cls}">경쟁 {escape(comp)}{gem}</span>')
+        if mom is not None and mom >= 40:
+            sig_parts.append(f'<span class="sig-hot">🔥 급등 {mom:+.0f}%</span>')
+        elif mom is not None and mom >= 15:
+            sig_parts.append(f'<span class="sig-rise">📈 상승 {mom:+.0f}%</span>')
+        signal_line = " · ".join(sig_parts)
+
         # 작성 여부 배지 + 이미 쓴 글이면 링크
         if rec.get("already_written"):
-            write_badge = '<span class="rec-pharma written-badge">✅ 이미 씀</span>'
+            write_badge = '<span class="hero-badge written-badge">✅ 이미 씀</span>'
             mp = rec.get("matched_post") or {}
-            if mp.get("url"):
-                matched_html = (
-                    f'<div class="matched-post">내 글: '
-                    f'<a href="{escape(mp.get("url", ""))}" target="_blank">'
-                    f'{escape(mp.get("title", ""))}</a></div>'
-                )
-            else:
-                matched_html = ""
+            matched_html = (
+                f'<div class="matched-post">내 글: '
+                f'<a href="{escape(mp.get("url", ""))}" target="_blank">'
+                f'{escape(mp.get("title", ""))}</a></div>'
+            ) if mp.get("url") else ""
         else:
-            write_badge = '<span class="rec-pharma gap-badge">🆕 미작성</span>'
+            write_badge = '<span class="hero-badge gap-badge">🆕 미작성</span>'
             matched_html = ""
+
         top_html += (
             '<div class="rec-card">'
             f'<div class="rec-rank">#{i}</div>'
             '<div class="rec-content">'
-            f'<div class="rec-keyword">{escape(rec.get("keyword", ""))}</div>'
-            '<div class="rec-meta">'
-            f'{write_badge}'
+            f'<div class="rec-head">'
+            f'<span class="rec-keyword">{escape(rec.get("keyword", ""))}</span>'
+            f'{write_badge}</div>'
+            f'<div class="rec-signal">{signal_line}</div>'
+            '<div class="rec-sub">'
             f'<span class="rec-root">{escape(rec.get("root", ""))}</span>'
             f'<span class="rec-intent">{escape(rec.get("intent", ""))}</span>'
-            f'<span class="rec-value">추천점수 {rec_score}</span>'
-            f'<span class="rec-pharma">약사가치 {pharma_val}</span>'
-            f'{time_label}'
-            f'<span class="rec-labels">{labels_str}</span>'
+            f'<span>전문가갭 {escape(gap.get("label", ""))}</span>'
+            f'<span class="rec-score-inline">기회점수 {rec_score}</span>'
             '</div>'
-            f'<div class="rec-gap">전문가갭: {gap.get("label", "")} '
-            f'(전체 {gap.get("total", 0)} / 약사 {gap.get("expert", 0)})</div>'
             f'{matched_html}'
             '</div></div>\n'
         )
@@ -512,12 +550,13 @@ def build_html(data):
             )
 
         cosearch_html = (
-            '<div class="cosearch-section">'
-            '<h3>🔍 네이버 실시간 인기 키워드</h3>'
+            '<details class="fold">'
+            '<summary>🔍 네이버 실시간 인기 키워드 (참고용)</summary>'
+            '<div class="fold-body">'
             '<p class="cosearch-desc">네이버 "함께 많이 찾는" 섹션에서 '
             '"요즘 인기" 배지가 붙은 키워드입니다.</p>'
             f'{sections_inner}'
-            '</div>'
+            '</div></details>'
         )
 
     # ── 미확인 후보 섹션 ──
@@ -535,13 +574,48 @@ def build_html(data):
                 "</tr>\n"
             )
         unid_html = (
-            '<div class="unid-section">'
-            '<h3>🔍 미확인 후보</h3>'
+            '<details class="fold">'
+            '<summary>🔍 미확인 후보 (사전 관리용)</summary>'
+            '<div class="fold-body">'
             '<p class="unid-desc">이번 분석에서 자주 등장했지만 known_products.json에 없는 단어입니다. '
             '제품/성분이 맞다면 사전에 추가해 주세요.</p>'
             '<table class="kw-table">'
             '<thead><tr><th>단어</th><th>빈도</th><th>출처 뿌리</th><th>최초 발견</th></tr></thead>'
-            f'<tbody>{unid_rows}</tbody></table></div>'
+            f'<tbody>{unid_rows}</tbody></table></div></details>'
+        )
+
+    # ── 지금 당장 쓸 1순위 (미작성 최고점) ──
+    pick_html = ""
+    pick = data.get("today_pick")
+    if pick:
+        sv = pick.get("search_volume")
+        comp = pick.get("comp_idx")
+        mom = pick.get("momentum")
+        if mom is None:
+            mom = pick.get("change_rate")
+        parts = []
+        if isinstance(sv, int):
+            parts.append(f'<span class="sig-vol">🔎 월 {sv:,}회</span>')
+        if comp:
+            comp_cls = {"낮음": "sig-comp-low", "중간": "sig-comp-mid",
+                        "높음": "sig-comp-high"}.get(comp, "")
+            gem = " 💎" if comp == "낮음" and isinstance(sv, int) and sv >= 1000 else ""
+            parts.append(f'<span class="{comp_cls}">경쟁 {escape(comp)}{gem}</span>')
+        if mom is not None and mom >= 40:
+            parts.append(f'<span class="sig-hot">🔥 급등 {mom:+.0f}%</span>')
+        elif mom is not None and mom >= 15:
+            parts.append(f'<span class="sig-rise">📈 상승 {mom:+.0f}%</span>')
+        pick_sig = " · ".join(parts)
+        gap = pick.get("expert_gap", {})
+        pick_html = (
+            '<div class="pick-card">'
+            '<div class="pick-label">🎯 지금 당장 쓸 1순위 (아직 안 쓴 글감 중 최고)</div>'
+            f'<div class="pick-kw">{escape(pick.get("keyword", ""))}</div>'
+            f'<div class="pick-signal">{pick_sig}</div>'
+            f'<div class="pick-sub"><b>{escape(pick.get("root", ""))}</b> · '
+            f'{escape(pick.get("intent", ""))} · 전문가갭 {escape(gap.get("label", ""))} · '
+            f'기회점수 {pick.get("recommend_score", 0)}</div>'
+            '</div>'
         )
 
     # 최종 조합 (CSS/JS는 상수이므로 중괄호 충돌 없음)
@@ -558,13 +632,18 @@ def build_html(data):
         f'<div class="updated">마지막 업데이트: {updated}</div>\n'
         f'{coverage_html}\n'
         f'{api_warning_html}\n'
-        f'{changes_html}\n'
-        f'{cosearch_html}\n'
-        '<h3>📝 오늘의 추천 글감 TOP 5</h3>\n'
+        f'{pick_html}\n'
+        '<h3>📝 오늘 쓸 글감 TOP 7</h3>\n'
+        '<div class="hero-sub">🔎 검색량(파이) · 경쟁 낮을수록(상위노출 쉬움) · 🔥지금 뜨는(모멘텀) '
+        '순으로 정렬 — <b>내가 실제로 상위노출 잡아 조회수 먹을 수 있는</b> 글감입니다.</div>\n'
         f'{top_section}\n'
+        f'{changes_html}\n'
         f'<div class="tab-bar">{tab_buttons}</div>\n'
         f'{tab_contents}\n'
         f'{watch_html}\n'
+        # 인물 화제 조합·롱테일 금맥 주입 지점 (접이식 참고 섹션보다 위에 오도록)
+        '<!-- INJECT_SECTIONS -->\n'
+        f'{cosearch_html}\n'
         f'{unid_html}\n'
         f'<script>{JS}</script>\n'
         '</body>\n</html>'

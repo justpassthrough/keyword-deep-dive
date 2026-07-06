@@ -166,10 +166,12 @@ def inject_into_dashboard(data):
         f'<style>{HOT_CSS}</style>\n{section}\n'
         '<!-- HOTCOMBO_END -->'
     )
-    # 화제 조합은 상단 관심사 → goldmine보다 앞(먼저)에 오도록 GOLDMINE_START 앞에 삽입,
-    # 없으면 </body> 직전.
+    # 화제 조합은 상단 관심사 → goldmine보다 앞(먼저)에 오도록 GOLDMINE_START 앞에 삽입.
+    # goldmine 없으면 주입 지점 앵커(INJECT_SECTIONS), 그것도 없으면 </body> 직전.
     if '<!-- GOLDMINE_START -->' in html:
         html = html.replace('<!-- GOLDMINE_START -->', f'{injection}\n<!-- GOLDMINE_START -->')
+    elif '<!-- INJECT_SECTIONS -->' in html:
+        html = html.replace('<!-- INJECT_SECTIONS -->', f'{injection}\n<!-- INJECT_SECTIONS -->')
     elif '</body>' in html:
         html = html.replace('</body>', f'{injection}\n</body>')
     else:

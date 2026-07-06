@@ -498,8 +498,11 @@ def inject_into_dashboard(data):
         '<!-- GOLDMINE_END -->'
     )
 
-    # </body> 직전에 삽입
-    if '</body>' in html:
+    # 주입 지점 앵커(INJECT_SECTIONS) 앞에 삽입 → 접이식 참고 섹션보다 위에 위치.
+    # 앵커 없으면 </body> 직전 폴백.
+    if '<!-- INJECT_SECTIONS -->' in html:
+        html = html.replace('<!-- INJECT_SECTIONS -->', f'{injection}\n<!-- INJECT_SECTIONS -->')
+    elif '</body>' in html:
         html = html.replace('</body>', f'{injection}\n</body>')
     else:
         html += injection
