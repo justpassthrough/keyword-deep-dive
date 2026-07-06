@@ -1,40 +1,73 @@
 {
-  "updated_at": "2026-07-06 10:14",
-  "today_count": 0,
-  "count": 12,
+  "updated_at": "2026-07-06 16:07",
+  "today_count": 6,
+  "count": 13,
   "items": [
     {
       "keyword": "조현아 위고비",
-      "search_volume": 370,
+      "search_volume": 420,
       "comp_idx": "낮음",
       "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-07-04",
-      "seen_count": 15,
-      "today": false
+      "last_seen": "2026-07-06",
+      "seen_count": 16,
+      "today": true
     },
     {
       "keyword": "손담비 탈모",
-      "search_volume": 110,
+      "search_volume": 120,
       "comp_idx": "낮음",
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
-      "seen_count": 1,
-      "today": false
+      "last_seen": "2026-07-06",
+      "seen_count": 2,
+      "today": true
     },
     {
       "keyword": "랄랄 마운자로",
+      "search_volume": 90,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-06",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 마운자로",
       "search_volume": 80,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
-      "seen_count": 2,
-      "today": false
+      "last_seen": "2026-07-06",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-06",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "이선민 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_count": 1,
+      "today": true
     },
     {
       "keyword": "성시경 감량",
@@ -50,28 +83,6 @@
     {
       "keyword": "리즈 위고비",
       "search_volume": 80,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
-      "seen_count": 2,
-      "today": false
-    },
-    {
-      "keyword": "케이윌 마운자로",
-      "search_volume": 70,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
-      "seen_count": 2,
-      "today": false
-    },
-    {
-      "keyword": "랄랄 위고비",
-      "search_volume": 30,
       "comp_idx": "낮음",
       "seed": "위고비",
       "is_hot_badge": false,
