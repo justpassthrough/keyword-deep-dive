@@ -1,17 +1,50 @@
 {
-  "updated_at": "2026-07-06 16:07",
-  "today_count": 6,
-  "count": 13,
+  "updated_at": "2026-07-07 12:07",
+  "today_count": 8,
+  "count": 15,
   "items": [
     {
+      "keyword": "성시경 마운자로",
+      "search_volume": 1600,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "성시경 위고비",
+      "search_volume": 750,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_count": 1,
+      "today": true
+    },
+    {
       "keyword": "조현아 위고비",
-      "search_volume": 420,
+      "search_volume": 450,
       "comp_idx": "낮음",
       "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-07-06",
-      "seen_count": 16,
+      "last_seen": "2026-07-07",
+      "seen_count": 17,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 마운자로",
+      "search_volume": 130,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-07",
+      "seen_count": 4,
       "today": true
     },
     {
@@ -21,41 +54,30 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-06",
-      "seen_count": 2,
+      "last_seen": "2026-07-07",
+      "seen_count": 3,
       "today": true
     },
     {
       "keyword": "랄랄 마운자로",
-      "search_volume": 90,
+      "search_volume": 100,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-06",
-      "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "케이윌 마운자로",
-      "search_volume": 80,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-07-06",
-      "seen_count": 3,
+      "last_seen": "2026-07-07",
+      "seen_count": 4,
       "today": true
     },
     {
       "keyword": "랄랄 위고비",
-      "search_volume": 30,
+      "search_volume": 40,
       "comp_idx": "낮음",
       "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-06",
-      "seen_count": 3,
+      "last_seen": "2026-07-07",
+      "seen_count": 4,
       "today": true
     },
     {
@@ -65,8 +87,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_count": 1,
+      "last_seen": "2026-07-07",
+      "seen_count": 2,
       "today": true
     },
     {
