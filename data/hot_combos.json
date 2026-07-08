@@ -1,30 +1,8 @@
 {
-  "updated_at": "2026-07-08 11:39",
-  "today_count": 7,
+  "updated_at": "2026-07-08 16:07",
+  "today_count": 5,
   "count": 15,
   "items": [
-    {
-      "keyword": "성시경 마운자로",
-      "search_volume": 1630,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-08",
-      "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "성시경 위고비",
-      "search_volume": 750,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-08",
-      "seen_count": 3,
-      "today": true
-    },
     {
       "keyword": "케이윌 마운자로",
       "search_volume": 150,
@@ -33,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-08",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
     },
     {
@@ -44,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-08",
-      "seen_count": 5,
+      "seen_count": 6,
       "today": true
     },
     {
@@ -55,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-08",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
     },
     {
@@ -66,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-08",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
     },
     {
@@ -77,8 +55,30 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-07-08",
-      "seen_count": 4,
+      "seen_count": 5,
       "today": true
+    },
+    {
+      "keyword": "성시경 마운자로",
+      "search_volume": 1630,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
+      "seen_count": 3,
+      "today": false
+    },
+    {
+      "keyword": "성시경 위고비",
+      "search_volume": 750,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
+      "seen_count": 3,
+      "today": false
     },
     {
       "keyword": "조현아 위고비",
