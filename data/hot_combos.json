@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-07-08 16:07",
-  "today_count": 5,
-  "count": 15,
+  "updated_at": "2026-07-09 16:08",
+  "today_count": 6,
+  "count": 16,
   "items": [
     {
       "keyword": "케이윌 마운자로",
-      "search_volume": 150,
+      "search_volume": 160,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-08",
-      "seen_count": 7,
+      "last_seen": "2026-07-09",
+      "seen_count": 8,
       "today": true
     },
     {
@@ -21,8 +21,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-08",
-      "seen_count": 6,
+      "last_seen": "2026-07-09",
+      "seen_count": 7,
       "today": true
     },
     {
@@ -32,8 +32,8 @@
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-08",
-      "seen_count": 7,
+      "last_seen": "2026-07-09",
+      "seen_count": 8,
       "today": true
     },
     {
@@ -43,8 +43,8 @@
       "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-08",
-      "seen_count": 7,
+      "last_seen": "2026-07-09",
+      "seen_count": 8,
       "today": true
     },
     {
@@ -54,8 +54,19 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-08",
-      "seen_count": 5,
+      "last_seen": "2026-07-09",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "조혜련 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "seen_count": 1,
       "today": true
     },
     {
