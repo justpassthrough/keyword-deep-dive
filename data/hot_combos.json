@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-07-09 16:08",
-  "today_count": 6,
+  "updated_at": "2026-07-10 11:57",
+  "today_count": 4,
   "count": 16,
   "items": [
     {
       "keyword": "케이윌 마운자로",
-      "search_volume": 160,
+      "search_volume": 190,
       "comp_idx": "낮음",
-      "seed": "마운자로",
+      "seed": "갱년기 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-09",
-      "seen_count": 8,
+      "last_seen": "2026-07-10",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -21,8 +21,30 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "이선민 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-10",
       "seen_count": 7,
+      "today": true
+    },
+    {
+      "keyword": "조혜련 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "건강 관리 비결",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
+      "seen_count": 2,
       "today": true
     },
     {
@@ -34,7 +56,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-09",
       "seen_count": 8,
-      "today": true
+      "today": false
     },
     {
       "keyword": "랄랄 위고비",
@@ -45,29 +67,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-09",
       "seen_count": 8,
-      "today": true
-    },
-    {
-      "keyword": "이선민 탈모",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-09",
-      "seen_count": 6,
-      "today": true
-    },
-    {
-      "keyword": "조혜련 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "체중 감량",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_count": 1,
-      "today": true
+      "today": false
     },
     {
       "keyword": "성시경 마운자로",
