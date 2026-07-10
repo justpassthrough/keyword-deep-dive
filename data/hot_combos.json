@@ -1,17 +1,28 @@
 {
-  "updated_at": "2026-07-10 11:57",
-  "today_count": 4,
-  "count": 16,
+  "updated_at": "2026-07-10 16:07",
+  "today_count": 7,
+  "count": 17,
   "items": [
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 1050,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-07-10",
+      "seen_count": 16,
+      "today": true
+    },
     {
       "keyword": "케이윌 마운자로",
       "search_volume": 190,
       "comp_idx": "낮음",
-      "seed": "갱년기 고백",
+      "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-10",
-      "seen_count": 9,
+      "seen_count": 10,
       "today": true
     },
     {
@@ -22,7 +33,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-10",
-      "seen_count": 8,
+      "seen_count": 9,
+      "today": true
+    },
+    {
+      "keyword": "이대호 위고비",
+      "search_volume": 80,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-10",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -33,18 +66,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-07-10",
-      "seen_count": 7,
+      "seen_count": 8,
       "today": true
     },
     {
       "keyword": "조혜련 감량",
       "search_volume": 30,
       "comp_idx": "낮음",
-      "seed": "건강 관리 비결",
+      "seed": "다이어트 성공",
       "is_hot_badge": false,
       "first_seen": "2026-07-09",
       "last_seen": "2026-07-10",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -52,17 +85,6 @@
       "search_volume": 110,
       "comp_idx": "낮음",
       "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-07-09",
-      "seen_count": 8,
-      "today": false
-    },
-    {
-      "keyword": "랄랄 위고비",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-09",
@@ -122,17 +144,6 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-04",
       "seen_count": 2,
-      "today": false
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 790,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-06-29",
-      "seen_count": 15,
       "today": false
     },
     {
