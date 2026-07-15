@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-07-14 16:07",
-  "today_count": 9,
-  "count": 20,
+  "updated_at": "2026-07-15 16:08",
+  "today_count": 12,
+  "count": 23,
   "items": [
     {
       "keyword": "빠니보틀 위고비",
       "search_volume": 600,
       "comp_idx": "낮음",
-      "seed": "체중 감량",
+      "seed": "다이어트 근황",
       "is_hot_badge": false,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-14",
-      "seen_count": 2,
+      "last_seen": "2026-07-15",
+      "seen_count": 3,
       "today": true
     },
     {
@@ -21,8 +21,8 @@
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-14",
-      "seen_count": 13,
+      "last_seen": "2026-07-15",
+      "seen_count": 14,
       "today": true
     },
     {
@@ -32,52 +32,63 @@
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-14",
-      "seen_count": 2,
+      "last_seen": "2026-07-15",
+      "seen_count": 3,
       "today": true
     },
     {
       "keyword": "손담비 탈모",
-      "search_volume": 110,
+      "search_volume": 100,
       "comp_idx": "낮음",
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-14",
-      "seen_count": 12,
+      "last_seen": "2026-07-15",
+      "seen_count": 13,
       "today": true
     },
     {
       "keyword": "이대호 위고비",
       "search_volume": 90,
       "comp_idx": "낮음",
-      "seed": "다이어트 고백",
+      "seed": "다이어트 비결",
       "is_hot_badge": false,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-07-14",
-      "seen_count": 4,
-      "today": true
-    },
-    {
-      "keyword": "김준호 위고비",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-11",
-      "last_seen": "2026-07-14",
-      "seen_count": 3,
+      "last_seen": "2026-07-15",
+      "seen_count": 5,
       "today": true
     },
     {
       "keyword": "랄랄 위고비",
-      "search_volume": 40,
+      "search_volume": 50,
       "comp_idx": "중간",
-      "seed": "위고비",
+      "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-14",
-      "seen_count": 12,
+      "last_seen": "2026-07-15",
+      "seen_count": 13,
+      "today": true
+    },
+    {
+      "keyword": "이성민 감량",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "김준호 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-15",
+      "seen_count": 4,
       "today": true
     },
     {
@@ -87,8 +98,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-14",
-      "seen_count": 11,
+      "last_seen": "2026-07-15",
+      "seen_count": 12,
       "today": true
     },
     {
@@ -98,8 +109,30 @@
       "seed": "다이어트 비결",
       "is_hot_badge": false,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-14",
-      "seen_count": 6,
+      "last_seen": "2026-07-15",
+      "seen_count": 7,
+      "today": true
+    },
+    {
+      "keyword": "김고은 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "이지혜 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "seen_count": 1,
       "today": true
     },
     {
