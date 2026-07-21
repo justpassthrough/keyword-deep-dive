@@ -1,28 +1,17 @@
 {
-  "updated_at": "2026-07-20 16:07",
-  "today_count": 14,
-  "count": 27,
+  "updated_at": "2026-07-21 20:56",
+  "today_count": 10,
+  "count": 28,
   "items": [
     {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 660,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-07-20",
-      "seen_count": 19,
-      "today": true
-    },
-    {
       "keyword": "케이윌 마운자로",
-      "search_volume": 210,
+      "search_volume": 220,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-20",
-      "seen_count": 18,
+      "last_seen": "2026-07-21",
+      "seen_count": 19,
       "today": true
     },
     {
@@ -32,8 +21,8 @@
       "seed": "다이어트 근황",
       "is_hot_badge": false,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-20",
-      "seen_count": 5,
+      "last_seen": "2026-07-21",
+      "seen_count": 6,
       "today": true
     },
     {
@@ -43,9 +32,97 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-07-21",
+      "seen_count": 18,
+      "today": true
+    },
+    {
+      "keyword": "이선민 탈모",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-21",
       "seen_count": 17,
       "today": true
+    },
+    {
+      "keyword": "김준호 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-21",
+      "seen_count": 9,
+      "today": true
+    },
+    {
+      "keyword": "조혜련 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-21",
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "김고은 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-21",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "이수현 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 비결",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-21",
+      "seen_count": 4,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "불면증 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-21",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "추성훈 갱년기",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 660,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-07-20",
+      "seen_count": 19,
+      "today": false
     },
     {
       "keyword": "랄랄 위고비",
@@ -56,29 +133,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-20",
       "seen_count": 17,
-      "today": true
-    },
-    {
-      "keyword": "이선민 탈모",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-20",
-      "seen_count": 16,
-      "today": true
-    },
-    {
-      "keyword": "김준호 위고비",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-11",
-      "last_seen": "2026-07-20",
-      "seen_count": 8,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이성민 마운자로",
@@ -89,29 +144,7 @@
       "first_seen": "2026-07-18",
       "last_seen": "2026-07-20",
       "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "조혜련 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 비결",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-20",
-      "seen_count": 11,
-      "today": true
-    },
-    {
-      "keyword": "김고은 탈모",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-15",
-      "last_seen": "2026-07-20",
-      "seen_count": 5,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이지혜 탈모",
@@ -122,18 +155,7 @@
       "first_seen": "2026-07-15",
       "last_seen": "2026-07-20",
       "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "이수현 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 근황",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-18",
-      "last_seen": "2026-07-20",
-      "seen_count": 3,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이성민 위고비",
@@ -144,18 +166,7 @@
       "first_seen": "2026-07-18",
       "last_seen": "2026-07-20",
       "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "케이윌 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "불면증 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-20",
-      "last_seen": "2026-07-20",
-      "seen_count": 2,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이대호 위고비",
