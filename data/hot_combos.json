@@ -1,8 +1,19 @@
 {
-  "updated_at": "2026-08-04 16:07",
-  "today_count": 19,
+  "updated_at": "2026-08-05 17:23",
+  "today_count": 1,
   "count": 43,
   "items": [
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 660,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-08-05",
+      "seen_count": 30,
+      "today": true
+    },
     {
       "keyword": "다이어트주사",
       "search_volume": 16290,
@@ -12,7 +23,18 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-04",
       "seen_count": 3,
-      "today": true
+      "today": false
+    },
+    {
+      "keyword": "오젬픽 페이스",
+      "search_volume": 2780,
+      "comp_idx": "높음",
+      "seed": "오젬픽",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
+      "seen_count": 2,
+      "today": false
     },
     {
       "keyword": "MSM 크림",
@@ -23,7 +45,7 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-04",
       "seen_count": 3,
-      "today": true
+      "today": false
     },
     {
       "keyword": "NMN 크림",
@@ -34,7 +56,7 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-04",
       "seen_count": 3,
-      "today": true
+      "today": false
     },
     {
       "keyword": "풍자 위고비",
@@ -45,18 +67,7 @@
       "first_seen": "2026-07-29",
       "last_seen": "2026-08-04",
       "seen_count": 6,
-      "today": true
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 640,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-08-04",
-      "seen_count": 29,
-      "today": true
+      "today": false
     },
     {
       "keyword": "조현아 위고비",
@@ -67,7 +78,7 @@
       "first_seen": "2026-06-26",
       "last_seen": "2026-08-04",
       "seen_count": 20,
-      "today": true
+      "today": false
     },
     {
       "keyword": "케이윌 마운자로",
@@ -78,7 +89,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-08-04",
       "seen_count": 35,
-      "today": true
+      "today": false
     },
     {
       "keyword": "랄랄 마운자로",
@@ -89,7 +100,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-08-04",
       "seen_count": 24,
-      "today": true
+      "today": false
     },
     {
       "keyword": "홍진호 마운자로",
@@ -100,7 +111,7 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-04",
       "seen_count": 3,
-      "today": true
+      "today": false
     },
     {
       "keyword": "박명수 탈모",
@@ -111,7 +122,7 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-04",
       "seen_count": 3,
-      "today": true
+      "today": false
     },
     {
       "keyword": "김준호 위고비",
@@ -122,7 +133,7 @@
       "first_seen": "2026-07-11",
       "last_seen": "2026-08-04",
       "seen_count": 25,
-      "today": true
+      "today": false
     },
     {
       "keyword": "랄랄 위고비",
@@ -133,7 +144,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-08-04",
       "seen_count": 33,
-      "today": true
+      "today": false
     },
     {
       "keyword": "김고은 탈모",
@@ -144,7 +155,7 @@
       "first_seen": "2026-07-15",
       "last_seen": "2026-08-04",
       "seen_count": 22,
-      "today": true
+      "today": false
     },
     {
       "keyword": "케이윌 위고비",
@@ -155,7 +166,7 @@
       "first_seen": "2026-07-20",
       "last_seen": "2026-08-04",
       "seen_count": 19,
-      "today": true
+      "today": false
     },
     {
       "keyword": "추성훈 갱년기",
@@ -166,7 +177,7 @@
       "first_seen": "2026-07-21",
       "last_seen": "2026-08-04",
       "seen_count": 17,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이수현 감량",
@@ -177,7 +188,7 @@
       "first_seen": "2026-07-18",
       "last_seen": "2026-08-04",
       "seen_count": 11,
-      "today": true
+      "today": false
     },
     {
       "keyword": "김원희 갱년기",
@@ -188,7 +199,7 @@
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-04",
       "seen_count": 2,
-      "today": true
+      "today": false
     },
     {
       "keyword": "일라이 마운자로",
@@ -199,7 +210,7 @@
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-04",
       "seen_count": 2,
-      "today": true
+      "today": false
     },
     {
       "keyword": "신봉선 갱년기",
@@ -208,17 +219,6 @@
       "seed": "갱년기 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
-      "seen_count": 2,
-      "today": true
-    },
-    {
-      "keyword": "오젬픽 페이스",
-      "search_volume": 2780,
-      "comp_idx": "높음",
-      "seed": "오젬픽",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-03",
       "last_seen": "2026-08-04",
       "seen_count": 2,
       "today": false
