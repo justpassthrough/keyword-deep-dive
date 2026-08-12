@@ -1,8 +1,173 @@
 {
-  "updated_at": "2026-08-11 16:07",
-  "today_count": 17,
-  "count": 48,
+  "updated_at": "2026-08-12 16:10",
+  "today_count": 15,
+  "count": 49,
   "items": [
+    {
+      "keyword": "박준형 비타민",
+      "search_volume": 980,
+      "comp_idx": "낮음",
+      "seed": "장 건강 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 700,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-08-12",
+      "seen_count": 38,
+      "today": true
+    },
+    {
+      "keyword": "홍진호 마운자로",
+      "search_volume": 640,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-12",
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "조현아 위고비",
+      "search_volume": 620,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-08-12",
+      "seen_count": 26,
+      "today": true
+    },
+    {
+      "keyword": "이승철 위고비",
+      "search_volume": 430,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-12",
+      "seen_count": 9,
+      "today": true
+    },
+    {
+      "keyword": "이성민 감량",
+      "search_volume": 220,
+      "comp_idx": "낮음",
+      "seed": "감량 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-08-12",
+      "seen_count": 13,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 마운자로",
+      "search_volume": 110,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-08-12",
+      "seen_count": 27,
+      "today": true
+    },
+    {
+      "keyword": "박명수 탈모",
+      "search_volume": 70,
+      "comp_idx": "낮음",
+      "seed": "연예인 탈모",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-12",
+      "seen_count": 11,
+      "today": true
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-08-12",
+      "seen_count": 5,
+      "today": true
+    },
+    {
+      "keyword": "김준호 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-08-12",
+      "seen_count": 34,
+      "today": true
+    },
+    {
+      "keyword": "김원희 갱년기",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-12",
+      "seen_count": 11,
+      "today": true
+    },
+    {
+      "keyword": "신봉선 갱년기",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-12",
+      "seen_count": 11,
+      "today": true
+    },
+    {
+      "keyword": "김고은 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-08-12",
+      "seen_count": 31,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-08-12",
+      "seen_count": 36,
+      "today": true
+    },
+    {
+      "keyword": "일라이 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-12",
+      "seen_count": 3,
+      "today": true
+    },
     {
       "keyword": "다이어트주사",
       "search_volume": 15420,
@@ -12,7 +177,7 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-11",
       "seen_count": 9,
-      "today": true
+      "today": false
     },
     {
       "keyword": "위고비 주사",
@@ -23,95 +188,7 @@
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-11",
       "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 690,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-08-11",
-      "seen_count": 37,
-      "today": true
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 570,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-08-11",
-      "seen_count": 25,
-      "today": true
-    },
-    {
-      "keyword": "홍진호 마운자로",
-      "search_volume": 460,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-03",
-      "last_seen": "2026-08-11",
-      "seen_count": 11,
-      "today": true
-    },
-    {
-      "keyword": "이승철 위고비",
-      "search_volume": 430,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-06",
-      "last_seen": "2026-08-11",
-      "seen_count": 8,
-      "today": true
-    },
-    {
-      "keyword": "이성민 감량",
-      "search_volume": 210,
-      "comp_idx": "낮음",
-      "seed": "감량 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-15",
-      "last_seen": "2026-08-11",
-      "seen_count": 12,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 마운자로",
-      "search_volume": 100,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-08-11",
-      "seen_count": 26,
-      "today": true
-    },
-    {
-      "keyword": "박명수 탈모",
-      "search_volume": 70,
-      "comp_idx": "낮음",
-      "seed": "연예인 탈모",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-03",
-      "last_seen": "2026-08-11",
-      "seen_count": 10,
-      "today": true
-    },
-    {
-      "keyword": "김준호 위고비",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "삭센다",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-11",
-      "last_seen": "2026-08-11",
-      "seen_count": 33,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이승철 감량",
@@ -122,51 +199,7 @@
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-11",
       "seen_count": 7,
-      "today": true
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-08-11",
-      "seen_count": 4,
-      "today": true
-    },
-    {
-      "keyword": "김고은 탈모",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-15",
-      "last_seen": "2026-08-11",
-      "seen_count": 30,
-      "today": true
-    },
-    {
-      "keyword": "김원희 갱년기",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-11",
-      "seen_count": 10,
-      "today": true
-    },
-    {
-      "keyword": "신봉선 갱년기",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-11",
-      "seen_count": 10,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이수현 감량",
@@ -177,18 +210,7 @@
       "first_seen": "2026-07-18",
       "last_seen": "2026-08-11",
       "seen_count": 19,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-08-11",
-      "seen_count": 35,
-      "today": true
+      "today": false
     },
     {
       "keyword": "김민하 다이어트",
@@ -302,17 +324,6 @@
       "first_seen": "2026-07-20",
       "last_seen": "2026-08-04",
       "seen_count": 19,
-      "today": false
-    },
-    {
-      "keyword": "일라이 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
-      "seen_count": 2,
       "today": false
     },
     {
