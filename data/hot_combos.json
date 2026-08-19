@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 10:08",
+  "updated_at": "2026-08-19 16:08",
   "today_count": 13,
-  "count": 54,
+  "count": 55,
   "items": [
     {
       "keyword": "다이어트주사",
@@ -11,7 +11,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-19",
-      "seen_count": 13,
+      "seen_count": 14,
+      "today": true
+    },
+    {
+      "keyword": "마운자로 베이비",
+      "search_volume": 3300,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": true,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
+      "seen_count": 2,
+      "today": true
+    },
+    {
+      "keyword": "알부민 주사",
+      "search_volume": 2670,
+      "comp_idx": "높음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -22,18 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-08-19",
-      "seen_count": 42,
-      "today": true
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 660,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-08-19",
-      "seen_count": 30,
+      "seen_count": 43,
       "today": true
     },
     {
@@ -43,17 +54,6 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
-      "seen_count": 4,
-      "today": true
-    },
-    {
-      "keyword": "성시경 위고비",
-      "search_volume": 360,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-07",
       "last_seen": "2026-08-19",
       "seen_count": 5,
       "today": true
@@ -66,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-08-19",
-      "seen_count": 25,
+      "seen_count": 26,
       "today": true
     },
     {
@@ -77,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-19",
-      "seen_count": 15,
+      "seen_count": 16,
       "today": true
     },
     {
@@ -88,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-08-19",
-      "seen_count": 8,
+      "seen_count": 9,
       "today": true
     },
     {
@@ -99,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-19",
-      "seen_count": 15,
+      "seen_count": 16,
       "today": true
     },
     {
@@ -110,7 +110,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-19",
-      "seen_count": 15,
+      "seen_count": 16,
       "today": true
     },
     {
@@ -121,18 +121,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-18",
       "last_seen": "2026-08-19",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
       "keyword": "김준호 위고비",
       "search_volume": 40,
       "comp_idx": "낮음",
-      "seed": "체중 감량",
+      "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-08-19",
-      "seen_count": 35,
+      "seen_count": 36,
       "today": true
     },
     {
@@ -143,18 +143,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-08-19",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
-      "keyword": "마운자로 베이비",
-      "search_volume": 3030,
+      "keyword": "조현아 위고비",
+      "search_volume": 660,
       "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": true,
-      "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18",
-      "seen_count": 1,
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-08-19",
+      "seen_count": 30,
+      "today": false
+    },
+    {
+      "keyword": "성시경 위고비",
+      "search_volume": 360,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-08-19",
+      "seen_count": 5,
       "today": false
     },
     {
