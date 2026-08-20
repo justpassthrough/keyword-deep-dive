@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-08-19 16:08",
+  "updated_at": "2026-08-20 11:10",
   "today_count": 13,
-  "count": 55,
+  "count": 56,
   "items": [
     {
       "keyword": "다이어트주사",
-      "search_volume": 15030,
+      "search_volume": 14900,
       "comp_idx": "높음",
       "seed": "다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-19",
-      "seen_count": 14,
+      "last_seen": "2026-08-20",
+      "seen_count": 15,
       "today": true
     },
     {
       "keyword": "마운자로 베이비",
-      "search_volume": 3300,
+      "search_volume": 3490,
       "comp_idx": "낮음",
       "seed": "마운자로",
-      "is_hot_badge": true,
+      "is_hot_badge": false,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
-      "seen_count": 2,
+      "last_seen": "2026-08-20",
+      "seen_count": 3,
       "today": true
     },
     {
@@ -32,30 +32,30 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
-      "seen_count": 1,
+      "last_seen": "2026-08-20",
+      "seen_count": 2,
       "today": true
     },
     {
       "keyword": "스윙스 마운자로",
-      "search_volume": 850,
+      "search_volume": 910,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
-      "last_seen": "2026-08-19",
-      "seen_count": 43,
+      "last_seen": "2026-08-20",
+      "seen_count": 44,
       "today": true
     },
     {
       "keyword": "맹승지 탈모",
-      "search_volume": 450,
+      "search_volume": 430,
       "comp_idx": "낮음",
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-19",
-      "seen_count": 5,
+      "last_seen": "2026-08-20",
+      "seen_count": 6,
       "today": true
     },
     {
@@ -65,8 +65,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-19",
-      "seen_count": 26,
+      "last_seen": "2026-08-20",
+      "seen_count": 27,
       "today": true
     },
     {
@@ -76,8 +76,19 @@
       "seed": "연예인 탈모",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-19",
-      "seen_count": 16,
+      "last_seen": "2026-08-20",
+      "seen_count": 17,
+      "today": true
+    },
+    {
+      "keyword": "박준형 위고비",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-20",
+      "seen_count": 4,
       "today": true
     },
     {
@@ -87,8 +98,8 @@
       "seed": "다이어트 비결",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-08-19",
-      "seen_count": 9,
+      "last_seen": "2026-08-20",
+      "seen_count": 10,
       "today": true
     },
     {
@@ -98,8 +109,8 @@
       "seed": "갱년기 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-19",
-      "seen_count": 16,
+      "last_seen": "2026-08-20",
+      "seen_count": 17,
       "today": true
     },
     {
@@ -109,30 +120,8 @@
       "seed": "갱년기 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-19",
-      "seen_count": 16,
-      "today": true
-    },
-    {
-      "keyword": "박준형 위고비",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
-      "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "김준호 위고비",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-11",
-      "last_seen": "2026-08-19",
-      "seen_count": 36,
+      "last_seen": "2026-08-20",
+      "seen_count": 17,
       "today": true
     },
     {
@@ -142,8 +131,19 @@
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
-      "seen_count": 2,
+      "last_seen": "2026-08-20",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "김준호 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -166,6 +166,17 @@
       "first_seen": "2026-07-07",
       "last_seen": "2026-08-19",
       "seen_count": 5,
+      "today": false
+    },
+    {
+      "keyword": "김준호 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-08-19",
+      "seen_count": 36,
       "today": false
     },
     {
