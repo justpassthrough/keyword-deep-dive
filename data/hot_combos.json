@@ -1,40 +1,117 @@
 {
-  "updated_at": "2026-08-24 16:42",
-  "today_count": 0,
-  "count": 59,
+  "updated_at": "2026-08-25 10:08",
+  "today_count": 10,
+  "count": 61,
   "items": [
     {
       "keyword": "다이어트주사",
-      "search_volume": 14410,
+      "search_volume": 14590,
       "comp_idx": "높음",
       "seed": "다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-24",
-      "seen_count": 18,
-      "today": false
+      "last_seen": "2026-08-25",
+      "seen_count": 19,
+      "today": true
     },
     {
       "keyword": "마운자로 베이비",
-      "search_volume": 3920,
+      "search_volume": 4110,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-24",
-      "seen_count": 6,
-      "today": false
+      "last_seen": "2026-08-25",
+      "seen_count": 7,
+      "today": true
     },
     {
       "keyword": "알부민 주사",
-      "search_volume": 2620,
+      "search_volume": 2700,
       "comp_idx": "높음",
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-24",
-      "seen_count": 5,
-      "today": false
+      "last_seen": "2026-08-25",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "마운자로 주사",
+      "search_volume": 2580,
+      "comp_idx": "높음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 1120,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-08-25",
+      "seen_count": 48,
+      "today": true
+    },
+    {
+      "keyword": "백지영 다이어트약",
+      "search_volume": 970,
+      "comp_idx": "낮음",
+      "seed": "다이어트약",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "맹승지 탈모",
+      "search_volume": 460,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-25",
+      "seen_count": 10,
+      "today": true
+    },
+    {
+      "keyword": "이선민 탈모",
+      "search_volume": 120,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-08-25",
+      "seen_count": 31,
+      "today": true
+    },
+    {
+      "keyword": "김원희 갱년기",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-25",
+      "seen_count": 21,
+      "today": true
+    },
+    {
+      "keyword": "신봉선 갱년기",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-25",
+      "seen_count": 21,
+      "today": true
     },
     {
       "keyword": "위고비 주사",
@@ -48,17 +125,6 @@
       "today": false
     },
     {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 1070,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-08-24",
-      "seen_count": 47,
-      "today": false
-    },
-    {
       "keyword": "조현아 위고비",
       "search_volume": 650,
       "comp_idx": "낮음",
@@ -67,50 +133,6 @@
       "first_seen": "2026-06-26",
       "last_seen": "2026-08-24",
       "seen_count": 31,
-      "today": false
-    },
-    {
-      "keyword": "맹승지 탈모",
-      "search_volume": 460,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-08-24",
-      "seen_count": 9,
-      "today": false
-    },
-    {
-      "keyword": "이선민 탈모",
-      "search_volume": 110,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-08-24",
-      "seen_count": 30,
-      "today": false
-    },
-    {
-      "keyword": "김원희 갱년기",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-24",
-      "seen_count": 20,
-      "today": false
-    },
-    {
-      "keyword": "신봉선 갱년기",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-24",
-      "seen_count": 20,
       "today": false
     },
     {
