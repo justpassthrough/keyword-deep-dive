@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-26 10:10",
-  "today_count": 11,
-  "count": 63,
+  "updated_at": "2026-08-26 16:07",
+  "today_count": 12,
+  "count": 65,
   "items": [
     {
       "keyword": "다이어트주사",
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-26",
-      "seen_count": 21,
+      "seen_count": 22,
       "today": true
     },
     {
@@ -22,7 +22,117 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-26",
+      "seen_count": 2,
+      "today": true
+    },
+    {
+      "keyword": "알부민 주사",
+      "search_volume": 2760,
+      "comp_idx": "높음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-26",
+      "seen_count": 9,
+      "today": true
+    },
+    {
+      "keyword": "솔가 철분",
+      "search_volume": 1920,
+      "comp_idx": "중간",
+      "seed": "철분",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "seen_count": 2,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 1160,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-08-26",
+      "seen_count": 51,
+      "today": true
+    },
+    {
+      "keyword": "백지영 다이어트약",
+      "search_volume": 1010,
+      "comp_idx": "낮음",
+      "seed": "다이어트약",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-26",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "맹승지 탈모",
+      "search_volume": 470,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-26",
+      "seen_count": 13,
+      "today": true
+    },
+    {
+      "keyword": "삭센다 주사",
+      "search_volume": 180,
+      "comp_idx": "높음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
       "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "이선민 탈모",
+      "search_volume": 120,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-08-26",
+      "seen_count": 34,
+      "today": true
+    },
+    {
+      "keyword": "보스웰리아 크림",
+      "search_volume": 80,
+      "comp_idx": "높음",
+      "seed": "보스웰리아",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "김원희 갱년기",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-26",
+      "seen_count": 24,
+      "today": true
+    },
+    {
+      "keyword": "신봉선 갱년기",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-26",
+      "seen_count": 24,
       "today": true
     },
     {
@@ -34,18 +144,7 @@
       "first_seen": "2026-08-18",
       "last_seen": "2026-08-26",
       "seen_count": 9,
-      "today": true
-    },
-    {
-      "keyword": "알부민 주사",
-      "search_volume": 2760,
-      "comp_idx": "높음",
-      "seed": "알부민",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-08-26",
-      "seen_count": 8,
-      "today": true
+      "today": false
     },
     {
       "keyword": "마운자로 주사",
@@ -56,83 +155,6 @@
       "first_seen": "2026-08-25",
       "last_seen": "2026-08-26",
       "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "솔가 철분",
-      "search_volume": 1920,
-      "comp_idx": "중간",
-      "seed": "철분",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "seen_count": 1,
-      "today": true
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 1160,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-08-26",
-      "seen_count": 50,
-      "today": true
-    },
-    {
-      "keyword": "맹승지 탈모",
-      "search_volume": 470,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-08-26",
-      "seen_count": 12,
-      "today": true
-    },
-    {
-      "keyword": "이선민 탈모",
-      "search_volume": 120,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-08-26",
-      "seen_count": 33,
-      "today": true
-    },
-    {
-      "keyword": "김원희 갱년기",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-26",
-      "seen_count": 23,
-      "today": true
-    },
-    {
-      "keyword": "신봉선 갱년기",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-26",
-      "seen_count": 23,
-      "today": true
-    },
-    {
-      "keyword": "백지영 다이어트약",
-      "search_volume": 970,
-      "comp_idx": "낮음",
-      "seed": "다이어트약",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "seen_count": 2,
       "today": false
     },
     {
