@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 12:43",
-  "today_count": 11,
-  "count": 66,
+  "updated_at": "2026-08-27 16:08",
+  "today_count": 13,
+  "count": 68,
   "items": [
     {
       "keyword": "다이어트주사",
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-27",
-      "seen_count": 23,
+      "seen_count": 24,
       "today": true
     },
     {
@@ -22,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-27",
-      "seen_count": 3,
+      "seen_count": 4,
       "today": true
     },
     {
@@ -33,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-08-27",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
@@ -44,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-27",
-      "seen_count": 3,
+      "seen_count": 4,
       "today": true
     },
     {
@@ -55,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-08-27",
-      "seen_count": 52,
+      "seen_count": 53,
       "today": true
     },
     {
@@ -63,6 +63,17 @@
       "search_volume": 950,
       "comp_idx": "중간",
       "seed": "철분",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_count": 2,
+      "today": true
+    },
+    {
+      "keyword": "김정은 마운자로",
+      "search_volume": 210,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-08-27",
       "last_seen": "2026-08-27",
@@ -77,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-27",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -88,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-08-27",
-      "seen_count": 35,
+      "seen_count": 36,
       "today": true
     },
     {
@@ -99,7 +110,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-08-27",
-      "seen_count": 38,
+      "seen_count": 39,
       "today": true
     },
     {
@@ -110,7 +121,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-27",
-      "seen_count": 25,
+      "seen_count": 26,
       "today": true
     },
     {
@@ -121,7 +132,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-27",
-      "seen_count": 25,
+      "seen_count": 26,
+      "today": true
+    },
+    {
+      "keyword": "김정은 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_count": 1,
       "today": true
     },
     {
