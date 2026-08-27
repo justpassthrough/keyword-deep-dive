@@ -1,39 +1,39 @@
 {
-  "updated_at": "2026-08-26 16:07",
-  "today_count": 12,
-  "count": 65,
+  "updated_at": "2026-08-27 12:43",
+  "today_count": 11,
+  "count": 66,
   "items": [
     {
       "keyword": "다이어트주사",
-      "search_volume": 14640,
+      "search_volume": 14610,
       "comp_idx": "높음",
       "seed": "다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-26",
-      "seen_count": 22,
+      "last_seen": "2026-08-27",
+      "seen_count": 23,
       "today": true
     },
     {
       "keyword": "솔가 엽산",
-      "search_volume": 6610,
+      "search_volume": 6570,
       "comp_idx": "중간",
       "seed": "엽산",
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "seen_count": 2,
+      "last_seen": "2026-08-27",
+      "seen_count": 3,
       "today": true
     },
     {
       "keyword": "알부민 주사",
-      "search_volume": 2760,
+      "search_volume": 2780,
       "comp_idx": "높음",
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-26",
-      "seen_count": 9,
+      "last_seen": "2026-08-27",
+      "seen_count": 10,
       "today": true
     },
     {
@@ -43,41 +43,30 @@
       "seed": "철분",
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "seen_count": 2,
-      "today": true
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 1160,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-08-26",
-      "seen_count": 51,
-      "today": true
-    },
-    {
-      "keyword": "백지영 다이어트약",
-      "search_volume": 1010,
-      "comp_idx": "낮음",
-      "seed": "다이어트약",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-08-27",
       "seen_count": 3,
       "today": true
     },
     {
-      "keyword": "맹승지 탈모",
-      "search_volume": 470,
+      "keyword": "스윙스 마운자로",
+      "search_volume": 1200,
       "comp_idx": "낮음",
-      "seed": "탈모 고백",
+      "seed": "다이어트 고백",
       "is_hot_badge": false,
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-08-26",
-      "seen_count": 13,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-08-27",
+      "seen_count": 52,
+      "today": true
+    },
+    {
+      "keyword": "키즈 철분",
+      "search_volume": 950,
+      "comp_idx": "중간",
+      "seed": "철분",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -87,30 +76,30 @@
       "seed": "삭센다",
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "seen_count": 1,
+      "last_seen": "2026-08-27",
+      "seen_count": 2,
       "today": true
     },
     {
       "keyword": "이선민 탈모",
       "search_volume": 120,
       "comp_idx": "낮음",
-      "seed": "탈모 고백",
+      "seed": "연예인 탈모",
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-26",
-      "seen_count": 34,
+      "last_seen": "2026-08-27",
+      "seen_count": 35,
       "today": true
     },
     {
-      "keyword": "보스웰리아 크림",
-      "search_volume": 80,
-      "comp_idx": "높음",
-      "seed": "보스웰리아",
+      "keyword": "케이윌 마운자로",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
       "is_hot_badge": false,
-      "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "seen_count": 1,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-08-27",
+      "seen_count": 38,
       "today": true
     },
     {
@@ -120,8 +109,8 @@
       "seed": "갱년기 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-26",
-      "seen_count": 24,
+      "last_seen": "2026-08-27",
+      "seen_count": 25,
       "today": true
     },
     {
@@ -131,8 +120,8 @@
       "seed": "갱년기 고백",
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-26",
-      "seen_count": 24,
+      "last_seen": "2026-08-27",
+      "seen_count": 25,
       "today": true
     },
     {
@@ -155,6 +144,39 @@
       "first_seen": "2026-08-25",
       "last_seen": "2026-08-26",
       "seen_count": 3,
+      "today": false
+    },
+    {
+      "keyword": "백지영 다이어트약",
+      "search_volume": 1010,
+      "comp_idx": "낮음",
+      "seed": "다이어트약",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-26",
+      "seen_count": 3,
+      "today": false
+    },
+    {
+      "keyword": "맹승지 탈모",
+      "search_volume": 470,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-26",
+      "seen_count": 13,
+      "today": false
+    },
+    {
+      "keyword": "보스웰리아 크림",
+      "search_volume": 80,
+      "comp_idx": "높음",
+      "seed": "보스웰리아",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "seen_count": 1,
       "today": false
     },
     {
@@ -467,17 +489,6 @@
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-08",
       "seen_count": 2,
-      "today": false
-    },
-    {
-      "keyword": "케이윌 마운자로",
-      "search_volume": 120,
-      "comp_idx": "낮음",
-      "seed": "불면증 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-08-07",
-      "seen_count": 37,
       "today": false
     },
     {
