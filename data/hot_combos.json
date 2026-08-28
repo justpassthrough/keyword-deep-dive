@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-28 11:06",
+  "updated_at": "2026-08-28 16:08",
   "today_count": 15,
-  "count": 70,
+  "count": 71,
   "items": [
     {
       "keyword": "다이어트주사",
@@ -11,18 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-08-28",
-      "seen_count": 25,
-      "today": true
-    },
-    {
-      "keyword": "솔가 엽산",
-      "search_volume": 6580,
-      "comp_idx": "중간",
-      "seed": "엽산",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-26",
-      "last_seen": "2026-08-28",
-      "seen_count": 5,
+      "seen_count": 26,
       "today": true
     },
     {
@@ -33,18 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-08-28",
-      "seen_count": 12,
-      "today": true
-    },
-    {
-      "keyword": "솔가 철분",
-      "search_volume": 1920,
-      "comp_idx": "중간",
-      "seed": "철분",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-26",
-      "last_seen": "2026-08-28",
-      "seen_count": 5,
+      "seen_count": 13,
       "today": true
     },
     {
@@ -55,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-08-28",
-      "seen_count": 54,
+      "seen_count": 55,
       "today": true
     },
     {
@@ -66,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-21",
       "last_seen": "2026-08-28",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -77,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-08-28",
-      "seen_count": 40,
+      "seen_count": 41,
       "today": true
     },
     {
@@ -88,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-27",
       "last_seen": "2026-08-28",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -99,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-28",
-      "seen_count": 4,
+      "seen_count": 5,
       "today": true
     },
     {
@@ -110,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-08-28",
-      "seen_count": 37,
+      "seen_count": 38,
       "today": true
     },
     {
@@ -118,6 +96,28 @@
       "search_volume": 120,
       "comp_idx": "낮음",
       "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "seen_count": 2,
+      "today": true
+    },
+    {
+      "keyword": "보스웰리아 크림",
+      "search_volume": 80,
+      "comp_idx": "높음",
+      "seed": "보스웰리아",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-28",
+      "seen_count": 2,
+      "today": true
+    },
+    {
+      "keyword": "황재균 위고비",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-08-28",
@@ -132,7 +132,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-28",
-      "seen_count": 27,
+      "seen_count": 28,
       "today": true
     },
     {
@@ -143,7 +143,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-27",
       "last_seen": "2026-08-28",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -154,7 +154,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-04",
       "last_seen": "2026-08-28",
-      "seen_count": 27,
+      "seen_count": 28,
       "today": true
     },
     {
@@ -165,8 +165,30 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-08-28",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
+    },
+    {
+      "keyword": "솔가 엽산",
+      "search_volume": 6580,
+      "comp_idx": "중간",
+      "seed": "엽산",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-28",
+      "seen_count": 5,
+      "today": false
+    },
+    {
+      "keyword": "솔가 철분",
+      "search_volume": 1920,
+      "comp_idx": "중간",
+      "seed": "철분",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-28",
+      "seen_count": 5,
+      "today": false
     },
     {
       "keyword": "키즈 철분",
@@ -221,17 +243,6 @@
       "first_seen": "2026-08-14",
       "last_seen": "2026-08-26",
       "seen_count": 13,
-      "today": false
-    },
-    {
-      "keyword": "보스웰리아 크림",
-      "search_volume": 80,
-      "comp_idx": "높음",
-      "seed": "보스웰리아",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
-      "seen_count": 1,
       "today": false
     },
     {
