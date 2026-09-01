@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01 10:08",
+  "updated_at": "2026-09-01 16:08",
   "today_count": 20,
   "count": 75,
   "items": [
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-01",
-      "seen_count": 31,
+      "seen_count": 32,
       "today": true
     },
     {
@@ -22,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-01",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
@@ -33,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-09-01",
-      "seen_count": 18,
+      "seen_count": 19,
       "today": true
     },
     {
@@ -44,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-09-01",
-      "seen_count": 7,
+      "seen_count": 8,
       "today": true
     },
     {
@@ -55,18 +55,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-01",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
       "keyword": "스윙스 마운자로",
       "search_volume": 1510,
       "comp_idx": "낮음",
-      "seed": "마운자로",
+      "seed": "다이어트 성공",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-01",
-      "seen_count": 60,
+      "seen_count": 61,
+      "today": true
+    },
+    {
+      "keyword": "홍진호 마운자로",
+      "search_volume": 1160,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-09-01",
+      "seen_count": 16,
       "today": true
     },
     {
@@ -77,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-01",
-      "seen_count": 46,
+      "seen_count": 47,
       "today": true
     },
     {
@@ -88,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-09-01",
-      "seen_count": 32,
+      "seen_count": 33,
       "today": true
     },
     {
@@ -99,7 +110,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-13",
       "last_seen": "2026-09-01",
-      "seen_count": 5,
+      "seen_count": 6,
       "today": true
     },
     {
@@ -110,7 +121,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-09-01",
-      "seen_count": 7,
+      "seen_count": 8,
       "today": true
     },
     {
@@ -121,7 +132,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-01",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
@@ -132,7 +143,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-09-01",
-      "seen_count": 43,
+      "seen_count": 44,
       "today": true
     },
     {
@@ -143,7 +154,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-01",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -154,7 +165,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-31",
       "last_seen": "2026-09-01",
-      "seen_count": 3,
+      "seen_count": 4,
       "today": true
     },
     {
@@ -165,7 +176,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-01",
-      "seen_count": 23,
+      "seen_count": 24,
       "today": true
     },
     {
@@ -176,7 +187,40 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-01",
-      "seen_count": 30,
+      "seen_count": 31,
+      "today": true
+    },
+    {
+      "keyword": "신봉선 갱년기",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-09-01",
+      "seen_count": 34,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 감량",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-09-01",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "이규형 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "장 건강 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-01",
+      "seen_count": 4,
       "today": true
     },
     {
@@ -188,40 +232,7 @@
       "first_seen": "2026-08-28",
       "last_seen": "2026-09-01",
       "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "신봉선 갱년기",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-09-01",
-      "seen_count": 33,
-      "today": true
-    },
-    {
-      "keyword": "케이윌 감량",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-29",
-      "last_seen": "2026-09-01",
-      "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "이규형 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "장 건강 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-01",
-      "seen_count": 3,
-      "today": true
+      "today": false
     },
     {
       "keyword": "김준호 마운자로",
@@ -232,17 +243,6 @@
       "first_seen": "2026-08-20",
       "last_seen": "2026-08-31",
       "seen_count": 4,
-      "today": false
-    },
-    {
-      "keyword": "홍진호 마운자로",
-      "search_volume": 1120,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-03",
-      "last_seen": "2026-08-30",
-      "seen_count": 15,
       "today": false
     },
     {
