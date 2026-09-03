@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-03 10:07",
-  "today_count": 20,
+  "updated_at": "2026-09-03 20:59",
+  "today_count": 19,
   "count": 78,
   "items": [
     {
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-03",
-      "seen_count": 35,
+      "seen_count": 36,
       "today": true
     },
     {
@@ -22,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-03",
-      "seen_count": 14,
+      "seen_count": 15,
       "today": true
     },
     {
@@ -33,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-09-03",
-      "seen_count": 11,
+      "seen_count": 12,
       "today": true
     },
     {
@@ -44,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-09-03",
-      "seen_count": 22,
+      "seen_count": 23,
       "today": true
     },
     {
@@ -55,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-03",
-      "seen_count": 14,
+      "seen_count": 15,
       "today": true
     },
     {
@@ -66,7 +66,150 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-03",
-      "seen_count": 64,
+      "seen_count": 65,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 마운자로",
+      "search_volume": 690,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-09-03",
+      "seen_count": 51,
+      "today": true
+    },
+    {
+      "keyword": "조현아 위고비",
+      "search_volume": 630,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-09-03",
+      "seen_count": 37,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 탈모",
+      "search_volume": 240,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-09-03",
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "삭센다 주사",
+      "search_volume": 180,
+      "comp_idx": "높음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-09-03",
+      "seen_count": 14,
+      "today": true
+    },
+    {
+      "keyword": "이선민 탈모",
+      "search_volume": 130,
+      "comp_idx": "낮음",
+      "seed": "연예인 탈모",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-09-03",
+      "seen_count": 48,
+      "today": true
+    },
+    {
+      "keyword": "보스웰리아크림",
+      "search_volume": 90,
+      "comp_idx": "높음",
+      "seed": "보스웰리아",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-03",
+      "seen_count": 7,
+      "today": true
+    },
+    {
+      "keyword": "박명수 탈모",
+      "search_volume": 70,
+      "comp_idx": "중간",
+      "seed": "연예인 탈모",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-09-03",
+      "seen_count": 28,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 마운자로",
+      "search_volume": 70,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-09-03",
+      "seen_count": 35,
+      "today": true
+    },
+    {
+      "keyword": "지석진 탈모",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-03",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "케이윌 감량",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-09-03",
+      "seen_count": 10,
+      "today": true
+    },
+    {
+      "keyword": "이규형 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "장 건강 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-03",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "이수현 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "이수현 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-03",
+      "seen_count": 3,
       "today": true
     },
     {
@@ -78,40 +221,7 @@
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-03",
       "seen_count": 19,
-      "today": true
-    },
-    {
-      "keyword": "케이윌 마운자로",
-      "search_volume": 690,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-09-03",
-      "seen_count": 50,
-      "today": true
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 630,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-09-03",
-      "seen_count": 36,
-      "today": true
-    },
-    {
-      "keyword": "케이윌 탈모",
-      "search_volume": 240,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-09-03",
-      "seen_count": 11,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이규형 마운자로",
@@ -122,51 +232,7 @@
       "first_seen": "2026-08-24",
       "last_seen": "2026-09-03",
       "seen_count": 4,
-      "today": true
-    },
-    {
-      "keyword": "이선민 탈모",
-      "search_volume": 130,
-      "comp_idx": "낮음",
-      "seed": "연예인 탈모",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-09-03",
-      "seen_count": 47,
-      "today": true
-    },
-    {
-      "keyword": "박명수 탈모",
-      "search_volume": 70,
-      "comp_idx": "중간",
-      "seed": "연예인 탈모",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-03",
-      "last_seen": "2026-09-03",
-      "seen_count": 27,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 마운자로",
-      "search_volume": 70,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-09-03",
-      "seen_count": 34,
-      "today": true
-    },
-    {
-      "keyword": "지석진 탈모",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-01",
-      "last_seen": "2026-09-03",
-      "seen_count": 5,
-      "today": true
+      "today": false
     },
     {
       "keyword": "쥬비스 마운자로",
@@ -177,72 +243,6 @@
       "first_seen": "2026-09-02",
       "last_seen": "2026-09-03",
       "seen_count": 2,
-      "today": true
-    },
-    {
-      "keyword": "케이윌 감량",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-29",
-      "last_seen": "2026-09-03",
-      "seen_count": 9,
-      "today": true
-    },
-    {
-      "keyword": "이규형 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "장 건강 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-03",
-      "seen_count": 7,
-      "today": true
-    },
-    {
-      "keyword": "이수현 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-09-03",
-      "seen_count": 2,
-      "today": true
-    },
-    {
-      "keyword": "이수현 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-09-03",
-      "seen_count": 2,
-      "today": true
-    },
-    {
-      "keyword": "삭센다 주사",
-      "search_volume": 180,
-      "comp_idx": "높음",
-      "seed": "삭센다",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-26",
-      "last_seen": "2026-09-02",
-      "seen_count": 13,
-      "today": false
-    },
-    {
-      "keyword": "보스웰리아크림",
-      "search_volume": 90,
-      "comp_idx": "높음",
-      "seed": "보스웰리아",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-02",
-      "seen_count": 6,
       "today": false
     },
     {
