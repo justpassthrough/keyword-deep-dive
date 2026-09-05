@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-04 10:03",
-  "today_count": 1,
+  "updated_at": "2026-09-05 19:30",
+  "today_count": 0,
   "count": 79,
   "items": [
     {
@@ -12,7 +12,7 @@
       "first_seen": "2026-09-04",
       "last_seen": "2026-09-04",
       "seen_count": 1,
-      "today": true
+      "today": false
     },
     {
       "keyword": "다이어트주사",
