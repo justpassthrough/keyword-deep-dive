@@ -1,8 +1,19 @@
 {
-  "updated_at": "2026-09-08 10:47",
-  "today_count": 16,
-  "count": 81,
+  "updated_at": "2026-09-08 16:08",
+  "today_count": 21,
+  "count": 86,
   "items": [
+    {
+      "keyword": "마그네슘 영양제",
+      "search_volume": 39370,
+      "comp_idx": "중간",
+      "seed": "마그네슘",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "seen_count": 1,
+      "today": true
+    },
     {
       "keyword": "다이어트주사",
       "search_volume": 14220,
@@ -11,7 +22,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-08",
-      "seen_count": 38,
+      "seen_count": 39,
+      "today": true
+    },
+    {
+      "keyword": "철분 영양제",
+      "search_volume": 8380,
+      "comp_idx": "높음",
+      "seed": "철분",
+      "is_hot_badge": true,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "알부민 영양제",
+      "search_volume": 7770,
+      "comp_idx": "높음",
+      "seed": "알부민",
+      "is_hot_badge": true,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -22,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-08",
-      "seen_count": 17,
+      "seen_count": 18,
       "today": true
     },
     {
@@ -33,7 +66,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-09-08",
-      "seen_count": 14,
+      "seen_count": 15,
+      "today": true
+    },
+    {
+      "keyword": "글루타치온 영양제",
+      "search_volume": 2560,
+      "comp_idx": "중간",
+      "seed": "글루타치온",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -44,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-08",
-      "seen_count": 17,
+      "seen_count": 18,
       "today": true
     },
     {
@@ -55,18 +99,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-08",
-      "seen_count": 67,
+      "seen_count": 68,
       "today": true
     },
     {
       "keyword": "케이윌 마운자로",
       "search_volume": 810,
       "comp_idx": "낮음",
-      "seed": "마운자로",
+      "seed": "삭센다",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-08",
-      "seen_count": 53,
+      "seen_count": 54,
       "today": true
     },
     {
@@ -77,7 +121,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-09-08",
-      "seen_count": 39,
+      "seen_count": 40,
+      "today": true
+    },
+    {
+      "keyword": "엽산 영양제",
+      "search_volume": 460,
+      "comp_idx": "높음",
+      "seed": "엽산",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -88,7 +143,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-28",
       "last_seen": "2026-09-08",
-      "seen_count": 14,
+      "seen_count": 15,
       "today": true
     },
     {
@@ -99,7 +154,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-08",
-      "seen_count": 16,
+      "seen_count": 17,
       "today": true
     },
     {
@@ -110,7 +165,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-06",
       "last_seen": "2026-09-08",
-      "seen_count": 50,
+      "seen_count": 51,
       "today": true
     },
     {
@@ -121,7 +176,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-08",
-      "seen_count": 37,
+      "seen_count": 38,
       "today": true
     },
     {
@@ -132,7 +187,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-08",
-      "seen_count": 30,
+      "seen_count": 31,
       "today": true
     },
     {
@@ -143,7 +198,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-01",
       "last_seen": "2026-09-08",
-      "seen_count": 8,
+      "seen_count": 9,
       "today": true
     },
     {
@@ -154,7 +209,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-29",
       "last_seen": "2026-09-08",
-      "seen_count": 12,
+      "seen_count": 13,
       "today": true
     },
     {
@@ -165,7 +220,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-31",
       "last_seen": "2026-09-08",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
@@ -176,7 +231,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-07",
       "last_seen": "2026-09-08",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
