@@ -148,6 +148,34 @@ def is_excluded_company(kw):
     return any(name in norm for name in ENDORSER_EXCLUDE)
 
 
+# 히어로(오늘 쓸 글감)/1순위에서 뺄 브랜드·제품 라인 이름(부분일치).
+# shop_count(쇼핑 상품수)가 0으로 돌아와 못 걸리는 경우(트리어드 오메가3·하이퍼셀 코엔자임Q10 등, 2026-09-11 실측)를
+# 이름 목록으로 직접 잡는다. 제조사(COMPANY_EXCLUDE)를 재사용 + DTC 건기식 브랜드를 더한다. 새 브랜드는 여기 이름만 추가.
+SUPPLEMENT_BRANDS = {
+    "솔가", "나우푸드", "커클랜드", "하이퍼셀", "트리어드", "덴프스", "뉴트리코어", "뉴트리원",
+    "세노비스", "얼라이브", "프로메가", "고려은단", "안국건강", "캘리포니아골드", "라이프익스텐션",
+    "닥터스베스트", "덴마크", "비에날씬", "에스더포뮬러", "드시모네", "한미양행", "일동후디스",
+    "뉴트리라이트", "센트룸", "임팩타민", "아로나민", "삐콤씨", "비타500", "비맥스", "정관장",
+}
+BRAND_NAMES_NORM = COMPANY_EXCLUDE_NORM | {b.replace(" ", "") for b in SUPPLEMENT_BRANDS}
+# 뿌리 성분에 이것만 붙으면 특정 제품(예: 알부민 골드). 뿌리를 뺀 나머지가 통째로 이 단어일 때만 잡는다
+# ("메가"는 "오메가3"에 들어가 오탐이라 제외).
+BRAND_TIERS_NORM = {"골드", "프리미엄", "플러스", "울트라"}
+
+
+def brand_name_reason(keyword, roots_norm):
+    """키워드가 브랜드/제품명이면 걸린 토큰을, 아니면 None. shop_count 보조(0으로 와도 이름으로 잡음)."""
+    up = keyword.replace(" ", "").upper()
+    for b in BRAND_NAMES_NORM:
+        if b and b.upper() in up:
+            return b
+    mod = up
+    for r in roots_norm:  # 뿌리 성분을 빼고 남은 수식어가 통째로 등급어면 특정 제품
+        if r and r in mod:
+            mod = mod.replace(r, "")
+    return mod if mod in {t.upper() for t in BRAND_TIERS_NORM} else None
+
+
 # ══════════════════════════════════════════════════════════
 #  데이터 로드
 # ══════════════════════════════════════════════════════════
@@ -280,11 +308,21 @@ def is_brand_product(compound, roots_norm):
     결과를 compound에 캐시(_brand, shop_count)해 재호출 방지."""
     if "_brand" in compound:
         return compound["_brand"]
-    kw_norm = compound.get("keyword", "").replace(" ", "").upper()
-    if kw_norm in roots_norm or compound.get("intent") != "일반":
+    kw = compound.get("keyword", "")
+    kw_norm = kw.replace(" ", "").upper()
+    if kw_norm in roots_norm:  # 뿌리 성분 자체(오메가3·콜라겐 등)는 통과
         compound["_brand"] = False
         return False
-    sc = shop_count(compound.get("keyword", ""))
+    bn = brand_name_reason(kw, roots_norm)  # 이름 목록 = shop_count 0으로 새는 브랜드 방어(교육 의도여도 특정 제품이면 제외)
+    if bn:
+        compound["shop_count"] = compound.get("shop_count", -1)  # 이름으로 판정(쇼핑 조회 생략)
+        compound["_brand_reason"] = bn
+        compound["_brand"] = True
+        return True
+    if compound.get("intent") != "일반":  # 교육 의도(부작용·용량·비교 등)는 통과
+        compound["_brand"] = False
+        return False
+    sc = shop_count(kw)
     time.sleep(0.2)  # rate limit 보호
     compound["shop_count"] = sc
     compound["_brand"] = sc >= BRAND_SHOP_MIN
@@ -1360,6 +1398,25 @@ def main():
         print(f"  → 데이터랩 신호 {len(signal)}개 → 약사가치×시의성 상위 {len(deep_cosearch)}개")
 
     # ── 전체 통합 추천 ──
+    roots_norm = {r["keyword"].replace(" ", "").upper() for r in roots}
+    # 브랜드/제품명(트리어드 오메가3·종근당 유산균 등)을 전체 표에서 제거한다(2026-09-11).
+    #   히어로뿐 아니라 표 전체에서 빼야 대시보드·글쓰기 툴이 읽는 목록까지 브랜드가 안 섞인다.
+    #   판별은 '이름 목록'(brand_name_reason, 오프라인)만 사용 — shop_count(쇼핑 API)는 비용이 커서 히어로에만 쓴다.
+    #   뿌리 성분 자체(오메가3·콜라겐 등)는 남긴다.
+    _brand_removed = []
+    for r in all_results:
+        kept = []
+        for c in r["compounds"]:
+            knorm = c.get("keyword", "").replace(" ", "").upper()
+            if knorm not in roots_norm and brand_name_reason(c.get("keyword", ""), roots_norm):
+                _brand_removed.append(c["keyword"])
+                continue
+            kept.append(c)
+        r["compounds"] = kept
+    if _brand_removed:
+        print(f"  🧹 브랜드/제품명 {len(_brand_removed)}개 제외(표·추천에서 제거): "
+              f"{', '.join(_brand_removed[:8])}{'…' if len(_brand_removed) > 8 else ''}")
+
     all_compounds = []
     for r in all_results:
         for c in r["compounds"]:
@@ -1377,7 +1434,6 @@ def main():
         return sv >= 150 and m is not None and m >= 40
     hero_pool = [c for c in all_compounds if _hero_ok(c)]
     hero_pool.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
-    roots_norm = {r["keyword"].replace(" ", "").upper() for r in roots}
     # 히어로 선정: 브랜드 제품(하이퍼셀 코엔자임Q10 등) 제외 + 띄어쓰기/대소문자 변형 중복 제거.
     # (브랜드 판별은 쇼핑 상품수 조회 → 상위부터 7개 채울 때까지만 검사해 API 호출 최소화)
     top_recommendations = []
