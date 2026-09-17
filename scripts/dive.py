@@ -433,18 +433,22 @@ def position_mult(serp, prior=None):
     영양제는 쇼핑 블록이 위를 덮고 블로그가 5,000~10,000px 아래, 처방약은 쇼핑이 없고 블로그가 맨 위(176~1,100px)."""
     if not serp:
         return (prior if prior is not None else 1.0), 1.0
+    # 비중은 작게 둔다(사용자 판단 2026-09-17): 쇼핑 블록이 위를 덮어도 블로그 글을 찾는 사람은 결국 내려서 본다 —
+    # 스크롤 길이로 크게 감점하면 영양제 글감이 통째로 밀린다. 처음엔 1.5/1.25/1.0/0.7 × 쇼핑 0.85 였다.
+    # '유입 검색어는 절반이 2,000px 안'이라는 실측은 있었지만 처방약 대 영양제라는 주제 차이가 섞인 비교라 인과로 보기 어렵다.
+    # 2~3주 뒤 실제 유입으로 다시 맞출 때 이 배수의 크기도 같이 본다.
     y = serp.get("first_blog_y")
     if not isinstance(y, int):
-        pos = 0.7    # 첫 화면들에 블로그 글이 아예 안 잡힘
+        pos = 0.95   # 첫 화면들에 블로그 글이 아예 안 잡힘
     elif y < 1000:
-        pos = 1.5
+        pos = 1.1
     elif y < 2500:
-        pos = 1.25
+        pos = 1.05
     elif y < 5000:
         pos = 1.0
     else:
-        pos = 0.7
-    shop = 0.85 if serp.get("shop_above_blog") else 1.0
+        pos = 0.95
+    shop = 0.97 if serp.get("shop_above_blog") else 1.0
     return pos, shop
 
 
@@ -890,17 +894,14 @@ def calc_recommend_score(opportunity_score, pharma_value):
 
 
 def winnable_spot(c, roots_norm):
-    """추천(TOP7·1순위)에 올릴 자리인가: 실제 검색 화면을 확인했고, 블로그 영역이 5,000px 안에 나오며,
+    """추천(TOP7·1순위)에 올릴 글감인가: 병원 찾기(지역) 검색이 아니고,
     신제품 브랜드 꼴(쇼핑이 위를 덮음 + 문서가 검색량보다 적음 + 의도 '일반' + 뿌리 아님)이 아닐 것.
-    표에는 그대로 남는다 — 추천만 '이길 수 있는 자리'로 제한."""
+    블로그 영역 위치로는 막지 않는다(2026-09-17 밤 변경: 예전엔 화면 확인 + 5,000px 안만 추천했다). 화면을 아직 못 본 글감도 추천에 오른다."""
     if any(region in c.get("keyword", "") for region in REGIONS):
         return False   # '부산 마운자로' 같은 병원 찾기 검색 — 약사 블로그 글로 받을 의도가 아님
     sp = c.get("serp")
     if not sp:
-        return False
-    y = sp.get("first_blog_y")
-    if not isinstance(y, int) or y >= 5000:
-        return False
+        return True
     is_root = c.get("keyword", "").replace(" ", "").upper() in roots_norm
     sat = c.get("saturation")
     if sp.get("shop_above_blog") and c.get("intent") == "일반" and not is_root and isinstance(sat, (int, float)) and sat <= 1:
