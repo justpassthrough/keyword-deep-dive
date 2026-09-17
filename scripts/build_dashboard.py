@@ -176,6 +176,25 @@ def _sat_text(c):
     return f"{label} (×{sat})" if isinstance(sat, (int, float)) else label
 
 
+def _serp_text(c):
+    """실제 검색 화면 한 줄 요약. 없으면 빈 문자열."""
+    sp = c.get("serp")
+    if not sp:
+        return ""
+    parts = []
+    y = sp.get("first_blog_y")
+    if isinstance(y, int):
+        where = "맨 위" if y < 1000 else "위쪽" if y < 2500 else "중간" if y < 5000 else "한참 아래"
+        parts.append(f"블로그 영역 {where}({y:,}px)")
+    if sp.get("shop_above_blog"):
+        parts.append("🛒 쇼핑이 위를 덮음")
+    if isinstance(sp.get("median_age_days"), int):
+        parts.append(f"상위 글 {sp['median_age_days']}일 전")
+    if sp.get("my_rank"):
+        parts.append(f"⭐ 내 글 {sp['my_rank']}번째")
+    return " · ".join(parts)
+
+
 def _rewrite_text(c):
     d = c.get("days_since_written")
     return f"🔁 재작성 후보 ({d}일 전 작성)" if isinstance(d, int) else "🔁 재작성 후보"
@@ -335,6 +354,8 @@ def build_html(data):
         elif mom is not None and mom >= 15:
             sig_parts.append(f'<span class="sig-rise">📈 상승 {mom:+.0f}%</span>')
         signal_line = " · ".join(sig_parts)
+        if _serp_text(rec):
+            signal_line += f'<br><span class="sig-dim">📱 {escape(_serp_text(rec))}</span>'
 
         # 작성 여부 배지 + 이미 쓴 글이면 링크
         if rec.get("already_written"):

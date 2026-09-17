@@ -1115,6 +1115,31 @@ def fetch_my_posts():
 REWRITE_AFTER_DAYS = 15
 
 
+def attach_serp(all_results):
+    """실제 검색 화면 확인 결과(data/serp.json)를 키워드에 붙인다.
+    serp.json 은 미니PC(집 IP)의 serp-check 가 상위 후보를 네이버 모바일 검색으로 열어 기록한 것
+    (Actions IP 는 검색 페이지가 막혀서 여기서 직접 못 본다). 키워드별 최신 1건, 3일마다 갱신.
+    붙는 필드 serp: median_age_days(상위 5개 블로그 글 나이 중앙값)·fresh_30d·my_rank(내 글 순위)·
+    first_blog_y(블로그 영역이 화면 위에서 몇 px)·shop_above_blog(쇼핑 블록이 블로그 위를 덮는지)"""
+    path = os.path.join(DATA_DIR, "serp.json")
+    if not os.path.exists(path):
+        return 0
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            items = json.load(f).get("items", {})
+    except (ValueError, OSError):
+        return 0
+    n = 0
+    for r in all_results:
+        for c in r.get("compounds", []):
+            hit = items.get(c.get("keyword", "").replace(" ", "").upper())
+            if hit and hit.get("status") == 200:
+                c["serp"] = {k: hit.get(k) for k in ("checked_at", "median_age_days", "fresh_30d", "my_rank",
+                                                      "first_blog_y", "shop_y", "shop_above_blog")}
+                n += 1
+    return n
+
+
 def _days_since(date_str):
     try:
         return (datetime.now() - datetime.strptime(date_str[:10], "%Y-%m-%d")).days
@@ -1394,6 +1419,10 @@ def main():
     if my_posts:
         print(f"\n── 교차검증: {checked_cnt}개 중 최근 {REWRITE_AFTER_DAYS}일 안에 쓴 글 {written_cnt}개 "
               f"(그보다 오래된 글은 재작성 후보로 남김) ──")
+
+    serp_n = attach_serp(all_results)
+    if serp_n:
+        print(f"  검색 화면 확인 결과 {serp_n}개 키워드에 연결")
 
     all_compounds = []
     for r in all_results:
