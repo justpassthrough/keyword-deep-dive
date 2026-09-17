@@ -399,6 +399,9 @@ FIT_MULT = {
     "효능": 1.05, "진위": 1.05, "공급": 1.05,
     "일반": 1.0, "경험담": 1.0, "선택": 1.0,
     "구매": 0.85, "접근성": 0.85,
+    # '약국 ○○'은 약사 블로그가 실제로 상위에 드는 꼴(2026-09-17 검색 화면 실측: 약국 젖산마그네슘 1번째,
+    # 약국 어린이 유산균순위 2번째, 유입 검색어에도 약국 베르베린·약국 밀크씨슬·약국 쏘팔메토) → 감점이 아니라 가산
+    "약국": 1.1,
 }
 
 
@@ -422,35 +425,89 @@ def _momentum_mult(m):
     return 1.0       # 평시(꾸준한 에버그린도 벌점 없음)
 
 
-def calc_opportunity(search_volume, comp_idx, momentum, intent):
-    """조회수 기회점수 = log10(검색량) × 경쟁배수 × 모멘텀배수 × 약사보정.
-    '지금 뜨고(모멘텀) + 상위노출 되고(경쟁 낮음) + 파이 최소 이상(검색량)'인
-    '내가 실제로 먹을 수 있는 조회수'를 위로 끌어올린다.
-    검색량 100 미만은 게이트(None) — 못 먹는/노이즈 키워드 배제."""
+def position_mult(serp, prior=None):
+    """실제 검색 화면에서 블로그 영역이 얼마나 위에 있나(미니PC serp-check 기록).
+    아직 못 본 키워드는 prior(같은 뿌리에서 확인된 키워드들의 중앙값, root_position_priors)를 빌린다.
+    1.0으로 두면 '확인돼서 감점된 키워드'를 '아직 안 본 키워드'가 앞지른다(2026-09-17 미리보기에서 확인).
+    실측(2026-09-17): 내 유입 검색어 24개 중 12개가 2,000px 안, 스캐너 상위 후보 30개는 2개뿐.
+    영양제는 쇼핑 블록이 위를 덮고 블로그가 5,000~10,000px 아래, 처방약은 쇼핑이 없고 블로그가 맨 위(176~1,100px)."""
+    if not serp:
+        return (prior if prior is not None else 1.0), 1.0
+    y = serp.get("first_blog_y")
+    if not isinstance(y, int):
+        pos = 0.7    # 첫 화면들에 블로그 글이 아예 안 잡힘
+    elif y < 1000:
+        pos = 1.5
+    elif y < 2500:
+        pos = 1.25
+    elif y < 5000:
+        pos = 1.0
+    else:
+        pos = 0.7
+    shop = 0.85 if serp.get("shop_above_blog") else 1.0
+    return pos, shop
+
+
+SATURATION_MULT = {"문서 적음": 1.2, "보통": 1.0, "도배됨": 0.8}
+
+
+def root_position_priors(serp_items, roots):
+    """뿌리별 '자리' 기본값: 그 뿌리 이름이 든 확인 완료 키워드들의 (자리×쇼핑) 중앙값. 없으면 전체 중앙값.
+    영양제 뿌리는 0.6 근처, 처방약 뿌리는 1.25~1.5 로 갈린다."""
+    def med(xs):
+        xs = sorted(xs)
+        return xs[len(xs) // 2] if xs else None
+    vals = {}
+    for key, hit in serp_items.items():
+        if hit.get("status") != 200:
+            continue
+        pos, shop = position_mult(hit)
+        vals[key] = round(pos * shop, 2)
+    overall = med(list(vals.values()))
+    priors = {}
+    for r in roots:
+        rk = r["keyword"].replace(" ", "").upper()
+        priors[r["keyword"]] = med([v for k, v in vals.items() if rk in k]) or overall
+    return priors
+
+
+def calc_opportunity(search_volume, momentum, intent, sat_label=None, serp=None, position_prior=None):
+    """기대 유입 점수 = log10(월 검색량) × 모멘텀 × 자리(블로그 영역 위치·쇼핑 덮임) × 문서 포화도 × 약사 보정.
+    축은 '내가 이길 수 있는 키워드'(사용자 2026-09-17): 검색량이 커도 못 이기는 자리면 유입은 0.
+    광고 경쟁도(comp_idx)는 광고주 입찰 경쟁이라 상위노출과 무관해 점수에서 뺐다(표시는 유지).
+    배수는 초안 — 검색 화면 기록이 2~3주 쌓이면 실제 유입으로 다시 맞춘다.
+    검색량 100 미만은 게이트(None). 반환: (점수, 항목별 배수)"""
     if search_volume is None or search_volume < 100:
-        return None
+        return None, None
+    parts = {
+        "volume": round(math.log10(search_volume), 2),
+        "momentum": _momentum_mult(momentum),
+        "saturation": SATURATION_MULT.get(sat_label, 1.0),
+        "fit": FIT_MULT.get(intent, 1.0),
+    }
+    parts["position"], parts["shop"] = position_mult(serp, position_prior)
+    parts["position_verified"] = bool(serp)
+    score = 1.0
+    for k, v in parts.items():
+        if k != "position_verified":
+            score *= v
+    return round(score, 2), parts
 
-    # 검색량을 로그 '그대로'(÷2 제거) 반영 → 파이 크기가 제대로 실림.
-    # log10: 100회=2.0, 1천=3.0, 1만=4.0, 27만≈5.4
-    vol_factor = math.log10(search_volume)
-    comp_mult = {"낮음": 1.3, "중간": 1.0, "높음": 0.7}.get(comp_idx, 1.0)
-    fit_mult = FIT_MULT.get(intent, 1.0)
 
-    return round(vol_factor * comp_mult * _momentum_mult(momentum) * fit_mult, 2)
-
-
-def opportunity_label(search_volume, comp_idx):
-    """검색량·경쟁도 조합을 사람이 읽을 라벨로."""
+def opportunity_label(search_volume, sat_label, serp=None):
+    """검색량·포화도·자리 조합을 사람이 읽을 라벨로."""
     if search_volume is None:
         return None
     if search_volume < 100:
         return "수요 적음"
-    if search_volume >= 1000 and comp_idx == "낮음":
-        return "💎황금(수요多·경쟁低)"
-    if comp_idx == "낮음":
-        return "양호(경쟁 낮음)"
-    if comp_idx == "높음":
-        return "포화(경쟁 높음)"
+    y = (serp or {}).get("first_blog_y")
+    top = isinstance(y, int) and y < 2500 and not (serp or {}).get("shop_above_blog")
+    if search_volume >= 1000 and top and sat_label != "도배됨":
+        return "💎황금(수요多·블로그가 위)"
+    if top:
+        return "양호(블로그가 위)"
+    if sat_label == "도배됨":
+        return "포화(문서 도배)"
     return "보통"
 
 
@@ -812,7 +869,7 @@ def _intent_label(word):
         "추천": "선택", "진짜": "진위", "가짜": "진위", "논란": "진위",
         "후기": "경험담", "경험": "경험담", "기간": "경험담", "결과": "경험담", "전후": "경험담",
         "가격": "구매", "최저가": "구매", "할인": "구매", "구매": "구매", "택배": "구매",
-        "병원": "접근성", "약국": "접근성", "성지": "접근성",
+        "병원": "접근성", "약국": "약국", "성지": "접근성",
     }
     return mapping.get(word, "일반")
 
@@ -830,6 +887,25 @@ def calc_recommend_score(opportunity_score, pharma_value):
     if opportunity_score is not None:
         return opportunity_score
     return round(pharma_value * 0.5, 2)
+
+
+def winnable_spot(c, roots_norm):
+    """추천(TOP7·1순위)에 올릴 자리인가: 실제 검색 화면을 확인했고, 블로그 영역이 5,000px 안에 나오며,
+    신제품 브랜드 꼴(쇼핑이 위를 덮음 + 문서가 검색량보다 적음 + 의도 '일반' + 뿌리 아님)이 아닐 것.
+    표에는 그대로 남는다 — 추천만 '이길 수 있는 자리'로 제한."""
+    if any(region in c.get("keyword", "") for region in REGIONS):
+        return False   # '부산 마운자로' 같은 병원 찾기 검색 — 약사 블로그 글로 받을 의도가 아님
+    sp = c.get("serp")
+    if not sp:
+        return False
+    y = sp.get("first_blog_y")
+    if not isinstance(y, int) or y >= 5000:
+        return False
+    is_root = c.get("keyword", "").replace(" ", "").upper() in roots_norm
+    sat = c.get("saturation")
+    if sp.get("shop_above_blog") and c.get("intent") == "일반" and not is_root and isinstance(sat, (int, float)) and sat <= 1:
+        return False
+    return True
 
 
 def _variant_keys(keyword):
@@ -1115,29 +1191,28 @@ def fetch_my_posts():
 REWRITE_AFTER_DAYS = 15
 
 
-def attach_serp(all_results):
-    """실제 검색 화면 확인 결과(data/serp.json)를 키워드에 붙인다.
+def load_serp():
+    """실제 검색 화면 확인 결과(data/serp.json)를 읽는다. 없으면 빈 dict.
     serp.json 은 미니PC(집 IP)의 serp-check 가 상위 후보를 네이버 모바일 검색으로 열어 기록한 것
-    (Actions IP 는 검색 페이지가 막혀서 여기서 직접 못 본다). 키워드별 최신 1건, 3일마다 갱신.
-    붙는 필드 serp: median_age_days(상위 5개 블로그 글 나이 중앙값)·fresh_30d·my_rank(내 글 순위)·
-    first_blog_y(블로그 영역이 화면 위에서 몇 px)·shop_above_blog(쇼핑 블록이 블로그 위를 덮는지)"""
+    (Actions IP 는 검색 페이지가 막혀서 여기서 직접 못 본다). 키워드별 최신 1건, 3일마다 갱신."""
     path = os.path.join(DATA_DIR, "serp.json")
-    if not os.path.exists(path):
-        return 0
     try:
         with open(path, "r", encoding="utf-8") as f:
-            items = json.load(f).get("items", {})
+            return json.load(f).get("items", {})
     except (ValueError, OSError):
-        return 0
-    n = 0
-    for r in all_results:
-        for c in r.get("compounds", []):
-            hit = items.get(c.get("keyword", "").replace(" ", "").upper())
-            if hit and hit.get("status") == 200:
-                c["serp"] = {k: hit.get(k) for k in ("checked_at", "median_age_days", "fresh_30d", "my_rank",
-                                                      "first_blog_y", "shop_y", "shop_above_blog")}
-                n += 1
-    return n
+        return {}
+
+
+SERP_FIELDS = ("checked_at", "median_age_days", "fresh_30d", "my_rank", "first_blog_y", "shop_y", "shop_above_blog")
+
+
+def serp_for(items, keyword):
+    """키워드의 검색 화면 기록(없으면 None). median_age_days=상위 5개 블로그 글 나이 중앙값, my_rank=내 글 순위,
+    first_blog_y=블로그 영역이 화면 위에서 몇 px, shop_above_blog=쇼핑 블록이 블로그 위를 덮는지"""
+    hit = items.get(keyword.replace(" ", "").upper())
+    if not hit or hit.get("status") != 200:
+        return None
+    return {k: hit.get(k) for k in SERP_FIELDS}
 
 
 def _days_since(date_str):
@@ -1216,6 +1291,8 @@ def main():
     known_products = load_known_products()
     root_data = load_all_roots()
 
+    serp_items = load_serp()
+    position_priors = root_position_priors(serp_items, roots)
     all_results = []
     results_by_root = {}
     all_unidentified = {}  # word → {count, found_from}
@@ -1290,11 +1367,13 @@ def main():
             comp_idx = vol["comp_idx"] if vol else None
             # 모멘텀 = 3일 급등/7일 추세 중 강한 쪽
             momentum = momentum_of(dl.get("change_rate"), dl.get("trend_rate"))
-            opportunity_score = calc_opportunity(search_volume, comp_idx, momentum, intent)
             sat, sat_label = saturation_label(expert_gap.get("total"), search_volume)
             expert_gap["ratio"] = sat
             expert_gap["label"] = sat_label
-            opp_label = opportunity_label(search_volume, comp_idx)
+            serp = serp_for(serp_items, kw)
+            opportunity_score, score_parts = calc_opportunity(search_volume, momentum, intent, sat_label, serp,
+                                                              position_priors.get(root))
+            opp_label = opportunity_label(search_volume, sat_label, serp)
 
             # 추천점수 = 기회점수(모멘텀·경쟁·검색량·약사보정 이미 반영)
             recommend_score = calc_recommend_score(opportunity_score, pharma_value)
@@ -1326,7 +1405,9 @@ def main():
                 "search_volume": search_volume,
                 "comp_idx": comp_idx,
                 "opportunity_score": opportunity_score,
+                "score_parts": score_parts,
                 "opportunity_label": opp_label,
+                "serp": serp,
                 "labels": labels,
                 "is_bridge": is_bridge,
                 "bridge_target": bridge_target,
@@ -1420,9 +1501,8 @@ def main():
         print(f"\n── 교차검증: {checked_cnt}개 중 최근 {REWRITE_AFTER_DAYS}일 안에 쓴 글 {written_cnt}개 "
               f"(그보다 오래된 글은 재작성 후보로 남김) ──")
 
-    serp_n = attach_serp(all_results)
-    if serp_n:
-        print(f"  검색 화면 확인 결과 {serp_n}개 키워드에 연결")
+    serp_n = sum(1 for r in all_results for c in r["compounds"] if c.get("serp"))
+    print(f"  검색 화면 확인 결과가 붙은 키워드: {serp_n}개")
 
     all_compounds = []
     for r in all_results:
@@ -1452,6 +1532,8 @@ def main():
         if c.get("already_written"):
             continue
         if is_brand_product(c, roots_norm):
+            continue
+        if not winnable_spot(c, roots_norm):
             continue
         _seen_hero.update(keys)
         top_recommendations.append(c)

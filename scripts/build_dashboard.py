@@ -195,6 +195,17 @@ def _serp_text(c):
     return " · ".join(parts)
 
 
+def _parts_text(c):
+    """점수 내역: '검색량 3.98 × 모멘텀 1.3 × 자리 1.5 …' (마우스 올리면 보임)"""
+    p = c.get("score_parts")
+    if not p:
+        return ""
+    names = [("volume", "검색량"), ("momentum", "모멘텀"), ("position", "자리"), ("shop", "쇼핑덮임"), ("saturation", "포화도"), ("fit", "약사보정")]
+    if not p.get("position_verified", True):
+        names = [(k, "자리(같은 뿌리 추정)" if k == "position" else ko) for k, ko in names]
+    return " × ".join(f"{ko} {p[k]}" for k, ko in names if k in p)
+
+
 def _rewrite_text(c):
     d = c.get("days_since_written")
     return f"🔁 재작성 후보 ({d}일 전 작성)" if isinstance(d, int) else "🔁 재작성 후보"
@@ -347,8 +358,8 @@ def build_html(data):
         if comp:
             comp_cls = {"낮음": "sig-comp-low", "중간": "sig-comp-mid",
                         "높음": "sig-comp-high"}.get(comp, "")
-            gem = " 💎" if comp == "낮음" and isinstance(sv, int) and sv >= 1000 else ""
-            sig_parts.append(f'<span class="{comp_cls}">경쟁 {escape(comp)}{gem}</span>')
+            gem = " 💎" if str(rec.get("opportunity_label") or "").startswith("💎") else ""
+            sig_parts.append(f'<span class="{comp_cls}">광고경쟁 {escape(comp)}{gem}</span>')
         if mom is not None and mom >= 40:
             sig_parts.append(f'<span class="sig-hot">🔥 급등 {mom:+.0f}%</span>')
         elif mom is not None and mom >= 15:
@@ -390,7 +401,7 @@ def build_html(data):
             f'<span class="rec-root">{escape(rec.get("root", ""))}</span>'
             f'<span class="rec-intent">{escape(rec.get("intent", ""))}</span>'
             f'<span>문서 {escape(_sat_text(rec))}</span>'
-            f'<span class="rec-score-inline">기회점수 {rec_score}</span>'
+            f'<span class="rec-score-inline" title="{escape(_parts_text(rec))}">기회점수 {rec_score}</span>'
             '</div>'
             f'{matched_html}'
             '</div></div>\n'
@@ -526,7 +537,7 @@ def build_html(data):
             '<table class="kw-table"><thead><tr>'
             '<th>복합키워드</th><th>라벨</th><th>트렌드</th><th>변화율(3일·전주 같은 요일 대비)</th>'
             '<th>의도</th><th>문서 포화</th><th>약사가치</th>'
-            '<th>월검색수</th><th>경쟁</th><th>기회점수</th><th>내 글</th>'
+            '<th>월검색수</th><th>광고경쟁</th><th>기회점수</th><th>내 글</th>'
             f'</tr></thead><tbody>{rows_html}</tbody></table>'
             '</div>\n'
         )
@@ -649,7 +660,7 @@ def build_html(data):
             comp_cls = {"낮음": "sig-comp-low", "중간": "sig-comp-mid",
                         "높음": "sig-comp-high"}.get(comp, "")
             gem = " 💎" if comp == "낮음" and isinstance(sv, int) and sv >= 1000 else ""
-            parts.append(f'<span class="{comp_cls}">경쟁 {escape(comp)}{gem}</span>')
+            parts.append(f'<span class="{comp_cls}">광고경쟁 {escape(comp)}</span>')
         if mom is not None and mom >= 40:
             parts.append(f'<span class="sig-hot">🔥 급등 {mom:+.0f}%</span>')
         elif mom is not None and mom >= 15:
@@ -683,7 +694,7 @@ def build_html(data):
         f'{api_warning_html}\n'
         f'{pick_html}\n'
         '<h3>📝 오늘 쓸 글감 TOP 7</h3>\n'
-        '<div class="hero-sub">🔎 검색량(파이) · 경쟁 낮을수록(상위노출 쉬움) · 🔥지금 뜨는(모멘텀) '
+        '<div class="hero-sub">🔎 검색량(파이) · 📱 실제 검색 화면에서 블로그가 위에 나오는 자리 · 문서 포화도 · 🔥지금 뜨는(모멘텀) '
         '순으로 정렬 — <b>내가 실제로 상위노출 잡아 조회수 먹을 수 있는</b> 글감입니다.</div>\n'
         f'{top_section}\n'
         f'{changes_html}\n'
