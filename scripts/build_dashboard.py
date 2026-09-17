@@ -168,6 +168,19 @@ def load_latest():
         return json.load(f)
 
 
+def _sat_text(c):
+    """문서 포화도 표시: '문서 적음 (×0.4)' — 블로그 문서수 ÷ 월 검색수. 낮을수록 상위노출 여지."""
+    gap = c.get("expert_gap") or {}
+    label = c.get("saturation_label") or gap.get("label", "")
+    sat = c.get("saturation")
+    return f"{label} (×{sat})" if isinstance(sat, (int, float)) else label
+
+
+def _rewrite_text(c):
+    d = c.get("days_since_written")
+    return f"🔁 재작성 후보 ({d}일 전 작성)" if isinstance(d, int) else "🔁 재작성 후보"
+
+
 def build_html(data):
     if not data:
         return "<html><body><h1>데이터 없음</h1></body></html>"
@@ -189,7 +202,7 @@ def build_html(data):
             f'📚 내 블로그 글 <b>{coverage.get("my_posts_count", 0)}개</b>와 대조 · '
             f'추천 키워드 {coverage.get("checked", 0)}개 중 '
             f'<b>🆕 미작성 {coverage.get("gap", 0)}개</b> · '
-            f'<span class="cov-written">✅ 이미 쓴 글 {coverage.get("already_written", 0)}개</span>'
+            f'<span class="cov-written">✅ 최근 15일 안에 쓴 글 {coverage.get("already_written", 0)}개</span>'
             '</div>'
         )
 
@@ -332,6 +345,14 @@ def build_html(data):
                 f'<a href="{escape(mp.get("url", ""))}" target="_blank">'
                 f'{escape(mp.get("title", ""))}</a></div>'
             ) if mp.get("url") else ""
+        elif rec.get("previously_written"):
+            write_badge = f'<span class="hero-badge written-badge">{_rewrite_text(rec)}</span>'
+            mp = rec.get("matched_post") or {}
+            matched_html = (
+                f'<div class="matched-post">예전 글: '
+                f'<a href="{escape(mp.get("url", ""))}" target="_blank">'
+                f'{escape(mp.get("title", ""))}</a></div>'
+            ) if mp.get("url") else ""
         else:
             write_badge = '<span class="hero-badge gap-badge">🆕 미작성</span>'
             matched_html = ""
@@ -347,7 +368,7 @@ def build_html(data):
             '<div class="rec-sub">'
             f'<span class="rec-root">{escape(rec.get("root", ""))}</span>'
             f'<span class="rec-intent">{escape(rec.get("intent", ""))}</span>'
-            f'<span>전문가갭 {escape(gap.get("label", ""))}</span>'
+            f'<span>문서 {escape(_sat_text(rec))}</span>'
             f'<span class="rec-score-inline">기회점수 {rec_score}</span>'
             '</div>'
             f'{matched_html}'
@@ -428,6 +449,13 @@ def build_html(data):
                     )
                 else:
                     write_cell = '<span class="write-cell-done">✅ 씀</span>'
+            elif c.get("previously_written"):
+                row_cls = ""
+                mp = c.get("matched_post") or {}
+                write_cell = (
+                    f'<span class="write-cell-done">🔁 <a href="{escape(mp.get("url", ""))}" target="_blank" '
+                    f'title="{escape(mp.get("title", ""))}">{c.get("days_since_written", "")}일 전</a></span>'
+                )
             else:
                 row_cls = ""
                 write_cell = '<span class="write-cell-gap">🆕</span>'
@@ -448,7 +476,7 @@ def build_html(data):
                 f"<td>{vol_display}</td>"
                 f'<td class="{cr_cls}">{cr_str}{trend_display}</td>'
                 f'<td>{escape(c.get("intent", ""))}</td>'
-                f'<td>{gap.get("label", "")}</td>'
+                f'<td>{escape(_sat_text(c))}</td>'
                 f'<td class="value-cell">{c.get("pharma_value", 0)}</td>'
                 f'<td class="vol-cell">{sv_display}</td>'
                 f"<td>{comp_display}</td>"
@@ -475,8 +503,8 @@ def build_html(data):
             f'{rising_block}'
             f'{news_block}'
             '<table class="kw-table"><thead><tr>'
-            '<th>복합키워드</th><th>라벨</th><th>트렌드</th><th>변화율(3일)</th>'
-            '<th>의도</th><th>전문가갭</th><th>약사가치</th>'
+            '<th>복합키워드</th><th>라벨</th><th>트렌드</th><th>변화율(3일·전주 같은 요일 대비)</th>'
+            '<th>의도</th><th>문서 포화</th><th>약사가치</th>'
             '<th>월검색수</th><th>경쟁</th><th>기회점수</th><th>내 글</th>'
             f'</tr></thead><tbody>{rows_html}</tbody></table>'
             '</div>\n'
@@ -609,11 +637,11 @@ def build_html(data):
         gap = pick.get("expert_gap", {})
         pick_html = (
             '<div class="pick-card">'
-            '<div class="pick-label">🎯 지금 당장 쓸 1순위 (아직 안 쓴 글감 중 최고)</div>'
+            '<div class="pick-label">🎯 지금 당장 쓸 1순위 (최근 15일 안에 안 쓴 글감 중 최고)</div>'
             f'<div class="pick-kw">{escape(pick.get("keyword", ""))}</div>'
             f'<div class="pick-signal">{pick_sig}</div>'
             f'<div class="pick-sub"><b>{escape(pick.get("root", ""))}</b> · '
-            f'{escape(pick.get("intent", ""))} · 전문가갭 {escape(gap.get("label", ""))} · '
+            f'{escape(pick.get("intent", ""))} · 문서 {escape(_sat_text(pick))} · '
             f'기회점수 {pick.get("recommend_score", 0)}</div>'
             '</div>'
         )

@@ -285,27 +285,17 @@ def get_blog_total_count(query):
     return data.get("total", 0)
 
 
-def shop_count(keyword):
-    """네이버 쇼핑 상품수. 브랜드/제품명=수백~수만, 순수 토픽·성분정보=0~수십.
-    (공식 API — Actions에서도 안전. 키 없으면 0=필터 안 함)"""
-    if not NAVER_CLIENT_ID:
-        return 0
-    data = _naver_search("shop", {"query": keyword, "display": 1})
-    return data.get("total", 0)
-
-
-# 브랜드 제품 판별 임계값(실측 2026-07-04): 순수 토픽 쇼핑수 ≤48(오젬픽 급여기준),
-# 브랜드 ≥160(저스트글로우 nmn)~수만. 둘 사이 100으로 잡아 브랜드 조합까지 걸러냄.
-BRAND_SHOP_MIN = 100
+# 네이버 쇼핑 검색 API(/v1/search/shop)는 종료됨(2026-09-17 확인: 404 SE05 "존재하지 않는 검색 api").
+# 07-04에 만든 '쇼핑 상품수로 브랜드 판별'은 그 뒤로 항상 0을 받아 아무것도 못 걸렀다.
+# 지금은 이름 목록(brand_name_reason)만 쓰고, 상위 후보의 브랜드 여부는 실제 검색 화면 확인 단계(serp_check)가 맡는다.
 
 
 def is_brand_product(compound, roots_norm):
     """히어로(오늘 쓸 글감)에서 제외할 '상업 제품/브랜드명' 여부.
     약사 교육 글감이 아니라 제품 리뷰가 되는 것(하이퍼셀 코엔자임Q10, 임산부오메가3 등) 차단.
-    - 뿌리(성분·약물 자체: 베르베린·콜라겐 등)는 쇼핑수 커도 통과.
-    - 교육 의도(부작용·용량·비교·효능 등, intent != '일반')는 통과.
-    - 의도 '일반' + 뿌리 아님 + 쇼핑 상품수 많음 = 브랜드 제품 → True.
-    결과를 compound에 캐시(_brand, shop_count)해 재호출 방지."""
+    - 뿌리(성분·약물 자체: 베르베린·콜라겐 등)는 통과.
+    - 이름 목록(brand_name_reason)에 걸리면 브랜드 제품 → True.
+    (쇼핑 상품수 판별은 API 종료로 제거. 위 주석 참고) 결과를 compound에 캐시(_brand)."""
     if "_brand" in compound:
         return compound["_brand"]
     kw = compound.get("keyword", "")
@@ -315,18 +305,11 @@ def is_brand_product(compound, roots_norm):
         return False
     bn = brand_name_reason(kw, roots_norm)  # 이름 목록 = shop_count 0으로 새는 브랜드 방어(교육 의도여도 특정 제품이면 제외)
     if bn:
-        compound["shop_count"] = compound.get("shop_count", -1)  # 이름으로 판정(쇼핑 조회 생략)
         compound["_brand_reason"] = bn
         compound["_brand"] = True
         return True
-    if compound.get("intent") != "일반":  # 교육 의도(부작용·용량·비교 등)는 통과
-        compound["_brand"] = False
-        return False
-    sc = shop_count(kw)
-    time.sleep(0.2)  # rate limit 보호
-    compound["shop_count"] = sc
-    compound["_brand"] = sc >= BRAND_SHOP_MIN
-    return compound["_brand"]
+    compound["_brand"] = False
+    return False
 
 
 # ══════════════════════════════════════════════════════════
@@ -420,8 +403,8 @@ FIT_MULT = {
 
 
 def momentum_of(change_rate, trend_rate):
-    """모멘텀 = 3일 급등/7일 추세 중 '더 센 쪽'. 반짝 스파이크도, 지속 상승도 놓치지 않음.
-    (검색량 하한이 노이즈를 막아주므로 max로 잡아도 안전)"""
+    """모멘텀 = 3일 급등(같은 요일 비교)/7일 추세 중 '더 센 쪽'. 반짝 스파이크도, 지속 상승도 놓치지 않음.
+    둘 다 요일 영향이 없는 비교라 max로 잡아도 요일 착시가 끼지 않는다."""
     vals = [v for v in (change_rate, trend_rate) if v is not None]
     return max(vals) if vals else None
 
@@ -716,14 +699,21 @@ def _calc_recent_avg(result):
 
 
 def _calc_change_rate_short(result):
-    """단기 변화율: (최근3일 - 직전3일) / 직전3일 × 100. 빠른 급등 감지용."""
-    ratios = [d["ratio"] for d in result.get("data", [])]
-    if len(ratios) < 6:
+    """단기 변화율: 최근 3일 vs '일주일 전 같은 요일' 3일. 빠른 급등 감지용.
+    (2026-09-17 변경) 예전엔 직전 3일과 비교했는데, 건강 검색은 주말에 줄어서
+    목요일엔 키워드의 47%가, 월요일엔 14%가 '급등'으로 잡히는 요일 착시였다(4주 실측).
+    날짜로 맞춰 비교한다(DataLab은 검색이 없던 날을 빼고 줄 수 있어 위치로 자르면 어긋남)."""
+    data = result.get("data", [])
+    if len(data) < 6:
         return None
-    prev = ratios[-6:-3]
-    recent = ratios[-3:]
-    avg_prev = sum(prev) / len(prev) if prev else 0
-    avg_recent = sum(recent) / len(recent) if recent else 0
+    by_day = {d["period"]: d["ratio"] for d in data}
+    last = datetime.strptime(data[-1]["period"], "%Y-%m-%d")
+    recent = [by_day.get((last - timedelta(days=i)).strftime("%Y-%m-%d"), 0) for i in range(3)]
+    prev = [by_day.get((last - timedelta(days=i + 7)).strftime("%Y-%m-%d"), 0) for i in range(3)]
+    if (last - timedelta(days=9)).strftime("%Y-%m-%d") < data[0]["period"]:
+        return None  # 일주일 전 구간이 조회 범위 밖
+    avg_prev = sum(prev) / 3
+    avg_recent = sum(recent) / 3
     if avg_prev == 0:
         return 100.0 if avg_recent > 0 else 0.0
     return (avg_recent - avg_prev) / avg_prev * 100
@@ -769,23 +759,28 @@ def detect_bridge(compound, active_roots):
 # ══════════════════════════════════════════════════════════
 
 def calc_expert_gap(compound):
-    """전문가 갭: 전체 블로그 vs '약사' 포함 블로그."""
+    """블로그 문서수만 조회한다(키워드당 1회).
+    (2026-09-17 변경) 예전엔 '키워드 약사' 문서수도 조회해 전문가 갭을 냈는데, 84%가 '전문가 부족' 이상으로
+    나와 변별력이 없었고 '약사'라는 단어가 든 글(광고 포함)을 세는 것이라 의미도 약했다.
+    라벨은 검색량을 안 뒤 saturation_label()로 채운다. 필드 이름 expert_gap은 읽는 쪽 호환용으로 유지."""
     total = get_blog_total_count(compound)
     time.sleep(0.15)
-    expert = get_blog_total_count(f"{compound} 약사")
-    time.sleep(0.15)
-    if total < 5:
-        return {"total": total, "expert": expert, "ratio": 0, "label": "수요 없음"}
-    ratio = total / (expert + 1)
-    if ratio >= 30:
-        label = "전문가 갭 큼"
-    elif ratio >= 10:
-        label = "전문가 부족"
-    elif ratio >= 3:
+    return {"total": total, "expert": None, "ratio": None, "label": ""}
+
+
+def saturation_label(total_docs, search_volume):
+    """문서 포화도 = 블로그 문서수 ÷ 월 검색수. 낮을수록 상위노출 여지가 크다.
+    실측 분위(2026-09-17, 439개): 20%=2.0, 40%=9.0, 60%=31.6, 80%=102.5"""
+    if not isinstance(search_volume, int) or search_volume <= 0 or total_docs is None:
+        return None, "검색량 미확인"
+    sat = total_docs / search_volume
+    if sat <= 3:
+        label = "문서 적음"
+    elif sat <= 30:
         label = "보통"
     else:
-        label = "전문가 포화"
-    return {"total": total, "expert": expert, "ratio": round(ratio, 1), "label": label}
+        label = "도배됨"
+    return round(sat, 1), label
 
 
 def _classify_intent(compound):
@@ -823,19 +818,9 @@ def _intent_label(word):
 
 
 def calc_pharma_value(compound, intent_score, expert_gap):
-    """약사 가치 = 의도점수 × 전문가갭배수. 시점 무관한 '전문성 적합도'.
-    (시의성/변화율은 여기 넣지 않음 → 추천점수에서만 반영해 이중계산 방지)"""
-    ratio = expert_gap.get("ratio", 0)
-    if ratio >= 30:
-        gap_mult = 1.3
-    elif ratio >= 10:
-        gap_mult = 1.1
-    elif ratio >= 3:
-        gap_mult = 1.0
-    else:
-        gap_mult = 0.7
-
-    return round(intent_score * gap_mult, 1)
+    """약사 가치 = 의도점수. 시점 무관한 '전문성 적합도'.
+    (전문가갭배수는 2026-09-17 제거 — calc_expert_gap 참고. 검색량 없는 키워드의 폴백 정렬에만 쓰인다)"""
+    return round(float(intent_score), 1)
 
 
 def calc_recommend_score(opportunity_score, pharma_value):
@@ -845,6 +830,31 @@ def calc_recommend_score(opportunity_score, pharma_value):
     if opportunity_score is not None:
         return opportunity_score
     return round(pharma_value * 0.5, 2)
+
+
+def _variant_keys(keyword):
+    """같은 글감의 표기 변형을 잡는 키 2개: 띄어쓰기 무시 / 어순 무시.
+    '활성 엽산'='활성엽산', '마운자로 일본'='일본 마운자로' — 글 하나로 다 잡히는 검색어들."""
+    k = keyword.upper()
+    return k.replace(" ", ""), "".join(sorted(k.split()))
+
+
+def merge_variants(compounds):
+    """정렬된 목록에서 표기 변형을 앞선(점수 높은) 하나로 합친다. 합쳐진 표기는 variants에 남긴다."""
+    kept, seen = [], {}
+    for c in compounds:
+        keys = _variant_keys(c.get("keyword", ""))
+        owner = next((seen[k] for k in keys if k in seen), None)
+        if owner is not None:
+            owner.setdefault("variants", []).append(c["keyword"])
+            sv, osv = c.get("search_volume"), owner.get("search_volume")
+            if isinstance(sv, int) and (not isinstance(osv, int) or sv > osv):
+                owner["variant_max_volume"] = sv   # 어순이 다른 쪽 검색량이 더 크면 참고로 남김
+            continue
+        for k in keys:
+            seen[k] = c
+        kept.append(c)
+    return kept
 
 
 def _make_labels(intent_score, change_rate, is_bridge, datalab_type):
@@ -1102,6 +1112,16 @@ def fetch_my_posts():
         return []
 
 
+REWRITE_AFTER_DAYS = 15
+
+
+def _days_since(date_str):
+    try:
+        return (datetime.now() - datetime.strptime(date_str[:10], "%Y-%m-%d")).days
+    except (ValueError, TypeError):
+        return None
+
+
 def _post_covers_keyword(keyword, post):
     """글 한 편이 복합키워드를 '이미 다뤘는지' 판단.
 
@@ -1133,15 +1153,23 @@ def mark_already_written(all_results, posts):
             if matches:
                 # 가장 최근에 쓴 글을 대표로 연결
                 best = max(matches, key=lambda p: p.get("date", ""))
-                c["already_written"] = True
+                days = _days_since(best.get("date", ""))
+                # 15일이 지난 글은 '이미 씀'으로 막지 않는다(사용자 결정 2026-09-17: 아직 인기면 다시 쓸 만함).
+                # already_written 은 읽는 쪽(글쓰기 앱)이 후보에서 빼는 표시라, 다시 쓸 수 있으면 False 로 둔다.
+                c["already_written"] = days is None or days < REWRITE_AFTER_DAYS
+                c["previously_written"] = True
+                c["days_since_written"] = days
                 c["matched_post"] = {
                     "title": best.get("title", ""),
                     "url": best.get("url", ""),
                     "date": best.get("date", ""),
                 }
-                written += 1
+                if c["already_written"]:
+                    written += 1
             else:
                 c["already_written"] = False
+                c["previously_written"] = False
+                c["days_since_written"] = None
                 c["matched_post"] = None
     return checked, written
 
@@ -1238,6 +1266,9 @@ def main():
             # 모멘텀 = 3일 급등/7일 추세 중 강한 쪽
             momentum = momentum_of(dl.get("change_rate"), dl.get("trend_rate"))
             opportunity_score = calc_opportunity(search_volume, comp_idx, momentum, intent)
+            sat, sat_label = saturation_label(expert_gap.get("total"), search_volume)
+            expert_gap["ratio"] = sat
+            expert_gap["label"] = sat_label
             opp_label = opportunity_label(search_volume, comp_idx)
 
             # 추천점수 = 기회점수(모멘텀·경쟁·검색량·약사보정 이미 반영)
@@ -1263,6 +1294,8 @@ def main():
                 "intent": intent,
                 "intent_score": intent_score,
                 "expert_gap": expert_gap,
+                "saturation": sat,
+                "saturation_label": sat_label,
                 "pharma_value": pharma_value,
                 "recommend_score": recommend_score,
                 "search_volume": search_volume,
@@ -1292,6 +1325,7 @@ def main():
             has_demand = 1 if (isinstance(sv, int) and sv >= 100) else 0
             return (has_demand, score)
         compound_details.sort(key=_sort_key, reverse=True)
+        compound_details = merge_variants(compound_details)
 
         # 4. 뉴스 이벤트
         news_events = detect_news_events(news_titles, root)
@@ -1324,84 +1358,15 @@ def main():
 
         print(f"  분석 완료: {len(compound_details)}개 복합키워드, {len(rising)}개 급등")
 
-    # ── 급등 키워드 2차 cosearch (deep dive) ──
+    # 급등 키워드 2차 cosearch('급등 키워드에서 추가 발견')는 2026-09-17 제거:
+    # 급등 230개를 10분간 긁어 접힌 섹션 10개만 남기던 단계(사용자: 거의 안 봄). 필드는 읽는 쪽 호환용으로 빈 목록 유지.
     deep_cosearch = []
-    all_rising_kws = []
-    for r in all_results:
-        for c in r.get("compounds", []):
-            if c.get("change_rate") is not None and c["change_rate"] >= 20:
-                all_rising_kws.append({"keyword": c["keyword"], "root": r["keyword"]})
-
-    if all_rising_kws:
-        print(f"\n── 급등 키워드 2차 cosearch: {len(all_rising_kws)}개 ──")
-        # 기존 복합키워드(메인 표) 집합 — 중복 제거용
-        existing = set()
-        for r in all_results:
-            for c in r.get("compounds", []):
-                existing.add(c["keyword"].replace(" ", ""))
-
-        raw = []
-        seen = set()
-        for rk in all_rising_kws:
-            results = fetch_cosearch_trending(rk["keyword"])
-            for cs in results:
-                if not cs["is_trending"]:
-                    continue
-                q = cs["query"]
-                qn = q.replace(" ", "")
-                if qn in seen or qn in existing:
-                    continue  # 중복 / 메인 표와 겹침 제거
-                if any(region in q for region in REGIONS):
-                    continue  # 지역 스팸 제거
-                seen.add(qn)
-                raw.append({"query": q, "source_keyword": rk["keyword"], "root": rk["root"]})
-            time.sleep(0.5)
-        print(f"  요즘인기 수집(중복/스팸 제거 후): {len(raw)}개")
-
-        # 이 신생 롱테일은 검색광고 키워드DB엔 없지만(0건) 데이터랩엔 트렌드가 잡힘.
-        # 롱테일끼리만 5개씩 묶어 조회(큰 뿌리와 안 묶음 → 정규화 왜곡 회피).
-        # change_rate는 자기 시계열 내 비율이라 배치(정규화) 무관하게 비교 가능.
-        for i in range(0, len(raw), 5):
-            batch = raw[i:i + 5]
-            groups = [{"groupName": d["query"], "keywords": [d["query"]]} for d in batch]
-            data = datalab_search(groups)
-            time.sleep(1.0)
-            by_title = {res["title"]: res for res in (data.get("results", []) if data else [])}
-            for d in batch:
-                res = by_title.get(d["query"])
-                if res and res.get("data"):
-                    d["trend_avg"] = round(_calc_recent_avg(res), 1)
-                    d["change_rate"] = _calc_change_rate_short(res)
-                else:
-                    d["trend_avg"] = 0
-                    d["change_rate"] = None
-
-        # 데이터랩 신호 있는 것만 → 모멘텀 상위 25개로 압축(비싼 전문가갭 절약)
-        signal = [d for d in raw if d.get("trend_avg", 0) > 0]
-        signal.sort(key=lambda x: (x.get("change_rate") is not None,
-                                   x.get("change_rate") or 0, x.get("trend_avg", 0)),
-                    reverse=True)
-        shortlist = signal[:25]
-
-        # 약사가치 × 모멘텀으로 최종 정렬(브랜드명 급등 노이즈 억제).
-        # 이 신생 롱테일은 검색광고 절대검색량이 없어(0건) 기회점수를 못 냄 → 약사가치×모멘텀 폴백.
-        for d in shortlist:
-            intent, intent_score = _classify_intent(d["query"])
-            gap = calc_expert_gap(d["query"])
-            d["intent"] = intent
-            d["pharma_value"] = calc_pharma_value(d["query"], intent_score, gap)
-            d["expert_gap"] = gap
-            mom = momentum_of(d.get("change_rate"), None)
-            d["deep_score"] = round(d["pharma_value"] * _momentum_mult(mom), 2)
-        shortlist.sort(key=lambda x: x.get("deep_score") or 0, reverse=True)
-        deep_cosearch = shortlist[:10]
-        print(f"  → 데이터랩 신호 {len(signal)}개 → 약사가치×시의성 상위 {len(deep_cosearch)}개")
 
     # ── 전체 통합 추천 ──
     roots_norm = {r["keyword"].replace(" ", "").upper() for r in roots}
     # 브랜드/제품명(트리어드 오메가3·종근당 유산균 등)을 전체 표에서 제거한다(2026-09-11).
     #   히어로뿐 아니라 표 전체에서 빼야 대시보드·글쓰기 툴이 읽는 목록까지 브랜드가 안 섞인다.
-    #   판별은 '이름 목록'(brand_name_reason, 오프라인)만 사용 — shop_count(쇼핑 API)는 비용이 커서 히어로에만 쓴다.
+    #   판별은 '이름 목록'(brand_name_reason, 오프라인)만 사용.
     #   뿌리 성분 자체(오메가3·콜라겐 등)는 남긴다.
     _brand_removed = []
     for r in all_results:
@@ -1416,6 +1381,19 @@ def main():
     if _brand_removed:
         print(f"  🧹 브랜드/제품명 {len(_brand_removed)}개 제외(표·추천에서 제거): "
               f"{', '.join(_brand_removed[:8])}{'…' if len(_brand_removed) > 8 else ''}")
+
+    # ── 내가 이미 쓴 글 교차검증 (추천을 뽑기 전에 — 예전엔 뽑은 뒤라 TOP7에 쓴 글이 그대로 들어갔다) ──
+    my_posts = fetch_my_posts()
+    checked_cnt, written_cnt = mark_already_written(all_results, my_posts)
+    coverage = {
+        "my_posts_count": len(my_posts),
+        "checked": checked_cnt,
+        "already_written": written_cnt,
+        "gap": checked_cnt - written_cnt,
+    }
+    if my_posts:
+        print(f"\n── 교차검증: {checked_cnt}개 중 최근 {REWRITE_AFTER_DAYS}일 안에 쓴 글 {written_cnt}개 "
+              f"(그보다 오래된 글은 재작성 후보로 남김) ──")
 
     all_compounds = []
     for r in all_results:
@@ -1434,48 +1412,26 @@ def main():
         return sv >= 150 and m is not None and m >= 40
     hero_pool = [c for c in all_compounds if _hero_ok(c)]
     hero_pool.sort(key=lambda x: x.get("recommend_score") or 0, reverse=True)
-    # 히어로 선정: 브랜드 제품(하이퍼셀 코엔자임Q10 등) 제외 + 띄어쓰기/대소문자 변형 중복 제거.
-    # (브랜드 판별은 쇼핑 상품수 조회 → 상위부터 7개 채울 때까지만 검사해 API 호출 최소화)
+    # 히어로 선정: 최근 15일 안에 쓴 글·브랜드 제품 제외 + 표기 변형(띄어쓰기·어순) 중복 제거.
+    # 뿌리당 개수 제한은 두지 않는다(사용자 결정 2026-09-17: 잘 먹히는 분야가 다 차지해도 됨).
     top_recommendations = []
     _seen_hero = set()
     for c in hero_pool:
-        k = c["keyword"].replace(" ", "").upper()
-        if k in _seen_hero:
+        keys = _variant_keys(c["keyword"])
+        if any(k in _seen_hero for k in keys):
+            continue
+        if c.get("already_written"):
             continue
         if is_brand_product(c, roots_norm):
-            continue  # 브랜드 제품 → 히어로/1순위에서 제외(표에는 남음)
-        _seen_hero.add(k)
+            continue
+        _seen_hero.update(keys)
         top_recommendations.append(c)
         if len(top_recommendations) >= 7:
             break
 
-    # ── 내가 이미 쓴 글 교차검증 ──
-    # 추천 키워드 중 이미 글로 다룬 주제는 표시하고, '미작성 + 급등'만 부각시킨다.
-    my_posts = fetch_my_posts()
-    checked_cnt, written_cnt = mark_already_written(all_results, my_posts)
-    coverage = {
-        "my_posts_count": len(my_posts),
-        "checked": checked_cnt,
-        "already_written": written_cnt,
-        "gap": checked_cnt - written_cnt,
-    }
-    if my_posts:
-        print(f"\n── 교차검증: 추천 {checked_cnt}개 중 "
-              f"이미 쓴 글 {written_cnt}개 / 미작성 {checked_cnt - written_cnt}개 ──")
-
     # ── 지금 당장 쓸 1순위 ──
-    # 히어로 중 '아직 안 쓴' 최고 점수. 이미 쓴 글·브랜드 제품은 새 글감이 아니므로 제외.
-    # (교차검증 후라야 already_written이 채워져 있음. hero_pool은 점수순 정렬됨)
-    today_pick = None
-    for c in hero_pool:
-        if c.get("already_written"):
-            continue
-        if is_brand_product(c, roots_norm):  # 캐시됨 → 재조회 안 함
-            continue
-        today_pick = c
-        break
-    if today_pick is None and top_recommendations:
-        today_pick = top_recommendations[0]
+    # = 추천 목록의 맨 위(최근 15일 안에 쓴 글·브랜드는 이미 빠져 있음)
+    today_pick = top_recommendations[0] if top_recommendations else None
     if today_pick:
         print(f"  🎯 지금 당장 쓸 1순위: {today_pick.get('keyword')} "
               f"(검색 {today_pick.get('search_volume')}, 기회 {today_pick.get('recommend_score')})")
