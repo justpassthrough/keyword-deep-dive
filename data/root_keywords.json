@@ -123,12 +123,13 @@
     {
       "keyword": "아연",
       "category": "탈모치료",
-      "status": "active",
+      "status": "dormant",
       "source": "auto",
       "parent": null,
       "added": "2026-03-06",
       "last_active": "2026-09-17",
-      "consecutive_dormant_weeks": 0
+      "consecutive_dormant_weeks": 0,
+      "note": "2026-09-17: 최근 90일 검색 유입 0 → 의약품 뿌리 3개 시험 투입을 위해 데이터랩 한도 확보용으로 쉬게 함(되돌리려면 status=active)"
     },
     {
       "keyword": "코엔자임Q10",
@@ -183,12 +184,13 @@
     {
       "keyword": "크릴오일",
       "category": "영양제",
-      "status": "active",
+      "status": "dormant",
       "source": "auto",
       "parent": null,
       "added": "2026-03-10",
       "last_active": "2026-09-17",
-      "consecutive_dormant_weeks": 0
+      "consecutive_dormant_weeks": 0,
+      "note": "2026-09-17: 최근 90일 검색 유입 0 → 의약품 뿌리 3개 시험 투입을 위해 데이터랩 한도 확보용으로 쉬게 함(되돌리려면 status=active)"
     },
     {
       "keyword": "비오틴",
@@ -233,12 +235,13 @@
     {
       "keyword": "엽산",
       "category": "영양제",
-      "status": "active",
+      "status": "dormant",
       "source": "auto",
       "parent": null,
       "added": "2026-03-16",
       "last_active": "2026-09-17",
-      "consecutive_dormant_weeks": 0
+      "consecutive_dormant_weeks": 0,
+      "note": "2026-09-17: 최근 90일 검색 유입 0 → 의약품 뿌리 3개 시험 투입을 위해 데이터랩 한도 확보용으로 쉬게 함(되돌리려면 status=active)"
     },
     {
       "keyword": "글루코사민",
@@ -299,6 +302,39 @@
       "added": "2026-03-28",
       "last_active": "2026-09-17",
       "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "알레그라",
+      "category": "의약품",
+      "status": "watch",
+      "source": "inflow",
+      "parent": null,
+      "added": "2026-09-17",
+      "last_active": "2026-09-17",
+      "consecutive_dormant_weeks": 0,
+      "note": "유입 키워드 분석기에서 잡힌 뿌리 밖 수요(전용 글 없음·의약품이라 쇼핑 블록이 없는 자리). 2026-09-17 시험 투입"
+    },
+    {
+      "keyword": "피나스테리드",
+      "category": "의약품",
+      "status": "watch",
+      "source": "inflow",
+      "parent": null,
+      "added": "2026-09-17",
+      "last_active": "2026-09-17",
+      "consecutive_dormant_weeks": 0,
+      "note": "유입 키워드 분석기에서 잡힌 뿌리 밖 수요(전용 글 없음·의약품이라 쇼핑 블록이 없는 자리). 2026-09-17 시험 투입"
+    },
+    {
+      "keyword": "트루리시티",
+      "category": "비만·당뇨 치료제",
+      "status": "watch",
+      "source": "inflow",
+      "parent": null,
+      "added": "2026-09-17",
+      "last_active": "2026-09-17",
+      "consecutive_dormant_weeks": 0,
+      "note": "유입 키워드 분석기에서 잡힌 뿌리 밖 수요(전용 글 없음·의약품이라 쇼핑 블록이 없는 자리). 2026-09-17 시험 투입"
     }
   ]
 }
