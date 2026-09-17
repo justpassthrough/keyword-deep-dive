@@ -268,6 +268,28 @@ def discover_from_trend_scanner(known_products, existing_keywords):
             score = topic.get("score", 0)
             candidates.append((kw, score))
 
+    # 새 대상 장부(2026-09-17): 트렌드 스캐너가 '새 영역'으로 판정한 대상 이름.
+    # 예전엔 위 조건(known_products 에 이미 있는 이름)만 받아서, 스캐너가 찾은 새 이름은 새롭다는 이유로 전부 버려졌다.
+    # 여기서는 사전에 없어도 받되 뒤의 validate_candidate(데이터랩 검색량 + 복합 키워드 5종↑)가 거른다.
+    # 이틀 이상 제안됐거나 쇼핑 인기검색어에서 온 것만 — 하루 스쳐 간 이름은 제외.
+    try:
+        r2 = requests.get(TREND_SCANNER_URL.replace("latest.json", "new_entities.json"), timeout=15)
+        book = r2.json() if r2.status_code == 200 else {}
+    except Exception:
+        book = {}
+    existing_norm = {k.replace(" ", "").upper() for k in existing_keywords}
+    taken = {c[0] for c in candidates}
+    for name, info in book.items():
+        if name in taken or name.replace(" ", "").upper() in existing_norm:
+            continue
+        days = len(info.get("seen_days", []))
+        if days < 2 and info.get("source") != "shopping":
+            continue
+        vol = info.get("search_volume") or 0
+        weight = days * 2 + (3 if info.get("source") == "shopping" else 0) + (2 if vol >= 1000 else 0)
+        candidates.append((name, weight))
+    print(f"  새 대상 장부 {len(book)}개 반영")
+
     # score 높은 순 정렬
     candidates.sort(key=lambda x: x[1], reverse=True)
     print(f"  후보 {len(candidates)}개")
