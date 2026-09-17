@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-17 10:07",
-  "today_count": 18,
-  "count": 98,
+  "updated_at": "2026-09-17 16:09",
+  "today_count": 19,
+  "count": 99,
   "items": [
     {
       "keyword": "마그네슘 영양제",
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-08",
       "last_seen": "2026-09-17",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -22,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-17",
-      "seen_count": 54,
+      "seen_count": 55,
       "today": true
     },
     {
@@ -33,7 +33,7 @@
       "is_hot_badge": true,
       "first_seen": "2026-09-17",
       "last_seen": "2026-09-17",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -44,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-08",
       "last_seen": "2026-09-17",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -55,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-17",
-      "seen_count": 84,
+      "seen_count": 85,
       "today": true
     },
     {
@@ -66,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-17",
       "last_seen": "2026-09-17",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -77,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-25",
       "last_seen": "2026-09-17",
-      "seen_count": 12,
+      "seen_count": 13,
       "today": true
     },
     {
@@ -88,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-17",
-      "seen_count": 70,
+      "seen_count": 71,
       "today": true
     },
     {
@@ -99,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-08",
       "last_seen": "2026-09-17",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -110,7 +110,7 @@
       "is_hot_badge": true,
       "first_seen": "2026-09-13",
       "last_seen": "2026-09-17",
-      "seen_count": 9,
+      "seen_count": 10,
       "today": true
     },
     {
@@ -121,7 +121,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-11",
       "last_seen": "2026-09-17",
-      "seen_count": 12,
+      "seen_count": 13,
       "today": true
     },
     {
@@ -132,7 +132,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-14",
       "last_seen": "2026-09-17",
-      "seen_count": 15,
+      "seen_count": 16,
       "today": true
     },
     {
@@ -143,18 +143,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-17",
-      "seen_count": 5,
+      "seen_count": 6,
       "today": true
     },
     {
       "keyword": "박준면 마운자로",
       "search_volume": 50,
       "comp_idx": "낮음",
-      "seed": "마운자로",
+      "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-09-17",
-      "seen_count": 19,
+      "seen_count": 20,
+      "today": true
+    },
+    {
+      "keyword": "장호준 마운자로",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -165,7 +176,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-31",
       "last_seen": "2026-09-17",
-      "seen_count": 27,
+      "seen_count": 28,
       "today": true
     },
     {
@@ -176,7 +187,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-07",
       "last_seen": "2026-09-17",
-      "seen_count": 19,
+      "seen_count": 20,
       "today": true
     },
     {
@@ -187,7 +198,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-17",
-      "seen_count": 52,
+      "seen_count": 53,
       "today": true
     },
     {
@@ -198,7 +209,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-15",
       "last_seen": "2026-09-17",
-      "seen_count": 5,
+      "seen_count": 6,
       "today": true
     },
     {
