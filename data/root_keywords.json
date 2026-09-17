@@ -306,7 +306,7 @@
     {
       "keyword": "알레그라",
       "category": "의약품",
-      "status": "watch",
+      "status": "active",
       "source": "inflow",
       "parent": null,
       "added": "2026-09-17",
@@ -317,7 +317,7 @@
     {
       "keyword": "피나스테리드",
       "category": "의약품",
-      "status": "watch",
+      "status": "active",
       "source": "inflow",
       "parent": null,
       "added": "2026-09-17",
@@ -328,7 +328,7 @@
     {
       "keyword": "트루리시티",
       "category": "비만·당뇨 치료제",
-      "status": "watch",
+      "status": "active",
       "source": "inflow",
       "parent": null,
       "added": "2026-09-17",
