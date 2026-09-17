@@ -2,7 +2,9 @@ name: Daily Deep Dive
 on:
   schedule:
     - cron: '30 22 * * *'  # 07:30 KST
-    - cron: '0 4 * * *'    # 13:00 KST
+    # 13:00 회차는 2026-09-18 제거: 데이터랩 한도가 81%(하루 3회 기준)까지 올라 수요일(주간 발굴이 한 번 더 돎)에 넘칠 수 있었다.
+    #   글쓰기 앱은 06:30 에 전날 저녁 결과를 읽으므로 낮 회차의 쓰임이 가장 적다. 되살리려면 아래 줄의 주석을 풀고 dive.py 의 RUNS_PER_DAY 를 3으로.
+    # - cron: '0 4 * * *'    # 13:00 KST
     - cron: '0 10 * * *'   # 19:00 KST
   workflow_dispatch: {}
 permissions:
