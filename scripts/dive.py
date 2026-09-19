@@ -1223,17 +1223,44 @@ def _days_since(date_str):
         return None
 
 
+# 같은 대상의 다른 표기(글 제목은 '코큐텐', 검색어는 '코엔자임Q10'). 유입 분석기의 ENTITY_ALIAS 와 같은 뜻으로 맞춘다.
+# 일본 도시 이름은 '일본'으로 본다('오사카 마운자로' = '일본 마운자로' 글 하나로 받는 질문).
+ENTITY_ALIAS = {
+    "코큐텐": "코엔자임q10", "coq10": "코엔자임q10", "유비퀴놀": "코엔자임q10", "유비퀴논": "코엔자임q10",
+    "밀크시슬": "밀크씨슬", "엠에스엠": "msm", "쿼세틴": "퀘르세틴", "쿼르세틴": "퀘르세틴",
+    "오사카": "일본", "도쿄": "일본", "후쿠오카": "일본", "교토": "일본", "삿포로": "일본", "오키나와": "일본",
+}
+# 대상 없이 범위만 넓은 말. 같은 대상을 글 제목으로 쓴 적이 있으면 '○○ 효능' 은 같은 질문의 반복이라 이 말은 빼고 맞춘다
+# (2026-09-19: '코엔자임Q10 효능'이 코큐텐 글 3편 직후에도 3일 내내 1순위로 나갔고 글쓰기 앱이 매번 탈락시켰다).
+BROAD_TOKENS = {"효능", "효과", "영양제", "정보", "종류"}
+
+
+def _norm_match(text):
+    """매칭용 정규화: 소문자 + 띄어쓰기 제거 + 표기 통일('코엔자임 Q10' = '코엔자임Q10' = '코큐텐')."""
+    t = re.sub(r"\s+", "", text.lower())
+    for src, dst in ENTITY_ALIAS.items():
+        t = t.replace(src, dst)
+    return t
+
+
 def _post_covers_keyword(keyword, post):
     """글 한 편이 복합키워드를 '이미 다뤘는지' 판단.
 
     복합키워드를 띄어쓰기로 쪼갠 모든 토큰이 글 제목+요약에 전부 들어 있으면
     그 주제를 이미 쓴 것으로 본다. (예: '마운자로 고용량' → '마운자로'와 '고용량'이
-    모두 글에 등장해야 매칭)
+    모두 글에 등장해야 매칭) 띄어쓰기·표기 변형은 무시하고, 범위만 넓은 말(효능·효과…)은
+    나머지 말이 글 제목에 있으면 맞은 것으로 친다.
     """
-    text = post.get("_search_text", "")
-    tokens = [t for t in keyword.split() if t]
+    text = post.get("_match_text")
+    if text is None:
+        text = post["_match_text"] = _norm_match(post.get("_search_text", ""))
+        post["_match_title"] = _norm_match(post.get("title", ""))
+    tokens = [_norm_match(t) for t in keyword.split() if t]
     if not tokens:
         return False
+    specific = [t for t in tokens if t not in BROAD_TOKENS]
+    if specific and len(specific) < len(tokens):
+        return all(t in post["_match_title"] for t in specific)
     return all(t in text for t in tokens)
 
 
@@ -1298,8 +1325,10 @@ def main():
     results_by_root = {}
     all_unidentified = {}  # word → {count, found_from}
 
+    all_roots_norm = {r["keyword"].replace(" ", "").upper() for r in roots}
     for root_info in roots:
         root = root_info["keyword"]
+        root_norm = root.replace(" ", "").upper()
         print(f"\n── 뿌리: {root} ({root_info['status']}) ──")
 
         # 1. 복합키워드 마이닝
@@ -1313,6 +1342,10 @@ def main():
             query = cs["query"]
             if cs["is_trending"]:
                 cosearch_trending_set.add(query)
+            # 다른 뿌리의 이름이 든 검색어는 그 뿌리에서 다룬다(레스베라트롤 밑에 '베르베린'이 붙어 같은 글감이 두 번 추천되던 것)
+            qn = query.replace(" ", "").upper()
+            if root_norm not in qn and any(o in qn for o in all_roots_norm if o != root_norm):
+                continue
             # 기존 복합키워드 풀에 합류 (중복 방지)
             if query not in compounds:
                 compounds.append(query)
