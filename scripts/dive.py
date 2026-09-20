@@ -1624,6 +1624,8 @@ def main():
     # ── 결과 저장 ──
     output = {
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        # 실행 장소에 따라 updated_at 의 시간대가 다르다(Actions=UTC, 미니PC=KST) → 읽는 쪽이 헷갈리지 않게 시간대가 든 값도 함께 적는다
+        "updated_at_iso": datetime.now().astimezone().isoformat(timespec="minutes"),
         "roots": all_results,
         "today_pick": today_pick,
         "top_recommendations": top_recommendations,
