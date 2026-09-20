@@ -1,51 +1,51 @@
 {
- "generated_at": "2026-09-20T20:40",
+ "generated_at": "2026-09-20T20:42",
  "days": 90,
  "n": 102,
- "n_verified": 96,
+ "n_verified": 102,
  "position": [
   {
    "bucket": "<1,000px",
-   "n": 9,
-   "hit_rate": 67,
-   "avg_days": 9.0,
+   "n": 10,
+   "hit_rate": 70,
+   "avg_days": 9.8,
    "my_rank_seen": 0
   },
   {
    "bucket": "<2,500px",
-   "n": 10,
-   "hit_rate": 60,
-   "avg_days": 1.8,
+   "n": 11,
+   "hit_rate": 64,
+   "avg_days": 4.9,
    "my_rank_seen": 0
   },
   {
    "bucket": "<5,000px",
-   "n": 10,
-   "hit_rate": 80,
-   "avg_days": 7.7,
+   "n": 11,
+   "hit_rate": 82,
+   "avg_days": 7.3,
    "my_rank_seen": 0
   },
   {
    "bucket": "5,000px↓",
-   "n": 67,
-   "hit_rate": 55,
-   "avg_days": 2.8,
+   "n": 70,
+   "hit_rate": 53,
+   "avg_days": 2.7,
    "my_rank_seen": 1
   }
  ],
  "shop": [
   {
    "bucket": "안 덮음",
-   "n": 33,
-   "hit_rate": 64,
-   "avg_days": 5.1,
+   "n": 36,
+   "hit_rate": 67,
+   "avg_days": 6.2,
    "my_rank_seen": 0
   },
   {
    "bucket": "덮음",
-   "n": 63,
-   "hit_rate": 57,
-   "avg_days": 3.1,
+   "n": 66,
+   "hit_rate": 55,
+   "avg_days": 3.0,
    "my_rank_seen": 1
   }
  ],
@@ -135,28 +135,28 @@
  "score_thirds": [
   {
    "bucket": "하위 1/3",
-   "n": 32,
-   "hit_rate": 50,
-   "avg_days": 1.9,
+   "n": 34,
+   "hit_rate": 53,
+   "avg_days": 3.4,
    "my_rank_seen": 0
   },
   {
    "bucket": "중간",
-   "n": 32,
-   "hit_rate": 56,
-   "avg_days": 2.7,
+   "n": 34,
+   "hit_rate": 53,
+   "avg_days": 2.0,
    "my_rank_seen": 0
   },
   {
    "bucket": "상위 1/3",
-   "n": 32,
-   "hit_rate": 72,
-   "avg_days": 6.7,
+   "n": 34,
+   "hit_rate": 71,
+   "avg_days": 6.9,
    "my_rank_seen": 1
   }
  ],
- "spearman_score_vs_days": 0.304,
- "spearman_volume_only_vs_days": 0.182,
+ "spearman_score_vs_days": 0.256,
+ "spearman_volume_only_vs_days": 0.124,
  "rows": [
   {
    "keyword": "마운자로 5mg",
@@ -184,11 +184,11 @@
    "volume": 2.0,
    "saturation": 1.0,
    "fit": 1.0,
-   "first_blog_y": null,
-   "position": null,
-   "shop_above_blog": null,
+   "first_blog_y": 2324,
+   "position": 1.05,
+   "shop_above_blog": false,
    "my_rank": null,
-   "static_score": null,
+   "static_score": 2.1,
    "inflow_days": 36,
    "inflow_ratio_sum": 274.75
   },
@@ -303,11 +303,11 @@
    "volume": 2.26,
    "saturation": 0.8,
    "fit": 1.15,
-   "first_blog_y": null,
-   "position": null,
-   "shop_above_blog": null,
+   "first_blog_y": 176,
+   "position": 1.1,
+   "shop_above_blog": false,
    "my_rank": null,
-   "static_score": null,
+   "static_score": 2.287,
    "inflow_days": 17,
    "inflow_ratio_sum": 58.58
   },
@@ -745,11 +745,11 @@
    "volume": 2.36,
    "saturation": 0.8,
    "fit": 1.0,
-   "first_blog_y": null,
-   "position": null,
-   "shop_above_blog": null,
+   "first_blog_y": 4568,
+   "position": 1.0,
+   "shop_above_blog": false,
    "my_rank": null,
-   "static_score": null,
+   "static_score": 1.888,
    "inflow_days": 3,
    "inflow_ratio_sum": 3.64
   },
@@ -1833,11 +1833,11 @@
    "volume": 2.87,
    "saturation": 0.8,
    "fit": 1.0,
-   "first_blog_y": null,
-   "position": null,
-   "shop_above_blog": null,
+   "first_blog_y": 5844,
+   "position": 0.95,
+   "shop_above_blog": true,
    "my_rank": null,
-   "static_score": null,
+   "static_score": 2.116,
    "inflow_days": 0,
    "inflow_ratio_sum": 0
   },
@@ -1850,11 +1850,11 @@
    "volume": 2.45,
    "saturation": 0.8,
    "fit": 1.0,
-   "first_blog_y": null,
-   "position": null,
-   "shop_above_blog": null,
+   "first_blog_y": 5868,
+   "position": 0.95,
+   "shop_above_blog": true,
    "my_rank": null,
-   "static_score": null,
+   "static_score": 1.806,
    "inflow_days": 0,
    "inflow_ratio_sum": 0
   },
@@ -1884,11 +1884,11 @@
    "volume": 3.71,
    "saturation": 0.8,
    "fit": 1.0,
-   "first_blog_y": null,
-   "position": null,
-   "shop_above_blog": null,
+   "first_blog_y": 5417,
+   "position": 0.95,
+   "shop_above_blog": true,
    "my_rank": null,
-   "static_score": null,
+   "static_score": 2.735,
    "inflow_days": 0,
    "inflow_ratio_sum": 0
   }
