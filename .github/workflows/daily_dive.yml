@@ -1,11 +1,14 @@
 name: Daily Deep Dive
 on:
-  schedule:
-    - cron: '30 22 * * *'  # 07:30 KST
+  # 2026-09-20: 매일 스캔은 미니PC(관제탑) 로컬 실행으로 옮겼다 — 작업 스케줄러 Auto_DeepDive 02:30 / Auto_DeepDive_PM 14:30 (scripts/run_local.py).
+  #   Actions 예약은 늘 1.6~6시간 밀려(09-09~19 실측 30회) 아침 06:30 글쓰기가 전날 밤 자료를 썼다. 여기는 수동 실행(비상용)만 남긴다.
+  #   되돌리려면 아래 schedule 세 줄의 주석을 풀고 미니PC 작업 두 개를 끈다(둘 다 돌면 데이터랩 한도를 넘는다).
+  # schedule:
+  #   - cron: '30 22 * * *'  # 07:30 KST
     # 13:00 회차는 2026-09-18 제거: 데이터랩 한도가 81%(하루 3회 기준)까지 올라 수요일(주간 발굴이 한 번 더 돎)에 넘칠 수 있었다.
     #   글쓰기 앱은 06:30 에 전날 저녁 결과를 읽으므로 낮 회차의 쓰임이 가장 적다. 되살리려면 아래 줄의 주석을 풀고 dive.py 의 RUNS_PER_DAY 를 3으로.
     # - cron: '0 4 * * *'    # 13:00 KST
-    - cron: '0 10 * * *'   # 19:00 KST
+  #   - cron: '0 10 * * *'   # 19:00 KST
   workflow_dispatch: {}
 permissions:
   contents: write
