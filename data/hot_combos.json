@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-21 10:08",
-  "today_count": 15,
+  "updated_at": "2026-09-21 17:34",
+  "today_count": 13,
   "count": 106,
   "items": [
     {
@@ -11,29 +11,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-21",
-      "seen_count": 60,
+      "seen_count": 61,
       "today": true
     },
     {
       "keyword": "스윙스 마운자로",
       "search_volume": 2310,
       "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
+      "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-21",
-      "seen_count": 90,
+      "seen_count": 91,
       "today": true
     },
     {
       "keyword": "박지윤 감량",
       "search_volume": 1440,
       "comp_idx": "낮음",
-      "seed": "체중 감량",
+      "seed": "다이어트 근황",
       "is_hot_badge": false,
       "first_seen": "2026-09-10",
       "last_seen": "2026-09-21",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
     },
     {
@@ -44,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-25",
       "last_seen": "2026-09-21",
-      "seen_count": 18,
+      "seen_count": 19,
       "today": true
     },
     {
@@ -55,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-21",
-      "seen_count": 76,
+      "seen_count": 77,
       "today": true
     },
     {
@@ -66,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-13",
       "last_seen": "2026-09-21",
-      "seen_count": 15,
+      "seen_count": 16,
       "today": true
     },
     {
@@ -77,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-11",
       "last_seen": "2026-09-21",
-      "seen_count": 18,
+      "seen_count": 19,
       "today": true
     },
     {
@@ -88,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-19",
       "last_seen": "2026-09-21",
-      "seen_count": 4,
+      "seen_count": 5,
       "today": true
     },
     {
@@ -99,7 +99,51 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-09-21",
-      "seen_count": 11,
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "김흥국 탈모",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-21",
+      "seen_count": 5,
+      "today": true
+    },
+    {
+      "keyword": "박준면 마운자로",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-09-21",
+      "seen_count": 26,
+      "today": true
+    },
+    {
+      "keyword": "이규형 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "장 건강 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-21",
+      "seen_count": 34,
+      "today": true
+    },
+    {
+      "keyword": "서인영 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 피부관리",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-21",
+      "seen_count": 26,
       "today": true
     },
     {
@@ -111,7 +155,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-21",
       "seen_count": 57,
-      "today": true
+      "today": false
     },
     {
       "keyword": "유민상 마운자로",
@@ -122,51 +166,7 @@
       "first_seen": "2026-08-14",
       "last_seen": "2026-09-21",
       "seen_count": 21,
-      "today": true
-    },
-    {
-      "keyword": "김흥국 탈모",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-21",
-      "seen_count": 4,
-      "today": true
-    },
-    {
-      "keyword": "박준면 마운자로",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-09-21",
-      "seen_count": 25,
-      "today": true
-    },
-    {
-      "keyword": "이규형 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "장 건강 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-21",
-      "seen_count": 33,
-      "today": true
-    },
-    {
-      "keyword": "서인영 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 피부관리",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-21",
-      "seen_count": 25,
-      "today": true
+      "today": false
     },
     {
       "keyword": "장호준 마운자로",
