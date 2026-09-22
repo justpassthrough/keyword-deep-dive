@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-09-21 17:34",
-  "today_count": 13,
+  "updated_at": "2026-09-22 12:59",
+  "today_count": 12,
   "count": 106,
   "items": [
     {
       "keyword": "다이어트주사",
-      "search_volume": 13940,
+      "search_volume": 13890,
       "comp_idx": "높음",
       "seed": "다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-09-21",
-      "seen_count": 61,
+      "last_seen": "2026-09-22",
+      "seen_count": 62,
       "today": true
     },
     {
       "keyword": "스윙스 마운자로",
-      "search_volume": 2310,
+      "search_volume": 2340,
       "comp_idx": "낮음",
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
-      "last_seen": "2026-09-21",
-      "seen_count": 91,
+      "last_seen": "2026-09-22",
+      "seen_count": 92,
       "today": true
     },
     {
@@ -32,19 +32,107 @@
       "seed": "다이어트 근황",
       "is_hot_badge": false,
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-21",
-      "seen_count": 7,
+      "last_seen": "2026-09-22",
+      "seen_count": 8,
       "today": true
     },
     {
       "keyword": "백지영 다이어트약",
-      "search_volume": 1110,
+      "search_volume": 1070,
       "comp_idx": "낮음",
       "seed": "다이어트약",
       "is_hot_badge": false,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-09-21",
-      "seen_count": 19,
+      "last_seen": "2026-09-22",
+      "seen_count": 20,
+      "today": true
+    },
+    {
+      "keyword": "삭센다주사",
+      "search_volume": 310,
+      "comp_idx": "높음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-22",
+      "seen_count": 17,
+      "today": true
+    },
+    {
+      "keyword": "조현아 위고비",
+      "search_volume": 260,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-09-22",
+      "seen_count": 46,
+      "today": true
+    },
+    {
+      "keyword": "이창섭 탈모",
+      "search_volume": 240,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-22",
+      "seen_count": 20,
+      "today": true
+    },
+    {
+      "keyword": "씬님 마운자로",
+      "search_volume": 190,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-09-22",
+      "seen_count": 13,
+      "today": true
+    },
+    {
+      "keyword": "전현무 마운자로",
+      "search_volume": 150,
+      "comp_idx": "낮음",
+      "seed": "감량 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-22",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "김흥국 탈모",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-22",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "이규형 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "장 건강 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-22",
+      "seen_count": 35,
+      "today": true
+    },
+    {
+      "keyword": "서인영 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 피부관리",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-22",
+      "seen_count": 27,
       "today": true
     },
     {
@@ -56,95 +144,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-21",
       "seen_count": 77,
-      "today": true
-    },
-    {
-      "keyword": "삭센다주사",
-      "search_volume": 310,
-      "comp_idx": "높음",
-      "seed": "삭센다",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-21",
-      "seen_count": 16,
-      "today": true
-    },
-    {
-      "keyword": "이창섭 탈모",
-      "search_volume": 240,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-11",
-      "last_seen": "2026-09-21",
-      "seen_count": 19,
-      "today": true
-    },
-    {
-      "keyword": "전현무 마운자로",
-      "search_volume": 170,
-      "comp_idx": "낮음",
-      "seed": "감량 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-21",
-      "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "씬님 마운자로",
-      "search_volume": 170,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-09-21",
-      "seen_count": 12,
-      "today": true
-    },
-    {
-      "keyword": "김흥국 탈모",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-21",
-      "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "박준면 마운자로",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-09-21",
-      "seen_count": 26,
-      "today": true
-    },
-    {
-      "keyword": "이규형 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "장 건강 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-21",
-      "seen_count": 34,
-      "today": true
-    },
-    {
-      "keyword": "서인영 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 피부관리",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-21",
-      "seen_count": 26,
-      "today": true
+      "today": false
     },
     {
       "keyword": "랄랄 마운자로",
@@ -166,6 +166,17 @@
       "first_seen": "2026-08-14",
       "last_seen": "2026-09-21",
       "seen_count": 21,
+      "today": false
+    },
+    {
+      "keyword": "박준면 마운자로",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-09-21",
+      "seen_count": 26,
       "today": false
     },
     {
@@ -397,17 +408,6 @@
       "first_seen": "2026-08-26",
       "last_seen": "2026-09-12",
       "seen_count": 23,
-      "today": false
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 280,
-      "comp_idx": "낮음",
-      "seed": "몸매 변화",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-09-11",
-      "seen_count": 45,
       "today": false
     },
     {
