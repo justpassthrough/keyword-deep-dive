@@ -1,17 +1,127 @@
 {
-  "updated_at": "2026-09-24 16:08",
+  "updated_at": "2026-09-25 10:07",
   "today_count": 11,
-  "count": 109,
+  "count": 111,
   "items": [
     {
       "keyword": "다이어트주사",
-      "search_volume": 13730,
+      "search_volume": 13570,
       "comp_idx": "높음",
       "seed": "다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-09-24",
-      "seen_count": 67,
+      "last_seen": "2026-09-25",
+      "seen_count": 68,
+      "today": true
+    },
+    {
+      "keyword": "삭센다주사",
+      "search_volume": 340,
+      "comp_idx": "높음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-25",
+      "seen_count": 23,
+      "today": true
+    },
+    {
+      "keyword": "조현아 위고비",
+      "search_volume": 280,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-09-25",
+      "seen_count": 52,
+      "today": true
+    },
+    {
+      "keyword": "이창섭 탈모",
+      "search_volume": 270,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-25",
+      "seen_count": 26,
+      "today": true
+    },
+    {
+      "keyword": "조현아 감량",
+      "search_volume": 140,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-25",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 마운자로",
+      "search_volume": 130,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-09-25",
+      "seen_count": 60,
+      "today": true
+    },
+    {
+      "keyword": "이대호 마운자로",
+      "search_volume": 130,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-25",
+      "seen_count": 4,
+      "today": true
+    },
+    {
+      "keyword": "이대호 위고비",
+      "search_volume": 110,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-09-25",
+      "seen_count": 11,
+      "today": true
+    },
+    {
+      "keyword": "가비 마운자로",
+      "search_volume": 100,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "가비 위고비",
+      "search_volume": 100,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "김흥국 탈모",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-25",
+      "seen_count": 12,
       "today": true
     },
     {
@@ -23,95 +133,7 @@
       "first_seen": "2026-09-10",
       "last_seen": "2026-09-24",
       "seen_count": 13,
-      "today": true
-    },
-    {
-      "keyword": "삭센다주사",
-      "search_volume": 330,
-      "comp_idx": "높음",
-      "seed": "삭센다",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-24",
-      "seen_count": 22,
-      "today": true
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 280,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-09-24",
-      "seen_count": 51,
-      "today": true
-    },
-    {
-      "keyword": "이창섭 탈모",
-      "search_volume": 270,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-11",
-      "last_seen": "2026-09-24",
-      "seen_count": 25,
-      "today": true
-    },
-    {
-      "keyword": "조현아 감량",
-      "search_volume": 140,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-22",
-      "last_seen": "2026-09-24",
-      "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 마운자로",
-      "search_volume": 130,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-09-24",
-      "seen_count": 59,
-      "today": true
-    },
-    {
-      "keyword": "이대호 위고비",
-      "search_volume": 90,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-10",
-      "last_seen": "2026-09-24",
-      "seen_count": 10,
-      "today": true
-    },
-    {
-      "keyword": "이대호 마운자로",
-      "search_volume": 80,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-23",
-      "last_seen": "2026-09-24",
-      "seen_count": 3,
-      "today": true
-    },
-    {
-      "keyword": "김흥국 탈모",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-24",
-      "seen_count": 11,
-      "today": true
+      "today": false
     },
     {
       "keyword": "랄랄 위고비",
@@ -122,7 +144,7 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-24",
       "seen_count": 58,
-      "today": true
+      "today": false
     },
     {
       "keyword": "스윙스 마운자로",
