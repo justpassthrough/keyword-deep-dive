@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-26 10:08",
-  "today_count": 12,
-  "count": 112,
+  "updated_at": "2026-09-26 16:08",
+  "today_count": 15,
+  "count": 113,
   "items": [
     {
       "keyword": "다이어트주사",
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
       "last_seen": "2026-09-26",
-      "seen_count": 70,
+      "seen_count": 71,
       "today": true
     },
     {
@@ -22,18 +22,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-10",
       "last_seen": "2026-09-26",
-      "seen_count": 14,
+      "seen_count": 15,
+      "today": true
+    },
+    {
+      "keyword": "삭센다주사",
+      "search_volume": 340,
+      "comp_idx": "높음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-26",
+      "seen_count": 25,
       "today": true
     },
     {
       "keyword": "조현아 위고비",
       "search_volume": 290,
       "comp_idx": "낮음",
-      "seed": "다이어트 고백",
+      "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-09-26",
-      "seen_count": 54,
+      "seen_count": 55,
       "today": true
     },
     {
@@ -44,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-11",
       "last_seen": "2026-09-26",
-      "seen_count": 28,
+      "seen_count": 29,
       "today": true
     },
     {
@@ -55,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-23",
       "last_seen": "2026-09-26",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
     },
     {
@@ -66,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-22",
       "last_seen": "2026-09-26",
-      "seen_count": 8,
+      "seen_count": 9,
       "today": true
     },
     {
@@ -77,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-10",
       "last_seen": "2026-09-26",
-      "seen_count": 13,
+      "seen_count": 14,
       "today": true
     },
     {
@@ -88,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-25",
       "last_seen": "2026-09-26",
-      "seen_count": 3,
+      "seen_count": 4,
       "today": true
     },
     {
@@ -99,7 +110,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-25",
       "last_seen": "2026-09-26",
-      "seen_count": 3,
+      "seen_count": 4,
       "today": true
     },
     {
@@ -110,18 +121,29 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-19",
       "last_seen": "2026-09-26",
-      "seen_count": 14,
+      "seen_count": 15,
+      "today": true
+    },
+    {
+      "keyword": "통닭천사 위고비",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "seen_count": 1,
       "today": true
     },
     {
       "keyword": "박준면 마운자로",
       "search_volume": 50,
       "comp_idx": "낮음",
-      "seed": "체중 감량",
+      "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-08-19",
       "last_seen": "2026-09-26",
-      "seen_count": 28,
+      "seen_count": 29,
       "today": true
     },
     {
@@ -132,19 +154,19 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-26",
       "last_seen": "2026-09-26",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
-      "keyword": "삭센다주사",
-      "search_volume": 340,
-      "comp_idx": "높음",
-      "seed": "삭센다",
+      "keyword": "리즈 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
       "is_hot_badge": false,
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-25",
-      "seen_count": 24,
-      "today": false
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-09-26",
+      "seen_count": 8,
+      "today": true
     },
     {
       "keyword": "랄랄 마운자로",
@@ -903,17 +925,6 @@
       "first_seen": "2026-07-15",
       "last_seen": "2026-08-15",
       "seen_count": 14,
-      "today": false
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "감량 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-08-15",
-      "seen_count": 7,
       "today": false
     },
     {
