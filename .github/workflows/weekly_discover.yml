@@ -1,11 +1,13 @@
 name: Root Discovery (Weekly)
 on:
   schedule:
-    - cron: '0 23 * * 3'   # 매주 수요일 08:00 KST
+    - cron: '0 23 * * 3'   # UTC 수요일 23:00 = 한국 목요일 08:00
   workflow_dispatch: {}
 permissions:
   contents: write
-  pages: write
+concurrency:
+  group: root-discovery
+  cancel-in-progress: false
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -16,27 +18,53 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - name: Discover new roots
+        id: discover
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
         run: python scripts/discover_roots.py
-      - name: Run dive on updated roots
+      # 2026-09-27: 여기서는 뿌리 목록(data/root_keywords.json)만 올린다. 스캔(dive.py)과 대시보드는 하지 않는다.
+      #   09-24 실행: 새 뿌리 6개를 찾았는데, 뒤이은 스캔이 37분 걸리는 동안 다른 작업(관제탑 스캔·SERP·인물 조합)이
+      #   docs/index.html 을 바꿔 rebase 가 충돌했고 push 가 3번 다 실패했다. 그런데도 마지막 명령이 sleep 이라 실행은 성공으로 끝났다
+      #   → 찾은 뿌리 6개가 어디에도 안 올라갔고 아무도 몰랐다.
+      #   새 뿌리는 관제탑 스캔(Auto_DeepDive 02:30 / 14:30, 시작할 때 git pull)이 다음 회차에 읽어 돌린다.
+      #   그쪽은 검색광고 키까지 갖고 있어 검색량도 제대로 붙는다(여기 스캔은 그 키 없이 돌았다).
+      - name: Commit and push (root_keywords.json only)
+        id: push
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID_DIVE }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET_DIVE }}
-        run: python scripts/dive.py
-      - name: Build dashboard
-        run: python scripts/build_dashboard.py
-      - name: Inject goldmine section (if data exists)
-        run: python scripts/build_goldmine_section.py --inject || true
-      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ docs/
-          git diff --cached --quiet || git commit -m "discover+dive: $(TZ=Asia/Seoul date +%Y-%m-%d\ %H:%M)"
+          stage() {
+            git add data/root_keywords.json
+            if git diff --cached --quiet; then return 1; fi
+            git commit -q -m "discover: $(TZ=Asia/Seoul date +%Y-%m-%d\ %H:%M)"
+          }
+          if ! stage; then echo "뿌리 목록에 바뀐 것이 없음"; exit 0; fi
+          pushed=0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && break
-            echo "Push failed (attempt $i), retrying..."
+            if git pull --rebase origin main && git push origin HEAD:main; then pushed=1; break; fi
+            echo "Push failed (attempt $i)"
+            git rebase --abort 2>/dev/null || true
+            # 원격이 그새 바뀌었다 — 원격 최신에서 발굴을 다시 돌린다(몇 분이면 끝나고, 같은 입력이면 같은 뿌리가 나온다)
+            git fetch origin main
+            git reset -q --hard origin/main
+            python scripts/discover_roots.py
+            if ! stage; then echo "원격 최신 기준으로는 바뀐 것이 없음"; pushed=1; break; fi
             sleep 5
           done
+          if [ "$pushed" != "1" ]; then echo "::error::뿌리 목록 push 가 3번 모두 실패"; exit 1; fi
+          # 실제로 올라갔는지 원격에서 다시 본다
+          git fetch origin main
+          if ! git diff --quiet origin/main -- data/root_keywords.json; then echo "::error::원격의 root_keywords.json 이 방금 결과와 다름"; exit 1; fi
+          echo "원격 반영 확인"
+      - name: Notify Telegram on failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          pip install requests -q || true
+          python scripts/notify_telegram.py "⚠️ 주간 뿌리 발굴 실패 — discover=${{ steps.discover.outcome }} push=${{ steps.push.outcome }} · 로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

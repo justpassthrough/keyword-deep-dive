@@ -55,11 +55,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ docs/
           git diff --cached --quiet || git commit -m "dive: $(TZ=Asia/Seoul date +%Y-%m-%d\ %H:%M)"
+          # 2026-09-27: 3번 다 실패해도 마지막 명령(sleep)이 성공이라 실행이 성공으로 끝나던 것을 고침 — 실패하면 실패로 끝낸다.
+          pushed=0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && break
+            if git pull --rebase origin main && git push; then pushed=1; break; fi
             echo "Push failed (attempt $i), retrying..."
+            git rebase --abort 2>/dev/null || true
             sleep 5
           done
+          if [ "$pushed" != "1" ]; then echo "::error::push 가 3번 모두 실패"; exit 1; fi
       # 진짜 오류(코드/API/푸시 실패)만 텔레그램으로 조용히 알린다.
       # 러너를 아예 못 잡은 일시적 장애면 이 스텝도 안 돌아 아무 알림이 없다
       # (= 무해, 다음 실행이 복구). outcome은 continue-on-error에 영향받지 않는

@@ -44,8 +44,12 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/longtail_goldmine.json docs/index.html docs/goldmine.html
           git diff --staged --quiet || git commit -m "goldmine: $(TZ=Asia/Seoul date +%Y-%m-%d\ %H:%M)"
+          # 2026-09-27: 3번 다 실패해도 마지막 명령(sleep)이 성공이라 실행이 성공으로 끝나던 것을 고침 — 실패하면 실패로 끝낸다.
+          pushed=0
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && break
+            if git pull --rebase origin main && git push; then pushed=1; break; fi
             echo "Push failed (attempt $i), retrying..."
+            git rebase --abort 2>/dev/null || true
             sleep 5
           done
+          if [ "$pushed" != "1" ]; then echo "::error::push 가 3번 모두 실패"; exit 1; fi
