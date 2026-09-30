@@ -1,83 +1,105 @@
 {
-  "updated_at": "2026-09-29 16:15",
-  "today_count": 14,
+  "updated_at": "2026-09-30 16:08",
+  "today_count": 17,
   "count": 115,
   "items": [
     {
       "keyword": "다이어트주사",
-      "search_volume": 13270,
+      "search_volume": 13440,
       "comp_idx": "높음",
       "seed": "다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-09-29",
-      "seen_count": 77,
+      "last_seen": "2026-09-30",
+      "seen_count": 78,
+      "today": true
+    },
+    {
+      "keyword": "알부민 주사",
+      "search_volume": 2760,
+      "comp_idx": "높음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-09-30",
+      "seen_count": 24,
+      "today": true
+    },
+    {
+      "keyword": "한가인 알부민",
+      "search_volume": 1000,
+      "comp_idx": "낮음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
+      "seen_count": 2,
       "today": true
     },
     {
       "keyword": "조현아 위고비",
-      "search_volume": 360,
+      "search_volume": 390,
       "comp_idx": "낮음",
-      "seed": "위고비",
+      "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-09-29",
-      "seen_count": 61,
+      "last_seen": "2026-09-30",
+      "seen_count": 62,
+      "today": true
+    },
+    {
+      "keyword": "삭센다주사",
+      "search_volume": 330,
+      "comp_idx": "높음",
+      "seed": "삭센다",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-30",
+      "seen_count": 31,
       "today": true
     },
     {
       "keyword": "이대호 마운자로",
-      "search_volume": 230,
+      "search_volume": 240,
       "comp_idx": "낮음",
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-29",
-      "seen_count": 13,
+      "last_seen": "2026-09-30",
+      "seen_count": 14,
       "today": true
     },
     {
       "keyword": "빠니보틀 위고비",
-      "search_volume": 210,
+      "search_volume": 230,
       "comp_idx": "낮음",
       "seed": "다이어트 근황",
       "is_hot_badge": false,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-09-29",
-      "seen_count": 8,
+      "last_seen": "2026-09-30",
+      "seen_count": 9,
       "today": true
     },
     {
       "keyword": "조현아 감량",
       "search_volume": 160,
       "comp_idx": "낮음",
-      "seed": "다이어트 고백",
+      "seed": "다이어트 비결",
       "is_hot_badge": false,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-09-29",
-      "seen_count": 15,
-      "today": true
-    },
-    {
-      "keyword": "한가인 알부민",
-      "search_volume": 160,
-      "comp_idx": "낮음",
-      "seed": "알부민",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "seen_count": 1,
+      "last_seen": "2026-09-30",
+      "seen_count": 16,
       "today": true
     },
     {
       "keyword": "이대호 위고비",
-      "search_volume": 150,
+      "search_volume": 160,
       "comp_idx": "낮음",
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-09-29",
-      "seen_count": 20,
+      "last_seen": "2026-09-30",
+      "seen_count": 21,
       "today": true
     },
     {
@@ -87,19 +109,8 @@
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-29",
-      "seen_count": 10,
-      "today": true
-    },
-    {
-      "keyword": "빠니보틀 마운자로",
-      "search_volume": 90,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-09-29",
-      "seen_count": 5,
+      "last_seen": "2026-09-30",
+      "seen_count": 11,
       "today": true
     },
     {
@@ -109,8 +120,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-09-29",
-      "seen_count": 7,
+      "last_seen": "2026-09-30",
+      "seen_count": 8,
       "today": true
     },
     {
@@ -120,8 +131,8 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-09-29",
-      "seen_count": 20,
+      "last_seen": "2026-09-30",
+      "seen_count": 21,
       "today": true
     },
     {
@@ -131,8 +142,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-09-19",
-      "last_seen": "2026-09-29",
-      "seen_count": 21,
+      "last_seen": "2026-09-30",
+      "seen_count": 22,
       "today": true
     },
     {
@@ -142,8 +153,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-09-29",
-      "seen_count": 8,
+      "last_seen": "2026-09-30",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -153,8 +164,30 @@
       "seed": "위고비",
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-29",
-      "seen_count": 5,
+      "last_seen": "2026-09-30",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-09-30",
+      "seen_count": 13,
+      "today": true
+    },
+    {
+      "keyword": "우창윤 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "장 건강 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-30",
+      "seen_count": 3,
       "today": true
     },
     {
@@ -180,25 +213,14 @@
       "today": false
     },
     {
-      "keyword": "삭센다주사",
-      "search_volume": 330,
-      "comp_idx": "높음",
-      "seed": "삭센다",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-29",
-      "seen_count": 30,
-      "today": false
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 30,
+      "keyword": "빠니보틀 마운자로",
+      "search_volume": 90,
       "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
+      "seed": "마운자로",
       "is_hot_badge": false,
-      "first_seen": "2026-07-04",
+      "first_seen": "2026-07-13",
       "last_seen": "2026-09-29",
-      "seen_count": 12,
+      "seen_count": 5,
       "today": false
     },
     {
@@ -664,17 +686,6 @@
       "today": false
     },
     {
-      "keyword": "우창윤 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-09",
-      "seen_count": 2,
-      "today": false
-    },
-    {
       "keyword": "우창윤 위고비",
       "search_volume": 30,
       "comp_idx": "낮음",
@@ -716,17 +727,6 @@
       "first_seen": "2026-09-04",
       "last_seen": "2026-09-04",
       "seen_count": 1,
-      "today": false
-    },
-    {
-      "keyword": "알부민 주사",
-      "search_volume": 2940,
-      "comp_idx": "높음",
-      "seed": "알부민",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-19",
-      "last_seen": "2026-09-03",
-      "seen_count": 23,
       "today": false
     },
     {
