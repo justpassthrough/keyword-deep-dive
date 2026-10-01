@@ -335,6 +335,56 @@
       "last_active": "2026-10-01",
       "consecutive_dormant_weeks": 0,
       "note": "유입 키워드 분석기에서 잡힌 뿌리 밖 수요(전용 글 없음·의약품이라 쇼핑 블록이 없는 자리). 2026-09-17 시험 투입"
+    },
+    {
+      "keyword": "하스카프베리",
+      "category": "기타",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-10-01",
+      "last_active": "2026-10-01",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "카무트효소",
+      "category": "비만치료제",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-10-01",
+      "last_active": "2026-10-01",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "MBP",
+      "category": "기타",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-10-01",
+      "last_active": "2026-10-01",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "침향",
+      "category": "기타",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-10-01",
+      "last_active": "2026-10-01",
+      "consecutive_dormant_weeks": 0
+    },
+    {
+      "keyword": "프로폴리스",
+      "category": "피부관리",
+      "status": "active",
+      "source": "auto",
+      "parent": null,
+      "added": "2026-10-01",
+      "last_active": "2026-10-01",
+      "consecutive_dormant_weeks": 0
     }
   ]
 }
