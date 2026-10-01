@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-01T02:42:06.654Z",
- "source_scan": "2026-10-01 02:17",
+ "updated_at": "2026-10-01T06:15:35.074Z",
+ "source_scan": "2026-10-01 14:53",
  "items": {
   "저스트글로우": {
    "checked_at": "2026-09-30T06:12:36.038Z",
@@ -1588,12 +1588,12 @@
    "shop_above_blog": false
   },
   "마운자로처방병원": {
-   "checked_at": "2026-09-27T18:12:12.001Z",
+   "checked_at": "2026-10-01T06:12:26.227Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "thevom_2024",
-     "age_days": 14,
+     "age_days": 21,
      "title": "마운자로 사용 후 '묽은 변(설사)'이 나오는 이유? 대구 수성구 마운자로 처방 병원"
     },
     {
@@ -1603,32 +1603,37 @@
     },
     {
      "blog": "ant2001e",
-     "age_days": 14,
+     "age_days": 21,
      "title": "마운자로 가격과 처방 방법, 최저가 약국 찾는 방법 정리(한달 비용)"
     },
     {
-     "blog": "themozel",
+     "blog": "wednesdxx",
      "age_days": 14,
-     "title": "창원 마운자로 처방병원 성지, 탈모까지 함께 진료합니다."
+     "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
     },
     {
-     "blog": "gyongg99",
+     "blog": "hyetae8792",
      "age_days": 14,
-     "title": "부산 마운자로 성지 가격 동백전 내돈내산 5mg 처방 병원 최저가"
+     "title": "마운자로 정상체중 처방 후기 │ 종로 마운자로 성지"
     },
     {
      "blog": "puppuup",
-     "age_days": 21,
+     "age_days": 28,
      "title": "마운자로 BMI 안보는 병원 | 9월기준 최저가 처방받는법 (종로 마운자로 성지)"
+    },
+    {
+     "blog": "khss11550",
+     "age_days": 5,
+     "title": "후쿠오카 유니클로 커스텀티셔츠 ️ / 마운자로 성지 병원 처방 / 후기 /가격"
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 21,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 4436,
-   "shop_y": null,
+   "first_blog_y": 7075,
+   "shop_y": 1095,
    "ad_y": null,
-   "shop_above_blog": false
+   "shop_above_blog": true
   },
   "마운자로요요": {
    "checked_at": "2026-09-28T06:14:00.297Z",
@@ -1922,42 +1927,42 @@
    "shop_above_blog": false
   },
   "마운자로임신": {
-   "checked_at": "2026-09-26T06:12:45.000Z",
+   "checked_at": "2026-10-01T06:13:35.988Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "daywell_bundang",
+     "blog": "news33net",
      "age_days": 7,
+     "title": "“마운자로 임신부 처방 325건”…소아 110건·이상사례 1261건 집계"
+    },
+    {
+     "blog": "daywell_bundang",
+     "age_days": 14,
      "title": "위고비∙마운자로 베이비 임신했다? 다이어트주사와 피임약의 상관관계"
     },
     {
-     "blog": "upcup",
-     "age_days": 28,
-     "title": "[마운자로 베이비?] 피임약을 먹었는데...: 흡수율 저하로 인한 임신 위험성"
-    },
-    {
-     "blog": "watashijisu",
+     "blog": "medi-sis",
      "age_days": 14,
-     "title": "마운자로베이비 17주차 검사 후기｜2차 기형아검사 신경관 결손 검사, NIPT 했는데 또?"
+     "title": "(안양 미래연세의원) 마운자로·위고비, 평생 맞아도 될까요?"
     },
     {
-     "blog": "moonbswife",
-     "age_days": 21,
-     "title": "위고비와 마운자로 차이, 효과부터 부작용까지!"
+     "blog": "wednesdxx",
+     "age_days": 14,
+     "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
     },
     {
-     "blog": "1likehg",
-     "age_days": 21,
-     "title": "마운자로, 임신 준비 올스톱하고 2.5mg 다시 맞기로 한 썰 (ft. 일본 원정 포기함)"
+     "blog": "todayissue_kr",
+     "age_days": 7,
+     "title": "마운자로 임신 중 사용 주의사항 총정리 (feat. 식약처 허가사항)"
     }
    ],
-   "median_age_days": 21,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5685,
-   "shop_y": null,
+   "first_blog_y": 5872,
+   "shop_y": 1279,
    "ad_y": null,
-   "shop_above_blog": false
+   "shop_above_blog": true
   },
   "삭센다처방": {
    "checked_at": "2026-09-28T18:14:30.575Z",
@@ -2400,49 +2405,49 @@
    "shop_above_blog": false
   },
   "마운자로가격": {
-   "checked_at": "2026-09-27T18:12:18.450Z",
+   "checked_at": "2026-10-01T06:12:55.231Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "eatsight",
-     "age_days": 21,
-     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
-    },
-    {
-     "blog": "eatsight",
-     "age_days": 21,
-     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
-    },
-    {
-     "blog": "ant2001e",
-     "age_days": 14,
-     "title": "마운자로 가격과 처방 방법, 최저가 약국 찾는 방법 정리(한달 비용)"
-    },
-    {
-     "blog": "vitamin2230",
-     "age_days": 21,
-     "title": "마운자로 가격 및 처방 비용 총정리, 위고비 차이점과 효과 분석"
-    },
-    {
-     "blog": "ksj720508",
-     "age_days": 21,
-     "title": "마운자로 가격 위고비 효과 비교 실제 후기 (-12kg 유지중)"
-    },
-    {
-     "blog": "ddoni_mom",
-     "age_days": 14,
-     "title": "[첫 4주 비교] 위고비마운자로 차이, 마운자로 가격과 부작용 진실은?"
-    },
-    {
      "blog": "suzy_0620",
-     "age_days": 28,
-     "title": "마운자로 가격 부작용 췌장염 극복하고 살뺀 방법"
+     "age_days": 2,
+     "title": "위고비 부작용 마운자로 가격 처방 다이어트 4주 후기 (53kg)"
+    },
+    {
+     "blog": "hkyun3148",
+     "age_days": 1,
+     "title": "[기자수첩] 일본보다 2.8배 비싼 한국 '마운자로'… 비급여 약가의 서글픈 민낯"
+    },
+    {
+     "blog": "beyondpaylog",
+     "age_days": 3,
+     "title": "마운자로 vs 위고비 차이｜효과·가격·부작용, 누구에게 더 맞을까?"
+    },
+    {
+     "blog": "vivivi9999",
+     "age_days": 2,
+     "title": "마운자로 가격 얼마일까? (용량별 한 달 비용·실비보험·효과 총정리)"
+    },
+    {
+     "blog": "bhy_bjoo_h",
+     "age_days": 2,
+     "title": "일본 스시자로 열풍, 마운자로 가격부터 효과와 부작용까지 총정리"
+    },
+    {
+     "blog": "zhang700",
+     "age_days": 2,
+     "title": "위고비 마운자로 비교, 삭센다까지 효과·부작용·가격 차이 총정리"
+    },
+    {
+     "blog": "jhh1517",
+     "age_days": 3,
+     "title": "마운자로 가격 비교 2026년 9월｜중국·한국·일본·인도 어디가 저렴할까?"
     }
    ],
-   "median_age_days": 21,
+   "median_age_days": 2,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5192,
+   "first_blog_y": 3310,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -2577,7 +2582,7 @@
    "shop_above_blog": true
   },
   "위고비마운자로차이": {
-   "checked_at": "2026-09-27T18:13:34.362Z",
+   "checked_at": "2026-10-01T06:12:19.684Z",
    "status": 200,
    "blog_top": [
     {
@@ -2586,40 +2591,40 @@
      "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지웨지감자네이버 블로그"
     },
     {
-     "blog": "blu2sky7",
-     "age_days": 14,
-     "title": "마운자로 위고비 가격 비교 용량별 한 달 비용과 핵심 차이 총정리"
-    },
-    {
-     "blog": "suzy_0620",
-     "age_days": 14,
-     "title": "위고비 마운자로 차이 가격 다 겪은 리얼 실패 후기"
-    },
-    {
      "blog": "ddoni_mom",
-     "age_days": 14,
-     "title": "[첫 4주 비교] 위고비마운자로 차이, 마운자로 가격과 부작용 진실은?"
+     "age_days": null,
+     "title": "[첫 4주 비교] 위고비마운자로 차이, 마운자로 가격과 부작용 진실은?또니언니네이버 블로그"
     },
     {
      "blog": "moonbswife",
-     "age_days": 21,
+     "age_days": 28,
      "title": "위고비와 마운자로 차이, 효과부터 부작용까지!"
     },
     {
      "blog": "eatsight",
-     "age_days": 21,
+     "age_days": 28,
      "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
     },
     {
      "blog": "eatsight",
-     "age_days": 21,
+     "age_days": 28,
      "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
+    },
+    {
+     "blog": "blu2sky7",
+     "age_days": 21,
+     "title": "마운자로 위고비 가격 비교 용량별 한 달 비용과 핵심 차이 총정리"
+    },
+    {
+     "blog": "sh365clinic",
+     "age_days": 21,
+     "title": "서울대 교수가 알려주는 위고비 vs 마운자로 솔직 후기와 차이점 총정리 분당 서현365의원 야간 주...."
     }
    ],
-   "median_age_days": 14,
-   "fresh_30d": 4,
+   "median_age_days": 28,
+   "fresh_30d": 3,
    "my_rank": null,
-   "first_blog_y": 1283,
+   "first_blog_y": 1337,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -2673,7 +2678,7 @@
    "shop_above_blog": true
   },
   "락토핏유산균": {
-   "checked_at": "2026-09-27T18:15:15.174Z",
+   "checked_at": "2026-10-01T06:14:10.566Z",
    "status": 200,
    "blog_top": [
     {
@@ -2682,42 +2687,42 @@
      "title": "락토핏,덴프스,프로피오 유산균 3종 비교 및 정착 후기"
     },
     {
+     "blog": "honeystar7",
+     "age_days": 7,
+     "title": "종근당건강 락토핏 슈퍼슬림 프로바이오틱스 유산균"
+    },
+    {
      "blog": "dbdbgysl1",
      "age_days": 21,
      "title": "락토핏 유산균 다이어트 내돈내산 한달섭취 솔직후기"
     },
     {
-     "blog": "suhae0109",
+     "blog": "alzer",
      "age_days": 14,
-     "title": "락토핏 종근당건강 ALL NEW 리뉴얼 락토핏 골드 3통 150일분"
+     "title": "유산균+아연+비타민D까지? 1만원대 가성비 챙긴 7세 아들 최애 유산균 락토핏 키즈"
+    },
+    {
+     "blog": "dpa_hjlee",
+     "age_days": 14,
+     "title": "락토핏 유산균 후기｜온갇족 5년 넘게 꾸준히 먹고 있는 이유, 골드부터 코어맥스까지"
+    },
+    {
+     "blog": "spdlqjyj",
+     "age_days": 14,
+     "title": "락토핏 코어맥스 유산균 효능과 먹는법, 부작용은? 3개월째 내돈내산 먹는중"
     },
     {
      "blog": "richbup",
-     "age_days": 21,
+     "age_days": 28,
      "title": "락토핏 유산균 효능보다 가성비 락토핏 플러스 후기"
-    },
-    {
-     "blog": "lovely_sansam",
-     "age_days": 14,
-     "title": "[광고] 생유산균 락토핏키즈 뇨아가 한달째 먹고있는 유산균"
-    },
-    {
-     "blog": "loveleebb",
-     "age_days": 14,
-     "title": "락토핏 코어 가족유산균 후기｜가루날림 적고 휴대하기 편한 유산균"
-    },
-    {
-     "blog": "j-young0320",
-     "age_days": 14,
-     "title": "중학생 유산균 락토핏 당케어 괜찮을까? 온가족 매일 편하게 챙기고 싶을 때 선택기준"
     }
    ],
    "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 6412,
-   "shop_y": 2010,
-   "ad_y": 2435,
+   "first_blog_y": 6261,
+   "shop_y": 2106,
+   "ad_y": 2511,
    "shop_above_blog": true
   },
   "알부민효능": {
@@ -2865,18 +2870,13 @@
    "shop_above_blog": true
   },
   "비에날17유산균": {
-   "checked_at": "2026-09-27T18:12:29.129Z",
+   "checked_at": "2026-10-01T06:12:48.916Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "anarche69",
-     "age_days": 14,
+     "age_days": 21,
      "title": "10만원대 추석 선물 추천 선물 하기 좋은 김희선 다이어트 유산균 비에날씬"
-    },
-    {
-     "blog": "musoi99",
-     "age_days": 14,
-     "title": "다이어트유산균 비에날씬 다이어트와 장 건강 동시 관리 방법"
     },
     {
      "blog": "skjkhj",
@@ -2885,13 +2885,13 @@
     },
     {
      "blog": "dayoun08",
-     "age_days": 14,
+     "age_days": 21,
      "title": "비에날씬 BNR17 유산균 프로 체지방감소 장건강 까지 챙긴 남자다이어트"
     },
     {
-     "blog": "me8478",
-     "age_days": 14,
-     "title": "#BNR17 비에날씬 프로 추천｜다이어트 유산균 고를 때 알아볼 점#"
+     "blog": "chachan85",
+     "age_days": 28,
+     "title": "BNR17 비에날씬 프로 유산균 체지방감소 다이어트 유산균 후기"
     },
     {
      "blog": "ehejcd",
@@ -2900,16 +2900,21 @@
     },
     {
      "blog": "cih2437",
-     "age_days": 21,
+     "age_days": 28,
      "title": "비에날17유산균 장 건강과 체지방 관리 함께 챙겨본 후기!!!"
+    },
+    {
+     "blog": "musoi99",
+     "age_days": 21,
+     "title": "다이어트유산균 비에날씬 다이어트와 장 건강 동시 관리 방법"
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 21,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 7490,
-   "shop_y": 2837,
-   "ad_y": 3262,
+   "first_blog_y": 6498,
+   "shop_y": 2779,
+   "ad_y": 3066,
    "shop_above_blog": true
   },
   "베르베린효능": {
@@ -4364,46 +4369,51 @@
    "shop_above_blog": false
   },
   "동국제약알부민": {
-   "checked_at": "2026-09-21T18:15:25.405Z",
+   "checked_at": "2026-10-01T06:14:23.841Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "wjdghkshfwk",
-     "age_days": 14,
+     "age_days": 28,
      "title": "동국제약 마그마 스피트샷 먹은후기!"
     },
     {
-     "blog": "jullemodel",
-     "age_days": 174,
-     "title": "동국제약 마시는 알부민 <공구> 30병 1박스 44,900"
+     "blog": "ccaeccae212",
+     "age_days": 1,
+     "title": "마시는 알부민 효과는? 동국제약 마이핏 알부민 프리미엄 골드 핵심 성분 및 특징 총정리(동국제...."
     },
     {
-     "blog": "sunlightyoung",
-     "age_days": 174,
-     "title": "알부민 추천 [동국헬스케어 알부민 시그니처골드] : 난백분(건조난백분말) & L-아르지닌, 타우린등 ...."
-    },
-    {
-     "blog": "sinhope3",
-     "age_days": 187,
-     "title": "마시는알부민 찾는다면? 동국제약 마이핏 프리미엄 알부민 플래티넘 집적 먹어본 후기"
-    },
-    {
-     "blog": "rari_ya",
-     "age_days": 171,
-     "title": "2026년 4월 올영세일 동국제약 마데카 앰플 코앤텍 유산균 마이핏 알부민 건강몰 혜택 총정리"
+     "blog": "tomeido",
+     "age_days": 4,
+     "title": "제약사의 양심이?"
     },
     {
      "blog": "qkrxjvm7548",
-     "age_days": 21,
+     "age_days": 28,
      "title": "코스트코 '연회비 뽕 뽑고도 남는' 카트 필수 수량 털어온 후기 4가지"
+    },
+    {
+     "blog": "banilab86",
+     "age_days": 7,
+     "title": "알부민 효능·복용시간·부작용 총정리｜먹는 알부민 광고, 어디까지 믿어도 될까?"
+    },
+    {
+     "blog": "womynssi",
+     "age_days": 21,
+     "title": "코스트코 \"가격 보고 놀람\" 9월 셋째주 할인 건강식품 영양제 7종 김종국 아르기닌부터 이병헌 루...."
+    },
+    {
+     "blog": "boghee7514",
+     "age_days": 28,
+     "title": "코스트코 청라점 9월 둘째주 할인정보 주류 반려동물 비식품류"
     }
    ],
-   "median_age_days": 174,
-   "fresh_30d": 1,
+   "median_age_days": 7,
+   "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5549,
+   "first_blog_y": 5490,
    "shop_y": 1229,
-   "ad_y": 1568,
+   "ad_y": 1551,
    "shop_above_blog": true
   },
   "글루타치온12X": {
@@ -6040,50 +6050,50 @@
    "shop_above_blog": true
   },
   "알티지오메가3": {
-   "checked_at": "2026-09-27T18:13:41.930Z",
+   "checked_at": "2026-10-01T06:14:03.738Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "love_jjoono",
+     "blog": "do_sol_",
+     "age_days": 7,
+     "title": "데이즈멀티팩 멀티비타민추천 프로바이오틱스 알티지오메가3 루테인"
+    },
+    {
+     "blog": "dmsql1490",
      "age_days": 14,
+     "title": "식물성 초임계알티지 하이퍼셀 오메가3 제품 선택 가이드"
+    },
+    {
+     "blog": "3jeong",
+     "age_days": 14,
+     "title": "초임계알티지오메가3 효능보면 꼭 먹어야 할 걸? 추천 대상 정리"
+    },
+    {
+     "blog": "love_jjoono",
+     "age_days": 21,
      "title": "알티지오메가3 효과를 잘 챙기려면 먹는 시간부터 달라야 해요"
     },
     {
-     "blog": "kjsw444",
-     "age_days": 28,
-     "title": "유튜브 약사 알티지 오메가3 추천템, 믿어도 될까? 고르는 법 기준 총정리"
-    },
-    {
-     "blog": "panda754",
-     "age_days": 14,
-     "title": "식물성 초임계 알티지 오메가3 효능 고지혈증에 효과"
-    },
-    {
-     "blog": "hnz7942",
+     "blog": "kimhs2051",
      "age_days": 21,
-     "title": "[국군복지단 PX 추천건강템]알파프로젝트\"더블케어 알티지 오메가3\""
+     "title": "뉴트리코어 하이퍼셀 식물성 알티지 오메가3 최저가만 볼까? 5개월분 비교해본 포인트 총정리"
     },
     {
      "blog": "ehejcd",
-     "age_days": 21,
+     "age_days": 28,
      "title": "알티지 오메가3 효능과 부작용, 인기 제품 비교"
     },
     {
-     "blog": "cbj6798",
-     "age_days": 28,
-     "title": "[종근당건강] 프로메가 알티지 오메가3 비타민D 성분·후기 총정리 (중성지방 변화 기록 공개)"
-    },
-    {
-     "blog": "bongsic_93",
-     "age_days": 21,
-     "title": "뉴트리코어 식물성 알티지 오메가3｜초임계 DHA 오메가3 챙겨 먹는 후기"
+     "blog": "aettoday",
+     "age_days": 14,
+     "title": "헤라클레스 엑스퍼트 알래스카 알티지 오메가3 내돈내산 EPA DHA 1100mg 후기"
     }
    ],
-   "median_age_days": 21,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 6743,
-   "shop_y": 1648,
+   "first_blog_y": 6728,
+   "shop_y": 1662,
    "ad_y": 120,
    "shop_above_blog": true
   },
@@ -6457,51 +6467,51 @@
    "shop_above_blog": true
   },
   "벨리포좀베르베린": {
-   "checked_at": "2026-09-25T18:14:07.516Z",
+   "checked_at": "2026-10-01T06:15:24.528Z",
    "status": 200,
    "blog_top": [
     {
+     "blog": "twaczb05x7v9u",
+     "age_days": 0,
+     "title": "은성경blog.naver.com›twaczb05x7v9u"
+    },
+    {
      "blog": "realslow0303",
-     "age_days": 67,
+     "age_days": 73,
      "title": "이비blog.naver.com›realslow0303"
     },
     {
+     "blog": "pj3020",
+     "age_days": 14,
+     "title": "[영양제] 내추럴팩터스 베르베린 영양제 효과, 부작용, 복용 후기│천연 메트포르민│혈당 관리 ...."
+    },
+    {
      "blog": "mingdu22",
-     "age_days": 134,
+     "age_days": 140,
      "title": "벨리포좀 베르베린 먹어보고 식욕 진짜 줄었어요...!"
     },
     {
-     "blog": "dhrehddlzz",
-     "age_days": 7,
-     "title": "베르베린 영양제 추천 점심마다 식곤증에 고민인 직장인이 확인할 점"
-    },
-    {
-     "blog": "rsmdgqbatl",
-     "age_days": 21,
-     "title": "베르베린 500mg, 트리포좀 효능 기대해도 될까"
-    },
-    {
-     "blog": "juya0v0",
-     "age_days": 67,
-     "title": "juyablog.naver.com›juya0v0"
-    },
-    {
-     "blog": "mo4usdt38i89hy",
-     "age_days": 14,
-     "title": "순도 85% 리포좀 베르베린, 복용법 어떻게 따라야 할까"
+     "blog": "nandayo2848",
+     "age_days": 114,
+     "title": "벨리포좀 베르베린 한 달 섭취 후기, 부작용은 없었을까?"
     },
     {
      "blog": "nandayo2848",
-     "age_days": 108,
-     "title": "벨리포좀 베르베린 한 달 섭취 후기, 부작용은 없었을까?"
+     "age_days": 114,
+     "title": "혈당 관리에 효과적인 벨리포좀 베르베린, 따져보고 고른 제품은?"
+    },
+    {
+     "blog": "dhrehddlzz",
+     "age_days": 14,
+     "title": "베르베린 영양제 추천 점심마다 식곤증에 고민인 직장인이 확인할 점"
     }
    ],
-   "median_age_days": 67,
+   "median_age_days": 73,
    "fresh_30d": 2,
    "my_rank": null,
-   "first_blog_y": 4357,
+   "first_blog_y": 4369,
    "shop_y": 1750,
-   "ad_y": 2049,
+   "ad_y": 2052,
    "shop_above_blog": true
   },
   "글루타치온효능": {
@@ -8381,51 +8391,51 @@
    "shop_above_blog": true
   },
   "액상마그네슘": {
-   "checked_at": "2026-09-27T18:14:35.174Z",
+   "checked_at": "2026-10-01T06:13:22.583Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "andher",
-     "age_days": 6,
+     "age_days": 14,
      "title": "액상마그네슘 추천, 이시형 박사의 닥터루템 인생마그네슘 영양제"
     },
     {
-     "blog": "3jeong",
-     "age_days": 6,
-     "title": "액상 마그네슘 젖산 마그네슘 효능과 주의사항 제품 선택 방법"
-    },
-    {
      "blog": "dmsql1490",
-     "age_days": 7,
+     "age_days": 14,
      "title": "액상 마그네슘 효능 및 제품 선택 방법은?"
     },
     {
-     "blog": "panda754",
-     "age_days": 14,
-     "title": "마그네슘 영양제 효능 추천 액상 마그네슘 효과 칼마디 시너지"
+     "blog": "kingking69",
+     "age_days": 28,
+     "title": "“액상이라 많이 먹어도 될까요?” 액상마그네슘 복용법과 부작용"
     },
     {
-     "blog": "panda754",
+     "blog": "3jeong",
      "age_days": 14,
-     "title": "마그네슘 효능 부족 과다 증상, 액상 마그네슘 매일 챙겨야 하는 이유!"
+     "title": "액상 마그네슘 젖산 마그네슘 효능과 주의사항 제품 선택 방법"
     },
     {
-     "blog": "romantic1213",
+     "blog": "bonggustudio",
      "age_days": 14,
-     "title": "JTBC트렌드픽 젖산마그네슘 관심 폭발? 액상 마그네슘 고를 때 볼 것"
+     "title": "PNT 액상 마그네슘 플러스 효능·성분·부작용 총정리"
     },
     {
      "blog": "bonggustudio",
      "age_days": 14,
      "title": "pnt 액상 마그네슘 라벨로 배우는 마그네슘 영양제 함량 보는 법"
+    },
+    {
+     "blog": "mrfano",
+     "age_days": 14,
+     "title": "마그랩 포 스트레스 후기, 운동 후 챙겨 먹는 액상 마그네슘 2년째 재구매"
     }
    ],
-   "median_age_days": 7,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 7778,
-   "shop_y": 1274,
-   "ad_y": 1679,
+   "first_blog_y": 7335,
+   "shop_y": 1360,
+   "ad_y": 1704,
    "shop_above_blog": true
   },
   "키즈오메가3": {
@@ -16212,7 +16222,7 @@
    "shop_above_blog": false
   },
   "유비퀴놀코큐텐": {
-   "checked_at": "2026-09-27T18:14:55.153Z",
+   "checked_at": "2026-10-01T06:15:17.947Z",
    "status": 200,
    "blog_top": [
     {
@@ -16221,19 +16231,14 @@
      "title": "코큐텐 하루 권장량, 함량만 높으면 될까요? | 약사가 짚는 4가지"
     },
     {
+     "blog": "gumnamu80",
+     "age_days": 14,
+     "title": "코엔자임Q10 유비퀴논 유비퀴놀 비교"
+    },
+    {
      "blog": "biopharmblog",
      "age_days": 21,
      "title": "유비퀴놀 흡수 몇 배? 병원 약사가 반만 맞다고 하는 이유"
-    },
-    {
-     "blog": "dr_sallykang",
-     "age_days": 14,
-     "title": "[영양제] 코큐텐(CoQ10), 꼭 먹어야 할까? 효능부터 필수 추천 대상까지 완벽 정리"
-    },
-    {
-     "blog": "sparkle_ing",
-     "age_days": 14,
-     "title": "코엔자임Q10 성분 가격 분석, 임신준비 코큐텐13종 비교분석"
     },
     {
      "blog": "livewellz",
@@ -16241,22 +16246,27 @@
      "title": "코엔자임Q10 효능 5가지와 올바른 복용법, 코큐텐 부작용 체크"
     },
     {
-     "blog": "tsjang33",
-     "age_days": 28,
-     "title": "비타민C, 코큐텐, 오메가3 왜 비싼거 사세요? - 셜약사"
+     "blog": "nomad2per",
+     "age_days": 21,
+     "title": "코엔자임Q10 유비퀴논과 유비퀴놀은 어떻게 다를까"
     },
     {
-     "blog": "editwell_lab",
-     "age_days": 7,
-     "title": "유비퀴놀 효능, 코큐텐과 같은 성분일까"
+     "blog": "sparkle_ing",
+     "age_days": 21,
+     "title": "코엔자임Q10 성분 가격 분석, 임신준비 코큐텐13종 비교분석"
+    },
+    {
+     "blog": "shine3356gold",
+     "age_days": 21,
+     "title": "퀴놀 메가 코엔자임큐텐 유비퀴놀 100mg 소프트젤"
     }
    ],
    "median_age_days": 21,
    "fresh_30d": 5,
-   "my_rank": 2,
-   "first_blog_y": 6297,
-   "shop_y": 1402,
-   "ad_y": 1793,
+   "my_rank": 3,
+   "first_blog_y": 6550,
+   "shop_y": 1540,
+   "ad_y": 1911,
    "shop_above_blog": true
   },
   "재로우MSM": {
@@ -18212,6 +18222,878 @@
    "first_blog_y": 6026,
    "shop_y": 1468,
    "ad_y": 1870,
+   "shop_above_blog": true
+  },
+  "캡슐레이션효소": {
+   "checked_at": "2026-10-01T06:12:12.919Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "1208_sj",
+     "age_days": 0,
+     "title": "리센느 효소로 유명한 그레인온 캡슐레이션 효소, 이렇게 챙겨요"
+    },
+    {
+     "blog": "8ighth",
+     "age_days": 0,
+     "title": "그레인온 리센느 캡슐레이션 효소 맛부터 휴대성까지 솔직 후기"
+    },
+    {
+     "blog": "sungdevilsh",
+     "age_days": 0,
+     "title": "그레인온 리센느 효소 후기! 디저트처럼 먹는 캡슐레이션 효소 5가지 맛"
+    },
+    {
+     "blog": "sunmi29001",
+     "age_days": 0,
+     "title": "리센느 효소 그레인온 캡슐레이션 효소 섭취 솔직후기"
+    },
+    {
+     "blog": "ielf",
+     "age_days": 0,
+     "title": "디저트처럼 즐기는 리센느 캡슐레이션 효소 그레인온"
+    },
+    {
+     "blog": "oj6676",
+     "age_days": 0,
+     "title": "맛있는 효소 추천 그레인온 리센느 캡슐레이션 효소 5종 직접 먹어본 후기"
+    },
+    {
+     "blog": "queenblair7",
+     "age_days": 0,
+     "title": "그레인온 리센느 효소 캡슐레이션 효소 5종 달콤한 이너뷰티 루틴"
+    }
+   ],
+   "median_age_days": 0,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 6157,
+   "shop_y": 1705,
+   "ad_y": 2007,
+   "shop_above_blog": true
+  },
+  "파로효소": {
+   "checked_at": "2026-10-01T06:12:33.035Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "mirca1004",
+     "age_days": 21,
+     "title": "파로효소 곡물효소 발효효소 100만 역가수치와 효소의기능"
+    },
+    {
+     "blog": "sb5722",
+     "age_days": 7,
+     "title": "그레인온 골드 파로효소 캡슐레이션 간편한 식후 관리 루틴"
+    },
+    {
+     "blog": "onj0808",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 후기, 일반 효소와 다른 점은?"
+    },
+    {
+     "blog": "hiyangsoon",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 추석 식후관리 추천"
+    },
+    {
+     "blog": "zingga9",
+     "age_days": 14,
+     "title": "채정안 비타바이브 혈당케어 필름, 그레인온 골드 파로효소 캡슐레이션 영양제 추천 이유"
+    },
+    {
+     "blog": "ash0642",
+     "age_days": 14,
+     "title": "카무트 효소 vs 파로효소 캡슐레이션｜요즘엔 뭐가 더 좋을까? 직접 비교해봤어요"
+    },
+    {
+     "blog": "manetteshoes",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 추천 간편하게 꾸준히 챙겨요"
+    }
+   ],
+   "median_age_days": 14,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 7393,
+   "shop_y": 1358,
+   "ad_y": 1725,
+   "shop_above_blog": true
+  },
+  "카무트효소먹는법": {
+   "checked_at": "2026-10-01T06:12:39.852Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "100vs100328",
+     "age_days": null,
+     "title": "카무트 효소 3개월(90일) 내돈내산 솔직 후기｜역가수치 속임수 구별법·체지방 당도 관리 변화 (실...."
+    },
+    {
+     "blog": "3jeong",
+     "age_days": 14,
+     "title": "카무트효소효능 효소 역할과 먹는 법·주의사항"
+    },
+    {
+     "blog": "ddoni_mom",
+     "age_days": 28,
+     "title": "카무트효소효능 높이고 싶다면? 발아 카무트 효소 고르는 법"
+    },
+    {
+     "blog": "dbongpalb",
+     "age_days": 21,
+     "title": "카뮤트효소 카무트 추천 원료 정보 및 먹는법"
+    },
+    {
+     "blog": "bae12386",
+     "age_days": 7,
+     "title": "카무트효소 효능, 요즘 찾는 이유가 따로 있었어요"
+    },
+    {
+     "blog": "aen8222",
+     "age_days": 14,
+     "title": "카무트 효소 먹는법, 식전 식후 언제 챙겨 먹을까?"
+    },
+    {
+     "blog": "boolloo",
+     "age_days": 6,
+     "title": "카무트효소 효능부터 먹는법까지 총정리! 솔직히 다이어트에 효과 있을까?"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 4,
+   "my_rank": null,
+   "first_blog_y": 7454,
+   "shop_y": 3391,
+   "ad_y": 3736,
+   "shop_above_blog": true
+  },
+  "골드파로효소": {
+   "checked_at": "2026-10-01T06:13:02.123Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "higo1404",
+     "age_days": 14,
+     "title": "독소를 배출해주는 그레인온 골드 파로효소 캡슐레이션"
+    },
+    {
+     "blog": "rubi0815",
+     "age_days": 14,
+     "title": "속 더부룩할 때 그레인온 골드 파로효소 캡슐레이션 솔직 후기"
+    },
+    {
+     "blog": "sb5722",
+     "age_days": 7,
+     "title": "그레인온 골드 파로효소 캡슐레이션 간편한 식후 관리 루틴"
+    },
+    {
+     "blog": "manetteshoes",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 추천 간편하게 꾸준히 챙겨요"
+    },
+    {
+     "blog": "nb98269",
+     "age_days": 14,
+     "title": "소화효소 추천 그레인온 골드 파로효소 캡슐레이션 섭취 후기"
+    },
+    {
+     "blog": "hiyangsoon",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 추석 식후관리 추천"
+    },
+    {
+     "blog": "zingga9",
+     "age_days": 14,
+     "title": "채정안 비타바이브 혈당케어 필름, 그레인온 골드 파로효소 캡슐레이션 영양제 추천 이유"
+    }
+   ],
+   "median_age_days": 14,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 6621,
+   "shop_y": 1807,
+   "ad_y": 2174,
+   "shop_above_blog": true
+  },
+  "뼈엔엠비피MBP": {
+   "checked_at": "2026-10-01T06:13:09.037Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "slyeon",
+     "age_days": 21,
+     "title": "부모님 위한 명절선물세트 픽한 이유"
+    },
+    {
+     "blog": "slyeon",
+     "age_days": 21,
+     "title": "명절선물세트 추석선물로 만족!"
+    },
+    {
+     "blog": "toryjel",
+     "age_days": 3,
+     "title": "남궁민 뼈엔 엠비피 MBP 3박스, 가격부터 구성·구매 혜택까지"
+    },
+    {
+     "blog": "aquisoro",
+     "age_days": 14,
+     "title": "엠비피 정말 뼈 건강에 필요할까요? 성분표로 확인해본 뼈엔 엠비피MBP"
+    },
+    {
+     "blog": "ehejcd",
+     "age_days": 21,
+     "title": "뼈엔 엠비피 MBP 어떤 성분일까? 효능과 부작용, 가격"
+    },
+    {
+     "blog": "cih2437",
+     "age_days": 14,
+     "title": "매일 꾸준히 뼈엔 MBP 챙기면 한 달 뒤 생기는 변화 3가지"
+    },
+    {
+     "blog": "almyundonn",
+     "age_days": 21,
+     "title": "네추럴웨이 뼈엔 엠비피 MBP 130mg x 30캡슐 / 3박스, 30정 추석선물 효도선물 부모님선물 추천"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 5971,
+   "shop_y": 2173,
+   "ad_y": 2495,
+   "shop_above_blog": true
+  },
+  "그레이온카무트효소": {
+   "checked_at": "2026-10-01T06:13:15.730Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "yasi523",
+     "age_days": 2,
+     "title": "그레이온 골드 카무트 브랜드밀효소 30g 발효 효소 후기"
+    },
+    {
+     "blog": "ystmpark7",
+     "age_days": 21,
+     "title": "그레인온 골드 카무트 브랜드 밀 효소 90g.3개"
+    },
+    {
+     "blog": "narae3170",
+     "age_days": 21,
+     "title": "카무트효소 왜 많이 먹을까? 야식 잦은 우리 부부가 골드카무트효소 챙기는 이유"
+    },
+    {
+     "blog": "wangrujin92",
+     "age_days": 14,
+     "title": "리센느 원이 효소 그레이온 베리말차 캡슐레이션 효소 파로저당씬칩 내돈내산"
+    },
+    {
+     "blog": "0ww0ww0",
+     "age_days": 28,
+     "title": "코스트코 이지혜 카무트 효소 효능과 실제 먹어본 후기"
+    },
+    {
+     "blog": "grl1031",
+     "age_days": 50,
+     "title": "그레인온 골드 파로효소 캡슐레이션_카무트 효소 내돈내산 후기"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 6191,
+   "shop_y": 1663,
+   "ad_y": 1920,
+   "shop_above_blog": true
+  },
+  "그레인온카무트효소": {
+   "checked_at": "2026-10-01T06:13:29.523Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "beginrightnow",
+     "age_days": 21,
+     "title": "코스트코 추석선물세트 그레인온 카무트효소 가격 말돈소금&후추선물세트 프리미엄 곱창돌김 선...."
+    },
+    {
+     "blog": "sb5722",
+     "age_days": 7,
+     "title": "그레인온 골드 파로효소 캡슐레이션 간편한 식후 관리 루틴"
+    },
+    {
+     "blog": "hiyangsoon",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 추석 식후관리 추천"
+    },
+    {
+     "blog": "onj0808",
+     "age_days": 14,
+     "title": "그레인온 골드 파로효소 캡슐레이션 후기, 일반 효소와 다른 점은?"
+    },
+    {
+     "blog": "1111_kkkk",
+     "age_days": 21,
+     "title": "[카뮤트효소] 그레인온 VS 뉴트리원 내돈내산 후기(Feat. 과연 승자는?, 변비 탈출까지 완벽하다!)"
+    },
+    {
+     "blog": "nutrisana",
+     "age_days": 21,
+     "title": "그레인온 카무트 효소로 소중한 분들께 건강을 선물하세요 추석 명절 선물 추천!"
+    },
+    {
+     "blog": "jyhpower",
+     "age_days": 21,
+     "title": "4050 중년 속더부룩함을 줄이기 위한! | \"그레인온 골드 카무트 브랜드밀효소 G\" 솔직 후기 및 성분 ."
+    }
+   ],
+   "median_age_days": 14,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 6721,
+   "shop_y": 2037,
+   "ad_y": 2256,
+   "shop_above_blog": true
+  },
+  "야생하스카프베리": {
+   "checked_at": "2026-10-01T06:13:42.587Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "jinni615",
+     "age_days": 4,
+     "title": "100% 착즙주스 추천! 베리풀 유기농 하스카프베리 건강주스 하루에 한잔씩!"
+    },
+    {
+     "blog": "hj2307",
+     "age_days": 1,
+     "title": "베리풀 100% 착즙주스 하스카프베리즙 간편하게 즐기기"
+    },
+    {
+     "blog": "sucrimnet",
+     "age_days": 14,
+     "title": "베리풀 유기농 하스카프베리 100% 착즙주스, 간편하게 챙기는 건강주스 베리즙"
+    },
+    {
+     "blog": "lsjv12291",
+     "age_days": 14,
+     "title": "베리풀 야생 하스카프베리주스 착즙 베리주스 솔직 후기"
+    },
+    {
+     "blog": "vitajj",
+     "age_days": 14,
+     "title": "야생 하스카프 베리, 자연산하스카프베리와 뭐가 다를까?"
+    },
+    {
+     "blog": "wlswnal",
+     "age_days": 21,
+     "title": "베리풀 야생 하스카프베리 착즙으로 간편한 건강 챙기기"
+    },
+    {
+     "blog": "wjdfla7929",
+     "age_days": 14,
+     "title": "100% 착즙주스 추천 베리풀 하스카프베리 유기농 베리즙 건강주스 음료"
+    }
+   ],
+   "median_age_days": 14,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 5764,
+   "shop_y": 1559,
+   "ad_y": 1955,
+   "shop_above_blog": true
+  },
+  "헤르메딕스": {
+   "checked_at": "2026-10-01T06:13:49.265Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "jongsuk0398",
+     "age_days": 14,
+     "title": "헤르메딕스 효과 영양제 판매처 자꾸 반복돼서 찾아보다 알게 된 제품"
+    },
+    {
+     "blog": "hgh2815",
+     "age_days": 39,
+     "title": "헤르메딕스 효능 부작용 헤르메딕스 영양제 복용법"
+    },
+    {
+     "blog": "zlsb12",
+     "age_days": 94,
+     "title": "헤르메딕스 효과와 후기, 약국 구입처 총정리"
+    },
+    {
+     "blog": "selfhelp2",
+     "age_days": 21,
+     "title": "헤르메딕스 후기, EGCG 피페린 성분 장단점 총정리"
+    },
+    {
+     "blog": "jhllsh0513",
+     "age_days": 48,
+     "title": "헤르메딕스 효과와 효능, 부작용 및 가격 정보 총정리"
+    },
+    {
+     "blog": "ayoung1993",
+     "age_days": 52,
+     "title": "입술 헤르페스 먹는 약 추천 헤르메딕스 에이치클로버 영양제 내돈내산 추천 효과 진짜 좋음! 부...."
+    },
+    {
+     "blog": "dongky_unnie",
+     "age_days": 21,
+     "title": "에이치클로버 헤르메딕스 EGCG 녹차추출물 영양제 후기"
+    }
+   ],
+   "median_age_days": 39,
+   "fresh_30d": 2,
+   "my_rank": null,
+   "first_blog_y": 5942,
+   "shop_y": 1011,
+   "ad_y": 1291,
+   "shop_above_blog": true
+  },
+  "골드카무트브랜드밀": {
+   "checked_at": "2026-10-01T06:13:55.900Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "chikiho",
+     "age_days": 4,
+     "title": "골드 카무트 브랜드밀효소 총정리! 효능·복용법·변비·암웨이 비교까지"
+    },
+    {
+     "blog": "hsmom25",
+     "age_days": 4,
+     "title": "소화가 안되던 나를 바꾼 효소 | 그레인온 골드 카무트 브랜드밀 효소 솔직 후기"
+    },
+    {
+     "blog": "harulog85",
+     "age_days": 4,
+     "title": "이지혜 효소로 유명한 '그레인온 골드 카무트 브랜드밀 효소', 진짜 효과있을까?(맛·역가수치·주...."
+    },
+    {
+     "blog": "skyjs1222",
+     "age_days": 7,
+     "title": "뉴트리원 카무트 브랜드 밀 효소 골드 S, 30포*3개 25,900원"
+    },
+    {
+     "blog": "lazy_comma_",
+     "age_days": 14,
+     "title": "그레인온 골드 카무트 효소 | 엄마가 챙겨준 효소 솔직 후기"
+    },
+    {
+     "blog": "zoo20000",
+     "age_days": 21,
+     "title": "골드카무트R브랜드밀효소G"
+    },
+    {
+     "blog": "ystmpark7",
+     "age_days": 21,
+     "title": "그레인온 골드 카무트 브랜드 밀 효소 90g.3개"
+    }
+   ],
+   "median_age_days": 4,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 5393,
+   "shop_y": 1615,
+   "ad_y": 2040,
+   "shop_above_blog": true
+  },
+  "산양유초유단백질MBP": {
+   "checked_at": "2026-10-01T06:14:17.200Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "prettyellen",
+     "age_days": 21,
+     "title": "남재현의산양유단백질프리미엄골드, 웰포유더당당 든든한 영양 성분부터 AI 음악 선물까지"
+    },
+    {
+     "blog": "hanii2525",
+     "age_days": 28,
+     "title": "남재현의산양유단백질프리미엄골드, 웰포유더당당으로 건강한 하루를 시작해요"
+    },
+    {
+     "blog": "special_price",
+     "age_days": 14,
+     "title": "에버그린 산양유 초유 단백질 MBP 스틱 특징과 섭취 전 체크사항"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 3,
+   "my_rank": null,
+   "first_blog_y": 6302,
+   "shop_y": 1693,
+   "ad_y": 1974,
+   "shop_above_blog": true
+  },
+  "호주산프로폴리스": {
+   "checked_at": "2026-10-01T06:14:30.684Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "hari-hajoon",
+     "age_days": 21,
+     "title": "[프로폴리스 스프레이] 환절기 에어컨 목감기 대비로 챙기는 호주산 뿌리는 프로폴리스 후기"
+    },
+    {
+     "blog": "tongtong2_0",
+     "age_days": 21,
+     "title": "[프로폴리스 구강 스프레이] 간편하게 구강케어 하는 방법 \"오즈퓨어 호주산 프로폴리스\""
+    },
+    {
+     "blog": "tojeh",
+     "age_days": 14,
+     "title": "환절기 프로폴리스 캔디 추천, 호주 네이쳐스영 먹어본 후기"
+    },
+    {
+     "blog": "jwsbabyangel",
+     "age_days": null,
+     "title": "호주산 프로폴리스 16000, 숫자 클수록 좋을까? 프로폴리스 효과 기준"
+    },
+    {
+     "blog": "lwr0509",
+     "age_days": 21,
+     "title": "프로폴리스 효과 복용법, 어떤 형태로 챙겨볼까?"
+    },
+    {
+     "blog": "pd_94438",
+     "age_days": 14,
+     "title": "블랙모어스 프로폴리스 호주산 영양제 플라보노이드 캡슐 3병 구성 비교 정리"
+    },
+    {
+     "blog": "jenny5924",
+     "age_days": 14,
+     "title": "환절기 프로폴리스 추천｜호주산 프로폴리스 프로메가폴리스 캔디"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 4,
+   "my_rank": null,
+   "first_blog_y": 6451,
+   "shop_y": 1110,
+   "ad_y": 1393,
+   "shop_above_blog": true
+  },
+  "엔자이메디카베르베린": {
+   "checked_at": "2026-10-01T06:14:37.379Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "dreamerluna_",
+     "age_days": null,
+     "title": "엔자이메디카 베르베린, 하루 2알로 끝제이네이버 블로그"
+    },
+    {
+     "blog": "hyuk220312",
+     "age_days": null,
+     "title": "엔자이메디카 베르베린 파이토좀 효능, 복용법 혈당 영양제 추천건강정보네이버 블로그"
+    },
+    {
+     "blog": "et9frtq8u58p2",
+     "age_days": 1,
+     "title": "엔자이메디카 베르베린 직접 써본 솔직 사용기"
+    },
+    {
+     "blog": "winsomekim_trip",
+     "age_days": 21,
+     "title": "베르베린 영양제 | 직접 먹어본 엔자이메디카 베르베린 파이토솜 후기 베르베린 파이토솜 직접 구...."
+    },
+    {
+     "blog": "winsomekim_trip",
+     "age_days": 21,
+     "title": "베르베린 추천? 직접 먹어본 엔자이메디카 베르베린 파이토솜 후기"
+    },
+    {
+     "blog": "wellife_tip",
+     "age_days": 21,
+     "title": "베르베린, 알고 보니 당뇨약 메트포르민이랑 효과가 비슷했어요"
+    },
+    {
+     "blog": "gkack1",
+     "age_days": 14,
+     "title": "스완슨 베르베린 어드밴스드 흡수율 높은 해외직구 혈당관리 영양제"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 3,
+   "my_rank": null,
+   "first_blog_y": 537,
+   "shop_y": 1745,
+   "ad_y": 2042,
+   "shop_above_blog": false
+  },
+  "프로폴리스스프레이": {
+   "checked_at": "2026-10-01T06:14:44.215Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "kingking69",
+     "age_days": 6,
+     "title": "“목 아플 때마다 뿌리는데…” 프로폴리스스프레이, 아무 때나 써도 될까요?"
+    },
+    {
+     "blog": "wa3072",
+     "age_days": 14,
+     "title": "수험생 면역관리 함평청정꿀 프로폴리스 스프레이 후기 간편하게 챙기는 데일리 프로폴리스"
+    },
+    {
+     "blog": "ljyhhj",
+     "age_days": 14,
+     "title": "프로폴리스 스프레이 효능 3가지, 목에 뿌리기 전 부작용부터 확인하세요"
+    },
+    {
+     "blog": "dreamy35",
+     "age_days": 21,
+     "title": "구강 관리 그린 프로폴리스 스프레이 건강기능식품 덴프스"
+    },
+    {
+     "blog": "nara1772",
+     "age_days": 14,
+     "title": "오리진에이 프로폴리스 프레쉬 브레스 스프레이 / 환절기 목관리"
+    },
+    {
+     "blog": "berry__22",
+     "age_days": 14,
+     "title": "[환절기 영양제] 세노비스 프로폴리스 스프레이 키즈"
+    },
+    {
+     "blog": "tazmaniandev",
+     "age_days": 14,
+     "title": "프로폴리스 스프레이 민트 입냄새 관리템 추천"
+    }
+   ],
+   "median_age_days": 14,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 7315,
+   "shop_y": 139,
+   "ad_y": 526,
+   "shop_above_blog": true
+  },
+  "호주프로폴리스": {
+   "checked_at": "2026-10-01T06:14:51.102Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "lmgoo11",
+     "age_days": 14,
+     "title": "[호주 여행 필수템] 부모님 선물 1순위, 존앤질스 MGO915 프로폴리스 마누카꿀"
+    },
+    {
+     "blog": "yoonmh1230",
+     "age_days": 21,
+     "title": "비염천식 환절기 필수템 호주 프로폴리스 스프레이"
+    },
+    {
+     "blog": "hari-hajoon",
+     "age_days": 21,
+     "title": "[프로폴리스 스프레이] 환절기 에어컨 목감기 대비로 챙기는 호주산 뿌리는 프로폴리스 후기"
+    },
+    {
+     "blog": "rabirebi",
+     "age_days": 21,
+     "title": "프로폴리스 원산지별 차이 | 브라질·뉴질랜드·호주 프로폴리스 비교"
+    },
+    {
+     "blog": "pd_94438",
+     "age_days": 14,
+     "title": "블랙모어스 프로폴리스 호주산 영양제 플라보노이드 캡슐 3병 구성 비교 정리"
+    },
+    {
+     "blog": "missnancy",
+     "age_days": 14,
+     "title": "환절기 만성비염 호주산 프로폴리스 14000mg에서 10000mg 내돈내산"
+    },
+    {
+     "blog": "tojeh",
+     "age_days": 14,
+     "title": "환절기 프로폴리스 캔디 추천, 호주 네이쳐스영 먹어본 후기"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 7095,
+   "shop_y": 1336,
+   "ad_y": 1702,
+   "shop_above_blog": true
+  },
+  "콴첼MBP": {
+   "checked_at": "2026-10-01T06:14:57.796Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "womynssi",
+     "age_days": 28,
+     "title": "코스트코 \"이틀 후면 끝\" 9월 첫째주까지 할인하는 관절 뼈 건강식품 3종 총정리 MBP, 초록입홍합, .."
+    },
+    {
+     "blog": "jaewon101910",
+     "age_days": 95,
+     "title": "콴첼 더 좋은 MBP 엠비피 유단백추출물 120정 선물용으로도 인기 많은 이유"
+    },
+    {
+     "blog": "goida",
+     "age_days": 37,
+     "title": "부모님 일상에 활력을 더하는 콴첼 더 좋은 MBP 엠비피 유단백추출물 분석"
+    },
+    {
+     "blog": "bingo525-",
+     "age_days": 28,
+     "title": "코스트코 건강식품 할인대잔치,추석선물 어때요?^^"
+    }
+   ],
+   "median_age_days": 37,
+   "fresh_30d": 2,
+   "my_rank": null,
+   "first_blog_y": 5782,
+   "shop_y": 1462,
+   "ad_y": 1723,
+   "shop_above_blog": true
+  },
+  "위고비처방병원": {
+   "checked_at": "2026-10-01T06:15:04.404Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "dovecost",
+     "age_days": null,
+     "title": "강남 마운자로 처방, 위고비와 무엇이 다를까요?원더풀 성형외과네이버 블로그"
+    },
+    {
+     "blog": "eatsight",
+     "age_days": 21,
+     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
+    },
+    {
+     "blog": "eatsight",
+     "age_days": 21,
+     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
+    },
+    {
+     "blog": "wednesdxx",
+     "age_days": 14,
+     "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
+    },
+    {
+     "blog": "bymar",
+     "age_days": 14,
+     "title": "종로 위고비 성지 병원 1mg 처방 후기 내돈내산"
+    },
+    {
+     "blog": "pszahir27",
+     "age_days": 21,
+     "title": "위고비 처방 병원과 약국 비용 비교 전 확인할 기준"
+    },
+    {
+     "blog": "zcvscvx",
+     "age_days": 21,
+     "title": "위고비 가격 처방 투약방법 위고비가 노화 늦춘다? 체중감량 외 효과, 부작용은 무엇"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 4,
+   "my_rank": null,
+   "first_blog_y": 1168,
+   "shop_y": null,
+   "ad_y": null,
+   "shop_above_blog": false
+  },
+  "닥터린루테인": {
+   "checked_at": "2026-10-01T06:15:11.185Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "qpjzefr02",
+     "age_days": 1,
+     "title": "닥터린 루테인 지아잔틴 아스타잔틴 6개월 꾸준히 먹어본 솔직 후기"
+    },
+    {
+     "blog": "t9hol0yghwkx5f2",
+     "age_days": 1,
+     "title": "닥터린 올인원 루테인 내돈내산 6개월 후기"
+    },
+    {
+     "blog": "w67ix1hgjhvrwqvmn2",
+     "age_days": 21,
+     "title": "닥터린 루테인 지아잔틴 아스타잔틴 6개월 꾸준히 먹어본 후기"
+    },
+    {
+     "blog": "rivbrm0aenceikqom2",
+     "age_days": 21,
+     "title": "닥터린 루테인 지아잔틴 6개월 꾸준히 먹은 솔직 후기"
+    },
+    {
+     "blog": "hdcyq8p451ej00pihmx2",
+     "age_days": 21,
+     "title": "닥터린 루테인 지아잔틴 6개월 솔직 사용기"
+    },
+    {
+     "blog": "bside_tt",
+     "age_days": 28,
+     "title": "닥터린 루테인지아잔틴24 고르는 법 복용시간 주의사항"
+    },
+    {
+     "blog": "shitn41688",
+     "age_days": 91,
+     "title": "닥터린 루테인 지아잔틴 아스타잔틴 직접 써본 솔직 사용기"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 6473,
+   "shop_y": 1990,
+   "ad_y": 2395,
+   "shop_above_blog": true
+  },
+  "소화효소": {
+   "checked_at": "2026-10-01T06:15:31.483Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "sjch481",
+     "age_days": 21,
+     "title": "카무트 효소 효능 소화효소제 먹으면 살 빠진다는 것이 정말일까요?"
+    },
+    {
+     "blog": "do_sol_",
+     "age_days": 28,
+     "title": "효소 카무트효능 발효효소 소화효소 장건강 다이어트"
+    },
+    {
+     "blog": "upcup",
+     "age_days": 14,
+     "title": "'약국 소화제'와 '효소제'의 차이는? 약사가 알려주는 올바른 선택법"
+    },
+    {
+     "blog": "gyuniya",
+     "age_days": 7,
+     "title": "발효 소화 효소 효능 역가수치 분해 기능 추천"
+    },
+    {
+     "blog": "healthcarekorea_",
+     "age_days": 21,
+     "title": "소화효소제 종류와 성분 차이｜베아제·닥터베아제·훼스탈·다제스 비교"
+    },
+    {
+     "blog": "cshdopark",
+     "age_days": 21,
+     "title": "판크레아틴 효능과 부작용, 속쓰림 없이 소화효소 제대로 흡수시키는 법"
+    },
+    {
+     "blog": "jjinjookim",
+     "age_days": 21,
+     "title": "임산부 소화 효소추천 역가수치 비교해 고른 아보카도효소 에너바이브"
+    }
+   ],
+   "median_age_days": 21,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 7460,
+   "shop_y": 1342,
+   "ad_y": 1729,
    "shop_above_blog": true
   }
  }
