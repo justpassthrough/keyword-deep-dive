@@ -3,3 +3,4 @@ __pycache__/
 .env
 data/history/
 run_local.log
+run_local.lock

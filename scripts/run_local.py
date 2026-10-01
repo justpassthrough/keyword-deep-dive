@@ -10,6 +10,7 @@ GitHub 는 그대로 결과 배포(raw 주소)·Pages 대시보드·코드 보�
   python scripts/run_local.py            # 매일 스캔(dive.py)
   python scripts/run_local.py discover   # 주간 뿌리 발굴(discover_roots.py → dive.py)
   python scripts/run_local.py goldmine   # 주간 롱테일(longtail_goldmine.py)
+  python scripts/run_local.py catchup    # 빠진 회차 메우기 — 마지막 예정 회차(02:30·14:30)의 결과가 없으면 그때만 스캔을 돈다
   --no-push 를 붙이면 커밋·push 없이 끝낸다(시험용)
 비밀값은 저장소에 두지 않는다: 네이버 키는 이 폴더의 .env(없으면 트렌드 스캐너 폴더의 .env), GitHub 토큰·텔레그램은 video-auto 의 .env.local.
 """
@@ -18,12 +19,20 @@ import os
 import re
 import subprocess
 import sys
-from datetime import datetime
+import json
+import time
+from datetime import datetime, timedelta
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHARED_ENV = os.environ.get("SHARED_ENV", r"C:\auto\video-auto\.env.local")
 FALLBACK_ENV = os.environ.get("NAVER_ENV_FALLBACK", r"C:\auto\health-trend-scanner\.env")
 LOG = os.path.join(BASE, "run_local.log")
+LOCK = os.path.join(BASE, "run_local.lock")
+# 빠진 회차 메우기(2026-09-27): 09-27 14:30 회차가 14:47 재부팅으로 끊겨 그날 오후 자료가 없었다(마지막 결과 03:00).
+SLOTS = [(2, 30), (14, 30)]      # 작업 스케줄러 Auto_DeepDive / Auto_DeepDive_PM 시작 시각
+SLOT_GRACE_MIN = 60              # 회차 시작 뒤 이만큼은 아직 도는 중일 수 있어 기다린다(스캔 30~40분)
+SLOT_MAX_AGE_H = 8               # 이보다 오래된 회차는 메우지 않는다(다음 회차가 곧 돈다)
+LOCK_STALE_MIN = 120             # 잠금 파일이 이보다 오래됐으면 끊긴 실행이 남긴 것으로 본다
 
 
 def read_env(path):
@@ -65,8 +74,72 @@ def notify(shared, text):
         pass
 
 
+def locked():
+    """다른 실행이 도는 중인가 — 잠금 파일이 있고, 오래되지 않았고, 거기 적힌 프로세스가 아직 살아 있는 python 이면 그렇다.
+    재부팅으로 끊긴 실행은 잠금 파일만 남기므로 프로세스를 확인해야 바로 메울 수 있다."""
+    try:
+        if (time.time() - os.path.getmtime(LOCK)) >= LOCK_STALE_MIN * 60:
+            return False
+        with open(LOCK, "r", encoding="utf-8") as f:
+            pid = f.read().split()[0]
+        if not pid.isdigit():
+            return False
+        out = subprocess.run(["tasklist", "/FI", f"PID eq {pid}", "/FO", "CSV", "/NH"], capture_output=True, timeout=20).stdout
+        return b"python" in out.lower()
+    except (OSError, IndexError, subprocess.SubprocessError):
+        return False
+
+
+def missed_slot(now=None):
+    """마지막 예정 회차의 결과가 빠졌으면 그 회차 시각을, 아니면 None."""
+    now = now or datetime.now()
+    slots = []
+    for d in (now.date(), (now - timedelta(days=1)).date()):
+        for h, m in SLOTS:
+            slots.append(datetime(d.year, d.month, d.day, h, m))
+    past = sorted(t for t in slots if t <= now)
+    if not past:
+        return None
+    slot = past[-1]
+    age = now - slot
+    if age < timedelta(minutes=SLOT_GRACE_MIN) or age > timedelta(hours=SLOT_MAX_AGE_H):
+        return None
+    try:
+        with open(os.path.join(BASE, "data", "latest.json"), "r", encoding="utf-8") as f:
+            stamp = json.load(f).get("updated_at", "")
+        updated = datetime.strptime(stamp[:16], "%Y-%m-%d %H:%M")
+    except (OSError, ValueError):
+        return slot
+    return None if updated >= slot else slot
+
+
 def main():
     mode = next((a for a in sys.argv[1:] if not a.startswith("--")), "dive")
+    if mode == "catchup":
+        if locked():
+            log("빠진 회차 확인: 다른 실행이 도는 중 — 넘어감")
+            return 0
+        slot = missed_slot()
+        if not slot:
+            log("빠진 회차 확인: 빠진 회차 없음")
+            return 0
+        log(f"빠진 회차 확인: {slot:%m-%d %H:%M} 회차의 결과가 없어 지금 스캔합니다")
+        mode = "dive"
+    elif locked():
+        log(f"다른 실행이 도는 중(잠금 파일 {LOCK_STALE_MIN}분 안) — 이번 {mode} 은 넘어감")
+        return 0
+    try:
+        with open(LOCK, "w", encoding="utf-8") as f:
+            f.write(f"{os.getpid()} {datetime.now():%Y-%m-%d %H:%M:%S} {mode}")
+        return run_mode(mode)
+    finally:
+        try:
+            os.remove(LOCK)
+        except OSError:
+            pass
+
+
+def run_mode(mode):
     dry = "--no-push" in sys.argv
     shared = read_env(SHARED_ENV)
     keys = {**read_env(FALLBACK_ENV), **read_env(os.path.join(BASE, ".env"))}
