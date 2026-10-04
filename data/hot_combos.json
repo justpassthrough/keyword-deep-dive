@@ -1,61 +1,105 @@
 {
-  "updated_at": "2026-10-03 16:08",
-  "today_count": 16,
-  "count": 117,
+  "updated_at": "2026-10-04 10:08",
+  "today_count": 22,
+  "count": 119,
   "items": [
     {
       "keyword": "소화효소",
-      "search_volume": 10860,
+      "search_volume": 10840,
       "comp_idx": "중간",
       "seed": "카무트효소",
       "is_hot_badge": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
-      "seen_count": 1,
+      "last_seen": "2026-10-04",
+      "seen_count": 2,
       "today": true
     },
     {
       "keyword": "한가인 알부민",
-      "search_volume": 3850,
+      "search_volume": 3920,
       "comp_idx": "낮음",
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-03",
-      "seen_count": 7,
+      "last_seen": "2026-10-04",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "황재균 감량",
+      "search_volume": 2430,
+      "comp_idx": "낮음",
+      "seed": "감량 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-10-04",
+      "seen_count": 19,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 1770,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-10-04",
+      "seen_count": 96,
       "today": true
     },
     {
       "keyword": "박지윤 감량",
       "search_volume": 1440,
       "comp_idx": "낮음",
-      "seed": "다이어트 근황",
+      "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-09-10",
-      "last_seen": "2026-10-03",
-      "seen_count": 16,
+      "last_seen": "2026-10-04",
+      "seen_count": 17,
       "today": true
     },
     {
       "keyword": "침향 드라마",
-      "search_volume": 1270,
+      "search_volume": 1330,
       "comp_idx": "낮음",
       "seed": "침향",
       "is_hot_badge": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-03",
-      "seen_count": 4,
+      "last_seen": "2026-10-04",
+      "seen_count": 5,
+      "today": true
+    },
+    {
+      "keyword": "오로라 글루타치온",
+      "search_volume": 990,
+      "comp_idx": "높음",
+      "seed": "글루타치온",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-10-04",
+      "seen_count": 3,
+      "today": true
+    },
+    {
+      "keyword": "백지영 다이어트약",
+      "search_volume": 990,
+      "comp_idx": "낮음",
+      "seed": "다이어트약",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-10-04",
+      "seen_count": 24,
       "today": true
     },
     {
       "keyword": "조현아 위고비",
       "search_volume": 380,
       "comp_idx": "낮음",
-      "seed": "다이어트 근황",
+      "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-10-03",
-      "seen_count": 67,
+      "last_seen": "2026-10-04",
+      "seen_count": 68,
       "today": true
     },
     {
@@ -65,30 +109,41 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-10-03",
-      "seen_count": 19,
+      "last_seen": "2026-10-04",
+      "seen_count": 20,
       "today": true
     },
     {
       "keyword": "조현아 감량",
       "search_volume": 160,
       "comp_idx": "낮음",
-      "seed": "다이어트 근황",
+      "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-03",
-      "seen_count": 21,
+      "last_seen": "2026-10-04",
+      "seen_count": 22,
       "today": true
     },
     {
       "keyword": "가비 마운자로",
-      "search_volume": 120,
+      "search_volume": 110,
       "comp_idx": "낮음",
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-10-03",
-      "seen_count": 16,
+      "last_seen": "2026-10-04",
+      "seen_count": 17,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 위고비",
+      "search_volume": 100,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-10-04",
+      "seen_count": 19,
       "today": true
     },
     {
@@ -98,8 +153,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-10-03",
-      "seen_count": 13,
+      "last_seen": "2026-10-04",
+      "seen_count": 14,
       "today": true
     },
     {
@@ -109,8 +164,85 @@
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-03",
-      "seen_count": 4,
+      "last_seen": "2026-10-04",
+      "seen_count": 5,
+      "today": true
+    },
+    {
+      "keyword": "김흥국 탈모",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-10-04",
+      "seen_count": 28,
+      "today": true
+    },
+    {
+      "keyword": "배성재 마운자로",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "김준현 마운자로",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "이대호 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-10-04",
+      "seen_count": 15,
+      "today": true
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-10-04",
+      "seen_count": 19,
+      "today": true
+    },
+    {
+      "keyword": "성시경 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-10-04",
+      "seen_count": 14,
+      "today": true
+    },
+    {
+      "keyword": "김정은 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-10-04",
+      "seen_count": 6,
       "today": true
     },
     {
@@ -122,62 +254,7 @@
       "first_seen": "2026-07-18",
       "last_seen": "2026-10-03",
       "seen_count": 26,
-      "today": true
-    },
-    {
-      "keyword": "김흥국 탈모",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-10-03",
-      "seen_count": 27,
-      "today": true
-    },
-    {
-      "keyword": "이대호 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-26",
-      "last_seen": "2026-10-03",
-      "seen_count": 14,
-      "today": true
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-10-03",
-      "seen_count": 18,
-      "today": true
-    },
-    {
-      "keyword": "성시경 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "체중 감량",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-10-03",
-      "seen_count": 13,
-      "today": true
-    },
-    {
-      "keyword": "김정은 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-27",
-      "last_seen": "2026-10-03",
-      "seen_count": 5,
-      "today": true
+      "today": false
     },
     {
       "keyword": "이대호 위고비",
@@ -257,17 +334,6 @@
       "today": false
     },
     {
-      "keyword": "황재균 감량",
-      "search_volume": 5770,
-      "comp_idx": "낮음",
-      "seed": "체중 감량",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-09-29",
-      "seen_count": 18,
-      "today": false
-    },
-    {
       "keyword": "솔가 철분",
       "search_volume": 2150,
       "comp_idx": "중간",
@@ -298,17 +364,6 @@
       "first_seen": "2026-09-17",
       "last_seen": "2026-09-28",
       "seen_count": 8,
-      "today": false
-    },
-    {
-      "keyword": "오로라 글루타치온",
-      "search_volume": 990,
-      "comp_idx": "중간",
-      "seed": "글루타치온",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-27",
-      "last_seen": "2026-09-27",
-      "seen_count": 2,
       "today": false
     },
     {
@@ -364,28 +419,6 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-09-24",
       "seen_count": 58,
-      "today": false
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 2350,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-09-23",
-      "seen_count": 95,
-      "today": false
-    },
-    {
-      "keyword": "백지영 다이어트약",
-      "search_volume": 1070,
-      "comp_idx": "낮음",
-      "seed": "다이어트약",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-09-23",
-      "seen_count": 23,
       "today": false
     },
     {
@@ -485,17 +518,6 @@
       "first_seen": "2026-08-14",
       "last_seen": "2026-09-21",
       "seen_count": 21,
-      "today": false
-    },
-    {
-      "keyword": "스윙스 위고비",
-      "search_volume": 100,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-20",
-      "last_seen": "2026-09-20",
-      "seen_count": 18,
       "today": false
     },
     {
