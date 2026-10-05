@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-05T06:15:34.899Z",
- "source_scan": "2026-10-05 14:55",
+ "updated_at": "2026-10-05T18:51:43.127Z",
+ "source_scan": "2026-10-06 03:07",
  "items": {
   "저스트글로우": {
    "checked_at": "2026-10-03T06:43:54.003Z",
@@ -1138,12 +1138,12 @@
    "shop_above_blog": true
   },
   "먹는마운자로": {
-   "checked_at": "2026-10-02T06:13:33.541Z",
+   "checked_at": "2026-10-05T18:48:49.369Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "gabuki6611",
-     "age_days": 21,
+     "age_days": 28,
      "title": "43세 기은세, 아침에 먹는 천연 마운자로 스무디? 바나나·아보카도·블루베리 주스 레시피"
     },
     {
@@ -1152,35 +1152,35 @@
      "title": "마운자로 식단, 적게 먹기만 하면 될까? 복용 중 식사 관리 총정리"
     },
     {
+     "blog": "cococo93",
+     "age_days": 7,
+     "title": "마운자로 가격 위고비 다이어트후기 처방 심한 부작용"
+    },
+    {
+     "blog": "tears0403",
+     "age_days": 14,
+     "title": "주사는 더 세지고 알약까지? 위고비 7.2mg vs ‘먹는 마운자로’ 파운다요, 2027 비만약 판 바뀔까"
+    },
+    {
      "blog": "wednesdxx",
      "age_days": 14,
      "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
     },
     {
+     "blog": "rojororo",
+     "age_days": 21,
+     "title": "먹는 마운자로 파운다요(파운데요) 국내 출시일 총정리 | 한국 출시 언제? 가격·먹는 위고비 비교 ...."
+    },
+    {
      "blog": "gg986543",
      "age_days": 28,
      "title": "먹는 위고비가 마운자로를 이겼다? 알약 출시로 시작된 비만치료제 가격 전쟁"
-    },
-    {
-     "blog": "moonbswife",
-     "age_days": 28,
-     "title": "위고비와 마운자로 차이, 효과부터 부작용까지!"
-    },
-    {
-     "blog": "bbb3810",
-     "age_days": 14,
-     "title": "추석 명절 건강관리, 마운자로 하면서 연휴에 살 안 찌려면 이것만 지켜요"
-    },
-    {
-     "blog": "aphrody",
-     "age_days": 14,
-     "title": "위고비·마운자로 부작용이 걱정될 때-먹는 위고비, 먹는 마운자"
     }
    ],
-   "median_age_days": 28,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 1331,
+   "first_blog_y": 1107,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -1325,45 +1325,40 @@
    "shop_above_blog": true
   },
   "오젬픽프리필드펜": {
-   "checked_at": "2026-10-02T06:13:46.765Z",
+   "checked_at": "2026-10-05T18:45:48.818Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "kataba6",
-     "age_days": 254,
+     "age_days": 257,
      "title": "semaglutide 주사제 (오젬픽프리필드펜) 급여기준 신설 (26-02-01 시행)"
     },
     {
-     "blog": "39954",
-     "age_days": 246,
-     "title": "semaglutide 주사제 (품명 : 오젬픽프리필드펜 2mg 등) (26.2.1)"
+     "blog": "qhrud1430",
+     "age_days": 245,
+     "title": "오젬픽 프리필드펜 vs 위고비 프리필드펜 차이, 다이어트 주사 가격 효과 효능 부작용 주의사항"
     },
     {
      "blog": "iw1pharm",
-     "age_days": 94,
+     "age_days": 97,
      "title": "오젬픽 프리필드펜 제대로 맞는 법, 일원역1번출구약국이 정리했습니다"
     },
     {
-     "blog": "milky016",
-     "age_days": 21,
-     "title": "오젬픽 급여기준 및 비급여 가격 용량"
-    },
-    {
-     "blog": "youbei03",
-     "age_days": 254,
-     "title": "2026. 2.1. 오젬픽 (semaglutide)ㅡ(위고비 급여 버전)"
+     "blog": "mandal",
+     "age_days": 14,
+     "title": "오젬픽 당뇨 (+ 가격, 건강보험, 처방조건, 급여기준, 본인부담금)"
     }
    ],
-   "median_age_days": 246,
+   "median_age_days": 245,
    "fresh_30d": 1,
    "my_rank": null,
-   "first_blog_y": 3726,
+   "first_blog_y": 3760,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
   },
   "오젬픽사용법": {
-   "checked_at": "2026-10-02T06:15:26.586Z",
+   "checked_at": "2026-10-05T18:44:22.062Z",
    "status": 200,
    "blog_top": [
     {
@@ -1372,37 +1367,37 @@
      "title": "당뇨 주사 '오젬픽' 처음 처방받으셨나요? 약사가 알려주는 올바른 사용법과 주의사항까망약사네이버 블로그"
     },
     {
-     "blog": "ebbimin",
-     "age_days": null,
-     "title": "[오젬픽] 사용법 급여기준 용량용법 효과 정리온기약사네이버 블로그"
-    },
-    {
      "blog": "wendy_92",
      "age_days": null,
      "title": "오젬픽 주사 방법 및 주사법 안내서, 보관 방법, 주의 사항 등Wendy네이버 블로그"
     },
     {
      "blog": "blu2sky7",
-     "age_days": 14,
+     "age_days": 21,
      "title": "위고비 마운자로 오젬픽 부작용 총정리 속쓰림부터 근손실 요요 대처법"
     },
     {
      "blog": "semingg",
-     "age_days": 423,
+     "age_days": 426,
      "title": "오젬픽 위고비 차이 (사용법, 페이스 부작용 비교)"
     },
     {
      "blog": "tedpsy",
-     "age_days": 235,
+     "age_days": 238,
      "title": "[약키피디아] 오젬픽 프리필드펜 사용방법(feat. 급여, 마운자로, 위고비와 차이)"
     },
     {
-     "blog": "ohsikdang",
-     "age_days": 28,
-     "title": "오젬픽·마운자로 먹다가 임신했다면 - GLP-1 비만치료제와 임신 총정리"
+     "blog": "ebbimin",
+     "age_days": 1,
+     "title": "[오젬픽] 사용법 급여기준 용량용법 효과 정리"
+    },
+    {
+     "blog": "rentcarbuddy",
+     "age_days": 21,
+     "title": "위고비·오젬픽 시력상실 논란, 미국 소송까지…NAION은 어떤 부작용일까"
     }
    ],
-   "median_age_days": 423,
+   "median_age_days": 238,
    "fresh_30d": 1,
    "my_rank": null,
    "first_blog_y": 176,
@@ -2769,51 +2764,51 @@
    "shop_above_blog": true
   },
   "NMN영양제": {
-   "checked_at": "2026-10-02T18:14:22.837Z",
+   "checked_at": "2026-10-05T18:44:34.427Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "llllstyle",
-     "age_days": 21,
-     "title": "스페르미딘피세틴NMN 영양제 에이엠 리턴 솔루션 리포좀 올인원 저속노화 영양제"
+     "blog": "2da5ni",
+     "age_days": 7,
+     "title": "NMN 필름 엔엠엔 영양제 섭취 후기"
     },
     {
-     "blog": "sinni88",
-     "age_days": 21,
-     "title": "NMN 영양제 효능 5가지부터 섭취 방법까지 총정리"
-    },
-    {
-     "blog": "whgpdms1774",
+     "blog": "bknms2007",
      "age_days": 14,
-     "title": "뉴벨라 NMN 노화 방지 영양제 솔직후기 추석선물 추천"
+     "title": "NMN 성분 효능과 세포 노화 늦추는 영양제 섭취 가이드"
     },
     {
-     "blog": "kdwphoenix",
+     "blog": "anarche69",
      "age_days": 21,
-     "title": "NMN 효능 5가지, 부작용, 복용법 : NMN영양제"
+     "title": "NMN영양제 효과 및 섭취 시간 (+제품 고르는 팁)"
     },
     {
-     "blog": "lddvvk57",
-     "age_days": 28,
-     "title": "40대도 젊어질 수 있다 PQQ NMN 영양제 효능 총정리"
+     "blog": "skathgl",
+     "age_days": 14,
+     "title": "[공구] 로킷아메리카 NMN 효능부터 성분까지"
     },
     {
-     "blog": "jiniandur",
-     "age_days": 28,
-     "title": "NMN 영양제 효능 대체 뭐길래? 항노화 성분으로 주목받는 이유"
+     "blog": "mo_no1985",
+     "age_days": 6,
+     "title": "NMN영양제 저속노화 관심으로 살펴본리포좀NMN 마이토스 후기"
     },
     {
-     "blog": "bian",
-     "age_days": 2218,
-     "title": "한다맨blog.naver.com›bian"
+     "blog": "pinklove74",
+     "age_days": 7,
+     "title": "NMN영양제와 피세틴 같이 먹어도 될까? 함께 주목받는 이유와 복용 전 알아둘 점"
+    },
+    {
+     "blog": "duawjddlf09",
+     "age_days": 7,
+     "title": "저속노화 마이토스 리포좀 NMN 영양제 노화 니코틴산아미드 600mg 효능"
     }
    ],
-   "median_age_days": 21,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 7404,
-   "shop_y": 1468,
-   "ad_y": 1748,
+   "first_blog_y": 7097,
+   "shop_y": 1390,
+   "ad_y": 1670,
    "shop_above_blog": true
   },
   "리포좀베르베린": {
@@ -3474,14 +3469,9 @@
    "shop_above_blog": true
   },
   "베르베린500": {
-   "checked_at": "2026-10-02T06:13:40.346Z",
+   "checked_at": "2026-10-05T18:43:34.772Z",
    "status": 200,
    "blog_top": [
-    {
-     "blog": "hpstudioo",
-     "age_days": 4,
-     "title": "베르베린 고르는 법 | 순도·함량·원산지 3가지로 비교해 본 베르베린 프라임 500"
-    },
     {
      "blog": "e_day_w_lucky",
      "age_days": 21,
@@ -3493,32 +3483,52 @@
      "title": "리포좀 베르베린 바나바 올인원, 어떤 제품인지 살펴봤어요"
     },
     {
+     "blog": "hpstudioo",
+     "age_days": 14,
+     "title": "베르베린 고르는 법 | 순도·함량·원산지 3가지로 비교해 본 베르베린 프라임 500"
+    },
+    {
      "blog": "janghamzzi",
      "age_days": 28,
      "title": "고순도 베르베린추천 네이처드림 네오라인 베르베린500"
     },
     {
      "blog": "faithpartners",
-     "age_days": 14,
+     "age_days": 21,
      "title": "베르베린 복용법 식전 식후 언제? 효능·부작용과 제품 5종 비교"
+    },
+    {
+     "blog": "kx_ms",
+     "age_days": 14,
+     "title": "리포좀 베르베린이 뭐길래 흡수율이 5배나 차이날까? 쏠랑 베르베린 카렐라프로"
+    },
+    {
+     "blog": "rental_2580",
+     "age_days": null,
+     "title": "뉴트원 히말라야 베르베린 500mg 약사개발 2026 건강 관리"
     }
    ],
    "median_age_days": 21,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5510,
-   "shop_y": 1342,
-   "ad_y": 1702,
+   "first_blog_y": 6019,
+   "shop_y": 1366,
+   "ad_y": 1708,
    "shop_above_blog": true
   },
   "마운자로위고비차이": {
-   "checked_at": "2026-10-02T06:14:06.642Z",
+   "checked_at": "2026-10-05T18:48:03.962Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "ddoni_mom",
-     "age_days": 14,
+     "age_days": 21,
      "title": "[첫 4주 비교] 위고비마운자로 차이, 마운자로 가격과 부작용 진실은?"
+    },
+    {
+     "blog": "nsyncbye1004",
+     "age_days": 7,
+     "title": "마운자로 부작용 왜 생길까? 위고비와 차이까지"
     },
     {
      "blog": "wednesdxx",
@@ -3526,38 +3536,33 @@
      "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
     },
     {
-     "blog": "sh365clinic",
-     "age_days": 28,
-     "title": "서울대 교수가 알려주는 위고비 vs 마운자로 솔직 후기와 차이점 총정리 분당 서현365의원 야간 주...."
+     "blog": "beyondpaylog",
+     "age_days": 14,
+     "title": "마운자로 vs 위고비 차이｜효과·가격·부작용, 누구에게 더 맞을까?"
     },
     {
-     "blog": "moonbswife",
-     "age_days": 28,
-     "title": "위고비와 마운자로 차이, 효과부터 부작용까지!"
-    },
-    {
-     "blog": "careplanner79",
-     "age_days": 28,
-     "title": "마운자로 위고비 차이 다이어트 효과 뭐가 더 좋을까?"
+     "blog": "drted",
+     "age_days": 14,
+     "title": "위고비 마운자로 차이: 감량률 20% vs 14%와 처방 기준"
     },
     {
      "blog": "blu2sky7",
-     "age_days": 21,
+     "age_days": 28,
      "title": "마운자로 위고비 가격 비교 용량별 한 달 비용과 핵심 차이 총정리"
     },
     {
-     "blog": "ggayeoni2",
-     "age_days": 21,
-     "title": "마운자로 위고비 차이 총정리｜성분·작용 방식·투여 주기·건강보험 비교"
+     "blog": "bk0221",
+     "age_days": 7,
+     "title": "위고비, 마운자로 성분 비교, 같은 비만치료제인데 작용 방식은 달라요"
     }
    ],
-   "median_age_days": 28,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 3225,
-   "shop_y": 1429,
+   "first_blog_y": 3873,
+   "shop_y": null,
    "ad_y": null,
-   "shop_above_blog": true
+   "shop_above_blog": false
   },
   "오젬픽급여기준": {
    "checked_at": "2026-10-03T06:42:32.489Z",
@@ -4397,49 +4402,49 @@
    "shop_above_blog": true
   },
   "글루타치온12X": {
-   "checked_at": "2026-09-24T18:13:22.984Z",
+   "checked_at": "2026-10-05T18:50:00.862Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "lifewithgoods",
-     "age_days": 14,
-     "title": "불후의 명곡 쥬얼리 서인영 이너뷰티 | 여에스더 리포좀 글루타치온 12X"
-    },
-    {
-     "blog": "airuth",
-     "age_days": 14,
-     "title": "서인영 리포좀 글루타치온 12X로 챙기는 이너뷰티 관리법 울산 행사를 사로잡은 쥬얼리 완전체 비...."
-    },
-    {
-     "blog": "ho_lovely",
-     "age_days": 14,
-     "title": "서인영 유튜브 글루타치온, 영양제로 챙겨 먹은 여에스더 리포좀 글루타치온 필름"
-    },
-    {
      "blog": "duroomi_phj",
-     "age_days": 14,
+     "age_days": 21,
      "title": "서인영이 꾸준히 챙기는 귀티 루틴, 이너뷰티템 정체는?"
     },
     {
+     "blog": "airuth",
+     "age_days": 21,
+     "title": "서인영 리포좀 글루타치온 12X로 챙기는 이너뷰티 관리법 울산 행사를 사로잡은 쥬얼리 완전체 비...."
+    },
+    {
+     "blog": "lifewithgoods",
+     "age_days": 21,
+     "title": "불후의 명곡 쥬얼리 서인영 이너뷰티 | 여에스더 리포좀 글루타치온 12X"
+    },
+    {
      "blog": "lagrima04050",
-     "age_days": 14,
+     "age_days": 28,
      "title": "추석선물 준비, 40대 50대 피부에 좋은 이너뷰티 추천"
     },
     {
      "blog": "boyoung1121",
-     "age_days": 21,
+     "age_days": 28,
      "title": "여에스더 글루타치온 12X 알파 리포좀 12개 대용량 가격 비교"
     },
     {
-     "blog": "jjhhggss11",
-     "age_days": 14,
-     "title": "서인영 귀티 필름 글루타치온, 여에스더 리포좀 글루타치온 다이렉트 12X 알파 네트워크 영양제"
+     "blog": "ho_lovely",
+     "age_days": 21,
+     "title": "서인영 유튜브 글루타치온, 영양제로 챙겨 먹은 여에스더 리포좀 글루타치온 필름"
+    },
+    {
+     "blog": "o2f5j5yznd8",
+     "age_days": 21,
+     "title": "여에스더 리포좀 글루타치온 다이렉트 12X 알파 네트워크 445mg x 30매 1개, 4개, 13.35g"
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 21,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5143,
+   "first_blog_y": 4680,
    "shop_y": 517,
    "ad_y": 752,
    "shop_above_blog": true
@@ -5481,18 +5486,33 @@
    "shop_above_blog": true
   },
   "위고비처방": {
-   "checked_at": "2026-10-02T06:14:00.110Z",
+   "checked_at": "2026-10-05T18:47:22.889Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "pain119net",
-     "age_days": 14,
-     "title": "9월 26일 (토) 오전진료 - 마운자로&위고비 처방만 가능"
+     "blog": "suzy_0620",
+     "age_days": 7,
+     "title": "위고비 부작용 마운자로 가격 처방 다이어트 4주 후기 (53kg)"
     },
     {
      "blog": "suzy_0620",
-     "age_days": 14,
+     "age_days": 7,
      "title": "위고비 마운자로 처방 가격 다이어트주사 -11kg 효과 및 후기"
+    },
+    {
+     "blog": "cococo93",
+     "age_days": 7,
+     "title": "마운자로 가격 위고비 다이어트후기 처방 심한 부작용"
+    },
+    {
+     "blog": "junwooklove110",
+     "age_days": 7,
+     "title": "위고비 마운자로 처방 방법, 가격·구입·보관·주사 방법까지 총정리"
+    },
+    {
+     "blog": "gentlefruit",
+     "age_days": 28,
+     "title": "당뇨환자 마운자로 위고비 처방 가격 비교 차이와 실구매 팁 정리"
     },
     {
      "blog": "wednesdxx",
@@ -5500,30 +5520,15 @@
      "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
     },
     {
-     "blog": "eatsight",
-     "age_days": 28,
-     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
-    },
-    {
-     "blog": "eatsight",
-     "age_days": 28,
-     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
-    },
-    {
-     "blog": "gentlefruit",
-     "age_days": 21,
-     "title": "당뇨환자 마운자로 위고비 처방 가격 비교 차이와 실구매 팁 정리"
-    },
-    {
      "blog": "potenpop",
-     "age_days": 21,
+     "age_days": 28,
      "title": "위고비 가격 및 처방 가격 부작용 후기"
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 7,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5704,
+   "first_blog_y": 5250,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -5913,26 +5918,31 @@
    "shop_above_blog": false
   },
   "보스웰리아WOKVEL": {
-   "checked_at": "2026-09-30T18:12:25.706Z",
+   "checked_at": "2026-10-05T18:51:39.369Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "rjdlrose",
-     "age_days": 36,
+     "age_days": 41,
      "title": "부모님 관절 건강 챙기려고 직접 알아본 후기글 콘드로이친 부터 보스웰리아, 커큐민 등등"
     },
     {
      "blog": "money__bags",
-     "age_days": 557,
+     "age_days": 562,
      "title": "무릎 관절 건강에 좋은 콘드로이친"
+    },
+    {
+     "blog": "1004bhm",
+     "age_days": 180,
+     "title": "무릎 관절 통증, '터마신'에 주목해야 하는 이유ㅣ효능 효과 주의사항 총정리"
     }
    ],
-   "median_age_days": 557,
+   "median_age_days": 180,
    "fresh_30d": 0,
    "my_rank": null,
-   "first_blog_y": 4837,
-   "shop_y": 1049,
-   "ad_y": 1403,
+   "first_blog_y": 4692,
+   "shop_y": 782,
+   "ad_y": 1136,
    "shop_above_blog": true
   },
   "피나스테리드5MG": {
@@ -6184,49 +6194,44 @@
    "shop_above_blog": false
   },
   "위고비마운자로": {
-   "checked_at": "2026-10-02T06:12:25.349Z",
+   "checked_at": "2026-10-05T18:46:31.145Z",
    "status": 200,
    "blog_top": [
+    {
+     "blog": "cococo93",
+     "age_days": 7,
+     "title": "마운자로 가격 위고비 다이어트후기 처방 심한 부작용"
+    },
+    {
+     "blog": "suzy_0620",
+     "age_days": 7,
+     "title": "위고비 부작용 마운자로 가격 처방 다이어트 4주 후기 (53kg)"
+    },
+    {
+     "blog": "ddoni_mom",
+     "age_days": 21,
+     "title": "[첫 4주 비교] 위고비마운자로 차이, 마운자로 가격과 부작용 진실은?"
+    },
     {
      "blog": "wednesdxx",
      "age_days": 14,
      "title": "위고비 vs 마운자로 차이, 뭐가 더 잘 빠질까? 처방 기준부터 부작용까지"
     },
     {
-     "blog": "ddoni_mom",
-     "age_days": 14,
-     "title": "[첫 4주 비교] 위고비마운자로 차이, 마운자로 가격과 부작용 진실은?"
-    },
-    {
-     "blog": "eatsight",
-     "age_days": 28,
-     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
+     "blog": "zumzany",
+     "age_days": 21,
+     "title": "위고비 마운자로 부작용, 남친 비만주사 몰래 맞고 쓰러진 이유 위기탈출 넘버원"
     },
     {
      "blog": "alltimes1004",
      "age_days": 21,
      "title": "마운자로 가격도 비싼데 규제까지, 위고비도 이제 쉽게 못 산다?"
-    },
-    {
-     "blog": "sh365clinic",
-     "age_days": 28,
-     "title": "서울대 교수가 알려주는 위고비 vs 마운자로 솔직 후기와 차이점 총정리 분당 서현365의원 야간 주...."
-    },
-    {
-     "blog": "moonbswife",
-     "age_days": 28,
-     "title": "위고비와 마운자로 차이, 효과부터 부작용까지!"
-    },
-    {
-     "blog": "zumzany",
-     "age_days": 21,
-     "title": "위고비 마운자로 부작용, 남친 비만주사 몰래 맞고 쓰러진 이유 위기탈출 넘버원"
     }
    ],
-   "median_age_days": 21,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 3991,
+   "first_blog_y": 4104,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -6639,44 +6644,49 @@
    "shop_above_blog": false
   },
   "알레그라약국": {
-   "checked_at": "2026-09-23T06:14:21.608Z",
+   "checked_at": "2026-10-05T18:46:55.248Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "lwr0509",
-     "age_days": 21,
-     "title": "항히스타민제 알레그라 120mg 180mg 차이는? 알레르기성 비염약 알러지약"
+     "blog": "rising_hy",
+     "age_days": 6,
+     "title": "지르텍 알레그라 클라리틴 부작용 총정리"
     },
     {
-     "blog": "funrunsub3",
+     "blog": "isy0621",
      "age_days": 14,
-     "title": "환절기 알레르기약, 지르텍 vs 알레그라 뭐가 다를까? 졸림까지 비교"
+     "title": "남대문 시장 고향약국 이지엔식스프로 콜대원 모드콜 알레그라 타이레놀 가격 공유"
     },
     {
      "blog": "garsang88",
-     "age_days": 14,
+     "age_days": 28,
      "title": "지르텍 알레그라 코메키나 그린노즈 플러스 차이｜비염약 성분·코막힘·졸림·복용법 비교"
     },
     {
-     "blog": "happymedicalwriter",
-     "age_days": 51,
-     "title": "약사엄마blog.naver.com›happymedicalwriter"
+     "blog": "m7422870",
+     "age_days": 14,
+     "title": "알레그라정, 콧물 재채기 비염약 추천, 졸음 적은 3세대 항히스타민제"
     },
     {
-     "blog": "365health_on",
-     "age_days": 21,
-     "title": "자연주의약국blog.naver.com›365health_on"
+     "blog": "cyong65",
+     "age_days": 14,
+     "title": "플로리진·알레그라정 환절기 비염약 성분과 복용법｜종로 동대문역약국에서 알려드려요"
     },
     {
-     "blog": "nutriko-kr",
+     "blog": "allinfomadang",
+     "age_days": 14,
+     "title": "[일반의약품 상식] 지르텍 vs 알레그라 vs 클라리틴 vs 플로라딘 비염약 4종 비교! 성분·졸림·복용.."
+    },
+    {
+     "blog": "funrunsub3",
      "age_days": 21,
-     "title": "지르텍 vs 알레그라 vs 클라리틴 — 알레그라는 주스로 먹으면 안 됩니다"
+     "title": "환절기 알레르기약, 지르텍 vs 알레그라 뭐가 다를까? 졸림까지 비교"
     }
    ],
-   "median_age_days": 21,
-   "fresh_30d": 4,
+   "median_age_days": 14,
+   "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5032,
+   "first_blog_y": 3209,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -7185,29 +7195,49 @@
    "shop_above_blog": true
   },
   "알부민맥스": {
-   "checked_at": "2026-09-25T06:13:25.128Z",
+   "checked_at": "2026-10-05T18:48:26.022Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "thafpdh0188",
-     "age_days": 14,
-     "title": "일양약품 액티브 알부민 부스터 맥스 120포 57,390원 특가"
+     "blog": "qudrms64",
+     "age_days": 21,
+     "title": "[루체메디 마시는 실크 알부민 맥스 덴마크산 고함량 난백 알부민 20g 45포 선물용"
     },
     {
-     "blog": "hasbro_saber",
-     "age_days": 14,
-     "title": "이번 추석 선물, 딜릭에서 알부민 코어맥스로 골랐어요"
+     "blog": "sunjin_cnp",
+     "age_days": 21,
+     "title": "GNM 올인원 이뮨 액상 종합비타민과 마시는 알부민 맥스, 고마운 선물 기록"
     },
     {
      "blog": "ufhko2tkpn",
-     "age_days": 14,
+     "age_days": 28,
      "title": "안국약품 덴마크산 알부민 맥스 99 알부민 음료로 공간 절약과 효율적인 보관이 필요한 분에게 적...."
+    },
+    {
+     "blog": "gduchrzmofyr",
+     "age_days": 28,
+     "title": "알부민 골드 맥스 벨기에산 120정 자취 생활에 맞는 가격 대비 가치와 선택 기준"
+    },
+    {
+     "blog": "hasbro_saber",
+     "age_days": 28,
+     "title": "이번 추석 선물, 딜릭에서 알부민 코어맥스로 골랐어요"
+    },
+    {
+     "blog": "tpjss3fgesat1ajg",
+     "age_days": 28,
+     "title": "알부민 골드 맥스 120정 x3, 솔직히 이 사람에게 추천 안 합니다"
+    },
+    {
+     "blog": "pkgwctegex",
+     "age_days": 28,
+     "title": "알부민 골드 맥스 벨기에산 단백질 제품 구매 전 꼭 살펴야 할 핵심 조건"
     }
    ],
-   "median_age_days": 14,
-   "fresh_30d": 3,
+   "median_age_days": 28,
+   "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 6232,
+   "first_blog_y": 5243,
    "shop_y": 139,
    "ad_y": 490,
    "shop_above_blog": true
@@ -12800,33 +12830,33 @@
    "shop_above_blog": true
   },
   "저스트글로우NMN": {
-   "checked_at": "2026-10-02T18:14:36.547Z",
+   "checked_at": "2026-10-05T18:45:09.983Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "byeonew",
-     "age_days": 5,
+     "age_days": 14,
      "title": "내돈내산♥영양제 저스트글로우NMN justglow NMN"
     },
     {
-     "blog": "jaemin705",
-     "age_days": 4,
-     "title": "저스트 글로우 NMN 레스베라트롤 피세틴 노화방지 영양제"
-    },
-    {
      "blog": "answkgid2023",
-     "age_days": 38,
+     "age_days": 41,
      "title": "저스트글로우 NMN,이 뭐지?"
     },
     {
+     "blog": "lddvvk57",
+     "age_days": 190,
+     "title": "저스트글로우 NMN 벨리타 미국 대세 NMN 비교 분석"
+    },
+    {
      "blog": "song_tamin",
-     "age_days": 5,
+     "age_days": 14,
      "title": "내 삶을 바꿔준 이너뷰티템 11가지"
     },
     {
-     "blog": "cshdopark",
-     "age_days": 72,
-     "title": "저스트글로우 NMN 성분과 핵심 효능, 올바른 복용법 총정리"
+     "blog": "jmdlpretty",
+     "age_days": 28,
+     "title": "NMN 영양제 4개월 후기｜저스트글로우 NMN 500mg 후기 복용법 내돈내산"
     },
     {
      "blog": "ygxgop333",
@@ -12834,17 +12864,17 @@
      "title": "저스트글로우 NMN 베르베린 효능 가격 및 실제리뷰 정리"
     },
     {
-     "blog": "jmdlpretty",
-     "age_days": 28,
-     "title": "NMN 영양제 4개월 후기｜저스트글로우 NMN 500mg 후기 복용법 내돈내산"
+     "blog": "cshdopark",
+     "age_days": 75,
+     "title": "저스트글로우 NMN 성분과 핵심 효능, 올바른 복용법 총정리"
     }
    ],
-   "median_age_days": 5,
+   "median_age_days": 28,
    "fresh_30d": 3,
    "my_rank": null,
-   "first_blog_y": 6375,
-   "shop_y": 2135,
-   "ad_y": 2399,
+   "first_blog_y": 6370,
+   "shop_y": 2189,
+   "ad_y": 2453,
    "shop_above_blog": true
   },
   "석류콜라겐": {
@@ -13690,49 +13720,49 @@
    "shop_above_blog": true
   },
   "알부민수치": {
-   "checked_at": "2026-10-02T18:14:43.095Z",
+   "checked_at": "2026-10-05T18:43:21.632Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "amc_seoul",
-     "age_days": 142,
+     "age_days": 145,
      "title": "알부민 수치가 낮다는데, 먹는 알부민이 도움이 되나요? 서울아산병원 블로그 2026.05.14."
     },
     {
-     "blog": "hj12165445",
-     "age_days": 14,
-     "title": "강아지 ple 설사하면 알부민 수치 떨어지나요?"
-    },
-    {
      "blog": "wednesdxx",
-     "age_days": 5,
+     "age_days": 14,
      "title": "알부민 효능과 알부민 수치 총정리, 정상 범위부터 낮을 때 원인까지"
     },
     {
-     "blog": "7678ymym",
-     "age_days": 14,
-     "title": "알부민 수치 낮으면 생기는 변화와 정상 범위 정리"
-    },
-    {
      "blog": "el512",
-     "age_days": 14,
+     "age_days": 21,
      "title": "알부민 효능, 수치 낮으면 생기는 변화"
     },
     {
+     "blog": "nsyncbye1004",
+     "age_days": 28,
+     "title": "알부민 수치가 낮다면? 알부민 효능과 영양제 선택법"
+    },
+    {
      "blog": "stdpayments",
-     "age_days": 21,
+     "age_days": 28,
      "title": "알부민 효능, 먹는 것만으로는 부족합니다 (수치가 낮은 원인이 여섯 가지)"
     },
     {
-     "blog": "ant2001e",
+     "blog": "ssw2294",
+     "age_days": 7,
+     "title": "알부민 영양제·주사, 정말 도움이 될까요? 알부민 수치가 낮은 원인과 효과·부작용 총정리"
+    },
+    {
+     "blog": "h_k1024",
      "age_days": 14,
-     "title": "알부민 효능과 부작용, 효과를 못 느끼는 이유, 잘 먹는 방법"
+     "title": "알부민 효능 먹는 제품 정말 피로회복에 도움이 될까?"
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 28,
    "fresh_30d": 4,
    "my_rank": null,
-   "first_blog_y": 1433,
+   "first_blog_y": 1591,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -13834,39 +13864,44 @@
    "shop_above_blog": true
   },
   "마운자로실비": {
-   "checked_at": "2026-09-28T06:12:33.151Z",
+   "checked_at": "2026-10-05T18:42:20.550Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "one0000200",
+     "blog": "mjk4584",
      "age_days": null,
-     "title": "2026년 마운자로 실비 적용 기준 및 질병코드 완벽 정리키티미키네이버 블로그"
-    },
-    {
-     "blog": "bmham",
-     "age_days": null,
-     "title": "[마운자로 실비 청구 완벽 가이드] 마운자로 실비 청구 진짜 될까? 1분 만에 확인하는 조건 및 환급 후기함"
-    },
-    {
-     "blog": "migamed114",
-     "age_days": 14,
-     "title": "마운자로 실손 청구는 처방 사유로 갈립니다"
+     "title": "마운자로 당뇨 실비 처방 받아도 못 받는 5가지 이유와 대책팩트지기 최팀장네이버 블로그"
     },
     {
      "blog": "eatsight",
-     "age_days": 21,
-     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부"
+     "age_days": null,
+     "title": "마운자로 가격 및 위고비 비교 국내 처방 기준과 실손보험 적용 여부잇사이트네이버 블로그"
     },
     {
-     "blog": "frogexe",
+     "blog": "diaconn_",
+     "age_days": 7,
+     "title": "당뇨환자 마운자로 실비보험 조건 적용"
+    },
+    {
+     "blog": "life_spoon",
+     "age_days": 7,
+     "title": "마운자로 맞다가 실명할까?마운자로 실비 청구부터 부작용·용량·중단까지 총정리 앞으로 나올 ...."
+    },
+    {
+     "blog": "mylifemyhealth",
+     "age_days": 14,
+     "title": "마운자로 실비 청구될까? 진단명부터 확인해야 하는 이유"
+    },
+    {
+     "blog": "iskorea-",
      "age_days": 21,
-     "title": "위고비·마운자로 실비 될까? 건강보험 급여화 가능성까지 총정리"
+     "title": "마운자로 실손보험 되나요, 당뇨 코드만으로 안 되는 이유"
     }
    ],
-   "median_age_days": 21,
+   "median_age_days": 7,
    "fresh_30d": 3,
    "my_rank": null,
-   "first_blog_y": 1562,
+   "first_blog_y": 1390,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -14370,49 +14405,44 @@
    "shop_above_blog": false
   },
   "코오롱쏘팔메토": {
-   "checked_at": "2026-09-28T18:14:11.004Z",
+   "checked_at": "2026-10-05T18:50:32.689Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "lovbe43",
-     "age_days": 14,
+     "age_days": 21,
      "title": "[공유] \"당일특가\" 코오롱제약 쏘팔메토 옥타코사놀 포맨, 1000mg, 30캡슐, 3박스 77%할인 75,"
     },
     {
-     "blog": "shgroup67",
-     "age_days": 220,
-     "title": "코오롱제약 쎈 쏘팔메토 VIP 1,000mg X 120캡슐 추천"
+     "blog": "oky476600",
+     "age_days": 7,
+     "title": "중년 남성 활력 충전 비법 코오롱제약 쏘팔메토 옥타코사놀 포맨으로 달라지세요"
     },
     {
      "blog": "gapyeoklog",
-     "age_days": 14,
-     "title": "코오롱제약 쏘팔메토 옥타코사놀 포맨 싸게 사는 법 | 정가 300,000원 → 16,900원 94% 할인 정"
-    },
-    {
-     "blog": "gapyeoklog",
-     "age_days": 14,
+     "age_days": 21,
      "title": "코오롱제약 쏘팔메토 옥타코사놀 포맨 싸게 사는 법 | 정가 75,000원 → 16,900원 77% 할인 정보"
     },
     {
+     "blog": "gapyeoklog",
+     "age_days": 21,
+     "title": "코오롱제약 쏘팔메토 옥타코사놀 포맨 싸게 사는 법 | 정가 300,000원 → 16,900원 94% 할인 정"
+    },
+    {
      "blog": "pinozoa",
-     "age_days": 28,
+     "age_days": 33,
      "title": "남성 활력 건강기능식품 '코오롱제약 쏘팔메토 옥타코사놀 포맨'"
     },
     {
      "blog": "seskoo55",
-     "age_days": 392,
+     "age_days": 399,
      "title": "전립선 영양제 추천 코오롱제약 쏘팔메토 옥타코사놀 포맨 복용후기"
-    },
-    {
-     "blog": "shop100won",
-     "age_days": 7,
-     "title": "토스쇼핑 영양제 특가딜 4990원부터"
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 21,
    "fresh_30d": 4,
    "my_rank": null,
-   "first_blog_y": 6168,
+   "first_blog_y": 5163,
    "shop_y": 811,
    "ad_y": 1111,
    "shop_above_blog": true
@@ -16893,51 +16923,51 @@
    "shop_above_blog": false
   },
   "바이오코어유산균": {
-   "checked_at": "2026-09-29T18:12:18.857Z",
+   "checked_at": "2026-10-05T18:42:48.861Z",
    "status": 200,
    "blog_top": [
     {
+     "blog": "unodos123",
+     "age_days": 7,
+     "title": "[비피더스 b3다이어트유산균] 장 건강부터 피부까지! 내가 직접 먹어본 CJ웰케어 '바이오코어 500억 .."
+    },
+    {
      "blog": "gkswnsal",
-     "age_days": 14,
+     "age_days": 21,
      "title": "베이비 유산균 드롭D, CJ바이오코어에서 만든 베이비 유산균 드롭D로 시작해요"
     },
     {
-     "blog": "eungjung_",
-     "age_days": 14,
-     "title": "아기유산균 추천 유산균 언제부터 CJ 바이오코어 베이비 유산균 드롭D"
-    },
-    {
      "blog": "dldl3318",
-     "age_days": 14,
+     "age_days": 21,
      "title": "추석 연휴 후 관리 시작, 다이어트유산균 CJ 바이오코어 쓰리핏 유산균 다이어트로 다시 루틴 잡았...."
     },
     {
-     "blog": "alsrb816",
+     "blog": "suzy_blog",
+     "age_days": 5,
+     "title": "CJ 바이오코어 비피더스 다이어트 유산균 체지방 감소 화사 유산균 30캡슐 4개 세트 핵심 정보 정리"
+    },
+    {
+     "blog": "firtsdream",
+     "age_days": 5,
+     "title": "CJ 바이오코어 건강한 생유산균 100억 보장, 이런 분들께 특히 좋아요"
+    },
+    {
+     "blog": "yj_j_",
+     "age_days": 6,
+     "title": "다이어트 추천템 | 장 건강 치트키 | CJ웰케어 바이오코어 100억 유산균"
+    },
+    {
+     "blog": "guhwan2002",
      "age_days": 14,
-     "title": "CJ 바이오코어 500억 생 유산균 완벽 분석: 보장균수, 듀폰 균주 스펙, 섭취법 및 부작용 가이드"
-    },
-    {
-     "blog": "jjhu3ykbsv",
-     "age_days": 21,
-     "title": "CJ 바이오코어 피부면역 유산균 100억보장 5세트 제품 간 기능과 효과 차이점 살펴보기"
-    },
-    {
-     "blog": "bluejazzdenim",
-     "age_days": 14,
-     "title": "구름약사 유산균 내돈내산｜바이오코어 500억+바나나효소 후기 30대 영양제 추천 #내돈내산"
-    },
-    {
-     "blog": "merry96715",
-     "age_days": 21,
-     "title": "바이오코어 유산균 추천｜30알 구성에 휴대하기 좋은 초소형 캡슐 유산균"
+     "title": "CJ 바이오코어 피부면역 유산균 100억보장 부자 화사 유산균 30포 5개 구성 면역과민반응에 의한 피..."
     }
    ],
-   "median_age_days": 14,
+   "median_age_days": 7,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 7433,
-   "shop_y": 1655,
-   "ad_y": 2042,
+   "first_blog_y": 7049,
+   "shop_y": 1679,
+   "ad_y": 2104,
    "shop_above_blog": true
   },
   "마운자로병원": {
@@ -18602,28 +18632,18 @@
    "shop_above_blog": true
   },
   "골드카무트브랜드밀": {
-   "checked_at": "2026-10-01T06:13:55.900Z",
+   "checked_at": "2026-10-05T18:49:44.560Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "chikiho",
+     "blog": "klsaska",
      "age_days": 4,
-     "title": "골드 카무트 브랜드밀효소 총정리! 효능·복용법·변비·암웨이 비교까지"
+     "title": "[골드 카무트 브랜드밀효소] 직접 먹어본 후기, 역가수치와 성분 핵심 정리"
     },
     {
-     "blog": "hsmom25",
-     "age_days": 4,
-     "title": "소화가 안되던 나를 바꾼 효소 | 그레인온 골드 카무트 브랜드밀 효소 솔직 후기"
-    },
-    {
-     "blog": "harulog85",
-     "age_days": 4,
-     "title": "이지혜 효소로 유명한 '그레인온 골드 카무트 브랜드밀 효소', 진짜 효과있을까?(맛·역가수치·주...."
-    },
-    {
-     "blog": "skyjs1222",
+     "blog": "yasi523",
      "age_days": 7,
-     "title": "뉴트리원 카무트 브랜드 밀 효소 골드 S, 30포*3개 25,900원"
+     "title": "그레이온 골드 카무트 브랜드밀효소 30g 발효 효소 후기"
     },
     {
      "blog": "lazy_comma_",
@@ -18631,22 +18651,32 @@
      "title": "그레인온 골드 카무트 효소 | 엄마가 챙겨준 효소 솔직 후기"
     },
     {
+     "blog": "harulog85",
+     "age_days": 14,
+     "title": "이지혜 효소로 유명한 '그레인온 골드 카무트 브랜드밀 효소', 진짜 효과있을까?(맛·역가수치·주...."
+    },
+    {
+     "blog": "granada2023",
+     "age_days": 14,
+     "title": "[후기] 그레인온 골드 카무트 브랜드밀효소G (식단+더부룩함 개선)"
+    },
+    {
      "blog": "zoo20000",
-     "age_days": 21,
+     "age_days": 28,
      "title": "골드카무트R브랜드밀효소G"
     },
     {
-     "blog": "ystmpark7",
-     "age_days": 21,
-     "title": "그레인온 골드 카무트 브랜드 밀 효소 90g.3개"
+     "blog": "jyhpower",
+     "age_days": 28,
+     "title": "4050 중년 속더부룩함을 줄이기 위한! | \"그레인온 골드 카무트 브랜드밀효소 G\" 솔직 후기 및 성분 ."
     }
    ],
-   "median_age_days": 4,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 5393,
-   "shop_y": 1615,
-   "ad_y": 2040,
+   "first_blog_y": 6432,
+   "shop_y": 1639,
+   "ad_y": 2046,
    "shop_above_blog": true
   },
   "산양유초유단백질MBP": {
@@ -19565,18 +19595,23 @@
    "shop_above_blog": true
   },
   "PQQ영양제": {
-   "checked_at": "2026-10-01T18:14:40.360Z",
+   "checked_at": "2026-10-05T18:49:17.099Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "duzo328",
-     "age_days": 4,
+     "age_days": 14,
      "title": "뇌영양제 기억력 관리 추천 성분 PQQ 총정리"
     },
     {
      "blog": "duzo328",
-     "age_days": 4,
+     "age_days": 14,
      "title": "포스파티딜세린 효능, 두뇌 기억력 관리를 위한 성분 비교 기준 총정리"
+    },
+    {
+     "blog": "yesomini12",
+     "age_days": 80,
+     "title": "부모님 뇌 영양제로 pqq 샀다면.. \"이것\"도 꼭 알려드리세요"
     },
     {
      "blog": "house_movie",
@@ -19584,32 +19619,27 @@
      "title": "피큐큐 PQQ 영양제 효능 정말 있을까? 미토콘드리아부터 복용량·주의사항까지"
     },
     {
-     "blog": "yesomini12",
-     "age_days": 76,
-     "title": "부모님 뇌 영양제로 pqq 샀다면.. \"이것\"도 꼭 알려드리세요"
+     "blog": "go_odsaera",
+     "age_days": 28,
+     "title": "요즘 핫한 고순도NMN, 직접 챙겨 먹어본 후기 - 바이오해커 NMN 600"
+    },
+    {
+     "blog": "hoottown",
+     "age_days": 7,
+     "title": "[영양제 직구 가이드] 피로 회복 끝판왕! 라이프익스텐션 코큐텐(유비퀴놀+PQQ) 똑똑하게 구매하는 ...."
     },
     {
      "blog": "yang063",
      "age_days": 21,
      "title": "아이허브 오늘의 깜짝특가 40% 할인! 코큐텐·PQQ·레스베라트롤 영양제 추천 (9월 할인코드 30%)"
-    },
-    {
-     "blog": "lddvvk57",
-     "age_days": 28,
-     "title": "40대도 젊어질 수 있다 PQQ NMN 영양제 효능 총정리"
-    },
-    {
-     "blog": "livewellz",
-     "age_days": 46,
-     "title": "PQQ영양제 효능과 NMN 조합, 부작용까지 정리합니다"
     }
    ],
    "median_age_days": 14,
    "fresh_30d": 4,
    "my_rank": null,
-   "first_blog_y": 5635,
-   "shop_y": 1625,
-   "ad_y": 1905,
+   "first_blog_y": 4955,
+   "shop_y": 1613,
+   "ad_y": 1893,
    "shop_above_blog": true
   },
   "닥터브라이언칼마디": {
@@ -19805,49 +19835,39 @@
    "shop_above_blog": true
   },
   "먹는위고비": {
-   "checked_at": "2026-10-02T06:12:45.321Z",
+   "checked_at": "2026-10-05T18:44:05.983Z",
    "status": 200,
    "blog_top": [
     {
-     "blog": "dietyoga2050",
-     "age_days": 1,
-     "title": "주1회 먹는 위고비 1년에 4번 맞는 주사 미래 다이어트약 판도"
+     "blog": "cococo93",
+     "age_days": 7,
+     "title": "마운자로 가격 위고비 다이어트후기 처방 심한 부작용"
     },
     {
-     "blog": "wndlftnr1",
-     "age_days": 3,
-     "title": "먹는 비만약 감량률 비교: 위고비필 16.6% vs 파운다요 12.4%, 주사보다 정말 덜 빠질까?"
+     "blog": "backhos8",
+     "age_days": 14,
+     "title": "\"주사 아니고 알약이라고?\" 먹는 위고비 500만 처방, 64주 뒤 얼마나 빠졌나"
     },
     {
-     "blog": "wonderboy08",
-     "age_days": 3,
-     "title": "삼천당제약 초고평가?, 먹는 위고비 하나에 주가 15만원이 붙어 있다"
+     "blog": "backhos8",
+     "age_days": 14,
+     "title": "먹는 위고비 vs 파운다요, 둘 다 하루 한 알인데 \"이게\" 달랐다"
     },
     {
-     "blog": "money-sky",
-     "age_days": 1,
-     "title": "파운다요 vs 먹는 위고비, 한국 출시 전 팩트체크"
+     "blog": "remon1379",
+     "age_days": 21,
+     "title": "먹는 위고비 vs 파운다요, 주사보다 잘 빠질까? 효과·가격·부작용 총정리"
     },
     {
-     "blog": "sjy624sjy",
-     "age_days": 1,
-     "title": "‘먹는 위고비’, 주사제서 전환 후 3개월 체중 4.1% 감소…리얼월드 데이터 공개"
-    },
-    {
-     "blog": "h7781",
-     "age_days": 1,
-     "title": "위고비 주사 대신 먹는 위고비 알약? 3개월 만에 4kg 추가 감량한 최신 연구 결과 (가격·부작용 비..."
-    },
-    {
-     "blog": "ktyuou",
-     "age_days": 0,
-     "title": "먹는 위고비 vs 먹는 마운자로 뭐가 다를까요"
+     "blog": "seulbiois2",
+     "age_days": 21,
+     "title": "먹는 위고비 국내 출시 언제? 파운다요 효과·가격·부작용 총정리"
     }
    ],
-   "median_age_days": 1,
+   "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 3629,
+   "first_blog_y": 6916,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
@@ -19997,60 +20017,60 @@
    "shop_above_blog": true
   },
   "침향드라마": {
-   "checked_at": "2026-10-02T06:14:33.636Z",
+   "checked_at": "2026-10-05T18:43:12.070Z",
    "status": 200,
    "blog_top": [
     {
+     "blog": "dalcong1224",
+     "age_days": 3,
+     "title": "[한국 AI BL DRAMA] 침향: 헤븐리에 공개됐어요."
+    },
+    {
+     "blog": "veronica073",
+     "age_days": 14,
+     "title": "[BL 침향] 도하야 서진아 진정 사랑한다♥"
+    },
+    {
+     "blog": "km4394",
+     "age_days": 6,
+     "title": "사랑인 줄 알았는데 운명까지 뒤흔든 두 사람의 이야기 중드<침향여몽야불한>"
+    },
+    {
      "blog": "tony826",
-     "age_days": 59,
+     "age_days": 62,
      "title": "「침향」 그 밤, 문 한 뼘 사이 EP.04"
     },
     {
      "blog": "kim_young_kr",
-     "age_days": 71,
+     "age_days": 74,
      "title": "안 보셨으면 여기로 고고 지난달에 유튜브 떠돌다가 비슷한 시기에 침향 ai 드라마 보고, 야화첩 실사 드라마"
     },
     {
      "blog": "taka_mm",
-     "age_days": 51,
-     "title": "[AI BL] 침향 - 금손 고퀄리티 비쥬얼 끝판왕 아련함 터지는 드라마는 또 뭐예요???? ★★★★★"
-    },
-    {
-     "blog": "taka_mm",
-     "age_days": 51,
+     "age_days": 21,
      "title": "[AI BL] 침향 - 일본 FOD 에서 10/1에 공개 되나봐요!!!!!!"
     },
     {
-     "blog": "abaw_",
-     "age_days": 60,
-     "title": "한국 유튜브 달군 AI 드라마 <침향>, 글로벌 OTT 플랫폼 통해 확장판 공개하며 본격 세계 진출"
-    },
-    {
-     "blog": "veronica073",
-     "age_days": 5,
-     "title": "[BL 침향] 도하야 서진아 진정 사랑한다♥"
-    },
-    {
-     "blog": "panc4ke",
+     "blog": "taka_mm",
      "age_days": 21,
-     "title": "꽃 피던 그해 달빛 (2017)"
+     "title": "[AI BL] 침향 - 금손 고퀄리티 비쥬얼 끝판왕 아련함 터지는 드라마는 또 뭐예요???? ★★★★★"
     }
    ],
-   "median_age_days": 59,
-   "fresh_30d": 0,
+   "median_age_days": 14,
+   "fresh_30d": 3,
    "my_rank": null,
-   "first_blog_y": 1407,
+   "first_blog_y": 1274,
    "shop_y": null,
    "ad_y": null,
    "shop_above_blog": false
   },
   "임산부칼마디": {
-   "checked_at": "2026-10-02T06:14:47.214Z",
+   "checked_at": "2026-10-05T18:46:47.651Z",
    "status": 200,
    "blog_top": [
     {
      "blog": "llillo",
-     "age_days": 14,
+     "age_days": 21,
      "title": "임산부칼마디 쁘띠앤칼마디 마그네슘영양제 챙기죠"
     },
     {
@@ -20059,35 +20079,35 @@
      "title": "[임산부영양제추천]프리솔라 칼마디 임산부칼슘권장량"
     },
     {
-     "blog": "mk0414578",
+     "blog": "vet_catteacher",
+     "age_days": 5,
+     "title": "[맘스포뮬러 칼마디] 임산부 칼슘제 추천- 알약 큰 칼슘제 대신 선택한 칼마디 후기"
+    },
+    {
+     "blog": "lovebhs1212",
+     "age_days": 28,
+     "title": "PEPEblog.naver.com›lovebhs1212"
+    },
+    {
+     "blog": "yewon93510",
+     "age_days": 7,
+     "title": "임신준비 영양제 추천 이지맘 칼마디K2 임산부, 출산 후 수유기까지!"
+    },
+    {
+     "blog": "dbsek3695",
      "age_days": 14,
-     "title": "추석선물 칼슘영양제 추천, 임산부 중장년층에 좋은 쁘띠앤칼마디"
+     "title": "마미앤대디 비건 임산부 칼마디 영양제 칼마디K2"
     },
     {
      "blog": "rlqls1366",
-     "age_days": 3,
-     "title": "슬기의 슬기로운 생활blog.naver.com›rlqls1366"
-    },
-    {
-     "blog": "jhjjang56",
-     "age_days": 5,
-     "title": "지야blog.naver.com›jhjjang56"
-    },
-    {
-     "blog": "lively_note",
-     "age_days": 14,
-     "title": "마미앤대디 비건 임산부 칼마디 영양제 칼마디K2 출산후 정착한 영양제 추천"
-    },
-    {
-     "blog": "chojunhyeon",
-     "age_days": 21,
-     "title": "임산부칼마디 영양제 추천 쁘띠앤칼마디 영양제 1년넘게 챙겨먹은 후기"
+     "age_days": 7,
+     "title": "칼마디 프리솔라칼마디 임산부칼마디"
     }
    ],
    "median_age_days": 14,
    "fresh_30d": 5,
    "my_rank": null,
-   "first_blog_y": 6367,
+   "first_blog_y": 6341,
    "shop_y": 139,
    "ad_y": 544,
    "shop_above_blog": true
@@ -22066,6 +22086,150 @@
    "first_blog_y": 6005,
    "shop_y": 1344,
    "ad_y": 1644,
+   "shop_above_blog": true
+  },
+  "마운자로10MG": {
+   "checked_at": "2026-10-05T18:44:57.219Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "xxhennixx",
+     "age_days": 5,
+     "title": "마운자로 10mg 증량 17kg감량 전후 차이 부작용"
+    },
+    {
+     "blog": "mijung9750",
+     "age_days": 5,
+     "title": "마운자로 10mg 불량 교환 성공! 한국릴리 접수부터 교환 연락까지"
+    },
+    {
+     "blog": "llxiihiixll",
+     "age_days": 6,
+     "title": "[마운자로 10mg] 78일차 일기 (2.5기간 포함 107일)"
+    },
+    {
+     "blog": "smilems0115",
+     "age_days": 14,
+     "title": "마운자로 가격 얼마일까? 2.5mg부터 10mg까지 한 달 비용과 부작용 정리"
+    },
+    {
+     "blog": "alltimes1004",
+     "age_days": 21,
+     "title": "마운자로 가격도 비싼데 규제까지, 위고비도 이제 쉽게 못 산다?"
+    },
+    {
+     "blog": "notebyday",
+     "age_days": 21,
+     "title": "[대전마운자로 10mg 후기]1년동안 33kg 감량, BMI 계산하기"
+    },
+    {
+     "blog": "bsyyoon1",
+     "age_days": 28,
+     "title": "마운자로 효과·가격 총정리｜위고비·삭센다와 뭐가 다를까? 2.5mg·5mg·7.5mg·10mg 비교"
+    }
+   ],
+   "median_age_days": 6,
+   "fresh_30d": 5,
+   "my_rank": null,
+   "first_blog_y": 3809,
+   "shop_y": null,
+   "ad_y": null,
+   "shop_above_blog": false
+  },
+  "고약사피크노제놀": {
+   "checked_at": "2026-10-05T18:47:11.608Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "47ajumma",
+     "age_days": 21,
+     "title": "[4050 여성 건강] 피부보다 무서운 몸속 노화! 갱년기 필수 영양제 총정리(ft. 고약사)"
+    },
+    {
+     "blog": "ekek9911",
+     "age_days": 375,
+     "title": "나우푸드 피크노제놀과 피크노제놀 추천 및 영양제, 고약사"
+    },
+    {
+     "blog": "blackwrtn-g",
+     "age_days": 292,
+     "title": "피크노제놀 100MG 고약사 피크노제놀"
+    },
+    {
+     "blog": "healthynoeul",
+     "age_days": 1100,
+     "title": "노을blog.naver.com›healthynoeul"
+    },
+    {
+     "blog": "ahy6118",
+     "age_days": 1043,
+     "title": "봄봄blog.naver.com›ahy6118"
+    },
+    {
+     "blog": "kinggodlife",
+     "age_days": 711,
+     "title": "고약사 추천 피크노제놀 효능 성분 헬시오리진스 피크노제놀 100 mg 나우푸드 제품 가격까지 비교...."
+    },
+    {
+     "blog": "lulu_daily_life",
+     "age_days": 389,
+     "title": "자연이 준 건강 선물, 피크노제놀(Pycnogenol)이 뭐길래?"
+    }
+   ],
+   "median_age_days": 375,
+   "fresh_30d": 1,
+   "my_rank": null,
+   "first_blog_y": 2647,
+   "shop_y": 3321,
+   "ad_y": 3559,
+   "shop_above_blog": false
+  },
+  "징코피크노제놀": {
+   "checked_at": "2026-10-05T18:51:16.890Z",
+   "status": 200,
+   "blog_top": [
+    {
+     "blog": "happymin_life",
+     "age_days": 383,
+     "title": "더리틀스 징코 피크노제놀 부스터, 건강한 습관을 위한 나의 새로운 루틴"
+    },
+    {
+     "blog": "jjy320100",
+     "age_days": 524,
+     "title": "더리틀스 징코 피크노제놀 부스터 먹어본 솔직 리뷰"
+    },
+    {
+     "blog": "sjch481",
+     "age_days": 587,
+     "title": "피크노제놀 징코 피크노제놀 부스터 믿고 먹는 이유"
+    },
+    {
+     "blog": "elefixie",
+     "age_days": 686,
+     "title": "피크노제놀효능 더리틀스 징코 피크노제놀 부스터로 혈관건강 챙겨요"
+    },
+    {
+     "blog": "anfrlrl",
+     "age_days": 588,
+     "title": "피크노제놀 은행잎추출물 담은 더리틀스 징코 피크노제놀 부스터로 혈행개선"
+    },
+    {
+     "blog": "dms8714",
+     "age_days": 686,
+     "title": "피크노제놀 효능, 더리틀스 징코 피크노제놀 부스터 선택"
+    },
+    {
+     "blog": "evermore2",
+     "age_days": 588,
+     "title": "더리틀스 징코피크노제놀부스터 소개 및 언박싱"
+    }
+   ],
+   "median_age_days": 587,
+   "fresh_30d": 0,
+   "my_rank": null,
+   "first_blog_y": 5280,
+   "shop_y": 663,
+   "ad_y": 943,
    "shop_above_blog": true
   }
  }
