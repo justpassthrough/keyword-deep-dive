@@ -1,8 +1,85 @@
 {
-  "updated_at": "2026-10-16 10:00",
-  "today_count": 0,
-  "count": 122,
+  "updated_at": "2026-10-16 16:10",
+  "today_count": 7,
+  "count": 125,
   "items": [
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 12270,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "코엔삼백초",
+      "search_volume": 4520,
+      "comp_idx": "중간",
+      "seed": "삼백초",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "코엔 삼백초",
+      "search_volume": 4520,
+      "comp_idx": "중간",
+      "seed": "삼백초",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 1290,
+      "comp_idx": "낮음",
+      "seed": "감량 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-10-16",
+      "seen_count": 114,
+      "today": true
+    },
+    {
+      "keyword": "김준현 마운자로",
+      "search_volume": 70,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-16",
+      "seen_count": 19,
+      "today": true
+    },
+    {
+      "keyword": "김흥국 탈모",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-10-16",
+      "seen_count": 46,
+      "today": true
+    },
+    {
+      "keyword": "이수현 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 성공",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-10-16",
+      "seen_count": 39,
+      "today": true
+    },
     {
       "keyword": "한가인 알부민",
       "search_volume": 4220,
@@ -12,28 +89,6 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-15",
       "seen_count": 25,
-      "today": false
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 1350,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-10-15",
-      "seen_count": 113,
-      "today": false
-    },
-    {
-      "keyword": "김준현 마운자로",
-      "search_volume": 70,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-04",
-      "last_seen": "2026-10-15",
-      "seen_count": 18,
       "today": false
     },
     {
@@ -48,17 +103,6 @@
       "today": false
     },
     {
-      "keyword": "김흥국 탈모",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-10-15",
-      "seen_count": 45,
-      "today": false
-    },
-    {
       "keyword": "랄랄 마운자로",
       "search_volume": 60,
       "comp_idx": "낮음",
@@ -67,17 +111,6 @@
       "first_seen": "2026-07-04",
       "last_seen": "2026-10-15",
       "seen_count": 62,
-      "today": false
-    },
-    {
-      "keyword": "이수현 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 성공",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-18",
-      "last_seen": "2026-10-15",
-      "seen_count": 38,
       "today": false
     },
     {
