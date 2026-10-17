@@ -1,30 +1,8 @@
 {
-  "updated_at": "2026-10-17 10:10",
-  "today_count": 10,
+  "updated_at": "2026-10-17 20:06",
+  "today_count": 8,
   "count": 126,
   "items": [
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 12120,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-17",
-      "seen_count": 2,
-      "today": true
-    },
-    {
-      "keyword": "코엔삼백초",
-      "search_volume": 4840,
-      "comp_idx": "중간",
-      "seed": "삼백초",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-17",
-      "seen_count": 2,
-      "today": true
-    },
     {
       "keyword": "코엔 삼백초",
       "search_volume": 4840,
@@ -33,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-17",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -44,7 +22,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-10-17",
-      "seen_count": 115,
+      "seen_count": 116,
+      "today": true
+    },
+    {
+      "keyword": "백지영 다이어트약",
+      "search_volume": 1130,
+      "comp_idx": "낮음",
+      "seed": "다이어트약",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-10-17",
+      "seen_count": 37,
       "today": true
     },
     {
@@ -55,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-27",
       "last_seen": "2026-10-17",
-      "seen_count": 7,
+      "seen_count": 8,
       "today": true
     },
     {
@@ -66,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-04",
       "last_seen": "2026-10-17",
-      "seen_count": 20,
+      "seen_count": 21,
       "today": true
     },
     {
@@ -77,18 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-19",
       "last_seen": "2026-10-17",
-      "seen_count": 47,
-      "today": true
-    },
-    {
-      "keyword": "이수현 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 성공",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-18",
-      "last_seen": "2026-10-17",
-      "seen_count": 40,
+      "seen_count": 48,
       "today": true
     },
     {
@@ -99,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-27",
       "last_seen": "2026-10-17",
-      "seen_count": 8,
+      "seen_count": 9,
       "today": true
     },
     {
@@ -110,8 +88,41 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-17",
       "last_seen": "2026-10-17",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
+    },
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 12120,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-17",
+      "seen_count": 2,
+      "today": false
+    },
+    {
+      "keyword": "코엔삼백초",
+      "search_volume": 4840,
+      "comp_idx": "중간",
+      "seed": "삼백초",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-17",
+      "seen_count": 2,
+      "today": false
+    },
+    {
+      "keyword": "이수현 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 성공",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-10-17",
+      "seen_count": 40,
+      "today": false
     },
     {
       "keyword": "한가인 알부민",
@@ -243,17 +254,6 @@
       "first_seen": "2026-10-08",
       "last_seen": "2026-10-12",
       "seen_count": 7,
-      "today": false
-    },
-    {
-      "keyword": "백지영 다이어트약",
-      "search_volume": 990,
-      "comp_idx": "낮음",
-      "seed": "다이어트약",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-10-12",
-      "seen_count": 36,
       "today": false
     },
     {
