@@ -1,28 +1,61 @@
 {
-  "updated_at": "2026-10-21 16:09",
-  "today_count": 5,
+  "updated_at": "2026-10-22 10:10",
+  "today_count": 9,
   "count": 128,
   "items": [
     {
+      "keyword": "통풍 원인",
+      "search_volume": 11560,
+      "comp_idx": "높음",
+      "seed": "통풍",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-22",
+      "seen_count": 3,
+      "today": true
+    },
+    {
       "keyword": "이경제 흑염소",
-      "search_volume": 11280,
+      "search_volume": 11050,
       "comp_idx": "높음",
       "seed": "흑염소",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "코엔 삼백초",
+      "search_volume": 5970,
+      "comp_idx": "중간",
+      "seed": "삼백초",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-22",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "코엔삼백초",
+      "search_volume": 5970,
+      "comp_idx": "중간",
+      "seed": "삼백초",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-22",
       "seen_count": 7,
       "today": true
     },
     {
       "keyword": "한가인 알부민",
-      "search_volume": 4310,
+      "search_volume": 4320,
       "comp_idx": "낮음",
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-21",
-      "seen_count": 28,
+      "last_seen": "2026-10-22",
+      "seen_count": 29,
       "today": true
     },
     {
@@ -32,8 +65,19 @@
       "seed": "철분",
       "is_hot_badge": false,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-21",
-      "seen_count": 34,
+      "last_seen": "2026-10-22",
+      "seen_count": 35,
+      "today": true
+    },
+    {
+      "keyword": "오로라 글루타치온",
+      "search_volume": 1560,
+      "comp_idx": "높음",
+      "seed": "글루타치온",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-10-22",
+      "seen_count": 5,
       "today": true
     },
     {
@@ -43,8 +87,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-21",
-      "seen_count": 7,
+      "last_seen": "2026-10-22",
+      "seen_count": 8,
       "today": true
     },
     {
@@ -54,31 +98,9 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-21",
-      "seen_count": 2,
+      "last_seen": "2026-10-22",
+      "seen_count": 3,
       "today": true
-    },
-    {
-      "keyword": "코엔 삼백초",
-      "search_volume": 5560,
-      "comp_idx": "중간",
-      "seed": "삼백초",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-21",
-      "seen_count": 7,
-      "today": false
-    },
-    {
-      "keyword": "코엔삼백초",
-      "search_volume": 5560,
-      "comp_idx": "중간",
-      "seed": "삼백초",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-21",
-      "seen_count": 6,
-      "today": false
     },
     {
       "keyword": "김준현 마운자로",
@@ -89,17 +111,6 @@
       "first_seen": "2026-10-04",
       "last_seen": "2026-10-20",
       "seen_count": 24,
-      "today": false
-    },
-    {
-      "keyword": "통풍 원인",
-      "search_volume": 11590,
-      "comp_idx": "높음",
-      "seed": "통풍",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-19",
-      "seen_count": 2,
       "today": false
     },
     {
@@ -397,17 +408,6 @@
       "first_seen": "2026-08-28",
       "last_seen": "2026-10-04",
       "seen_count": 20,
-      "today": false
-    },
-    {
-      "keyword": "오로라 글루타치온",
-      "search_volume": 990,
-      "comp_idx": "높음",
-      "seed": "글루타치온",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-27",
-      "last_seen": "2026-10-04",
-      "seen_count": 4,
       "today": false
     },
     {
