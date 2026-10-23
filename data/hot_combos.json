@@ -1,30 +1,8 @@
 {
-  "updated_at": "2026-10-22 16:10",
+  "updated_at": "2026-10-23 12:08",
   "today_count": 5,
   "count": 128,
   "items": [
-    {
-      "keyword": "코엔 삼백초",
-      "search_volume": 5970,
-      "comp_idx": "중간",
-      "seed": "삼백초",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-22",
-      "seen_count": 9,
-      "today": true
-    },
-    {
-      "keyword": "코엔삼백초",
-      "search_volume": 5970,
-      "comp_idx": "중간",
-      "seed": "삼백초",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-22",
-      "seen_count": 8,
-      "today": true
-    },
     {
       "keyword": "한가인 알부민",
       "search_volume": 4320,
@@ -32,8 +10,19 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-22",
-      "seen_count": 30,
+      "last_seen": "2026-10-23",
+      "seen_count": 31,
+      "today": true
+    },
+    {
+      "keyword": "성시경 마운자로",
+      "search_volume": 720,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-10-23",
+      "seen_count": 4,
       "today": true
     },
     {
@@ -43,8 +32,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-22",
-      "seen_count": 9,
+      "last_seen": "2026-10-23",
+      "seen_count": 10,
       "today": true
     },
     {
@@ -54,7 +43,18 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-22",
+      "last_seen": "2026-10-23",
+      "seen_count": 5,
+      "today": true
+    },
+    {
+      "keyword": "이수현 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-10-23",
       "seen_count": 4,
       "today": true
     },
@@ -74,6 +74,28 @@
       "search_volume": 11050,
       "comp_idx": "높음",
       "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-22",
+      "seen_count": 8,
+      "today": false
+    },
+    {
+      "keyword": "코엔 삼백초",
+      "search_volume": 5970,
+      "comp_idx": "중간",
+      "seed": "삼백초",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-22",
+      "seen_count": 9,
+      "today": false
+    },
+    {
+      "keyword": "코엔삼백초",
+      "search_volume": 5970,
+      "comp_idx": "중간",
+      "seed": "삼백초",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-22",
@@ -939,17 +961,6 @@
       "today": false
     },
     {
-      "keyword": "이수현 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-09-03",
-      "seen_count": 3,
-      "today": false
-    },
-    {
       "keyword": "신봉선 갱년기",
       "search_volume": 30,
       "comp_idx": "낮음",
@@ -1379,17 +1390,6 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-07-20",
-      "seen_count": 3,
-      "today": false
-    },
-    {
-      "keyword": "성시경 마운자로",
-      "search_volume": 1630,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-08",
       "seen_count": 3,
       "today": false
     },
