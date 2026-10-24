@@ -1,8 +1,19 @@
 {
-  "updated_at": "2026-10-23 16:10",
-  "today_count": 5,
-  "count": 128,
+  "updated_at": "2026-10-24 10:10",
+  "today_count": 6,
+  "count": 129,
   "items": [
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 10850,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
+      "seen_count": 9,
+      "today": true
+    },
     {
       "keyword": "한가인 알부민",
       "search_volume": 4320,
@@ -10,8 +21,52 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-23",
-      "seen_count": 32,
+      "last_seen": "2026-10-24",
+      "seen_count": 33,
+      "today": true
+    },
+    {
+      "keyword": "손담비 마운자로",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "박준규 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-17",
+      "last_seen": "2026-10-24",
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "조혜련 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-24",
+      "seen_count": 7,
+      "today": true
+    },
+    {
+      "keyword": "이수현 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-10-24",
+      "seen_count": 6,
       "today": true
     },
     {
@@ -23,40 +78,7 @@
       "first_seen": "2026-07-07",
       "last_seen": "2026-10-23",
       "seen_count": 5,
-      "today": true
-    },
-    {
-      "keyword": "박준규 탈모",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-17",
-      "last_seen": "2026-10-23",
-      "seen_count": 11,
-      "today": true
-    },
-    {
-      "keyword": "조혜련 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-21",
-      "last_seen": "2026-10-23",
-      "seen_count": 6,
-      "today": true
-    },
-    {
-      "keyword": "이수현 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-10-23",
-      "seen_count": 5,
-      "today": true
+      "today": false
     },
     {
       "keyword": "통풍 원인",
@@ -67,17 +89,6 @@
       "first_seen": "2026-10-19",
       "last_seen": "2026-10-22",
       "seen_count": 3,
-      "today": false
-    },
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 11050,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-22",
-      "seen_count": 8,
       "today": false
     },
     {
