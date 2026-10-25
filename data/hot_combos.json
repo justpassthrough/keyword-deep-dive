@@ -1,28 +1,39 @@
 {
-  "updated_at": "2026-10-24 23:25",
-  "today_count": 7,
-  "count": 129,
+  "updated_at": "2026-10-25 10:10",
+  "today_count": 8,
+  "count": 130,
   "items": [
     {
       "keyword": "코엔 삼백초",
-      "search_volume": 6290,
+      "search_volume": 6630,
       "comp_idx": "중간",
       "seed": "삼백초",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-24",
-      "seen_count": 10,
+      "last_seen": "2026-10-25",
+      "seen_count": 11,
       "today": true
     },
     {
       "keyword": "코엔삼백초",
-      "search_volume": 6290,
+      "search_volume": 6630,
       "comp_idx": "중간",
       "seed": "삼백초",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-24",
-      "seen_count": 9,
+      "last_seen": "2026-10-25",
+      "seen_count": 10,
+      "today": true
+    },
+    {
+      "keyword": "강소라 감량",
+      "search_volume": 6150,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -32,8 +43,8 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-24",
-      "seen_count": 34,
+      "last_seen": "2026-10-25",
+      "seen_count": 35,
       "today": true
     },
     {
@@ -43,8 +54,8 @@
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
-      "seen_count": 2,
+      "last_seen": "2026-10-25",
+      "seen_count": 3,
       "today": true
     },
     {
@@ -54,8 +65,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-24",
-      "seen_count": 13,
+      "last_seen": "2026-10-25",
+      "seen_count": 14,
       "today": true
     },
     {
@@ -65,8 +76,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-24",
-      "seen_count": 8,
+      "last_seen": "2026-10-25",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -76,8 +87,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-10-24",
-      "seen_count": 7,
+      "last_seen": "2026-10-25",
+      "seen_count": 8,
       "today": true
     },
     {
