@@ -1,51 +1,62 @@
 {
-  "updated_at": "2026-10-28 10:27",
-  "today_count": 0,
-  "count": 131,
+  "updated_at": "2026-10-28 16:10",
+  "today_count": 9,
+  "count": 132,
   "items": [
     {
+      "keyword": "통풍 원인",
+      "search_volume": 11310,
+      "comp_idx": "높음",
+      "seed": "통풍",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-28",
+      "seen_count": 4,
+      "today": true
+    },
+    {
       "keyword": "이경제 흑염소",
-      "search_volume": 10820,
+      "search_volume": 10610,
       "comp_idx": "높음",
       "seed": "흑염소",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-27",
-      "seen_count": 10,
-      "today": false
+      "last_seen": "2026-10-28",
+      "seen_count": 11,
+      "today": true
     },
     {
       "keyword": "코엔 삼백초",
-      "search_volume": 7120,
+      "search_volume": 7450,
       "comp_idx": "중간",
       "seed": "삼백초",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-27",
-      "seen_count": 15,
-      "today": false
+      "last_seen": "2026-10-28",
+      "seen_count": 16,
+      "today": true
     },
     {
       "keyword": "코엔삼백초",
-      "search_volume": 7120,
+      "search_volume": 7450,
       "comp_idx": "중간",
       "seed": "삼백초",
       "is_hot_badge": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-27",
-      "seen_count": 14,
-      "today": false
+      "last_seen": "2026-10-28",
+      "seen_count": 15,
+      "today": true
     },
     {
       "keyword": "강소라 감량",
-      "search_volume": 6150,
+      "search_volume": 6160,
       "comp_idx": "낮음",
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-27",
-      "seen_count": 5,
-      "today": false
+      "last_seen": "2026-10-28",
+      "seen_count": 6,
+      "today": true
     },
     {
       "keyword": "한가인 알부민",
@@ -54,20 +65,42 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-27",
-      "seen_count": 39,
-      "today": false
+      "last_seen": "2026-10-28",
+      "seen_count": 40,
+      "today": true
     },
     {
       "keyword": "손담비 마운자로",
-      "search_volume": 40,
+      "search_volume": 50,
       "comp_idx": "낮음",
       "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-27",
-      "seen_count": 7,
-      "today": false
+      "last_seen": "2026-10-28",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "조혜련 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-28",
+      "seen_count": 14,
+      "today": true
+    },
+    {
+      "keyword": "이영현 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 근황",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "seen_count": 1,
+      "today": true
     },
     {
       "keyword": "박준규 탈모",
@@ -78,17 +111,6 @@
       "first_seen": "2026-10-17",
       "last_seen": "2026-10-27",
       "seen_count": 18,
-      "today": false
-    },
-    {
-      "keyword": "조혜련 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-21",
-      "last_seen": "2026-10-27",
-      "seen_count": 13,
       "today": false
     },
     {
@@ -122,17 +144,6 @@
       "first_seen": "2026-07-07",
       "last_seen": "2026-10-23",
       "seen_count": 5,
-      "today": false
-    },
-    {
-      "keyword": "통풍 원인",
-      "search_volume": 11560,
-      "comp_idx": "높음",
-      "seed": "통풍",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-22",
-      "seen_count": 3,
       "today": false
     },
     {
