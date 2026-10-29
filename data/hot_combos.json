@@ -1,30 +1,8 @@
 {
-  "updated_at": "2026-10-29 11:06",
-  "today_count": 7,
+  "updated_at": "2026-10-29 17:42",
+  "today_count": 4,
   "count": 132,
   "items": [
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 10490,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-29",
-      "seen_count": 12,
-      "today": true
-    },
-    {
-      "keyword": "강소라 감량",
-      "search_volume": 6160,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-29",
-      "seen_count": 7,
-      "today": true
-    },
     {
       "keyword": "한가인 알부민",
       "search_volume": 4170,
@@ -33,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-29",
-      "seen_count": 41,
+      "seen_count": 42,
       "today": true
     },
     {
@@ -44,18 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-29",
-      "seen_count": 9,
-      "today": true
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-10-29",
-      "seen_count": 34,
+      "seen_count": 10,
       "today": true
     },
     {
@@ -66,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-21",
       "last_seen": "2026-10-29",
-      "seen_count": 15,
+      "seen_count": 16,
       "today": true
     },
     {
@@ -77,8 +44,41 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-10-29",
-      "seen_count": 41,
+      "seen_count": 42,
       "today": true
+    },
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 10490,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-29",
+      "seen_count": 12,
+      "today": false
+    },
+    {
+      "keyword": "강소라 감량",
+      "search_volume": 6160,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-29",
+      "seen_count": 7,
+      "today": false
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-10-29",
+      "seen_count": 34,
+      "today": false
     },
     {
       "keyword": "통풍 원인",
