@@ -1,19 +1,8 @@
 {
-  "updated_at": "2026-10-30 16:10",
-  "today_count": 6,
+  "updated_at": "2026-10-31 10:10",
+  "today_count": 5,
   "count": 132,
   "items": [
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 10380,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-10-30",
-      "seen_count": 14,
-      "today": true
-    },
     {
       "keyword": "강소라 감량",
       "search_volume": 6160,
@@ -21,19 +10,19 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-30",
-      "seen_count": 9,
+      "last_seen": "2026-10-31",
+      "seen_count": 10,
       "today": true
     },
     {
       "keyword": "한가인 알부민",
-      "search_volume": 3330,
+      "search_volume": 960,
       "comp_idx": "낮음",
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-30",
-      "seen_count": 44,
+      "last_seen": "2026-10-31",
+      "seen_count": 45,
       "today": true
     },
     {
@@ -43,8 +32,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-30",
-      "seen_count": 12,
+      "last_seen": "2026-10-31",
+      "seen_count": 13,
       "today": true
     },
     {
@@ -54,8 +43,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-21",
-      "last_seen": "2026-10-30",
-      "seen_count": 18,
+      "last_seen": "2026-10-31",
+      "seen_count": 19,
       "today": true
     },
     {
@@ -65,9 +54,20 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-10-30",
-      "seen_count": 44,
+      "last_seen": "2026-10-31",
+      "seen_count": 45,
       "today": true
+    },
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 10380,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-30",
+      "seen_count": 14,
+      "today": false
     },
     {
       "keyword": "리즈 위고비",
