@@ -1,8 +1,19 @@
 {
-  "updated_at": "2026-11-02 10:10",
-  "today_count": 6,
+  "updated_at": "2026-11-02 16:10",
+  "today_count": 7,
   "count": 132,
   "items": [
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 9890,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-11-02",
+      "seen_count": 17,
+      "today": true
+    },
     {
       "keyword": "강소라 감량",
       "search_volume": 6160,
@@ -11,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
       "last_seen": "2026-11-02",
-      "seen_count": 14,
+      "seen_count": 15,
       "today": true
     },
     {
@@ -22,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-11-02",
-      "seen_count": 79,
+      "seen_count": 80,
       "today": true
     },
     {
@@ -33,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-02",
-      "seen_count": 17,
+      "seen_count": 18,
       "today": true
     },
     {
@@ -44,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-21",
       "last_seen": "2026-11-02",
-      "seen_count": 23,
+      "seen_count": 24,
       "today": true
     },
     {
@@ -55,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-11-02",
-      "seen_count": 49,
+      "seen_count": 50,
       "today": true
     },
     {
@@ -66,19 +77,8 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
       "last_seen": "2026-11-02",
-      "seen_count": 11,
+      "seen_count": 12,
       "today": true
-    },
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 10050,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-11-01",
-      "seen_count": 16,
-      "today": false
     },
     {
       "keyword": "한가인 알부민",
