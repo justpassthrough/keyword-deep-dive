@@ -1,8 +1,19 @@
 {
-  "updated_at": "2026-11-04 13:08",
-  "today_count": 11,
+  "updated_at": "2026-11-04 16:10",
+  "today_count": 12,
   "count": 133,
   "items": [
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 9910,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-11-04",
+      "seen_count": 19,
+      "today": true
+    },
     {
       "keyword": "이순실 위고비",
       "search_volume": 7000,
@@ -11,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-11-04",
-      "seen_count": 8,
+      "seen_count": 9,
       "today": true
     },
     {
@@ -22,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
       "last_seen": "2026-11-04",
-      "seen_count": 17,
+      "seen_count": 18,
       "today": true
     },
     {
@@ -33,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-11-04",
       "last_seen": "2026-11-04",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -44,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-22",
       "last_seen": "2026-11-04",
-      "seen_count": 4,
+      "seen_count": 5,
       "today": true
     },
     {
@@ -55,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-11-04",
-      "seen_count": 82,
+      "seen_count": 83,
       "today": true
     },
     {
@@ -66,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-26",
       "last_seen": "2026-11-04",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -77,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-04",
-      "seen_count": 20,
+      "seen_count": 21,
       "today": true
     },
     {
@@ -88,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-04",
-      "seen_count": 2,
+      "seen_count": 3,
       "today": true
     },
     {
@@ -99,7 +110,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-11-04",
-      "seen_count": 52,
+      "seen_count": 53,
       "today": true
     },
     {
@@ -110,7 +121,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
       "last_seen": "2026-11-04",
-      "seen_count": 14,
+      "seen_count": 15,
       "today": true
     },
     {
@@ -121,19 +132,8 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-20",
       "last_seen": "2026-11-04",
-      "seen_count": 6,
+      "seen_count": 7,
       "today": true
-    },
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 9910,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-11-03",
-      "seen_count": 18,
-      "today": false
     },
     {
       "keyword": "코엔 삼백초",
