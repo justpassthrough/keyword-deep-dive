@@ -1,19 +1,8 @@
 {
-  "updated_at": "2026-11-05 10:10",
-  "today_count": 10,
+  "updated_at": "2026-11-06 12:03",
+  "today_count": 9,
   "count": 133,
   "items": [
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 9740,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-11-05",
-      "seen_count": 20,
-      "today": true
-    },
     {
       "keyword": "이순실 위고비",
       "search_volume": 7060,
@@ -21,8 +10,8 @@
       "seed": "건강 관리 비결",
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
-      "last_seen": "2026-11-05",
-      "seen_count": 10,
+      "last_seen": "2026-11-06",
+      "seen_count": 11,
       "today": true
     },
     {
@@ -32,9 +21,97 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-05",
-      "seen_count": 19,
+      "last_seen": "2026-11-06",
+      "seen_count": 20,
       "today": true
+    },
+    {
+      "keyword": "스윙스 마운자로",
+      "search_volume": 930,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-11-06",
+      "seen_count": 117,
+      "today": true
+    },
+    {
+      "keyword": "조현아 위고비",
+      "search_volume": 90,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-11-06",
+      "seen_count": 85,
+      "today": true
+    },
+    {
+      "keyword": "이영현 감량",
+      "search_volume": 70,
+      "comp_idx": "낮음",
+      "seed": "다이어트 성공",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-11-06",
+      "seen_count": 5,
+      "today": true
+    },
+    {
+      "keyword": "손담비 마운자로",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-11-06",
+      "seen_count": 23,
+      "today": true
+    },
+    {
+      "keyword": "김준호 마운자로",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "다이어트 근황",
+      "is_hot_badge": false,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-11-06",
+      "seen_count": 9,
+      "today": true
+    },
+    {
+      "keyword": "이수현 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-11-06",
+      "seen_count": 55,
+      "today": true
+    },
+    {
+      "keyword": "이수현 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-11-06",
+      "seen_count": 17,
+      "today": true
+    },
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 9740,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-11-05",
+      "seen_count": 20,
+      "today": false
     },
     {
       "keyword": "조현아 마운자로",
@@ -45,73 +122,7 @@
       "first_seen": "2026-09-22",
       "last_seen": "2026-11-05",
       "seen_count": 6,
-      "today": true
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 80,
-      "comp_idx": "낮음",
-      "seed": "몸매 변화",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-11-05",
-      "seen_count": 84,
-      "today": true
-    },
-    {
-      "keyword": "이영현 감량",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "다이어트 성공",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-28",
-      "last_seen": "2026-11-05",
-      "seen_count": 4,
-      "today": true
-    },
-    {
-      "keyword": "손담비 마운자로",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-11-05",
-      "seen_count": 22,
-      "today": true
-    },
-    {
-      "keyword": "이수현 감량",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-18",
-      "last_seen": "2026-11-05",
-      "seen_count": 54,
-      "today": true
-    },
-    {
-      "keyword": "김준호 마운자로",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "다이어트 근황",
-      "is_hot_badge": false,
-      "first_seen": "2026-08-20",
-      "last_seen": "2026-11-05",
-      "seen_count": 8,
-      "today": true
-    },
-    {
-      "keyword": "이수현 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-11-05",
-      "seen_count": 16,
-      "today": true
+      "today": false
     },
     {
       "keyword": "에페 마운자로",
@@ -287,17 +298,6 @@
       "first_seen": "2026-08-27",
       "last_seen": "2026-10-19",
       "seen_count": 10,
-      "today": false
-    },
-    {
-      "keyword": "스윙스 마운자로",
-      "search_volume": 1260,
-      "comp_idx": "낮음",
-      "seed": "감량 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-10-17",
-      "seen_count": 116,
       "today": false
     },
     {
