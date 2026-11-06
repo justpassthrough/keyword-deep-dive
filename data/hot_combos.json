@@ -1,19 +1,8 @@
 {
-  "updated_at": "2026-11-06 12:03",
-  "today_count": 9,
+  "updated_at": "2026-11-06 16:10",
+  "today_count": 8,
   "count": 133,
   "items": [
-    {
-      "keyword": "이순실 위고비",
-      "search_volume": 7060,
-      "comp_idx": "낮음",
-      "seed": "건강 관리 비결",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-16",
-      "last_seen": "2026-11-06",
-      "seen_count": 11,
-      "today": true
-    },
     {
       "keyword": "강소라 감량",
       "search_volume": 6160,
@@ -22,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
       "last_seen": "2026-11-06",
-      "seen_count": 20,
+      "seen_count": 21,
       "today": true
     },
     {
@@ -33,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-16",
       "last_seen": "2026-11-06",
-      "seen_count": 117,
+      "seen_count": 118,
       "today": true
     },
     {
@@ -44,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-11-06",
-      "seen_count": 85,
+      "seen_count": 86,
       "today": true
     },
     {
@@ -55,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-06",
-      "seen_count": 5,
+      "seen_count": 6,
       "today": true
     },
     {
@@ -66,7 +55,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-06",
-      "seen_count": 23,
+      "seen_count": 24,
       "today": true
     },
     {
@@ -77,7 +66,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-08-20",
       "last_seen": "2026-11-06",
-      "seen_count": 9,
+      "seen_count": 10,
       "today": true
     },
     {
@@ -88,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-11-06",
-      "seen_count": 55,
+      "seen_count": 56,
       "today": true
     },
     {
@@ -99,8 +88,19 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
       "last_seen": "2026-11-06",
-      "seen_count": 17,
+      "seen_count": 18,
       "today": true
+    },
+    {
+      "keyword": "이순실 위고비",
+      "search_volume": 7060,
+      "comp_idx": "낮음",
+      "seed": "건강 관리 비결",
+      "is_hot_badge": false,
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-11-06",
+      "seen_count": 11,
+      "today": false
     },
     {
       "keyword": "이경제 흑염소",
