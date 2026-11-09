@@ -1,19 +1,8 @@
 {
-  "updated_at": "2026-11-09 11:11",
-  "today_count": 7,
+  "updated_at": "2026-11-09 16:10",
+  "today_count": 5,
   "count": 133,
   "items": [
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 9450,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-11-09",
-      "seen_count": 21,
-      "today": true
-    },
     {
       "keyword": "강소라 감량",
       "search_volume": 6160,
@@ -22,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
       "last_seen": "2026-11-09",
-      "seen_count": 24,
+      "seen_count": 25,
       "today": true
     },
     {
@@ -33,18 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
       "last_seen": "2026-11-09",
-      "seen_count": 88,
-      "today": true
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-09",
-      "seen_count": 35,
+      "seen_count": 89,
       "today": true
     },
     {
@@ -55,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-09",
-      "seen_count": 26,
+      "seen_count": 27,
       "today": true
     },
     {
@@ -66,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-11-09",
-      "seen_count": 58,
+      "seen_count": 59,
       "today": true
     },
     {
@@ -77,8 +55,30 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
       "last_seen": "2026-11-09",
-      "seen_count": 20,
+      "seen_count": 21,
       "today": true
+    },
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 9450,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-11-09",
+      "seen_count": 21,
+      "today": false
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 60,
+      "comp_idx": "낮음",
+      "seed": "위고비",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-09",
+      "seen_count": 35,
+      "today": false
     },
     {
       "keyword": "스윙스 마운자로",
