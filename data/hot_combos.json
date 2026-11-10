@@ -1,8 +1,19 @@
 {
-  "updated_at": "2026-11-09 16:10",
-  "today_count": 5,
+  "updated_at": "2026-11-10 12:48",
+  "today_count": 7,
   "count": 133,
   "items": [
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 9240,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-11-10",
+      "seen_count": 22,
+      "today": true
+    },
     {
       "keyword": "강소라 감량",
       "search_volume": 6160,
@@ -10,8 +21,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-09",
-      "seen_count": 25,
+      "last_seen": "2026-11-10",
+      "seen_count": 26,
       "today": true
     },
     {
@@ -21,8 +32,8 @@
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-11-09",
-      "seen_count": 89,
+      "last_seen": "2026-11-10",
+      "seen_count": 90,
       "today": true
     },
     {
@@ -32,8 +43,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-11-09",
-      "seen_count": 27,
+      "last_seen": "2026-11-10",
+      "seen_count": 28,
       "today": true
     },
     {
@@ -43,8 +54,8 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-11-09",
-      "seen_count": 59,
+      "last_seen": "2026-11-10",
+      "seen_count": 60,
       "today": true
     },
     {
@@ -54,20 +65,20 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-11-09",
-      "seen_count": 21,
+      "last_seen": "2026-11-10",
+      "seen_count": 22,
       "today": true
     },
     {
-      "keyword": "이경제 흑염소",
-      "search_volume": 9450,
-      "comp_idx": "높음",
-      "seed": "흑염소",
+      "keyword": "이수현 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
       "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-11-09",
-      "seen_count": 21,
-      "today": false
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-11-10",
+      "seen_count": 7,
+      "today": true
     },
     {
       "keyword": "리즈 위고비",
@@ -573,17 +584,6 @@
       "first_seen": "2026-09-13",
       "last_seen": "2026-09-30",
       "seen_count": 31,
-      "today": false
-    },
-    {
-      "keyword": "이수현 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-09-30",
-      "seen_count": 6,
       "today": false
     },
     {
