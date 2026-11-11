@@ -1,28 +1,17 @@
 {
-  "updated_at": "2026-11-10 16:10",
-  "today_count": 7,
+  "updated_at": "2026-11-11 10:52",
+  "today_count": 6,
   "count": 133,
   "items": [
     {
-      "keyword": "강소라 감량",
-      "search_volume": 6160,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-11-10",
-      "seen_count": 27,
-      "today": true
-    },
-    {
       "keyword": "조현아 위고비",
-      "search_volume": 90,
+      "search_volume": 100,
       "comp_idx": "낮음",
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-06-26",
-      "last_seen": "2026-11-10",
-      "seen_count": 91,
+      "last_seen": "2026-11-11",
+      "seen_count": 92,
       "today": true
     },
     {
@@ -32,8 +21,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-11-10",
-      "seen_count": 29,
+      "last_seen": "2026-11-11",
+      "seen_count": 30,
       "today": true
     },
     {
@@ -43,8 +32,8 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-11-10",
-      "seen_count": 61,
+      "last_seen": "2026-11-11",
+      "seen_count": 62,
       "today": true
     },
     {
@@ -54,8 +43,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-11-10",
-      "seen_count": 23,
+      "last_seen": "2026-11-11",
+      "seen_count": 24,
       "today": true
     },
     {
@@ -65,8 +54,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-11-10",
-      "seen_count": 8,
+      "last_seen": "2026-11-11",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -76,8 +65,8 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-10",
-      "seen_count": 63,
+      "last_seen": "2026-11-11",
+      "seen_count": 64,
       "today": true
     },
     {
@@ -89,6 +78,17 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-11-10",
       "seen_count": 22,
+      "today": false
+    },
+    {
+      "keyword": "강소라 감량",
+      "search_volume": 6160,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-11-10",
+      "seen_count": 27,
       "today": false
     },
     {
