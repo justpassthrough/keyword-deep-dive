@@ -1,8 +1,52 @@
 {
-  "updated_at": "2026-11-11 16:10",
-  "today_count": 7,
+  "updated_at": "2026-11-12 10:10",
+  "today_count": 4,
   "count": 133,
   "items": [
+    {
+      "keyword": "손담비 마운자로",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-11-12",
+      "seen_count": 32,
+      "today": true
+    },
+    {
+      "keyword": "이수현 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 성공",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-11-12",
+      "seen_count": 64,
+      "today": true
+    },
+    {
+      "keyword": "이수현 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-11-12",
+      "seen_count": 11,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-12",
+      "seen_count": 66,
+      "today": true
+    },
     {
       "keyword": "코엔 삼백초",
       "search_volume": 9530,
@@ -12,7 +56,7 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-11-11",
       "seen_count": 18,
-      "today": true
+      "today": false
     },
     {
       "keyword": "코엔삼백초",
@@ -23,62 +67,7 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-11-11",
       "seen_count": 17,
-      "today": true
-    },
-    {
-      "keyword": "손담비 마운자로",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-11-11",
-      "seen_count": 31,
-      "today": true
-    },
-    {
-      "keyword": "이수현 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-18",
-      "last_seen": "2026-11-11",
-      "seen_count": 63,
-      "today": true
-    },
-    {
-      "keyword": "이수현 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-11-11",
-      "seen_count": 25,
-      "today": true
-    },
-    {
-      "keyword": "이수현 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-02",
-      "last_seen": "2026-11-11",
-      "seen_count": 10,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-11",
-      "seen_count": 65,
-      "today": true
+      "today": false
     },
     {
       "keyword": "조현아 위고비",
@@ -89,6 +78,17 @@
       "first_seen": "2026-06-26",
       "last_seen": "2026-11-11",
       "seen_count": 92,
+      "today": false
+    },
+    {
+      "keyword": "이수현 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-11-11",
+      "seen_count": 25,
       "today": false
     },
     {
