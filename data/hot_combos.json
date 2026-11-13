@@ -1,19 +1,8 @@
 {
-  "updated_at": "2026-11-13 11:02",
-  "today_count": 6,
+  "updated_at": "2026-11-13 16:10",
+  "today_count": 5,
   "count": 134,
   "items": [
-    {
-      "keyword": "이경제 흑염소",
-      "search_volume": 8990,
-      "comp_idx": "높음",
-      "seed": "흑염소",
-      "is_hot_badge": false,
-      "first_seen": "2026-10-16",
-      "last_seen": "2026-11-13",
-      "seen_count": 23,
-      "today": true
-    },
     {
       "keyword": "리즈 마운자로",
       "search_volume": 180,
@@ -22,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-11-13",
       "last_seen": "2026-11-13",
-      "seen_count": 1,
+      "seen_count": 2,
       "today": true
     },
     {
@@ -33,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-11-13",
-      "seen_count": 36,
+      "seen_count": 37,
       "today": true
     },
     {
@@ -44,7 +33,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-13",
-      "seen_count": 34,
+      "seen_count": 35,
       "today": true
     },
     {
@@ -55,7 +44,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-18",
       "last_seen": "2026-11-13",
-      "seen_count": 66,
+      "seen_count": 67,
       "today": true
     },
     {
@@ -66,8 +55,19 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-11-13",
-      "seen_count": 68,
+      "seen_count": 69,
       "today": true
+    },
+    {
+      "keyword": "이경제 흑염소",
+      "search_volume": 8990,
+      "comp_idx": "높음",
+      "seed": "흑염소",
+      "is_hot_badge": false,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-11-13",
+      "seen_count": 23,
+      "today": false
     },
     {
       "keyword": "이수현 위고비",
