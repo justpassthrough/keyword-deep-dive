@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-11-18 16:10",
+  "updated_at": "2026-11-19 11:56",
   "today_count": 9,
   "count": 136,
   "items": [
     {
       "keyword": "카더가든 마운자로",
-      "search_volume": 2300,
+      "search_volume": 3220,
       "comp_idx": "낮음",
-      "seed": "마운자로",
+      "seed": "감량 고백",
       "is_hot_badge": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-11-18",
-      "seen_count": 5,
+      "last_seen": "2026-11-19",
+      "seen_count": 6,
       "today": true
     },
     {
@@ -21,19 +21,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-18",
-      "seen_count": 8,
-      "today": true
-    },
-    {
-      "keyword": "한가인 알부민",
-      "search_volume": 60,
-      "comp_idx": "낮음",
-      "seed": "알부민",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-29",
-      "last_seen": "2026-11-18",
-      "seen_count": 49,
+      "last_seen": "2026-11-19",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -43,8 +32,19 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-18",
-      "seen_count": 43,
+      "last_seen": "2026-11-19",
+      "seen_count": 44,
+      "today": true
+    },
+    {
+      "keyword": "한가인 알부민",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-11-19",
+      "seen_count": 50,
       "today": true
     },
     {
@@ -54,8 +54,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-11-18",
-      "seen_count": 41,
+      "last_seen": "2026-11-19",
+      "seen_count": 42,
       "today": true
     },
     {
@@ -65,8 +65,8 @@
       "seed": "다이어트 성공",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-18",
-      "seen_count": 21,
+      "last_seen": "2026-11-19",
+      "seen_count": 22,
       "today": true
     },
     {
@@ -76,8 +76,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-18",
-      "seen_count": 75,
+      "last_seen": "2026-11-19",
+      "seen_count": 76,
       "today": true
     },
     {
@@ -87,8 +87,8 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-11-15",
-      "last_seen": "2026-11-18",
-      "seen_count": 5,
+      "last_seen": "2026-11-19",
+      "seen_count": 6,
       "today": true
     },
     {
@@ -98,8 +98,8 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-11-18",
-      "seen_count": 39,
+      "last_seen": "2026-11-19",
+      "seen_count": 40,
       "today": true
     },
     {
