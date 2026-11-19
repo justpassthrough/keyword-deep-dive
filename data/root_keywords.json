@@ -310,7 +310,7 @@
       "source": "inflow",
       "parent": null,
       "added": "2026-09-17",
-      "last_active": "2026-11-18",
+      "last_active": "2026-11-19",
       "consecutive_dormant_weeks": 0,
       "note": "유입 키워드 분석기에서 잡힌 뿌리 밖 수요(전용 글 없음·의약품이라 쇼핑 블록이 없는 자리). 2026-09-17 시험 투입"
     },
@@ -713,7 +713,7 @@
       "source": "auto",
       "parent": null,
       "added": "2026-11-12",
-      "last_active": "2026-11-18",
+      "last_active": "2026-11-19",
       "consecutive_dormant_weeks": 0
     },
     {
@@ -753,13 +753,13 @@
       "source": "auto",
       "parent": null,
       "added": "2026-11-12",
-      "last_active": "2026-11-18",
+      "last_active": "2026-11-19",
       "consecutive_dormant_weeks": 0
     },
     {
       "keyword": "비타민B12",
       "category": "영양제",
-      "status": "watch",
+      "status": "active",
       "source": "auto",
       "parent": null,
       "added": "2026-11-19",
@@ -769,7 +769,7 @@
     {
       "keyword": "차가버섯",
       "category": "피부관리",
-      "status": "watch",
+      "status": "active",
       "source": "auto",
       "parent": null,
       "added": "2026-11-19",
@@ -779,7 +779,7 @@
     {
       "keyword": "푸룬",
       "category": "비만치료제",
-      "status": "watch",
+      "status": "active",
       "source": "auto",
       "parent": null,
       "added": "2026-11-19",
@@ -789,7 +789,7 @@
     {
       "keyword": "블랙커민",
       "category": "비만치료제",
-      "status": "watch",
+      "status": "active",
       "source": "auto",
       "parent": null,
       "added": "2026-11-19",
@@ -799,7 +799,7 @@
     {
       "keyword": "칼슘",
       "category": "영양제",
-      "status": "watch",
+      "status": "active",
       "source": "auto",
       "parent": null,
       "added": "2026-11-19",
