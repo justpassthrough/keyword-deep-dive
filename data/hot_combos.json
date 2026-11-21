@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-21 10:08",
-  "today_count": 10,
+  "updated_at": "2026-11-21 16:10",
+  "today_count": 9,
   "count": 137,
   "items": [
     {
@@ -11,7 +11,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-09",
       "last_seen": "2026-11-21",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
@@ -22,7 +22,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-11-13",
       "last_seen": "2026-11-21",
-      "seen_count": 13,
+      "seen_count": 14,
       "today": true
     },
     {
@@ -33,18 +33,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-11-21",
-      "seen_count": 48,
+      "seen_count": 49,
       "today": true
     },
     {
       "keyword": "한가인 알부민",
       "search_volume": 50,
       "comp_idx": "낮음",
-      "seed": "글루타치온 주사",
+      "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-11-21",
-      "seen_count": 54,
+      "seen_count": 55,
       "today": true
     },
     {
@@ -55,18 +55,18 @@
       "is_hot_badge": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-21",
-      "seen_count": 46,
+      "seen_count": 47,
       "today": true
     },
     {
       "keyword": "장나라 비타민",
       "search_volume": 40,
       "comp_idx": "낮음",
-      "seed": "동안 비결",
+      "seed": "연예인 영양제",
       "is_hot_badge": false,
       "first_seen": "2026-11-20",
       "last_seen": "2026-11-21",
-      "seen_count": 3,
+      "seen_count": 4,
       "today": true
     },
     {
@@ -77,7 +77,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-11-21",
-      "seen_count": 26,
+      "seen_count": 27,
       "today": true
     },
     {
@@ -88,7 +88,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
       "last_seen": "2026-11-21",
-      "seen_count": 80,
+      "seen_count": 81,
       "today": true
     },
     {
@@ -99,7 +99,7 @@
       "is_hot_badge": false,
       "first_seen": "2026-11-15",
       "last_seen": "2026-11-21",
-      "seen_count": 10,
+      "seen_count": 11,
       "today": true
     },
     {
@@ -111,7 +111,7 @@
       "first_seen": "2026-09-22",
       "last_seen": "2026-11-21",
       "seen_count": 44,
-      "today": true
+      "today": false
     },
     {
       "keyword": "조현아 위고비",
