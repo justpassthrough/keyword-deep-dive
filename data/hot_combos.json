@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-11-22 17:47",
+  "updated_at": "2026-11-23 10:10",
   "today_count": 10,
-  "count": 137,
+  "count": 138,
   "items": [
     {
       "keyword": "카더가든 마운자로",
-      "search_volume": 4740,
+      "search_volume": 5010,
       "comp_idx": "낮음",
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-11-22",
-      "seen_count": 12,
+      "last_seen": "2026-11-23",
+      "seen_count": 13,
       "today": true
     },
     {
       "keyword": "리즈 마운자로",
-      "search_volume": 190,
+      "search_volume": 180,
       "comp_idx": "낮음",
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-22",
-      "seen_count": 15,
+      "last_seen": "2026-11-23",
+      "seen_count": 16,
       "today": true
     },
     {
@@ -32,30 +32,85 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-22",
-      "seen_count": 50,
-      "today": true
-    },
-    {
-      "keyword": "한가인 알부민",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "알부민",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-29",
-      "last_seen": "2026-11-22",
-      "seen_count": 56,
+      "last_seen": "2026-11-23",
+      "seen_count": 51,
       "today": true
     },
     {
       "keyword": "장나라 비타민",
-      "search_volume": 40,
+      "search_volume": 50,
       "comp_idx": "낮음",
       "seed": "연예인 영양제",
       "is_hot_badge": false,
       "first_seen": "2026-11-20",
-      "last_seen": "2026-11-22",
-      "seen_count": 5,
+      "last_seen": "2026-11-23",
+      "seen_count": 6,
+      "today": true
+    },
+    {
+      "keyword": "한가인 알부민",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-11-23",
+      "seen_count": 57,
+      "today": true
+    },
+    {
+      "keyword": "성시경 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-23",
+      "seen_count": 29,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-23",
+      "seen_count": 83,
+      "today": true
+    },
+    {
+      "keyword": "장윤정 탈모",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "탈모 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-23",
+      "seen_count": 13,
+      "today": true
+    },
+    {
+      "keyword": "조현아 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "체중 감량",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-11-23",
+      "seen_count": 46,
+      "today": true
+    },
+    {
+      "keyword": "정형돈 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-23",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -67,51 +122,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-22",
       "seen_count": 48,
-      "today": true
-    },
-    {
-      "keyword": "성시경 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-22",
-      "seen_count": 28,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-22",
-      "seen_count": 82,
-      "today": true
-    },
-    {
-      "keyword": "장윤정 탈모",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "탈모 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-11-15",
-      "last_seen": "2026-11-22",
-      "seen_count": 12,
-      "today": true
-    },
-    {
-      "keyword": "조현아 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "체중 감량",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-22",
-      "last_seen": "2026-11-22",
-      "seen_count": 45,
-      "today": true
+      "today": false
     },
     {
       "keyword": "조현아 위고비",
