@@ -1,39 +1,50 @@
 {
-  "updated_at": "2026-11-23 16:10",
-  "today_count": 10,
+  "updated_at": "2026-11-24 10:10",
+  "today_count": 11,
   "count": 138,
   "items": [
     {
       "keyword": "카더가든 마운자로",
-      "search_volume": 5010,
+      "search_volume": 5210,
       "comp_idx": "낮음",
       "seed": "몸매 변화",
       "is_hot_badge": false,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-11-23",
-      "seen_count": 14,
+      "last_seen": "2026-11-24",
+      "seen_count": 15,
+      "today": true
+    },
+    {
+      "keyword": "정형돈 마운자로",
+      "search_volume": 280,
+      "comp_idx": "낮음",
+      "seed": "마운자로",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-24",
+      "seen_count": 3,
       "today": true
     },
     {
       "keyword": "리즈 마운자로",
-      "search_volume": 180,
+      "search_volume": 170,
       "comp_idx": "낮음",
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-23",
-      "seen_count": 17,
+      "last_seen": "2026-11-24",
+      "seen_count": 18,
       "today": true
     },
     {
-      "keyword": "리즈 위고비",
-      "search_volume": 50,
+      "keyword": "조현아 위고비",
+      "search_volume": 90,
       "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
+      "seed": "위고비",
       "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-23",
-      "seen_count": 52,
+      "first_seen": "2026-06-26",
+      "last_seen": "2026-11-24",
+      "seen_count": 96,
       "today": true
     },
     {
@@ -43,8 +54,19 @@
       "seed": "연예인 영양제",
       "is_hot_badge": false,
       "first_seen": "2026-11-20",
-      "last_seen": "2026-11-23",
-      "seen_count": 7,
+      "last_seen": "2026-11-24",
+      "seen_count": 8,
+      "today": true
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-24",
+      "seen_count": 53,
       "today": true
     },
     {
@@ -54,8 +76,8 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-11-23",
-      "seen_count": 58,
+      "last_seen": "2026-11-24",
+      "seen_count": 59,
       "today": true
     },
     {
@@ -65,8 +87,8 @@
       "seed": "다이어트 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-23",
-      "seen_count": 30,
+      "last_seen": "2026-11-24",
+      "seen_count": 31,
       "today": true
     },
     {
@@ -76,8 +98,8 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-23",
-      "seen_count": 84,
+      "last_seen": "2026-11-24",
+      "seen_count": 85,
       "today": true
     },
     {
@@ -87,30 +109,19 @@
       "seed": "탈모 고백",
       "is_hot_badge": false,
       "first_seen": "2026-11-15",
-      "last_seen": "2026-11-23",
-      "seen_count": 14,
+      "last_seen": "2026-11-24",
+      "seen_count": 15,
       "today": true
     },
     {
       "keyword": "조현아 감량",
       "search_volume": 30,
       "comp_idx": "낮음",
-      "seed": "다이어트 성공",
+      "seed": "감량 고백",
       "is_hot_badge": false,
       "first_seen": "2026-09-22",
-      "last_seen": "2026-11-23",
-      "seen_count": 47,
-      "today": true
-    },
-    {
-      "keyword": "정형돈 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-11-23",
-      "last_seen": "2026-11-23",
-      "seen_count": 2,
+      "last_seen": "2026-11-24",
+      "seen_count": 48,
       "today": true
     },
     {
@@ -122,17 +133,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-11-22",
       "seen_count": 48,
-      "today": false
-    },
-    {
-      "keyword": "조현아 위고비",
-      "search_volume": 90,
-      "comp_idx": "낮음",
-      "seed": "위고비",
-      "is_hot_badge": false,
-      "first_seen": "2026-06-26",
-      "last_seen": "2026-11-18",
-      "seen_count": 95,
       "today": false
     },
     {
