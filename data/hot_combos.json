@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26 10:10",
-  "today_count": 11,
+  "updated_at": "2026-11-26 16:10",
+  "today_count": 10,
   "count": 138,
   "items": [
     {
@@ -11,7 +11,106 @@
       "is_hot_badge": false,
       "first_seen": "2026-09-09",
       "last_seen": "2026-11-26",
-      "seen_count": 18,
+      "seen_count": 19,
+      "today": true
+    },
+    {
+      "keyword": "정형돈 마운자로",
+      "search_volume": 890,
+      "comp_idx": "낮음",
+      "seed": "다이어트 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-23",
+      "last_seen": "2026-11-26",
+      "seen_count": 7,
+      "today": true
+    },
+    {
+      "keyword": "리즈 마운자로",
+      "search_volume": 170,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-26",
+      "seen_count": 22,
+      "today": true
+    },
+    {
+      "keyword": "이성민 감량",
+      "search_volume": 70,
+      "comp_idx": "낮음",
+      "seed": "감량 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-11-26",
+      "seen_count": 16,
+      "today": true
+    },
+    {
+      "keyword": "장나라 비타민",
+      "search_volume": 50,
+      "comp_idx": "낮음",
+      "seed": "연예인 영양제",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-26",
+      "seen_count": 12,
+      "today": true
+    },
+    {
+      "keyword": "한가인 알부민",
+      "search_volume": 40,
+      "comp_idx": "낮음",
+      "seed": "알부민",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-11-26",
+      "seen_count": 63,
+      "today": true
+    },
+    {
+      "keyword": "리즈 위고비",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-26",
+      "seen_count": 57,
+      "today": true
+    },
+    {
+      "keyword": "성시경 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "다이어트 근황",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-26",
+      "seen_count": 35,
+      "today": true
+    },
+    {
+      "keyword": "랄랄 마운자로",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "연예인 다이어트",
+      "is_hot_badge": false,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-11-26",
+      "seen_count": 89,
+      "today": true
+    },
+    {
+      "keyword": "조현아 감량",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "감량 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-11-26",
+      "seen_count": 52,
       "today": true
     },
     {
@@ -23,106 +122,7 @@
       "first_seen": "2026-09-18",
       "last_seen": "2026-11-26",
       "seen_count": 9,
-      "today": true
-    },
-    {
-      "keyword": "정형돈 마운자로",
-      "search_volume": 890,
-      "comp_idx": "낮음",
-      "seed": "마운자로",
-      "is_hot_badge": false,
-      "first_seen": "2026-11-23",
-      "last_seen": "2026-11-26",
-      "seen_count": 6,
-      "today": true
-    },
-    {
-      "keyword": "리즈 마운자로",
-      "search_volume": 170,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-11-13",
-      "last_seen": "2026-11-26",
-      "seen_count": 21,
-      "today": true
-    },
-    {
-      "keyword": "이성민 감량",
-      "search_volume": 70,
-      "comp_idx": "낮음",
-      "seed": "감량 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-15",
-      "last_seen": "2026-11-26",
-      "seen_count": 15,
-      "today": true
-    },
-    {
-      "keyword": "장나라 비타민",
-      "search_volume": 50,
-      "comp_idx": "낮음",
-      "seed": "연예인 영양제",
-      "is_hot_badge": false,
-      "first_seen": "2026-11-20",
-      "last_seen": "2026-11-26",
-      "seen_count": 11,
-      "today": true
-    },
-    {
-      "keyword": "한가인 알부민",
-      "search_volume": 40,
-      "comp_idx": "낮음",
-      "seed": "알부민",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-29",
-      "last_seen": "2026-11-26",
-      "seen_count": 62,
-      "today": true
-    },
-    {
-      "keyword": "리즈 위고비",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-26",
-      "seen_count": 56,
-      "today": true
-    },
-    {
-      "keyword": "성시경 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "다이어트 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-26",
-      "seen_count": 34,
-      "today": true
-    },
-    {
-      "keyword": "랄랄 마운자로",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
-      "is_hot_badge": false,
-      "first_seen": "2026-07-04",
-      "last_seen": "2026-11-26",
-      "seen_count": 88,
-      "today": true
-    },
-    {
-      "keyword": "조현아 감량",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "감량 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-09-22",
-      "last_seen": "2026-11-26",
-      "seen_count": 51,
-      "today": true
+      "today": false
     },
     {
       "keyword": "장윤정 탈모",
