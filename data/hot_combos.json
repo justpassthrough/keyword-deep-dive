@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-11-27 16:10",
-  "today_count": 10,
-  "count": 139,
+  "updated_at": "2026-11-28 12:20",
+  "today_count": 11,
+  "count": 141,
   "items": [
     {
       "keyword": "정형돈 마운자로",
-      "search_volume": 1080,
+      "search_volume": 1130,
       "comp_idx": "낮음",
       "seed": "다이어트 근황",
       "is_hot_badge": false,
       "first_seen": "2026-11-23",
-      "last_seen": "2026-11-27",
-      "seen_count": 8,
+      "last_seen": "2026-11-28",
+      "seen_count": 9,
       "today": true
     },
     {
@@ -21,8 +21,30 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-27",
-      "seen_count": 23,
+      "last_seen": "2026-11-28",
+      "seen_count": 24,
+      "today": true
+    },
+    {
+      "keyword": "한지민 갱년기",
+      "search_volume": 120,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "seen_count": 1,
+      "today": true
+    },
+    {
+      "keyword": "이서진 갱년기",
+      "search_volume": 100,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-28",
+      "seen_count": 2,
       "today": true
     },
     {
@@ -32,8 +54,8 @@
       "seed": "감량 고백",
       "is_hot_badge": false,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-11-27",
-      "seen_count": 17,
+      "last_seen": "2026-11-28",
+      "seen_count": 18,
       "today": true
     },
     {
@@ -43,8 +65,8 @@
       "seed": "연예인 영양제",
       "is_hot_badge": false,
       "first_seen": "2026-11-20",
-      "last_seen": "2026-11-27",
-      "seen_count": 13,
+      "last_seen": "2026-11-28",
+      "seen_count": 14,
       "today": true
     },
     {
@@ -54,8 +76,8 @@
       "seed": "알부민",
       "is_hot_badge": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-11-27",
-      "seen_count": 64,
+      "last_seen": "2026-11-28",
+      "seen_count": 65,
       "today": true
     },
     {
@@ -65,30 +87,41 @@
       "seed": "연예인 다이어트",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-27",
-      "seen_count": 58,
+      "last_seen": "2026-11-28",
+      "seen_count": 59,
       "today": true
     },
     {
       "keyword": "성시경 감량",
       "search_volume": 30,
       "comp_idx": "낮음",
-      "seed": "다이어트 근황",
+      "seed": "다이어트 비결",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-27",
-      "seen_count": 36,
+      "last_seen": "2026-11-28",
+      "seen_count": 37,
       "today": true
     },
     {
       "keyword": "랄랄 마운자로",
       "search_volume": 30,
       "comp_idx": "낮음",
-      "seed": "연예인 다이어트",
+      "seed": "마운자로",
       "is_hot_badge": false,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-11-27",
-      "seen_count": 90,
+      "last_seen": "2026-11-28",
+      "seen_count": 91,
+      "today": true
+    },
+    {
+      "keyword": "조승우 갱년기",
+      "search_volume": 30,
+      "comp_idx": "낮음",
+      "seed": "갱년기 고백",
+      "is_hot_badge": false,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "seen_count": 1,
       "today": true
     },
     {
@@ -100,18 +133,7 @@
       "first_seen": "2026-09-22",
       "last_seen": "2026-11-27",
       "seen_count": 53,
-      "today": true
-    },
-    {
-      "keyword": "이서진 갱년기",
-      "search_volume": 30,
-      "comp_idx": "낮음",
-      "seed": "갱년기 고백",
-      "is_hot_badge": false,
-      "first_seen": "2026-11-27",
-      "last_seen": "2026-11-27",
-      "seen_count": 1,
-      "today": true
+      "today": false
     },
     {
       "keyword": "카더가든 마운자로",
